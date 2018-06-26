@@ -17,6 +17,7 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
+    "uuid": "^3.3.0"
   },
   "devDependencies": {
     "nwb": "0.21.x"
