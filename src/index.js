@@ -142,10 +142,19 @@ class Upgrader {
     }
   }
 
-  async retrieve_resource(uri) {
-    const response = await fetch(uri);
-    const json = await response.json();
-    return json;
+  retrieve_resource(uri) {
+    let request = new XMLHttpRequest();
+    request.open('GET', uri, false);  // `false` makes the request synchronous
+    request.send(null);
+    if (request.status === 200) {
+      try {
+        return JSON.parse(request.responseText);
+      } catch (ex) {
+        return {};
+      }
+    } else {
+      return {};
+    }
   }
 
 	mint_uri() {
@@ -289,11 +298,11 @@ class Upgrader {
       }
 			if (t.startsWith('sc:')) {
         t = t.replace('sc:', '')
-      } else if (t.startswith('oa:')) {
+      } else if (t.startsWith('oa:')) {
 				t = t.replace('oa:', '')
-			} else if (t.startswith('dctypes:')) {
+			} else if (t.startsWith('dctypes:')) {
 				t = t.replace('dctypes:', '')
-			} else if (t.startswith('iiif:')) {
+			} else if (t.startsWith('iiif:')) {
 				// e.g iiif:ImageApiSelector
         t = t.replace('iiif:', '')
       }
@@ -403,12 +412,30 @@ class Upgrader {
     return what;
   }
 
-  async get_head(url) {
-    const head = await fetch(new Request(url, {
-      method: 'HEAD'
-    }));
-    return head;
-  } 
+  // async get_head(url) {
+  //   const head = await fetch(new Request(url, {
+  //     method: 'HEAD'
+  //   }));
+  //   return head;
+  // } 
+  get_head() {
+    let request = new XMLHttpRequest();
+    request.open('HEAD', uri, false);  // `false` makes the request synchronous
+    request.send(null);
+    if (request.status === 200) {
+      return {
+        headers: {
+          get: (headerName) => request.getResponseHeader(headerName)
+        }
+      };
+    } else {
+      return {
+        headers: {
+          get: (headerName) => ""
+        }
+      };
+    }
+  }
 
 	set_remote_type(what) {
     let h = null;
@@ -446,13 +473,12 @@ class Upgrader {
 		if (!isDictionary(what)) {
       what = {'id': what}
     }
+    let  myid = '';
 
-		if (what.hasOwnProperty('id')) {
+    if (what.hasOwnProperty('id')) {
 			myid = what['id']
     } else if (what.hasOwnProperty('@id')) {
       myid = what['@id']
-    } else {
-      myid = ''
     }
 
 		if (!what.hasOwnProperty('type') && typ) {
@@ -495,7 +521,7 @@ class Upgrader {
     for (var p in this.object_property_types) {
       let typ = this.object_property_types[p];
       if (what.hasOwnProperty(p)) {
-        p3version = []
+        //let p3version = []
         if (p in this.set_properties) {
           // Assumes list :(
           what[p] = what[p].map(v => this.fix_object(v, typ));
@@ -509,7 +535,7 @@ class Upgrader {
 
 	process_generic(what) {
     // process generic IIIF properties 
-		if ('@id' in what) {
+		if (what.hasOwnProperty('@id')) {
 			what['id'] = what['@id'];
       delete what['@id'];
     } else {
@@ -532,11 +558,11 @@ class Upgrader {
 			// License went from many to single
 		  // Also requires CC or RSS, otherwise extension
 		  // Put others into metadata
-			lic = what['license']
+			let lic = what['license']
 			if (!isArray(lic)) {
         lic = [lic]
       }
-      done = False
+      let done = false
       lic.forEach(l => {
         if (isDictionary(l)) {
           l = l['@id']
@@ -550,9 +576,9 @@ class Upgrader {
 					done = true
         } else {
           // fix_languages below will correct these to langMaps
-					licstmt = {"label": this.license_label, "value": l}
-					md = what['metadata'] || []
-					md.append(licstmt)
+					let licstmt = {"label": this.license_label, "value": l}
+					let md = what['metadata'] || []
+					md.push(licstmt)
 					what['metadata'] = md
         }
       })
@@ -581,7 +607,7 @@ class Upgrader {
 		if (what.hasOwnProperty('description')){
 			if (this.description_is_metadata) {
 				// Put it in metadata
-				md = what.get('metadata', [])
+				let md = what['metadata'] || [];
 		  	// NB this must happen before fix_languages
 				md.push({
           "label": "Description", 
@@ -614,7 +640,7 @@ class Upgrader {
           } else {
             uri = rel
           }
-					md = what['metadata'] || [];
+					let md = what['metadata'] || [];
 				  // NB this must happen before fix_languages
 					md.push({
             label: 'Related', 
@@ -637,9 +663,9 @@ class Upgrader {
       delete what['within']
     }
 
-		what = this.fix_languages(what)
-		what = this.fix_sets(what)
-		what = this.fix_objects(what)
+		what = this.fix_languages(what);
+		what = this.fix_sets(what);
+		what = this.fix_objects(what);
     return what
   }
 
@@ -869,8 +895,8 @@ class Upgrader {
     return this.process_generic(what);
   }
 
-	process_annotationpage(self, what) {
-		what = this.process_generic(what)
+	process_annotationpage(what) {
+    what = this.process_generic(what)
 		if (what.hasOwnProperty('resources')) {
 			what['items'] = what['resources']
       delete what['resources'];
@@ -899,9 +925,9 @@ class Upgrader {
 
 		let m = what['motivation'] || '';
 		if (m) {
-			if (m.startswith('sc:')) {
+			if (m.startsWith('sc:')) {
 				m = m.replace('sc:', '')
-      } else if (m.startswith('oa:')) {
+      } else if (m.startsWith('oa:')) {
         m = m.replace('oa:', '')
       }
       what['motivation'] = m
@@ -977,7 +1003,7 @@ class Upgrader {
     for (let k in what) {
       let v = what[k];
       if (isArray(v)) {
-        v = v.fiter(vi=>!!vi || vi===0)
+        v = v.filter(vi=>!!vi || vi===0)
       }
       if (v) {
         what2[k] = v
@@ -991,13 +1017,15 @@ class Upgrader {
 		what = this.post_process_generic(what);
 
 		// do ranges at this point, after everything else is traversed
-		tops = []
+    let tops = [];
+    let rhash = {};
+    let structs = [];
 		if (what.hasOwnProperty('structures')) {
 			// Need to process from here, to have access to all info
 		  // needed to unflatten them
-			let rhash = {}
+			
 			what['structures'].forEach(r => {
-				newStruct = this.fix_type(r);
+				let newStruct = this.fix_type(r);
 				newStruct = this.process_range(newStruct);
 				rhash[newStruct['id']] = newStruct
         tops.push(newStruct['id']);
@@ -1023,35 +1051,36 @@ class Upgrader {
 						delete rhash[c['id']]
 						tops.splice(tops.indexOf(c['id']), 1);
 					} else {
-            newits.append(c)
+            newits.push(c);
           }
         })
 				rng['items'] = newits;
 
 				// Harvard has a strange within based pattern
 				// which will now be mapped to partOf
-				if (rng.hasOwnProperty('partOf')) {
-					tops.splice(tops.indexOf(rng['id']),1);
-					let parid = rng['partOf'][0]['id']
-					delete rng['partOf'];
-					let parent = rhash[parid];
-					if (parent) {
-						// Just drop it on the floor?
-						this.warn("Unknown parent range: %s" % parid)
-          } else {
-						// e.g. Harvard has massive duplication of canvases
-						// not wrong, but don't need it any more
-						rng['items'].forEach(child => {
-              parent['items'] = parent['items'].filter(
-                sibling => child['id'] !== sibling['id']
-              )
-            })
-            parent['items'].append(rng)
-          }
-        }
+				// if (rng.hasOwnProperty('partOf')) {
+        //   console.log('rng.partOf', JSON.stringify(rng.partOf));
+				// 	tops.splice(tops.indexOf(rng['id']),1);
+				// 	let parid = rng['partOf'][0]['id'];
+				// 	delete rng['partOf'];
+				// 	let parent = rhash[parid];
+				// 	if (parent) {
+				// 		// Just drop it on the floor?
+				// 		this.warn("Unknown parent range: %s" % parid)
+        //   } else {
+				// 		// e.g. Harvard has massive duplication of canvases
+				// 		// not wrong, but don't need it any more
+				// 		rng['items'].forEach(child => {
+        //       parent['items'] = parent['items'].filter(
+        //         sibling => child['id'] !== sibling['id']
+        //       )
+        //     })
+        //     parent['items'].append(rng)
+        //   }
+        // }
       })
     }
-    let structs = [];
+    
 		if (what.hasOwnProperty('_structures')) {
       structs = what['_structures'];
 			delete what['_structures'];
