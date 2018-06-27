@@ -76,6 +76,7 @@ const FLAGS = {
 
 const isArray = (i) => i instanceof Array;
 const isDictionary = (i) => i instanceof Object && !(i instanceof Array);
+const isIn = (item, array) => (array ||[]).indexOf(item) >= 0;
 
 class Upgrader {
 
@@ -169,8 +170,8 @@ class Upgrader {
     let fn = null;
     for (let k in what) {
       v = what[k];
-      if (k in this.language_properties ||
-          k in this.do_not_traverse) {
+      if (this.language_properties.includes(k)||
+          this.do_not_traverse.includes(k)) {
         //also handled by language_map, etc
         p3version[k] = v
         continue;
@@ -183,7 +184,7 @@ class Upgrader {
 
       if (isDictionary(v)) {
         let keys = Object.keys(v);
-        if (!(keys.length == 2 && 'type' in keys && 'id' in keys)) {
+        if (!(keys.length == 2 && keys.includes('type') && keys.includes('id'))) {
           p3version[k] = fn(v)
         } else {
           p3version[k] = v 
@@ -193,7 +194,7 @@ class Upgrader {
         v.forEach(i => {
           if (isDictionary(i)) {
             let keys = Object.keys(i);
-            if (!(keys.length == 2 && 'type' in keys && 'id' in keys)) {
+            if (!(keys.length == 2 && keys.includes('type') && keys.includes('id'))) {
               p3versionl.push(fn(i));
             } else {
               p3versionl.push(i);
@@ -206,7 +207,10 @@ class Upgrader {
       } else {
         p3version[k] = v
       }
-      if (k in this.language_properties || k in this.do_not_traverse) {
+      if (
+        !this.language_properties.includes(k) && 
+        !this.do_not_traverse.includes(k)
+      ) {
         this.warn(`Unknown property: ${k}`);
       }
     }
@@ -222,16 +226,16 @@ class Upgrader {
         delete what['@context'];
         return what;
       } else if (
-        ctxt in ["http://iiif.io/api/image/1/context.json",
-				"http://library.stanford.edu/iiif/image-api/1.1/context.json"]
+        ["http://iiif.io/api/image/1/context.json",
+				"http://library.stanford.edu/iiif/image-api/1.1/context.json"].includes(ctxt)
       ) {
         what['@type'] = "ImageService1";
 				delete what['@context'];
 				return what;
-      } else if (ctxt in ["http://iiif.io/api/search/1/context.json",
+      } else if (["http://iiif.io/api/search/1/context.json",
 				"http://iiif.io/api/search/0/context.json",
 				"http://iiif.io/api/auth/1/context.json",
-				"http://iiif.io/api/auth/0/context.json"]) {
+				"http://iiif.io/api/auth/0/context.json"].includes(ctxt)) {
 				// handle below in profiles, but delete context here
         delete what['@context'];
       } else if (ctxt === "http://iiif.io/api/annex/openannotation/context.json") {
@@ -246,7 +250,7 @@ class Upgrader {
 		if (what.hasOwnProperty('profile')) {
 			// Auth: CookieService1 , TokenService1
 			let profile = what['profile']
-			if (profile in [
+			if ([
 				"http://iiif.io/api/auth/1/kiosk",
 				"http://iiif.io/api/auth/1/login",
 				"http://iiif.io/api/auth/1/clickthrough",
@@ -255,30 +259,30 @@ class Upgrader {
 				"http://iiif.io/api/auth/0/login",
 				"http://iiif.io/api/auth/0/clickthrough",
 				"http://iiif.io/api/auth/0/external"
-				]) {
+				].includes(profile)) {
 				what['@type'] = 'AuthCookieService1';
         // leave profile alone
       } else if (
-        profile in ["http://iiif.io/api/auth/1/token",
-				"http://iiif.io/api/auth/0/token"]) {
+        ["http://iiif.io/api/auth/1/token",
+				"http://iiif.io/api/auth/0/token"].includes(profile)) {
 				what['@type'] = 'AuthTokenService1'
 			} else if (
-        profile in [
+        [
           "http://iiif.io/api/auth/1/logout",
           "http://iiif.io/api/auth/0/logout"
-        ]) {
+        ].includes(profile)) {
         what['@type'] = 'AuthLogoutService1'
       } else if (
-        profile in [
+        [
           "http://iiif.io/api/search/1/search",
           "http://iiif.io/api/search/0/search"
-        ]) {
+        ].includes(profile)) {
         what['@type'] = "SearchService1"
       } else if (
-        profile in [
+        [
           "http://iiif.io/api/search/1/autocomplete",
           "http://iiif.io/api/search/0/autocomplete"
-        ]) {
+        ].includes(profile)) {
           what['@type'] = "AutoCompleteService1"
       }
     }
@@ -291,9 +295,9 @@ class Upgrader {
 		let t = what['@type'] || '';
     if (t) {
     	if (isArray(t)) {
-				if ('oa:CssStyle' in t) {
+				if (t.includes('oa:CssStyle')) {
           t = "CssStylesheet";
-        } else if ('cnt:ContentAsText' in t) {
+        } else if (t.includes('cnt:ContentAsText')) {
           t = "TextualBody";
         }
       }
@@ -318,7 +322,6 @@ class Upgrader {
 			what['type'] = t
       delete what['@type'];
     }
-    console.log(what['type'], '->', what);
     return what
   }
 
@@ -343,7 +346,7 @@ class Upgrader {
 							p3IString[i['@language']] = [i['@value']]
             } catch (e2) {
 							// Just @value, no @langauge (ucd.ie)
-							if ('@none' in p3IString) {
+							if (p3IString.hasOwnProperty('@none')) {
 								p3IString['@none'].push(i['@value'])
               } else {
                 p3IString['@none'] = [i['@value']]
@@ -453,9 +456,9 @@ class Upgrader {
 			ct = ct.toLowercase();
 			first = ct.split('/')[0]
 
-			if (first in this.content_type_map) {
+			if (this.content_type_map.hasOwnProperty(first)) {
         what['type'] = this.content_type_map[first]
-      } else if (ct in this.content_type_map) {
+      } else if (this.content_type_map.hasOwnProperty(ct)) {
         what['type'] = this.content_type_map[ct]
       } else if (ct.startsWith("application/json") || 
         ct.startsWith("application/ld+json")) {
@@ -524,7 +527,7 @@ class Upgrader {
       let typ = this.object_property_types[p];
       if (what.hasOwnProperty(p)) {
         //let p3version = []
-        if (p in this.set_properties) {
+        if (this.set_properties.includes(p)) {
           // Assumes list :(
           what[p] = what[p].map(v => this.fix_object(v, typ));
         } else {
@@ -776,7 +779,7 @@ class Upgrader {
           // Copy other properties and hand off to _generic
           delete s['canvases']
           Object.keys(s).forEach(k=> {
-            if (!k in ['@id', '@type']) {
+            if (!['@id', '@type'].includes(k)) {
               rng[k] = s[k]
             }
           });
@@ -865,8 +868,10 @@ class Upgrader {
     }
 
 		// Remove redundant 'top' Range
-    if (what.hasOwnProperty('behavior') &&
-      'top' in what['behavior']) {
+    if (
+      what.hasOwnProperty('behavior') &&
+      what['behavior'].hasOwnProperty('top')
+    ) {
 			what['behavior'].splice(what['behavior'].indexOf('top'), 1);
 		  // if we're empty, remove it
 			if (what['behavior'].length === 0) {
@@ -941,7 +946,7 @@ class Upgrader {
 			ss = what['stylesheet']
 			if (isDictionary(ss)) {
 				ss['@type'] = 'oa:CssStylesheet'
-				if ('chars' in ss) {
+				if (ss.hasOwnProperty('chars')) {
 					ss['value'] = ss['chars']
           delete ss['chars'];
         }
@@ -1048,7 +1053,7 @@ class Upgrader {
             c = child;
           }
 
-					if (c['type'] === "Range" && c['id'] in rhash) {
+					if (c['type'] === "Range" && rhash.hasOwnProperty(c['id'])) {
 
           
 						newits.push(rhash[c['id']])

@@ -1,0 +1,1716 @@
+{
+  "logo": [
+    {
+      "id": "https://www.nga.gov/content/dam/ngaweb/imgs/NGAEB.jpg",
+      "type": "Image"
+    }
+  ],
+  "label": {
+    "@none": [
+      "National Gallery of Art Collection Highlights"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "@none": [
+          "Description"
+        ]
+      },
+      "value": {
+        "@none": [
+          "Highlights from the collection of the National Gallery of Art"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "Description"
+        ]
+      },
+      "value": {
+        "@none": [
+          "A selection of highlights from the National Gallery of Art"
+        ]
+      }
+    }
+  ],
+  "guid": "e61700b6-7cb9-4c14-92ab-4246a345ec71",
+  "viewingDirection": "left-to-right",
+  "type": "Manifest",
+  "id": "https://media.nga.gov/public/manifests/nga_highlights.json",
+  "behavior": [
+    "individuals"
+  ],
+  "items": [
+    {
+      "label": {
+        "@none": [
+          "Self-Portrait"
+        ]
+      },
+      "height": 402,
+      "width": 307,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/106382.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/e945bc8a-a409-458d-9fa5-d1d6e8212b6e",
+              "target": "https://media.nga.gov/public/manifests/canvas/106382.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 307,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/4dd94854-6e7d-43d7-a710-3edae7a7e358"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Flower Beds in Holland"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1883"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 2086,
+      "width": 3350,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/61371.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/6870b81b-b92c-469d-9553-4ed1c62760e1",
+              "target": "https://media.nga.gov/public/manifests/canvas/61371.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 325,
+                "width": 443,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/bf3b5adc-d71e-4d69-88c1-a8c90d142d67"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Farmhouse in Provence"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1888"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 334,
+      "width": 441,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/52178.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/b07c6f7d-57c6-49f3-b642-3dad67409c59",
+              "target": "https://media.nga.gov/public/manifests/canvas/52178.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 334,
+                "width": 441,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/24b24924-9814-4d27-8051-61b27bc45bde"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "La Mousme"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1888"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 401,
+      "width": 330,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/46626.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/38db7a77-e28d-468a-9f00-459c1a386f61",
+              "target": "https://media.nga.gov/public/manifests/canvas/46626.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 2088,
+                "width": 3348,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/9271352f-a798-46b0-8ef9-86be3c23b6ca"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "The Feast of the Gods"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1513"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 439,
+      "width": 401,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/1138.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/a81c96ae-1231-4b7e-b181-4f405ca005ba",
+              "target": "https://media.nga.gov/public/manifests/canvas/1138.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 439,
+                "width": 401,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/e54a505b-d5b6-4e43-8122-f4d4deafb956"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Marchesa Brigida Spinola Doria"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1606"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 400,
+      "width": 260,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/46159.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/9a62c314-410a-4e85-82dd-af39ed83415a",
+              "target": "https://media.nga.gov/public/manifests/canvas/46159.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 260,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/cd345dbe-7f9a-4c88-8e93-16f5d6c792ad"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Laocoon"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1610"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 351,
+      "width": 443,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/33253.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/ee9b77a4-a414-431f-a1f2-4d5551d79f92",
+              "target": "https://media.nga.gov/public/manifests/canvas/33253.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 351,
+                "width": 443,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/70492971-7834-4cc1-a2e9-df652116ed9a"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Marchesa Elena Grimaldi Cattaneo"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1623"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 401,
+      "width": 224,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/1231.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/ea143f54-5263-4879-b285-25efc323c3c8",
+              "target": "https://media.nga.gov/public/manifests/canvas/1231.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 401,
+                "width": 224,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/5f10f2b8-dd33-4029-8d08-663ba6ccbf88"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Self-Portrait"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1603"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 400,
+      "width": 352,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/37003.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/b4f5540f-6f8b-41aa-b308-f9e432349821",
+              "target": "https://media.nga.gov/public/manifests/canvas/37003.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 352,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/526f23a6-4c4b-45e0-b622-7767b0ef13f7"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "The Maas at Dordrecht"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1650"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 298,
+      "width": 442,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/576.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/6600065f-0456-4c31-b342-25b0df169313",
+              "target": "https://media.nga.gov/public/manifests/canvas/576.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 298,
+                "width": 442,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0058fe1b-78b4-46ae-a0a4-fa5c280a50d9"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Self-Portrait"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1659"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 402,
+      "width": 312,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/79.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/e929bfd1-f2a1-4b35-9653-87311db5bbd9",
+              "target": "https://media.nga.gov/public/manifests/canvas/79.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 312,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0d1518ba-ea26-483a-9e6b-cd98d715d4de"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Woman Holding a Balance"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1664"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 401,
+      "width": 355,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/1236.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/e918c89d-dd5d-416b-923d-a18d256130bf",
+              "target": "https://media.nga.gov/public/manifests/canvas/1236.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 401,
+                "width": 355,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/2bc3211b-10b8-4867-a042-076edf75489f"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Young Girl Reading"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1770"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 401,
+      "width": 355,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/46303.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/976f0c11-80f7-450e-8fe0-30cdce3128a2",
+              "target": "https://media.nga.gov/public/manifests/canvas/46303.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 401,
+                "width": 355,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/31fdea96-0fb5-4927-b92c-380f930d31bd"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Watson and the Shark"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1778"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 351,
+      "width": 441,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/46471.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/249b11ef-553a-4022-882c-832383ef2a99",
+              "target": "https://media.nga.gov/public/manifests/canvas/46471.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 351,
+                "width": 441,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/5061fd63-0ba1-4499-aa8f-29b8fa6e4fc7"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "The Emperor Napoleon in His Study at the Tuileries"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1812"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 402,
+      "width": 245,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/46114.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/2d004334-4ca6-4930-b0e9-bb2413b32d2b",
+              "target": "https://media.nga.gov/public/manifests/canvas/46114.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 245,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/f33921f9-3077-49d7-a78b-85e60e75b963"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Wivenhoe Park, Essex"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1816"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 240,
+      "width": 443,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/1147.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/23c95b74-2279-4758-9174-64ff67fd71f4",
+              "target": "https://media.nga.gov/public/manifests/canvas/1147.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 240,
+                "width": 443,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/d99df0d2-03c2-4bda-b927-5a6606d5d21f"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Keelmen Heaving in Coals by Moonlight"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1835"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 329,
+      "width": 441,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/1225.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/1ba17f47-4124-4ebc-a7e3-5e96ece1c62b",
+              "target": "https://media.nga.gov/public/manifests/canvas/1225.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 329,
+                "width": 441,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0f30ab16-c790-4fde-9442-683772700a89"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "The Voyage of Life: Childhood"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1842"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 299,
+      "width": 441,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/52450.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/597d0833-3170-42e9-9ad1-d9a46fe5037e",
+              "target": "https://media.nga.gov/public/manifests/canvas/52450.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 299,
+                "width": 441,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/159fc819-51a2-4fc8-962e-9153ab35927b"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Symphony in White, No. 1: The White Girl"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1862"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 402,
+      "width": 201,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/12198.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/f7238066-322d-4af7-a510-4d3edcf2adde",
+              "target": "https://media.nga.gov/public/manifests/canvas/12198.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 201,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/23b358ba-fad1-4212-927c-63bda8d95f08"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "The Railway"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1873"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 360,
+      "width": 442,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/43624.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/49016608-7eca-47ee-b6ec-9a8f6b336836",
+              "target": "https://media.nga.gov/public/manifests/canvas/43624.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 360,
+                "width": 442,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/af92dc02-6562-4142-96f5-d3a6d771669e"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "The Japanese Footbridge"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1899"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 356,
+      "width": 441,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/74796.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/951eb806-f6c8-4060-9ae6-a74dc6f6ccce",
+              "target": "https://media.nga.gov/public/manifests/canvas/74796.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 356,
+                "width": 441,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/3d496f84-0d15-4343-8a7e-8e5550ebff07"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "The Olive Orchard"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1889"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 349,
+      "width": 442,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/46627.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/72f589eb-4172-44c5-9e7f-3308eedc8595",
+              "target": "https://media.nga.gov/public/manifests/canvas/46627.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 349,
+                "width": 442,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/27037126-8d03-4427-8db0-5d2461aea9c8"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Forty-two Kids"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1907"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 349,
+      "width": 442,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/134485.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/96f07bba-3720-4f7c-9725-0702835aff64",
+              "target": "https://media.nga.gov/public/manifests/canvas/134485.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 305,
+                "width": 441,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/42afa428-1021-44d2-a283-da794d86bc89"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Woman Viewed from Behind (Visit to a Museum)"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "c. 1879-1885"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 400,
+      "width": 372,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/66409.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/77538d51-748c-454e-b38e-e9600950a1d6",
+              "target": "https://media.nga.gov/public/manifests/canvas/66409.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 372,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/1314e5e0-eb22-4b21-b6d2-28e717384ffc"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Portrait of a Gentleman"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1520"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 400,
+      "width": 300,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/398.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/01faa558-8ec0-4675-a4d8-69d1ac7509bf",
+              "target": "https://media.nga.gov/public/manifests/canvas/398.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 300,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0bcf9e58-edf4-4664-be27-5453af281837"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": [
+          "Still Life of Oranges and Lemons with Blue Gloves"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": [
+              "Date"
+            ]
+          },
+          "value": {
+            "@none": [
+              "1889"
+            ]
+          }
+        },
+        {
+          "label": {
+            "@none": [
+              "Description"
+            ]
+          },
+          "value": {
+            "@none": [
+              "Painting"
+            ]
+          }
+        }
+      ],
+      "height": 340,
+      "width": 441,
+      "type": "Canvas",
+      "id": "https://media.nga.gov/public/manifests/canvas/164923.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/1c8677af-aee7-4c61-8989-49be43c62b15",
+              "target": "https://media.nga.gov/public/manifests/canvas/164923.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 340,
+                "width": 441,
+                "service": [
+                  {
+                    "@id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif",
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "@type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif/full/full/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/cbf22243-c2ed-4c98-87bd-13c6ae7109f6"
+        }
+      ]
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

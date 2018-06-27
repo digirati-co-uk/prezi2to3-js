@@ -1,0 +1,156 @@
+{
+  "within": [],
+  "@type": "sc:Manifest",
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "description": "Het document bevat een overeenkomst tussen een corporatie en haar leiders. De leden van de corporatie van jagers (en waarschijnlijk ook van vissers) gaan de verbintenis aan t.o.v. Flavius Hermauos en Flavius Dios, hen als hun chefs te erkennen voor de duu",
+  "@id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
+  "license": "http://rightsstatements.org/vocab/UND/1.0/",
+  "related": {
+    "@id": "https://lib.ugent.be/viewer/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
+    "format": "text/html"
+  },
+  "metadata": [
+    {
+      "label": "Record",
+      "value": "<a href=\"https://lib.ugent.be/catalog/rug01%3A001484515/items/800000096237\">https://lib.ugent.be/catalog/rug01%3A001484515/items/800000096237</a>"
+    },
+    {
+      "value": "[papyrus] Document uit het archief van de dichter Dioskoros van Aphrodite (?).",
+      "label": "Title"
+    },
+    {
+      "value": "34 regels ; 29 x 72,5 cm.",
+      "label": "Description"
+    },
+    {
+      "label": "Description",
+      "value": "Papyrus"
+    },
+    {
+      "value": "537-538?",
+      "label": "Publisher"
+    },
+    {
+      "label": "Provenance",
+      "value": "BHSL.PAP.000044 Herkomst: Aphrodit\u00f4"
+    },
+    {
+      "label": "Contents",
+      "value": "Het document bevat een overeenkomst tussen een corporatie en haar leiders. De leden van de corporatie van jagers (en waarschijnlijk ook van vissers) gaan de verbintenis aan t.o.v. Flavius Hermauos en Flavius Dios, hen als hun chefs te erkennen voor de duu"
+    },
+    {
+      "value": "archive.ugent.be:4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
+      "label": "Object ID"
+    }
+  ],
+  "seeAlso": {
+    "dcterms:format": "application/marcxml+xml",
+    "@id": "https://lib.ugent.be/catalog/rug01%3A001484515.marcxml"
+  },
+  "attribution": "Provided by Ghent University Library",
+  "thumbnail": {
+    "@id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg",
+    "@type": "dctypes:Image"
+  },
+  "label": "Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]",
+  "sequences": [
+    {
+      "startCanvas": "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+      "rendering": [
+        {
+          "label": "Download all images (562.38 MB)",
+          "@id": "https://lib.ugent.be/catalog/rug01%3A001484515/requests/new?objectid=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
+          "format": "application/zip"
+        }
+      ],
+      "viewingDirection": "left-to-right",
+      "@id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/sequences/0",
+      "canvases": [
+        {
+          "thumbnail": {
+            "@id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg",
+            "@type": "dctypes:Image"
+          },
+          "@id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+          "height": 15076,
+          "label": "1",
+          "license": "http://rightsstatements.org/vocab/UND/1.0/",
+          "width": 6215,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level1.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1"
+                },
+                "@id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/full/full/0/native.jpg",
+                "width": 6215,
+                "format": "image/jpeg",
+                "height": 15076,
+                "@type": "dctypes:Image",
+                "label": "BHSL-PAP-000044_2010_0001_AC.jp2"
+              },
+              "@id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1/image-annotations/0",
+              "@type": "oa:Annotation"
+            }
+          ],
+          "attribution": "Provided by Ghent University Library",
+          "rendering": [
+            {
+              "@id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1&svc_id=original",
+              "format": "image/jp2",
+              "label": "Download as jpeg2000 (78.77 MB)"
+            }
+          ]
+        },
+        {
+          "width": 6235,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "@id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3/image-annotations/0",
+              "@type": "oa:Annotation",
+              "on": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "profile": "http://iiif.io/api/image/2/level1.json",
+                  "@id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3"
+                },
+                "@type": "dctypes:Image",
+                "label": "BHSL-PAP-000044_2010_0002_AC.jp2",
+                "height": 15036,
+                "width": 6235,
+                "format": "image/jpeg",
+                "@id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "rendering": [
+            {
+              "label": "Download as jpeg2000 (78.29 MB)",
+              "format": "image/jp2",
+              "@id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3&svc_id=original"
+            }
+          ],
+          "attribution": "Provided by Ghent University Library",
+          "@id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
+          "thumbnail": {
+            "@type": "dctypes:Image",
+            "@id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/0,0,6235,15036/226,/0/default.jpg"
+          },
+          "height": 15036,
+          "label": "2",
+          "license": "http://rightsstatements.org/vocab/UND/1.0/"
+        }
+      ],
+      "@type": "sc:Sequence"
+    }
+  ],
+  "logo": "http://adore.ugent.be/IIIF/img/logo_i.svg"
+}
