@@ -3,11 +3,6 @@
 // IIIF Presentation API version 2 to version 3 upgrader
 //
 
-// import json
-// import requests
-// import uuid
-// from collections import OrderedDict
-
 import { v4 as uuid4 } from 'uuid';
 
 const FLAGS = {
@@ -76,17 +71,17 @@ const FLAGS = {
 
 const isArray = (i) => i instanceof Array;
 const isDictionary = (i) => i instanceof Object && !(i instanceof Array);
-const isIn = (item, array) => (array ||[]).indexOf(item) >= 0;
 
 class Upgrader {
 
   constructor(flags={}) {
+    // bind all functions... 
     for (let key in this) {
       if (typeof this[key]==='function') {
         this[key] = this[key].bind(this);
       }
-      //console.log(key, typeof this[key]);
     }
+    // add properties
     let info = null;
     for (let flag in FLAGS) {
         info = FLAGS[flag]
@@ -159,7 +154,6 @@ class Upgrader {
   }
 
 	mint_uri() {
-    console.log('mint_uri');
     const new_uuid = uuid4();
     return `https://example.org/uuid/${new_uuid}`;
   }
@@ -286,7 +280,6 @@ class Upgrader {
           what['@type'] = "AutoCompleteService1"
       }
     }
-
     return what
   }
 
