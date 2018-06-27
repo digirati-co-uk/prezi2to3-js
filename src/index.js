@@ -215,7 +215,7 @@ class Upgrader {
 	fix_service_type(what) {
 		// manage known service contexts
 		if (what.hasOwnProperty('@context')) {
-			ctxt = what['@context']
+			let ctxt = what['@context']
 			if (ctxt === "http://iiif.io/api/image/2/context.json") {
         what['@type'] = "ImageService2";
         delete what['@context'];
@@ -244,7 +244,7 @@ class Upgrader {
 
 		if (what.hasOwnProperty('profile')) {
 			// Auth: CookieService1 , TokenService1
-			profile = what['profile']
+			let profile = what['profile']
 			if (profile in [
 				"http://iiif.io/api/auth/1/kiosk",
 				"http://iiif.io/api/auth/1/login",
@@ -585,8 +585,8 @@ class Upgrader {
       delete what['license']
     }
 		if (what.hasOwnProperty('attribution')) {
-			label = this.do_language_map(this.attribution_label)
-			val = this.do_language_map(what['attribution'])
+			let label = this.do_language_map(this.attribution_label)
+			let val = this.do_language_map(what['attribution'])
 			what['requiredStatement'] = {"label": label, "value": val}
       delete what['attribution']
     }
@@ -622,7 +622,7 @@ class Upgrader {
     }
 		if (what.hasOwnProperty('related')) {
 			let rels = what['related']
-			if (isArray(rels)) {
+			if (!isArray(rels)) {
         rels = [rels]
       }
       rels.forEach(rel => {
@@ -632,6 +632,8 @@ class Upgrader {
             what['homepage'] = {'@id': rel}
           } 
         } else {
+          let uri = '';
+          let label = '';
           if (isDictionary(rel)) {
 						uri = rel['@id']
 						if (rel.hasOwnProperty('label')) {
@@ -753,7 +755,7 @@ class Upgrader {
         seqs.forEach(s => {
           // XXX Test here to see if we need to crawl
 
-          let rng = {"id": s.get('@id', this.mint_uri()), "type": "Range"}
+          let rng = {"id": s['@id'] || this.mint_uri(), "type": "Range"}
           rng['behavior'] = ['sequence'];
           rng['items'] = s['canvases'].map(c => {
             if (isDictionary(c)) {

@@ -6,5 +6,11 @@ module.exports = {
       global: 'y',
       externals: {}
     }
+  },
+  karma: {
+    extra: {
+      browserDisconnectTimeout: 10000000,
+      browserNoActivityTimeout: 10000000,
+    }
   }
 }
