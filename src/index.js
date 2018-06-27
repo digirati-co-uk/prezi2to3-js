@@ -158,6 +158,7 @@ class Upgrader {
   }
 
 	mint_uri() {
+    console.log('mint_uri');
     const new_uuid = uuid4();
     return `https://example.org/uuid/${new_uuid}`;
   }
@@ -286,7 +287,7 @@ class Upgrader {
   }
 
 	fix_type(what) {
-		// Called from process_resource so we can switch
+    // Called from process_resource so we can switch
 		let t = what['@type'] || '';
     if (t) {
     	if (isArray(t)) {
@@ -309,14 +310,15 @@ class Upgrader {
 			if (t === "Layer") {
         t = "AnnotationCollection"
       }
-			else if (t == "AnnotationList") {
+			else if (t === "AnnotationList") {
         t = "AnnotationPage"
-      } else if (t == "cnt:ContentAsText") {
+      } else if (t === "cnt:ContentAsText") {
         t = "TextualBody"
       }
 			what['type'] = t
       delete what['@type'];
     }
+    console.log(what['type'], '->', what);
     return what
   }
 
@@ -568,7 +570,7 @@ class Upgrader {
           l = l['@id']
         }
         if (!done && 
-          (l.indexOf('creativecommons.org/') >-1 || 
+          (l.indexOf('creativecommons.org/') > -1 || 
             l.indexOf('rightsstatements.org/') > -1)
         ) {
           // match
@@ -882,13 +884,13 @@ class Upgrader {
 
 	process_canvas(what) {
 		// XXX process otherContent here before generic grabs it
-		what = this.process_generic(what);
-		if (what.hasOwnProperty('images')) {
+    what = this.process_generic(what);
+    if (what.hasOwnProperty('images')) {
       what['items'] = [{
         'type': 'AnnotationPage', 
-        'items': what['images'].map(anno=>anno)
+        'items': what['images'].map(anno=>JSON.parse(JSON.stringify(anno)))
       }]
-			delete what['images']
+      delete what['images']
     }
     return what;
   }
@@ -902,7 +904,7 @@ class Upgrader {
 		if (what.hasOwnProperty('resources')) {
 			what['items'] = what['resources']
       delete what['resources'];
-    } else if (what.hasOwnProperty('items')) {
+    } else if (!what.hasOwnProperty('items')) {
       what['items'] = []
     }
     return what;
