@@ -4,7 +4,7 @@ import Upgrader from 'src/index'
 
 const TEST_URLS = [
   //"http://iiif.io/api/presentation/2.1/example/fixtures/collection.json",
-  "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json",
+  //"http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json",
   "http://iiif.io/api/presentation/2.0/example/fixtures/list/65/list1.json",
   "http://media.nga.gov/public/manifests/nga_highlights.json",
   "https://iiif.lib.harvard.edu/manifests/drs:48309543",
@@ -31,7 +31,15 @@ const TEST_URLS = [
   "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/manifest.json"
 ];
 
-
+const UUID_START = 'https://example.org/uuid/';
+const processUUIDs = (jsonObject) => {
+  let uidIdx = 0;
+  return JSON.stringify(jsonObject, (k, v) => {
+    if (k === 'id' && typeof v == 'string' && v.startsWith(UUID_START)) {
+      return 'uuid' + (uidIdx++);
+    } 
+  })
+};
 
 describe('prezi2to3', () => {
   
@@ -55,9 +63,9 @@ describe('prezi2to3', () => {
       let results = upgrader.process_resource(window.__json__[input_manifest], true);
       
       expect(
-        JSON.stringify(results)
+        processUUIDs(results)
       ).toBe(
-        JSON.stringify(window.__json__[output_manifest])
+        processUUIDs(window.__json__[output_manifest])
       );  
       
     })
