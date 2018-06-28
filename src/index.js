@@ -785,7 +785,6 @@ class Upgrader {
   process_range(what) {
     what = this.process_generic(what);
 
-    let members = what['members'] || [];
     if (what.hasOwnProperty('items')) {
       // preconfigured, move right along
       //pass
@@ -1063,10 +1062,10 @@ class Upgrader {
         // which will now be mapped to partOf
         if (rng.hasOwnProperty('partOf')) {
           tops.splice(tops.indexOf(rng['id']),1);
-        	let parid = rng['partOf'][0]['id'];
-        	delete rng['partOf'];
-        	let parent = rhash[parid];
-        	if (parent) {
+          let parid = rng['partOf'][0]['id'];
+          delete rng['partOf'];
+          let parent = rhash[parid];
+          if (!parent) {
         		// Just drop it on the floor?
         		this.warn("Unknown parent range: %s" % parid)
           } else {

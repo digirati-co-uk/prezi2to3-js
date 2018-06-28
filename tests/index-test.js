@@ -9,7 +9,7 @@ const TEST_URLS = [
   "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json",
   "http://iiif.io/api/presentation/2.0/example/fixtures/list/65/list1.json",
   "http://media.nga.gov/public/manifests/nga_highlights.json",
-  //"https://iiif.lib.harvard.edu/manifests/drs:48309543",
+  "https://iiif.lib.harvard.edu/manifests/drs:48309543",
   "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
   //"http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/manifest",
   "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E/manifest.json",
