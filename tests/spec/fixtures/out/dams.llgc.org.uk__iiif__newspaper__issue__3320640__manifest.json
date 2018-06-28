@@ -734,7 +734,7 @@
   "id": "http://dams.llgc.org.uk/iiif/newspaper/issue/3320640/manifest.json",
   "partOf": [
     {
-      "id": "https://example.org/uuid/69d8e4a1-805d-4186-a8fc-8395b6a595d1"
+      "id": "https://example.org/uuid/b9266e5e-dce7-4573-bbe0-4d5fcfb3765d"
     }
   ],
   "items": [
@@ -830,7 +830,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/fdaebabc-f418-47c4-9f75-cb7d756e3060"
+          "id": "https://example.org/uuid/ec95f4c0-c401-491f-84e9-f2f303bb4c05"
         }
       ]
     },
@@ -926,7 +926,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3922e356-21b6-44a9-b87f-6cb1dc95b7b8"
+          "id": "https://example.org/uuid/60b3d420-8060-4ac2-8d33-26e33a04bd9b"
         }
       ]
     },
@@ -1102,7 +1102,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f38843ec-4a0d-4164-b3c3-e51dd07b783c"
+          "id": "https://example.org/uuid/d1b20b85-87a3-4c19-9234-7f1ad3dcb866"
         }
       ]
     },
@@ -1238,7 +1238,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2b4b9385-3010-4608-a027-0b226a46e43e"
+          "id": "https://example.org/uuid/b8262feb-6406-47de-b96a-17f2702e906a"
         }
       ]
     }

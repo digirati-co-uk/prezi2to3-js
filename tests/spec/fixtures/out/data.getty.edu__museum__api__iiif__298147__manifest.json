@@ -171,7 +171,7 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/71a3ea04-dbdd-4d2d-910a-916726f64300"
+      "id": "https://example.org/uuid/497437f1-414f-424c-adb5-952f51624c91"
     }
   ],
   "items": [
@@ -216,7 +216,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4c833714-3c75-4e27-8b91-c2ae2d3c05eb"
+          "id": "https://example.org/uuid/e83c5fd5-22f3-4042-8f2d-d6bc0e21a35c"
         }
       ]
     }

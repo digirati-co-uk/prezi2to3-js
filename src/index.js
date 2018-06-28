@@ -75,6 +75,7 @@ const isDictionary = (i) => i instanceof Object && !(i instanceof Array);
 class Upgrader {
 
   constructor(flags={}) {
+    //console.log('Updater->flags',flags);
     // bind all functions...
     for (let key in this) {
       if (typeof this[key]==='function') {
@@ -85,8 +86,11 @@ class Upgrader {
     let info = null;
     for (let flag in FLAGS) {
         info = FLAGS[flag]
-        this[info['prop']] = flags[flag] || info['default'];
+        this[info['prop']] = flags.hasOwnProperty(flag) ? 
+          flags[flag] : 
+          info['default'];
     }
+    //console.log('Updater->deref_links',this.deref_links);
 
     this.id_type_hash = {}
     this.language_properties = ['label', 'summary']
@@ -113,10 +117,10 @@ class Upgrader {
     this.object_property_types = {
       "thumbnail": "Image",
       "logo":"Image",
-      "homepage": "",
-      "rendering": "",
+      "homepage": null,
+      "rendering": null,
       "seeAlso": "Dataset",
-      "partOf": ""
+      "partOf": null
     }
 
     this.content_type_map = {
@@ -178,7 +182,7 @@ class Upgrader {
 
       if (isDictionary(v)) {
         let keys = Object.keys(v);
-        if (!(keys.length == 2 && keys.includes('type') && keys.includes('id'))) {
+        if (!(keys.length === 2 && keys.includes('type') && keys.includes('id'))) {
           p3version[k] = fn(v)
         } else {
           p3version[k] = v
@@ -188,7 +192,7 @@ class Upgrader {
         v.forEach(i => {
           if (isDictionary(i)) {
             let keys = Object.keys(i);
-            if (!(keys.length == 2 && keys.includes('type') && keys.includes('id'))) {
+            if (!(keys.length === 2 && keys.includes('type') && keys.includes('id'))) {
               p3versionl.push(fn(i));
             } else {
               p3versionl.push(i);
@@ -332,39 +336,31 @@ class Upgrader {
     } else if (isArray(value)) {
       value.forEach(i => {
         if (isDictionary(i)) {
-          try {
-            p3IString[i['@language']].push(i['@value'])
-          } catch (e1) {
-            try {
-              p3IString[i['@language']] = [i['@value']]
-            } catch (e2) {
-              // Just @value, no @langauge (ucd.ie)
-              if (p3IString.hasOwnProperty('@none')) {
-                p3IString['@none'].push(i['@value'])
-              } else {
-                p3IString['@none'] = [i['@value']]
-              }
-            }
+          let lang = i['@language'] || '@none';
+          // if (!i.hasOwnProperty('@language')) {
+          //   i['@language'] = '@none';
+          // }
+          if (!p3IString.hasOwnProperty(lang)) {
+            p3IString[lang] = []
           }
+          //console.log(p3IString, p3IString[lang], lang);
+          p3IString[lang].push(i['@value']);
         } else if (isArray(i)) {
           //pass
-        } else if (isDictionary(i)) {
+        } /*else if (isDictionary(i)) {
+          let lang = i['@language'] || '@none';
           // UCD has just {"@value": ""}
-          if (!i.hasOwnProperty('@language')) {
-            i['@language'] = '@none'
+          if (!p3IString.hasOwnProperty(lang)) {
+            p3IString[lang] = [];
           }
-          try {
-            p3IString[i['@language']].append(i['@value'])
-          } catch(e3) {
-            p3IString[i['@language']] = [i['@value']]
-          }
-        } else {
+          console.log(p3IString[lang], lang);
+          p3IString[lang].push(i['@value']);
+        }*/ else {
           // string value
-          try {
-            p3IString[defl].append(i)
-          } catch (e4) {
-            p3IString[defl] = [i]
+          if (!p3IString.hasOwnProperty(defl)) {
+            p3IString[defl] = []
           }
+          p3IString[defl].push(i);
         }
       });
     } else {
@@ -416,7 +412,7 @@ class Upgrader {
   //   }));
   //   return head;
   // }
-  get_head() {
+  get_header(uri) {
     let request = new XMLHttpRequest();
     request.open('HEAD', uri, false);  // `false` makes the request synchronous
     request.send(null);
@@ -424,14 +420,11 @@ class Upgrader {
       return {
         headers: {
           get: (headerName) => request.getResponseHeader(headerName)
-        }
+        },
+        status: request.status
       };
     } else {
-      return {
-        headers: {
-          get: (headerName) => ""
-        }
-      };
+      return null;
     }
   }
 
@@ -439,15 +432,15 @@ class Upgrader {
     let h = null;
     // do a HEAD on the resource and look at Content-Type
     try {
-      h = get_head(what['id']);
+      h = this.get_header(what['id']);
     } catch (ex) {
-
+      
     }
     if (h && h.status == 200) {
-      ct = h.headers.get('content-type')
+      let ct = h.headers.get('content-type')
       what['format'] = ct  // as we have it...
-      ct = ct.toLowercase();
-      first = ct.split('/')[0]
+      ct = ct.toLowerCase();
+      let first = ct.split('/')[0];
 
       if (this.content_type_map.hasOwnProperty(first)) {
         what['type'] = this.content_type_map[first]
@@ -456,7 +449,8 @@ class Upgrader {
       } else if (ct.startsWith("application/json") ||
         ct.startsWith("application/ld+json")) {
         // Try and fetch and look for a type!
-        data = this.retrieve_resource(v['id'])
+        let data = this.retrieve_resource(what['id'])
+
         if (data.hasOwnProperty('type')) {
           what['type'] = data['type']
         } else if (data.hasOwnProperty('@type')) {
@@ -468,6 +462,7 @@ class Upgrader {
   }
 
   fix_object(what, typ) {
+    //console.log('fix_object', what, typ, this.deref_links);
     if (!isDictionary(what)) {
       what = {'id': what}
     }
@@ -485,7 +480,7 @@ class Upgrader {
       if (this.id_type_hash.hasOwnProperty(myid)) {
         what['type'] = this.id_type_hash[myid]
       } else if (this.deref_links) {
-        this.set_remote_type(myid)
+        this.set_remote_type(what);
       } else {
         // Try to guess from format
         if (what.hasOwnProperty('format')) {
@@ -516,6 +511,7 @@ class Upgrader {
   }
 
   fix_objects(what) {
+    //console.log('fix_objects', what);
     for (var p in this.object_property_types) {
       let typ = this.object_property_types[p];
       if (what.hasOwnProperty(p)) {
@@ -624,11 +620,13 @@ class Upgrader {
         rels = [rels]
       }
       rels.forEach(rel => {
-        if (!this.related_is_metadata && rel == rels[0]) {
+        //console.log(rels, rels[0], rel)
+        if (!this.related_is_metadata && rel === rels[0]) {
           // Assume first is homepage, rest to metadata
           if (!isDictionary(rel)) {
-            what['homepage'] = {'@id': rel}
+            rel = {'@id': rel}
           }
+          what['homepage'] = rel
         } else {
           let uri = '';
           let label = '';
@@ -644,7 +642,7 @@ class Upgrader {
           // NB this must happen before fix_languages
           md.push({
             label: 'Related',
-            value: `<a href="${uri}">${label}</a>`
+            value: '<a href=\'' + uri + '\'>' + label + '</a>'
           })
           what['metadata'] = md
         }
@@ -662,10 +660,11 @@ class Upgrader {
       what['partOf'] = what['within']
       delete what['within']
     }
-
+    //console.log('partOf<-fix_objects', JSON.stringify(what));
     what = this.fix_languages(what);
     what = this.fix_sets(what);
     what = this.fix_objects(what);
+    //console.log('partOf->fix_objects', JSON.stringify(what));
     return what
   }
 
@@ -795,7 +794,7 @@ class Upgrader {
       let its = what['members'];
       delete what['members'];
       what['items'] = its.map(i => {
-        if (isDictionary(i)) {
+        if (!isDictionary(i)) {
           // look in id/type hash
           if (this.id_type_hash.hasOwnProperty(i)) {
             return {
@@ -813,7 +812,7 @@ class Upgrader {
       let nl = []
       let rngs = what['ranges'] || [];
       nl = rngs.map(r => {
-        if (isDictionary(r)) {
+        if (!isDictionary(r)) {
           return {'id': r, 'type': 'Range'};
         } else if (!r.hasOwnProperty('type')) {
           r['type'] = 'Range';
@@ -824,7 +823,7 @@ class Upgrader {
       let cvs = what['canvases'] || [];
       nl = nl.concat(
         cvs.map(c => {
-          if (isDictionary(c)) {
+          if (!isDictionary(c)) {
             return {'id': c, 'type': 'Canvas'}
           } else if (c.hasOwnProperty('type')) {
             c['type'] = 'Canvas'
@@ -1036,7 +1035,7 @@ class Upgrader {
       let newits = [];
       what['structures'].forEach(rng => {
         // first try to include our Range items
-
+        newits = [];
         rng['items'].forEach(child => {
           let c = {};
           if (child.hasOwnProperty("@id")) {
@@ -1060,26 +1059,26 @@ class Upgrader {
 
         // Harvard has a strange within based pattern
         // which will now be mapped to partOf
-        // if (rng.hasOwnProperty('partOf')) {
-        //   console.log('rng.partOf', JSON.stringify(rng.partOf));
-        // 	tops.splice(tops.indexOf(rng['id']),1);
-        // 	let parid = rng['partOf'][0]['id'];
-        // 	delete rng['partOf'];
-        // 	let parent = rhash[parid];
-        // 	if (parent) {
-        // 		// Just drop it on the floor?
-        // 		this.warn("Unknown parent range: %s" % parid)
-        //   } else {
-        // 		// e.g. Harvard has massive duplication of canvases
-        // 		// not wrong, but don't need it any more
-        // 		rng['items'].forEach(child => {
-        //       parent['items'] = parent['items'].filter(
-        //         sibling => child['id'] !== sibling['id']
-        //       )
-        //     })
-        //     parent['items'].append(rng)
-        //   }
-        // }
+        if (rng.hasOwnProperty('partOf')) {
+          //console.log('rng.partOf', JSON.stringify(rng.partOf));
+        	tops.splice(tops.indexOf(rng['id']),1);
+        	let parid = rng['partOf'][0]['id'];
+        	delete rng['partOf'];
+        	let parent = rhash[parid];
+        	if (parent) {
+        		// Just drop it on the floor?
+        		this.warn("Unknown parent range: %s" % parid)
+          } else {
+        		// e.g. Harvard has massive duplication of canvases
+        		// not wrong, but don't need it any more
+        		rng['items'].forEach(child => {
+              parent['items'] = parent['items'].filter(
+                sibling => child['id'] !== sibling['id']
+              )
+            })
+            parent['items'].append(rng)
+          }
+        }
       })
     }
 

@@ -193,7 +193,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/8e158d26-f64b-4a86-b773-a562ea9efca0",
+              "id": "https://example.org/uuid/54539387-fa16-4e58-992f-aa40bb598cb3",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981394",
               "body": {
                 "format": "image/jpeg",
@@ -213,7 +213,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/e390ea3f-3b3f-4d06-aaa8-f9590c760e48",
+              "id": "https://example.org/uuid/45611a6a-41fb-4ecb-bf6c-475069e45852",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981394#xywh=3949,994,1091,1232",
               "body": {
                 "format": "image/jpeg",
@@ -231,7 +231,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e64e32b9-1a1e-4d0b-959f-7fd5e07694e7"
+          "id": "https://example.org/uuid/fc341967-7c7a-433b-922e-865003069d68"
         }
       ]
     },
@@ -252,7 +252,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/9e427c64-e754-45e3-aa4c-af83ae61e118",
+              "id": "https://example.org/uuid/4f6f8c1d-f79a-419a-b89f-d9028fc0627b",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981395",
               "body": {
                 "format": "image/jpeg",
@@ -272,7 +272,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/f1807ba7-40bf-452d-a151-73719029cdb6",
+              "id": "https://example.org/uuid/bae95be8-5a87-462e-bdaf-aab98e0fee95",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981395#xywh=2618,927,1080,1224",
               "body": {
                 "format": "image/jpeg",
@@ -290,7 +290,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3c990e4c-8d0a-4d56-b56b-86f4438f0b1c"
+          "id": "https://example.org/uuid/22c2dd74-52f7-43da-9dce-fb071e773253"
         }
       ]
     },
@@ -311,7 +311,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/145d5618-6c98-474e-bc73-7a8e3934ec62",
+              "id": "https://example.org/uuid/9c958230-fd2c-440c-8412-1dca46899d4c",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981406",
               "body": {
                 "format": "image/jpeg",
@@ -331,7 +331,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/34b14b1c-7fe8-431a-ac39-733b83d4e4ac",
+              "id": "https://example.org/uuid/89b1a927-54ed-4fa3-a321-9050f3aac487",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981406#xywh=3953,927,1078,1045",
               "body": {
                 "format": "image/jpeg",
@@ -349,7 +349,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3b7defbd-f115-4137-af09-c5756412c6c5"
+          "id": "https://example.org/uuid/919b691b-0388-4e43-8f7f-8506df2ee22c"
         }
       ]
     },
@@ -370,7 +370,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/68fdc51b-64d3-4fb8-b758-971c0a3d8f0f",
+              "id": "https://example.org/uuid/4324458f-e147-4314-8a48-23081400212a",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981407",
               "body": {
                 "format": "image/jpeg",
@@ -390,7 +390,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/06affd39-b9a3-4062-821f-0158730e1537",
+              "id": "https://example.org/uuid/c83fe6a4-54b0-4933-97b1-cfb51e71edbf",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981407#xywh=2632,881,1091,1024",
               "body": {
                 "format": "image/jpeg",
@@ -408,7 +408,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/840d5715-9a06-421d-a1df-a3e98d54d85d"
+          "id": "https://example.org/uuid/cb4c35f1-74c2-471a-a2ff-a51ebdcdb479"
         }
       ]
     },
@@ -429,7 +429,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/0f143e63-d18f-44aa-9d6f-bf3acf9f6f10",
+              "id": "https://example.org/uuid/1d95a502-96ad-4fd5-bd48-94576dae085f",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981414",
               "body": {
                 "format": "image/jpeg",
@@ -449,7 +449,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/171cbca8-941e-45e9-b565-df01439e1cd9",
+              "id": "https://example.org/uuid/40b48d6f-c052-46d4-a9fd-497a603ff4b9",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981414#xywh=3928,956,1093,1381",
               "body": {
                 "format": "image/jpeg",
@@ -467,7 +467,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a5f87a67-ef71-4130-97b3-05cfdd557e02"
+          "id": "https://example.org/uuid/797d2a01-0c0c-4bc2-acac-722aa7f351ae"
         }
       ]
     },
@@ -488,7 +488,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/d8009216-c5b9-4f69-90d3-68d73116bf67",
+              "id": "https://example.org/uuid/23808a65-aacc-46b7-8086-8d08cbfa58e9",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981415",
               "body": {
                 "format": "image/jpeg",
@@ -508,7 +508,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/0f46cc05-2855-42b2-8970-728bf62ef616",
+              "id": "https://example.org/uuid/8f740a7a-eb3c-4968-873a-a18a7847e973",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981415#xywh=2683,925,1046,1333",
               "body": {
                 "format": "image/jpeg",
@@ -526,7 +526,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c1b7085a-70f0-4775-b302-e4980c1c18b5"
+          "id": "https://example.org/uuid/3671d450-ad25-47c6-b235-75608ba6e9a4"
         }
       ]
     },
@@ -547,7 +547,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/c2606d8f-bf4b-461a-848d-3a675f36f836",
+              "id": "https://example.org/uuid/b96a2051-d7de-4cc7-ac5e-c62cc569144b",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981428",
               "body": {
                 "format": "image/jpeg",
@@ -567,7 +567,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/29404a03-9e37-408e-aafb-3d920352d854",
+              "id": "https://example.org/uuid/1fd4ae40-ab87-4062-87ef-0aca06bcc768",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981428#xywh=4053,964,1096,1051",
               "body": {
                 "format": "image/jpeg",
@@ -585,7 +585,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ef54ab12-d86b-4d2b-a4d8-6ce6d71e6fb7"
+          "id": "https://example.org/uuid/d2755e6c-e565-4282-b15b-0524485256de"
         }
       ]
     },
@@ -606,7 +606,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/632582ce-0d49-45db-b994-b74c6a0a6472",
+              "id": "https://example.org/uuid/d7ac475d-9a48-4526-86e1-97b201a4fd29",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981429",
               "body": {
                 "format": "image/jpeg",
@@ -626,7 +626,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/97693a5a-d0c0-4699-a154-dc8a310367ec",
+              "id": "https://example.org/uuid/a0746d44-f0ca-4c24-a9c7-a724a9414eb6",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981429#xywh=2695,938,1087,1025",
               "body": {
                 "format": "image/jpeg",
@@ -644,7 +644,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c3341964-d938-470c-8c8a-6af210cdc78c"
+          "id": "https://example.org/uuid/1814ddd0-4822-4845-b69f-0f72944db207"
         }
       ]
     },
@@ -665,7 +665,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/66786f06-ff72-4e79-baa3-9cf65031e292",
+              "id": "https://example.org/uuid/078dcb86-5c27-4318-9de3-2e0e44275031",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981441",
               "body": {
                 "format": "image/jpeg",
@@ -685,7 +685,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/24426c07-4bc0-49a2-a79b-d7864a6979f5",
+              "id": "https://example.org/uuid/b412eb7b-664e-4b05-84c5-c7426bc44122",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981441#xywh=4007,970,1094,1064",
               "body": {
                 "format": "image/jpeg",
@@ -703,7 +703,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5524cc47-0537-4a53-8271-02ef805e5e7d"
+          "id": "https://example.org/uuid/856a4741-b81c-4ea3-88f0-6328f616f3b0"
         }
       ]
     },
@@ -724,7 +724,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/cb4b3d77-af50-4339-b0ce-adfbbc82a771",
+              "id": "https://example.org/uuid/6387ee3b-de4f-4b7b-82ef-9e99357d6713",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981442",
               "body": {
                 "format": "image/jpeg",
@@ -744,7 +744,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/fb66bf88-e38c-4d28-8fd5-7663f473b3fd",
+              "id": "https://example.org/uuid/adc6f757-faa9-41b6-89f3-cc3a7d18f7b3",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981442#xywh=2758,974,1044,1046",
               "body": {
                 "format": "image/jpeg",
@@ -762,7 +762,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9d373467-66e8-46c6-b5e5-efa6bbf6d65b"
+          "id": "https://example.org/uuid/fb14fd02-bec6-40ea-94ce-121d4151ac77"
         }
       ]
     },
@@ -783,7 +783,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/de3aea8f-cc67-4602-93af-b37d7307b07d",
+              "id": "https://example.org/uuid/bf67b8fb-4908-4b0b-856b-ef72d96f84a7",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981445",
               "body": {
                 "format": "image/jpeg",
@@ -803,7 +803,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/3181f87c-4eaa-4caa-a8e9-f41e94fc5de9",
+              "id": "https://example.org/uuid/f8b07e7d-76eb-419f-b996-9e37ad055483",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981445#xywh=4005,963,1089,1085",
               "body": {
                 "format": "image/jpeg",
@@ -821,7 +821,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a9a7c710-aabe-4b65-84d2-1cd15ead55f8"
+          "id": "https://example.org/uuid/e8ab3b02-adf6-4c39-a7be-62e97e9c33be"
         }
       ]
     },
@@ -842,7 +842,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/317b1f18-a28f-4e1d-b920-087034938a08",
+              "id": "https://example.org/uuid/25be33eb-4d43-4710-b0b9-c3abd95b3387",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981446",
               "body": {
                 "format": "image/jpeg",
@@ -862,7 +862,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/c2088eb8-813c-4191-9838-7dac4210cd12",
+              "id": "https://example.org/uuid/2f933d8c-2fbe-402d-9087-abf15560c4bd",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981446#xywh=2726,970,1097,1080",
               "body": {
                 "format": "image/jpeg",
@@ -880,7 +880,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ed566f91-3944-4c26-8c1f-3be07a397a3c"
+          "id": "https://example.org/uuid/57309eff-047b-4dea-8028-ab5e731845f1"
         }
       ]
     },
@@ -901,7 +901,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/07440424-5498-4440-8147-7f994be5c100",
+              "id": "https://example.org/uuid/2cb93118-6cce-47d5-8976-480dcd71b781",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981449",
               "body": {
                 "format": "image/jpeg",
@@ -921,7 +921,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/45c610f7-f2c6-4c60-b6ed-76381a22e7cb",
+              "id": "https://example.org/uuid/d9c0e5f4-738e-40c9-acf4-1ee2ceae49e5",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981449#xywh=4077,1028,1055,1015",
               "body": {
                 "format": "image/jpeg",
@@ -939,7 +939,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/366fcb12-cd34-410a-ac3e-50aa3094d755"
+          "id": "https://example.org/uuid/61dd1e4d-060b-452a-817a-6b53dc8a67a2"
         }
       ]
     },
@@ -960,7 +960,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/37b96b67-793f-4b92-a85a-d2eb1a771f09",
+              "id": "https://example.org/uuid/2bbff25e-6c8b-4b68-a051-dc601eb96567",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981450",
               "body": {
                 "format": "image/jpeg",
@@ -980,7 +980,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/1878ff15-3c9a-4312-b1dd-f9848260460e",
+              "id": "https://example.org/uuid/f44eacae-ae5b-43ce-987f-28e4729005eb",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981450#xywh=2904,956,1030,1008",
               "body": {
                 "format": "image/jpeg",
@@ -998,7 +998,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/47973a93-3b17-4d7d-85f2-21a5d9cbeb9c"
+          "id": "https://example.org/uuid/ca8e580f-56e3-495c-b05f-7b650c23989b"
         }
       ]
     },
@@ -1019,7 +1019,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/9e1d473b-c698-4438-bded-46e9096012a6",
+              "id": "https://example.org/uuid/4804db68-d0ee-46c0-b979-f02683af3b07",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981542",
               "body": {
                 "format": "image/jpeg",
@@ -1039,7 +1039,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/07925fec-2282-49e4-9af2-c2359a18beb0",
+              "id": "https://example.org/uuid/63c7aa8b-931a-40d7-8b1c-bddc178c87d0",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981542#xywh=4064,1409,976,1026",
               "body": {
                 "format": "image/jpeg",
@@ -1057,7 +1057,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/585ab813-e36c-4d49-a301-1d18a62edcd0"
+          "id": "https://example.org/uuid/98ef1c7d-06ed-40ab-bbff-14ffa9ecba51"
         }
       ]
     },
@@ -1078,7 +1078,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/e174ba15-334d-41cc-a884-3a81d0fefa83",
+              "id": "https://example.org/uuid/177e68d0-542e-4dff-bd77-752cddb04395",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981543",
               "body": {
                 "format": "image/jpeg",
@@ -1098,7 +1098,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/2ba4e78c-3e19-439c-abfd-9a6b4ad277b3",
+              "id": "https://example.org/uuid/575e0585-ac00-4c03-b0f5-3333199eaeb9",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981543#xywh=2843,1384,990,1039",
               "body": {
                 "format": "image/jpeg",
@@ -1116,7 +1116,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b2e4994a-80aa-4267-99d9-b550d2cd54bd"
+          "id": "https://example.org/uuid/a8b90488-14d2-470c-845a-bda29913d832"
         }
       ]
     },
@@ -1137,7 +1137,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/9f5f4ca0-bd26-401f-9d88-be27ab55d18b",
+              "id": "https://example.org/uuid/f452e281-df0e-4f13-932b-d9089b958340",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981549",
               "body": {
                 "format": "image/jpeg",
@@ -1157,7 +1157,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/3db9474f-3ff9-47c4-9ea1-dfef518a66d7",
+              "id": "https://example.org/uuid/c66bbb28-297f-47cc-a4cc-edba098e9d07",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981549#xywh=4067,2816,961,1027",
               "body": {
                 "format": "image/jpeg",
@@ -1175,7 +1175,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/849521fb-5353-4ce0-8c05-2edbf22a155e"
+          "id": "https://example.org/uuid/28a39bd9-d15e-4999-bc3c-aa939ff871b0"
         }
       ]
     },
@@ -1196,7 +1196,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/b78aca66-0980-4fe8-8ca6-167524e6bcfe",
+              "id": "https://example.org/uuid/049cf6a5-805c-47e8-b950-0811877ede24",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981550",
               "body": {
                 "format": "image/jpeg",
@@ -1216,7 +1216,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/e049d4b5-d7f5-4f8a-b0c2-ddb97651aa30",
+              "id": "https://example.org/uuid/5c94c5d2-3502-4650-9301-59a35cbb3992",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981550#xywh=2864,2853,1000,1074",
               "body": {
                 "format": "image/jpeg",
@@ -1234,7 +1234,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3c36dcde-984a-456e-92e7-a95eb16fd8c0"
+          "id": "https://example.org/uuid/e81fc310-d004-4aa1-8c6b-edbe14415e2f"
         }
       ]
     },
@@ -1255,7 +1255,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/640e9ec3-8d8e-4327-8e28-3fa5389cf776",
+              "id": "https://example.org/uuid/e8cbb479-5178-40e4-a80b-4dbf66cf560b",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981720",
               "body": {
                 "format": "image/jpeg",
@@ -1275,7 +1275,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/80b41445-33cd-4124-a5f9-70f94899d546",
+              "id": "https://example.org/uuid/23c22578-32e4-4857-ae64-ec03f51f4415",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981720#xywh=5025,2529,1058,1045",
               "body": {
                 "format": "image/jpeg",
@@ -1293,7 +1293,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ff7c03f4-1f44-4e50-9036-ad67e9ecc3a7"
+          "id": "https://example.org/uuid/0edfd320-8d32-42c8-b6f5-28d53dcd5090"
         }
       ]
     },
@@ -1314,7 +1314,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/401f0bc0-733b-4873-8caa-5ff2ad08c01a",
+              "id": "https://example.org/uuid/4c931edd-0342-48a0-aff2-83895371d745",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981721",
               "body": {
                 "format": "image/jpeg",
@@ -1334,7 +1334,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/d32d5609-2597-420a-954b-37585a8a5267",
+              "id": "https://example.org/uuid/ea43ac3d-0023-4478-a668-063cc898a38b",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981721#xywh=1093,2503,1085,1060",
               "body": {
                 "format": "image/jpeg",
@@ -1352,7 +1352,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5d7680da-f0c8-4464-a7f0-e24d6c2ab916"
+          "id": "https://example.org/uuid/2f64abc8-aa75-414a-bfef-a706c60a5fd1"
         }
       ]
     },
@@ -1373,7 +1373,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/8af867d8-02c0-4800-990f-8a23e975d561",
+              "id": "https://example.org/uuid/d5ef7871-79bd-4f89-b853-5969ade42a5e",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981776",
               "body": {
                 "format": "image/jpeg",
@@ -1393,7 +1393,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/826a8984-627b-4203-b674-c32452789861",
+              "id": "https://example.org/uuid/d157ddc5-94fd-4b3e-8ea3-489ed009ab89",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981776#xywh=4865,2140,1053,1168",
               "body": {
                 "format": "image/jpeg",
@@ -1411,7 +1411,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a4651b3c-6898-4661-a2eb-71d533a803c7"
+          "id": "https://example.org/uuid/3d369a57-8ad6-428d-99db-be28e2cb722c"
         }
       ]
     },
@@ -1432,7 +1432,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/67663a8a-af54-4408-98de-a07c9462cdc7",
+              "id": "https://example.org/uuid/8ce3189c-50d4-4ed3-92e9-6edcfa50f921",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981777",
               "body": {
                 "format": "image/jpeg",
@@ -1452,7 +1452,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/2b22e1a3-b10e-4fd4-90b2-fd8b206d64dc",
+              "id": "https://example.org/uuid/8ede2544-1d70-41e9-90a4-22de910591f7",
               "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981777#xywh=1019,2146,1077,1185",
               "body": {
                 "format": "image/jpeg",
@@ -1470,7 +1470,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/6f92c4f7-ef9e-42a9-994a-e94fa8b88f41"
+          "id": "https://example.org/uuid/b34bdfad-3943-453f-80b0-efe75fc831e5"
         }
       ]
     }

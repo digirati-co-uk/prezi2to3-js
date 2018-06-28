@@ -148,7 +148,7 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/51c53a90-1578-4959-857d-012b7351b171"
+      "id": "https://example.org/uuid/d331bf6f-4c15-439a-bd7f-1078e03bd205"
     }
   ],
   "items": [
@@ -193,7 +193,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5b21ded6-a5de-4a0d-a797-e4baef64179f"
+          "id": "https://example.org/uuid/d6de871b-0466-42b8-87d9-705c27751954"
         }
       ]
     },
@@ -238,7 +238,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3bf7c935-2ed7-47fa-abeb-69942a6068b1"
+          "id": "https://example.org/uuid/90bdcafc-8a58-43f7-aefa-4f611e4d7d02"
         }
       ]
     },
@@ -283,7 +283,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b347bce6-d24a-4589-b3c0-2d24cfa0bd8a"
+          "id": "https://example.org/uuid/9379aea6-24c3-4bc5-ac13-2154cdf7ef65"
         }
       ]
     },
@@ -328,7 +328,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e9a3ac5f-27c9-4d72-bd9e-d16fce064e32"
+          "id": "https://example.org/uuid/0b7204e3-5c21-4b9a-85a3-74b456ad39b5"
         }
       ]
     },
@@ -373,7 +373,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3ed98657-7f1e-4760-ba0f-81cf5ba368d8"
+          "id": "https://example.org/uuid/7943dedf-7454-4e1a-8968-481c52d7dff5"
         }
       ]
     },
@@ -418,7 +418,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/97ca8ad3-1838-4119-8289-399ca55ec813"
+          "id": "https://example.org/uuid/e211f30b-0ef4-4e6a-ae67-0207a71e9d6e"
         }
       ]
     }
