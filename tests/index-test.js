@@ -6,7 +6,7 @@ import Upgrader from 'src/index'
 
 const TEST_URLS = [
   "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json",
-  //"http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json",
+  "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json",
   "http://iiif.io/api/presentation/2.0/example/fixtures/list/65/list1.json",
   "http://media.nga.gov/public/manifests/nga_highlights.json",
   //"https://iiif.lib.harvard.edu/manifests/drs:48309543",
@@ -56,13 +56,12 @@ const manifestFromUri = (uri, io) => window.__json__[keyFromURI(uri, io)];
 describe('prezi2to3', () => {
   
   it('outputs identical json to the python version', (done) => {
-    let upgrader = new Upgrader({
-      "ext_ok": false, 
-      "deref_links": false
-    });
-
     TEST_URLS.forEach(uri=>{
       console.log(uri);
+      let upgrader = new Upgrader({
+        "ext_ok": false, 
+        "deref_links": false
+      });
       const input_manifest = manifestFromUri(uri,'in');
       const output_manifest = manifestFromUri(uri, 'out');
       const results = upgrader.process_resource(input_manifest, true);
@@ -72,11 +71,11 @@ describe('prezi2to3', () => {
           JSON.parse(processUUIDs(results))
         ), null, 2);
       
-      //console.log(processUUIDs(output_manifest))
-      //console.log(processUUIDs(results))
       expect(compare).toBe(undefined,
         [compare,
+        "reference",
         processUUIDs(output_manifest),
+        "result",
         processUUIDs(results)].join('\n\n')
       );
     });

@@ -75,7 +75,6 @@ const isDictionary = (i) => i instanceof Object && !(i instanceof Array);
 class Upgrader {
 
   constructor(flags={}) {
-    //console.log('Updater->flags',flags);
     // bind all functions...
     for (let key in this) {
       if (typeof this[key]==='function') {
@@ -90,7 +89,7 @@ class Upgrader {
           flags[flag] : 
           info['default'];
     }
-    //console.log('Updater->deref_links',this.deref_links);
+    
 
     this.id_type_hash = {}
     this.language_properties = ['label', 'summary']
@@ -138,7 +137,7 @@ class Upgrader {
 
   warn(msg) {
     if (this.debug) {
-      console.log(msg)
+      console.log(msg);
     }
   }
 
@@ -337,23 +336,20 @@ class Upgrader {
       value.forEach(i => {
         if (isDictionary(i)) {
           let lang = i['@language'] || '@none';
-          // if (!i.hasOwnProperty('@language')) {
-          //   i['@language'] = '@none';
-          // }
+          
           if (!p3IString.hasOwnProperty(lang)) {
             p3IString[lang] = []
           }
-          //console.log(p3IString, p3IString[lang], lang);
           p3IString[lang].push(i['@value']);
         } else if (isArray(i)) {
           //pass
         } /*else if (isDictionary(i)) {
+          // NEVER GETTING EXECUTED becase the isDictionary(i) is the previous expression
           let lang = i['@language'] || '@none';
           // UCD has just {"@value": ""}
           if (!p3IString.hasOwnProperty(lang)) {
             p3IString[lang] = [];
           }
-          console.log(p3IString[lang], lang);
           p3IString[lang].push(i['@value']);
         }*/ else {
           // string value
@@ -462,7 +458,6 @@ class Upgrader {
   }
 
   fix_object(what, typ) {
-    //console.log('fix_object', what, typ, this.deref_links);
     if (!isDictionary(what)) {
       what = {'id': what}
     }
@@ -479,7 +474,7 @@ class Upgrader {
     } else if (!what.hasOwnProperty('type') && myid) {
       if (this.id_type_hash.hasOwnProperty(myid)) {
         what['type'] = this.id_type_hash[myid]
-      } else if (this.deref_links) {
+      } else if (this.deref_links===true) {
         this.set_remote_type(what);
       } else {
         // Try to guess from format
@@ -511,11 +506,9 @@ class Upgrader {
   }
 
   fix_objects(what) {
-    //console.log('fix_objects', what);
     for (var p in this.object_property_types) {
       let typ = this.object_property_types[p];
       if (what.hasOwnProperty(p)) {
-        //let p3version = []
         if (this.set_properties.includes(p)) {
           // Assumes list :(
           what[p] = what[p].map(v => this.fix_object(v, typ));
@@ -620,7 +613,6 @@ class Upgrader {
         rels = [rels]
       }
       rels.forEach(rel => {
-        //console.log(rels, rels[0], rel)
         if (!this.related_is_metadata && rel === rels[0]) {
           // Assume first is homepage, rest to metadata
           if (!isDictionary(rel)) {
@@ -660,11 +652,11 @@ class Upgrader {
       what['partOf'] = what['within']
       delete what['within']
     }
-    //console.log('partOf<-fix_objects', JSON.stringify(what));
+    
     what = this.fix_languages(what);
     what = this.fix_sets(what);
     what = this.fix_objects(what);
-    //console.log('partOf->fix_objects', JSON.stringify(what));
+    
     return what
   }
 
@@ -1070,8 +1062,7 @@ class Upgrader {
         // Harvard has a strange within based pattern
         // which will now be mapped to partOf
         if (rng.hasOwnProperty('partOf')) {
-          //console.log('rng.partOf', JSON.stringify(rng.partOf));
-        	tops.splice(tops.indexOf(rng['id']),1);
+          tops.splice(tops.indexOf(rng['id']),1);
         	let parid = rng['partOf'][0]['id'];
         	delete rng['partOf'];
         	let parent = rhash[parid];
@@ -1086,7 +1077,7 @@ class Upgrader {
                 sibling => child['id'] !== sibling['id']
               )
             })
-            parent['items'].append(rng)
+            parent['items'].push(rng)
           }
         }
       })
@@ -1126,7 +1117,6 @@ class Upgrader {
     what = this.traverse(what)
     let fn2 = this[`post_process_${typ_lower}`] || this.post_process_generic;
     what = fn2(what);
-
     if (top) {
       // Add back in the v3 context
       if (isArray(orig_context)) {
