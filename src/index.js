@@ -691,9 +691,11 @@ class Upgrader {
       what['items'] = what['members'];
       delete what['members'];
     } else {
-      let colls = what['collections'] || [];
-      let mfsts = what['manifests'] || [];
-      let nl = colls.map(c => {
+      let colls = (
+        what.hasOwnProperty('collections') ? 
+          what['collections'] : 
+          []
+      ).map(c => {
         if (!isDictionary(c)) {
           return {'id': c, 'type': 'Collection'}
         } else if (!c.hasOwnProperty('type')) {
@@ -701,15 +703,20 @@ class Upgrader {
         }
         return c;
       });
-      nl = nl.concat(mfsts.map(m => {
+      let mfsts = (
+        what.hasOwnProperty('manifests') ?  
+          what['manifests'] : 
+          []
+      ).map(m => {
         if (!isDictionary(m)) {
           return {'id': m, 'type': 'Manifest'};
-        } else if (m.hasOwnProperty('type')) {
+        } else if (!m.hasOwnProperty('type')) {
           m['type'] = 'Manifest';
         }
-      }))
-
-      if (nl) {
+        return m
+      });
+      let nl = colls.concat(mfsts);
+      if (nl.length>0) {
         what['items'] = nl;
       }
     }
@@ -1005,6 +1012,9 @@ class Upgrader {
       let v = what[k];
       if (isArray(v)) {
         v = v.filter(vi=>!!vi || vi===0)
+        if (v.length===0) {
+          v = false;
+        }
       }
       if (v) {
         what2[k] = v
