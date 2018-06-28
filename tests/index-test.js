@@ -11,7 +11,7 @@ const TEST_URLS = [
   "http://media.nga.gov/public/manifests/nga_highlights.json",
   "https://iiif.lib.harvard.edu/manifests/drs:48309543",
   "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
-  //"http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/manifest",
+  "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/manifest",
   "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E/manifest.json",
   "https://damsssl.llgc.org.uk/iiif/2.0/4389767/manifest.json",
   "http://iiif.bodleian.ox.ac.uk/iiif/manifest/60834383-7146-41ab-bfe1-48ee97bc04be.json",

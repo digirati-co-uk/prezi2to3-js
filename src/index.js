@@ -1002,7 +1002,15 @@ class Upgrader {
     for (let k in what) {
       let v = what[k];
       if (isArray(v)) {
-        v = v.filter(vi=>!!vi || vi===0)
+        v = v.filter(
+          vi =>
+            !(
+              vi.constructor === Object &&
+              Object.keys(vi).length === 0
+            ) &&
+            vi !== undefined &&
+            vi !== null
+        )
         if (v.length===0) {
           v = false;
         }
