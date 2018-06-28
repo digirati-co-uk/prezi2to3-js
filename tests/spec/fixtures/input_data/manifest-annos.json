@@ -1,0 +1,103 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json", 
+  "@id": "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json", 
+  "@type": "sc:Manifest", 
+  "label": "Manifest Label",
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "label": "Current Order",
+      "canvases": [
+        {
+          "@id": "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json", 
+          "@type": "sc:Canvas", 
+          "label": "Test 1 Canvas: 1", 
+          "height": 1800, 
+          "width": 1200, 
+          "images": [
+            {
+              "@type": "oa:Annotation", 
+              "motivation": "sc:painting", 
+              "resource": {
+                "@id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png", 
+                "@type": "dctypes:Image"
+              }, 
+              "on": "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json"
+            },
+            {
+              "@id": "http://example.org/iiif/book1/annotation/anno1",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://www.example.org/iiif/book1-page1/50,50,1250,1850/full/0/default.jpg",
+                "@type": "oa:SpecificResource",
+                "full": {
+                  "@id": "http://example.org/iiif/book1-page1/full/full/0/default.jpg",
+                  "@type": "dctypes:Image"
+                },
+                "selector": {
+                  "@context": "http://iiif.io/api/annex/openannotation/context.json",
+                  "@type": "iiif:ImageApiSelector",
+                  "region": "50,50,1250,1850"
+                }
+              },
+              "on": "http://www.example.org/iiif/book1/canvas/p1#xywh=0,0,600,900"      
+            },
+            {
+              "@id": "http://example.org/iiif/book1/annotation/p1",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource":{
+                "@type": "cnt:ContentAsText",
+                "chars": "Here starts book one...",
+                "format": "text/plain",
+                "language": "en"
+              },
+              "on": "http://example.org/iiif/book1/canvas/p1#xywh=100,150,500,25"
+            },
+            {
+              "@id": "http://example.org/iiif/book1/annotation/anno1",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource":{
+                "@type": "oa:Choice",
+                "default":{
+                  "@id": "http://example.org/iiif/book1/res/page1.jpg",
+                  "@type": "dctypes:Image",
+                  "label": "Color"
+                },
+                "item": [
+                  {
+                    "@id": "http://example.org/iiif/book1/res/page1-blackandwhite.jpg",
+                    "@type": "dctypes:Image",
+                    "label": "Black and White"
+                  }
+                ]
+              },
+              "on": "http://example.org/iiif/book1/canvas/p1"
+            },            
+            {
+              "@id": "http://example.org/iiif/book1/annotation/anno1",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "stylesheet":{
+                "@type": ["oa:CssStyle", "cnt:ContentAsText"],
+                "chars": ".red {color: red;}"
+              },
+              "resource":{
+                "@type": "oa:SpecificResource",
+                "style": "red",
+                "full": {
+                  "@type": "cnt:ContentAsText",
+                  "chars": "Rubrics are Red, ..."
+                }
+              },
+              "on": "http://example.org/iiif/book1/canvas/p1#xywh=100,150,500,30"
+            }
+
+          ]
+        }
+      ]
+    }
+  ]
+}

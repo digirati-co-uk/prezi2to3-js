@@ -933,7 +933,7 @@ class Upgrader {
     }
 
     if (what.hasOwnProperty('stylesheet')) {
-      ss = what['stylesheet']
+      let ss = what['stylesheet']
       if (isDictionary(ss)) {
         ss['@type'] = 'oa:CssStylesheet'
         if (ss.hasOwnProperty('chars')) {
@@ -975,11 +975,11 @@ class Upgrader {
 
     let newl = [];
     if (what.hasOwnProperty('default')) {
-      newl.append(what['default'])
+      newl.push(what['default'])
       delete what['default'];
     }
     if (what.hasOwnProperty('item')) {
-      v = what['item']
+      let v = what['item']
       if (isArray(v)) {
         v = [v]
       }
