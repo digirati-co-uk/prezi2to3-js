@@ -14,8 +14,9 @@ module.exports = {
       'karma-json-fixtures-preprocessor',
     ],
     extra: {
-      browserDisconnectTimeout: 10000000,
-      browserNoActivityTimeout: 10000000,
+      browserDisconnectTimeout: 100000,
+      browserNoActivityTimeout: 100000,
+      captureTimeout: 60000,
       files: [
         {
           pattern: 'tests/spec/fixtures/**/*',
