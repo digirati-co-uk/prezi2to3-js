@@ -1,4 +1,4 @@
-# IIIF-prezi2to3
+# IIIF Presentation v2 to v3 converter (Javascript)
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
@@ -62,6 +62,25 @@ let resultObject = upgrader.process_uri(uri, true);
 * `default_lang` : The default language to use for language maps. The default is `"@none"`.
 * `deref_links` : Should links without a `format` property be dereferenced and the HTTP response inspected for the media type? The default is `true`.
 * `debug` : Are we in debug mode and should spit out more warnings than normal? The default is `false`
+
+## TODO/Roadmap
+
+* Convert function names to camel case.
+* Increase code coverage
+* Rewrite tests using JEST
+* Drop nwb.
+* Add typings.
+* Reduce cyclomatic complexity for several functions including:
+    * traverse
+    * fix_service_type
+    * fix_type
+    * fix_object
+    * process_generic
+    * set_remote_type
+    * process_range
+    * process_annotation
+    * process_resource
+
 
 
 [build-badge]: https://travis-ci.org/digirati-co-uk/prezi2to3-js.svg?branch=master
