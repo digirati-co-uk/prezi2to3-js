@@ -59,6 +59,7 @@ const manifestFixture = (name) => window.__json__[`tests/spec/fixtures/input_dat
 describe('prezi2to3', () => {
   
   it('outputs identical json to the python version', (done) => {
+    this.timeout(10000);
     TEST_URLS.forEach(uri=>{
       console.log(uri);
       let upgrader = new Upgrader({
