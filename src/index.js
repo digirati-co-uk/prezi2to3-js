@@ -7,53 +7,101 @@ import { v4 as uuid4 } from 'uuid';
 
 const FLAGS = {
   "crawl": {
-        "prop": "crawl",
-        "default": false,
-        "description": "NOT YET IMPLEMENTED. Crawl to linked resources, such as AnnotationLists from a Manifest"
-    },
+    "prop": "crawl",
+    "default": false,
+    "description": "NOT YET IMPLEMENTED. Crawl to linked resources, such as AnnotationLists from a Manifest"
+  },
   "desc_2_md": {
-        "prop": "description_is_metadata",
-        "default": true,
+    "prop": "description_is_metadata",
+    "default": true,
     "description": "If true, then the source's `description` properties will be put into a `metadata` pair.\
          If false, they will be put into `summary`."
-    },
+  },
   "related_2_md": {
-        "prop": "related_is_metadata",
-        "default": false,
+    "prop": "related_is_metadata",
+    "default": false,
     "description": "If true, then the `related` resource will go into a `metadata` pair.\
         If false, it will become the `homepage` of the resource."
-    },
+  },
   "ext_ok": {
-        "prop": "ext_ok",
-        "default": false,
+    "prop": "ext_ok",
+    "default": false,
     "description": "If true, then extensions are allowed and will be copied across. \
         If false, then they will raise an error."
-    },
-    "default_lang": {
-        "prop": "default_lang",
-        "default": "@none",
-        "description": "The default language to use when adding values to language maps."
-    },
-    "deref_links": {
-        "prop": "deref_links",
-        "default": true,
-        "description": "If true, the conversion will dereference external content resources to look for format and type."
-    },
-    "debug": {
-        "prop": "debug",
-        "default": false,
-        "description": "If true, then go into a more verbose debugging mode."
-    },
-    "attribution_label": {
-        "prop": "attribution_label",
-        "default": "Attribution",
-        "description": "The label to use for requiredStatement mapping from attribution"
-    },
-    "license_label": {
-        "prop": "license_label",
-        "default": "Rights/License",
-        "description": "The label to use for non-conforming license URIs mapped into metadata"
-    }
+  },
+  "default_lang": {
+    "prop": "default_lang",
+    "default": "@none",
+    "description": "The default language to use when adding values to language maps."
+  },
+  "deref_links": {
+    "prop": "deref_links",
+    "default": true,
+    "description": "If true, the conversion will dereference external content resources to look for format and type."
+  },
+  "debug": {
+    "prop": "debug",
+    "default": false,
+    "description": "If true, then go into a more verbose debugging mode."
+  },
+  "attribution_label": {
+    "prop": "attribution_label",
+    "default": "Attribution",
+    "description": "The label to use for requiredStatement mapping from attribution"
+  },
+  "license_label": {
+    "prop": "license_label",
+    "default": "Rights/License",
+    "description": "The label to use for non-conforming license URIs mapped into metadata"
+  }
+};
+
+const CONTENT_TYPE_MAP = {
+  "image": "Image",
+  "audio": "Sound",
+  "video": "Video",
+  "application/pdf": "Text",
+  "text/html": "Text",
+  "text/plain": "Text",
+  "application/xml": "Dataset",
+  "text/xml": "Dataset"
+};
+
+const OBJECT_PROPERTY_TYPES = {
+  "thumbnail": "Image",
+  "logo":"Image",
+  "homepage": null,
+  "rendering": null,
+  "seeAlso": "Dataset",
+  "partOf": null
+};
+
+const SET_PROPERTIES = [
+  "thumbnail", "logo", "behavior",
+  "rendering", "service", "seeAlso", "partOf"
+];
+
+const ANNOTATION_PROPERTIES = [
+  "body", "target", "motivation", "source", "selector", "state",
+  "stylesheet", "styleClass"
+];
+
+const ALL_PROPERTIES = [
+  "label", "metadata", "summary", "thumbnail", "navDate",
+  "requiredStatement", "rights", "logo", "value",
+  "id", "type", "format", "language", "profile", "timeMode",
+  "height", "width", "duration", "viewingDirection", "behavior",
+  "homepage", "rendering", "service", "seeAlso", "partOf",
+  "start", "includes", "items", "structures", "annotations"]
+
+  
+const LANGUAGE_PROPERTIES = ['label', 'summary'];
+const DO_NOT_TRAVERSE = ['metadata', 'structures', '_structures', 'requiredStatement'];
+
+const SIMPLE_TYPE_MAP = { 
+  "Layer": "AnnotationCollection",
+  "AnnotationList": "AnnotationPage",
+  "cnt:ContentAsText": "TextualBody"
 };
 
 // const KEY_ORDER = [
@@ -89,50 +137,7 @@ class Upgrader {
           flags[flag] : 
           info['default'];
     }
-    
-
-    this.id_type_hash = {}
-    this.language_properties = ['label', 'summary']
-    this.do_not_traverse = ['metadata', 'structures', '_structures', 'requiredStatement']
-
-    this.all_properties = [
-      "label", "metadata", "summary", "thumbnail", "navDate",
-      "requiredStatement", "rights", "logo", "value",
-      "id", "type", "format", "language", "profile", "timeMode",
-      "height", "width", "duration", "viewingDirection", "behavior",
-      "homepage", "rendering", "service", "seeAlso", "partOf",
-      "start", "includes", "items", "structures", "annotations"]
-
-    this.annotation_properties = [
-      "body", "target", "motivation", "source", "selector", "state",
-      "stylesheet", "styleClass"
-    ]
-
-    this.set_properties = [
-      "thumbnail", "logo", "behavior",
-      "rendering", "service", "seeAlso", "partOf"
-    ]
-
-    this.object_property_types = {
-      "thumbnail": "Image",
-      "logo":"Image",
-      "homepage": null,
-      "rendering": null,
-      "seeAlso": "Dataset",
-      "partOf": null
-    }
-
-    this.content_type_map = {
-      "image": "Image",
-      "audio": "Sound",
-      "video": "Video",
-      "application/pdf": "Text",
-      "text/html": "Text",
-      "text/plain": "Text",
-      "application/xml": "Dataset",
-      "text/xml": "Dataset"
-    }
-
+    this.idTypeHash = {};
   }
 
   warn(msg) {
@@ -141,7 +146,7 @@ class Upgrader {
     }
   }
 
-  retrieve_resource(uri) {
+  retrieveResource(uri) {
     let request = new XMLHttpRequest();
     request.open('GET', uri, false);  // `false` makes the request synchronous
     request.send(null);
@@ -156,9 +161,9 @@ class Upgrader {
     }
   }
 
-  mint_uri() {
-    const new_uuid = uuid4();
-    return `https://example.org/uuid/${new_uuid}`;
+  mintURI() {
+    const newUUID = uuid4();
+    return `https://example.org/uuid/${newUUID}`;
   }
 
   traverse(what) {
@@ -167,16 +172,16 @@ class Upgrader {
     let fn = null;
     for (let k in what) {
       v = what[k];
-      if (this.language_properties.includes(k)||
-          this.do_not_traverse.includes(k)) {
+      if (LANGUAGE_PROPERTIES.includes(k)||
+          DO_NOT_TRAVERSE.includes(k)) {
         //also handled by language_map, etc
         p3version[k] = v
         continue;
       } else if (k === 'service') {
         // break service out as it has so many types
-        fn = this.process_service
+        fn = this.processService
       } else {
-        fn = this.process_resource
+        fn = this.processResource
       }
 
       if (isDictionary(v)) {
@@ -204,17 +209,15 @@ class Upgrader {
       } else {
         p3version[k] = v
       }
-      if (
-        !this.language_properties.includes(k) &&
-        !this.do_not_traverse.includes(k)
-      ) {
+      if (!LANGUAGE_PROPERTIES.includes(k) &&
+        !DO_NOT_TRAVERSE.includes(k)) {
         this.warn(`Unknown property: ${k}`);
       }
     }
     return p3version
   }
 
-  fix_service_type(what) {
+  fixServiceType(what) {
     // manage known service contexts
     if (what.hasOwnProperty('@context')) {
       let ctxt = what['@context']
@@ -286,8 +289,8 @@ class Upgrader {
     return what
   }
 
-  fix_type(what) {
-    // Called from process_resource so we can switch
+  fixType(what) {
+    // Called from processResource so we can switch
     let t = what['@type'] || '';
     if (t) {
       if (isArray(t)) {
@@ -297,31 +300,17 @@ class Upgrader {
           t = "TextualBody";
         }
       }
-      if (t.startsWith('sc:')) {
-        t = t.replace('sc:', '')
-      } else if (t.startsWith('oa:')) {
-        t = t.replace('oa:', '')
-      } else if (t.startsWith('dctypes:')) {
-        t = t.replace('dctypes:', '')
-      } else if (t.startsWith('iiif:')) {
-        // e.g iiif:ImageApiSelector
-        t = t.replace('iiif:', '')
-      }
-      if (t === "Layer") {
-        t = "AnnotationCollection"
-      }
-      else if (t === "AnnotationList") {
-        t = "AnnotationPage"
-      } else if (t === "cnt:ContentAsText") {
-        t = "TextualBody"
+      t = t.replace(/^(sc|oa|dctypes|iiif)\:/,'');
+      if (SIMPLE_TYPE_MAP.hasOwnProperty(t)) {
+        t = SIMPLE_TYPE_MAP[t];
       }
       what['type'] = t
       delete what['@type'];
     }
-    return what
+    return what;
   }
 
-  do_language_map(value) {
+  doLanguageMap(value) {
     // TODO compare this with the original i feel what it does is wrong
     let p3IString = {};
     const defl = this.default_lang;
@@ -366,12 +355,12 @@ class Upgrader {
     return p3IString
   }
 
-  fix_languages(what) {
-    this.language_properties.forEach(
+  fixLanguages(what) {
+    LANGUAGE_PROPERTIES.forEach(
       p => {
         if (what.hasOwnProperty(p)) {
           try {
-            what[p] = this.do_language_map(what[p]);
+            what[p] = this.doLanguageMap(what[p]);
           } catch (ex) {
             throw ex; /// ??? ehh your pardon?
           }
@@ -381,16 +370,16 @@ class Upgrader {
     if (what.hasOwnProperty('metadata')) {
       what['metadata'] = what['metadata'].map(pair=> {
         return {
-          'label': this.do_language_map(pair['label']),
-          'value': this.do_language_map(pair['value'])
+          'label': this.doLanguageMap(pair['label']),
+          'value': this.doLanguageMap(pair['value'])
         };
       });
     }
     return what;
   }
 
-  fix_sets(what) {
-    this.set_properties.forEach(
+  fixSets(what) {
+    SET_PROPERTIES.forEach(
       p => {
         if (what.hasOwnProperty(p)) {
           if (!isArray(what[p])) {
@@ -408,7 +397,7 @@ class Upgrader {
   //   }));
   //   return head;
   // }
-  get_header(uri) {
+  getHeader(uri) {
     let request = new XMLHttpRequest();
     request.open('HEAD', uri, false);  // `false` makes the request synchronous
     request.send(null);
@@ -424,11 +413,11 @@ class Upgrader {
     }
   }
 
-  set_remote_type(what) {
+  setRemoteType(what) {
     let h = null;
     // do a HEAD on the resource and look at Content-Type
     try {
-      h = this.get_header(what['id']);
+      h = this.getHeader(what['id']);
     } catch (ex) {
       
     }
@@ -438,44 +427,38 @@ class Upgrader {
       ct = ct.toLowerCase();
       let first = ct.split('/')[0];
 
-      if (this.content_type_map.hasOwnProperty(first)) {
-        what['type'] = this.content_type_map[first]
-      } else if (this.content_type_map.hasOwnProperty(ct)) {
-        what['type'] = this.content_type_map[ct]
+      if (CONTENT_TYPE_MAP.hasOwnProperty(first)) {
+        what['type'] = CONTENT_TYPE_MAP[first]
+      } else if (CONTENT_TYPE_MAP.hasOwnProperty(ct)) {
+        what['type'] = CONTENT_TYPE_MAP[ct]
       } else if (ct.startsWith("application/json") ||
         ct.startsWith("application/ld+json")) {
         // Try and fetch and look for a type!
-        let data = this.retrieve_resource(what['id'])
+        let data = this.retrieveResource(what['id'])
 
         if (data.hasOwnProperty('type')) {
           what['type'] = data['type']
         } else if (data.hasOwnProperty('@type')) {
-          data = this.fix_type(data)
+          data = this.fixType(data)
           what['type'] = data['type']
         }
       }
     }
   }
 
-  fix_object(what, typ) {
+  fixObject(what, typ) {
     if (!isDictionary(what)) {
       what = {'id': what}
     }
-    let  myid = '';
-
-    if (what.hasOwnProperty('id')) {
-      myid = what['id']
-    } else if (what.hasOwnProperty('@id')) {
-      myid = what['@id']
-    }
+    let  myid = what['id'] || what['@id'] || '';
 
     if (!what.hasOwnProperty('type') && typ) {
       what['type'] = typ
     } else if (!what.hasOwnProperty('type') && myid) {
-      if (this.id_type_hash.hasOwnProperty(myid)) {
-        what['type'] = this.id_type_hash[myid]
+      if (this.idTypeHash.hasOwnProperty(myid)) {
+        what['type'] = this.idTypeHash[myid]
       } else if (this.deref_links===true) {
-        this.set_remote_type(what);
+        this.setRemoteType(what);
       } else {
         // Try to guess from format
         if (what.hasOwnProperty('format')) {
@@ -490,7 +473,7 @@ class Upgrader {
           } else if (what['format'].startsWith('application/pdf')) {
             what['type'] = "Text"
           }
-        }
+        }1
 
         // Try to guess from URI
         if (!what.hasOwnProperty('type') && myid.indexOf('.htm') > -1) {
@@ -505,29 +488,29 @@ class Upgrader {
     return what
   }
 
-  fix_objects(what) {
-    for (var p in this.object_property_types) {
-      let typ = this.object_property_types[p];
+  fixObjects(what) {
+    for (var p in OBJECT_PROPERTY_TYPES) {
+      let typ = OBJECT_PROPERTY_TYPES[p];
       if (what.hasOwnProperty(p)) {
-        if (this.set_properties.includes(p)) {
+        if (SET_PROPERTIES.includes(p)) {
           // Assumes list :(
-          what[p] = what[p].map(v => this.fix_object(v, typ));
+          what[p] = what[p].map(v => this.fixObject(v, typ));
         } else {
-          what[p] = this.fix_object(what[p], typ);
+          what[p] = this.fixObject(what[p], typ);
         }
       }
     }
     return what;
   }
 
-  process_generic(what) {
+  processGeneric(what) {
     // process generic IIIF properties
     if (what.hasOwnProperty('@id')) {
       what['id'] = what['@id'];
       delete what['@id'];
     } else {
       // Add in id with a vanilla UUID
-      what['id'] = this.mint_uri();
+      what['id'] = this.mintURI();
     }
 
     // @type already processed
@@ -535,7 +518,7 @@ class Upgrader {
     if (what.hasOwnProperty('id') &&
       what.hasOwnProperty('type')) {
       try {
-        this.id_type_hash[what['id']] = what['type']
+        this.idTypeHash[what['id']] = what['type']
       } catch (e) {
         throw `ValueError: ${what.id}`;
       }
@@ -562,7 +545,7 @@ class Upgrader {
           what['rights'] = l
           done = true
         } else {
-          // fix_languages below will correct these to langMaps
+          // fixLanguages below will correct these to langMaps
           let licstmt = {"label": this.license_label, "value": l}
           let md = what['metadata'] || []
           md.push(licstmt)
@@ -572,8 +555,8 @@ class Upgrader {
       delete what['license']
     }
     if (what.hasOwnProperty('attribution')) {
-      let label = this.do_language_map(this.attribution_label)
-      let val = this.do_language_map(what['attribution'])
+      let label = this.doLanguageMap(this.attribution_label)
+      let val = this.doLanguageMap(what['attribution'])
       what['requiredStatement'] = {"label": label, "value": val}
       delete what['attribution']
     }
@@ -595,7 +578,7 @@ class Upgrader {
       if (this.description_is_metadata) {
         // Put it in metadata
         let md = what['metadata'] || [];
-        // NB this must happen before fix_languages
+        // NB this must happen before fixLanguages
         md.push({
           "label": "Description",
           "value": what['description']
@@ -631,7 +614,7 @@ class Upgrader {
             uri = rel
           }
           let md = what['metadata'] || [];
-          // NB this must happen before fix_languages
+          // NB this must happen before fixLanguages
           md.push({
             label: 'Related',
             value: '<a href=\'' + uri + '\'>' + label + '</a>'
@@ -653,15 +636,15 @@ class Upgrader {
       delete what['within']
     }
     
-    what = this.fix_languages(what);
-    what = this.fix_sets(what);
-    what = this.fix_objects(what);
+    what = this.fixLanguages(what);
+    what = this.fixSets(what);
+    what = this.fixObjects(what);
     
     return what
   }
 
-  process_service(what) {
-    what = this.fix_service_type(what)
+  processService(what) {
+    what = this.fixServiceType(what)
     // The only thing to traverse is further services
     // everything else we leave alone
     if (what.hasOwnProperty('service')){
@@ -670,14 +653,14 @@ class Upgrader {
         what['service'] = [ss]
       }
       what['service'] = what['service'].map(
-        s => this.process_service(s)
+        s => this.processService(s)
       );
     }
     return what;
   }
 
-  process_collection(what) {
-    what = this.process_generic(what)
+  processCollection(what) {
+    what = this.processGeneric(what)
 
     if (what.hasOwnProperty('members')) {
       what['items'] = what['members'];
@@ -722,8 +705,8 @@ class Upgrader {
     return what;
   }
 
-  process_manifest(what) {
-    what = this.process_generic(what)
+  processManifest(what) {
+    what = this.processGeneric(what)
 
     if (what.hasOwnProperty('startCanvas')) {
       let v = what['startCanvas'];
@@ -751,7 +734,7 @@ class Upgrader {
         seqs.forEach(s => {
           // XXX Test here to see if we need to crawl
 
-          let rng = {"id": s['@id'] || this.mint_uri(), "type": "Range"}
+          let rng = {"id": s['@id'] || this.mintURI(), "type": "Range"}
           rng['behavior'] = ['sequence'];
           rng['items'] = s['canvases'].map(c => {
             if (isDictionary(c)) {
@@ -774,7 +757,7 @@ class Upgrader {
               rng[k] = s[k]
             }
           });
-          this.process_generic(rng);
+          this.processGeneric(rng);
           what['_structures'].push(rng);
         })
       }
@@ -782,8 +765,8 @@ class Upgrader {
     return what;
   }
 
-  process_range(what) {
-    what = this.process_generic(what);
+  processRange(what) {
+    what = this.processGeneric(what);
 
     if (what.hasOwnProperty('items')) {
       // preconfigured, move right along
@@ -794,10 +777,10 @@ class Upgrader {
       what['items'] = its.map(i => {
         if (!isDictionary(i)) {
           // look in id/type hash
-          if (this.id_type_hash.hasOwnProperty(i)) {
+          if (this.idTypeHash.hasOwnProperty(i)) {
             return {
               "id": i,
-              "type": this.id_type_hash[i]
+              "type": this.idTypeHash[i]
             };
           } else {
             return {"id": i};
@@ -871,15 +854,15 @@ class Upgrader {
 
     if (what.hasOwnProperty('supplementary')) {
       // single object
-      what['supplementary'] = this.process_resource(what['supplementary']);
+      what['supplementary'] = this.processResource(what['supplementary']);
     }
     return what;
   }
 
 
-  process_canvas(what) {
+  processCanvas(what) {
     // XXX process otherContent here before generic grabs it
-    what = this.process_generic(what);
+    what = this.processGeneric(what);
     if (what.hasOwnProperty('images')) {
       what['items'] = [{
         'type': 'AnnotationPage',
@@ -890,12 +873,12 @@ class Upgrader {
     return what;
   }
 
-  process_layer(what) {
-    return this.process_generic(what);
+  processLayer(what) {
+    return this.processGeneric(what);
   }
 
-  process_annotationpage(what) {
-    what = this.process_generic(what)
+  processAnnotationpage(what) {
+    what = this.processGeneric(what)
     if (what.hasOwnProperty('resources')) {
       what['items'] = what['resources']
       delete what['resources'];
@@ -905,12 +888,12 @@ class Upgrader {
     return what;
   }
 
-  process_annotationcollection(what) {
-    return this.process_generic(what);
+  processAnnotationcollection(what) {
+    return this.processGeneric(what);
   }
 
-  process_annotation(what) {
-    what = this.process_generic(what)
+  processAnnotation(what) {
+    what = this.processGeneric(what)
 
     if (what.hasOwnProperty('on')) {
       what['target'] = what['on']
@@ -942,14 +925,17 @@ class Upgrader {
         }
       } else {
         // Just a link
-        what['stylesheet'] = {'@id': ss, '@type': 'oa:CssStylesheet'}
+        what['stylesheet'] = {
+          '@id': ss,
+          '@type': 'oa:CssStylesheet'
+        };
       }
     }
     return what;
   }
 
-  process_specificresource(what) {
-    what = this.process_generic(what)
+  processSpecificresource(what) {
+    what = this.processGeneric(what)
     if (what.hasOwnProperty('full')) {
       // And if not, it's broken...
       what['source'] = what['full']
@@ -962,7 +948,7 @@ class Upgrader {
     return what;
   }
 
-  process_textualbody(what) {
+  processTextualbody(what) {
     if (what.hasOwnProperty('chars')) {
       what['value'] = what['chars']
       delete what['chars'];
@@ -970,8 +956,8 @@ class Upgrader {
     return what;
   }
 
-  process_choice(what) {
-    what = this.process_generic(what)
+  processChoice(what) {
+    what = this.processGeneric(what)
 
     let newl = [];
     if (what.hasOwnProperty('default')) {
@@ -990,7 +976,7 @@ class Upgrader {
     return what;
   }
 
-  post_process_generic(what) {
+  postProcessGeneric(what) {
 
     // test known properties of objects for type
     if (what.hasOwnProperty('homepage') && !what['homepage'].hasOwnProperty('type')) {
@@ -1022,9 +1008,9 @@ class Upgrader {
     return what2;
   }
 
-  post_process_manifest(what) {
+  postProcessManifest(what) {
 
-    what = this.post_process_generic(what);
+    what = this.postProcessGeneric(what);
 
     // do ranges at this point, after everything else is traversed
     let tops = [];
@@ -1035,8 +1021,8 @@ class Upgrader {
       // needed to unflatten them
 
       what['structures'].forEach(r => {
-        let newStruct = this.fix_type(r);
-        newStruct = this.process_range(newStruct);
+        let newStruct = this.fixType(r);
+        newStruct = this.processRange(newStruct);
         rhash[newStruct['id']] = newStruct
         tops.push(newStruct['id']);
       });
@@ -1048,8 +1034,8 @@ class Upgrader {
         rng['items'].forEach(child => {
           let c = {};
           if (child.hasOwnProperty("@id")) {
-            c = this.fix_type(child)
-            c = this.process_generic(c)
+            c = this.fixType(child)
+            c = this.processGeneric(c)
           } else {
             c = child;
           }
@@ -1107,26 +1093,29 @@ class Upgrader {
     return what;
   }
 
-  process_resource(what, top=false) {
-    let orig_context = ""
+  processResource(what, top=false) {
+    let origContext = ""
     if (top) {
       // process @context
-      orig_context = what["@context"];
+      origContext = what["@context"];
       // could be a list with extensions etc
       delete what['@context'];
     }
     // First update types, so we can switch on it
-    what = this.fix_type(what);
-    let typ = what['type'] || '';
-    let typ_lower = typ.toLowerCase();
-    let fn = this[`process_${typ_lower}`] || this.process_generic;
+    what = this.fixType(what);
+    let typeCapitalised = (what['type'] || '')
+      .split('')
+      .map((chr,idx)=> 
+        idx===0 ? chr.toUpperCase() : chr.toLowerCase()
+      ).join('');
+    let fn = this[`process${typeCapitalised}`] || this.processGeneric;
     what = fn(what);
     what = this.traverse(what)
-    let fn2 = this[`post_process_${typ_lower}`] || this.post_process_generic;
+    let fn2 = this[`postProcess${typeCapitalised}`] || this.postProcessGeneric;
     what = fn2(what);
     if (top) {
       // Add back in the v3 context
-      if (isArray(orig_context)) {
+      if (isArray(origContext)) {
         // XXX process extensions
         // pass
       } else {
@@ -1140,15 +1129,15 @@ class Upgrader {
   }
 
   process_uri(uri, top=false) {
-    let what = this.retrieve_resource(uri);
-    return this.process_resource(what, top);
+    let what = this.retrieveResource(uri);
+    return this.processResource(what, top);
   }
 
   /*process_cached(fn, top=true) {
     with open(fn, 'r') as fh:
       data = fh.read()
     what = json.loads(data)
-    return this.process_resource(what, top)
+    return this.processResource(what, top)
   }
 
   reorder(what) {

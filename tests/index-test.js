@@ -67,7 +67,7 @@ describe('prezi2to3', () => {
       });
       const input_manifest = manifestFromUri(uri,'in');
       const output_manifest = manifestFromUri(uri, 'out');
-      const results = upgrader.process_resource(input_manifest, true);
+      const results = upgrader.processResource(input_manifest, true);
       const compare = JSON.stringify(
         jsonDiff(
           JSON.parse(processUUIDs(output_manifest)), 
@@ -91,7 +91,7 @@ describe('prezi2to3', () => {
     before(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
-		  results = upgrader.process_resource(
+		  results = upgrader.processResource(
         manifestFixture('manifest-basic'),
         true
       )
@@ -242,7 +242,7 @@ describe('prezi2to3', () => {
     before(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
-		  results = upgrader.process_resource(
+		  results = upgrader.processResource(
         manifestFixture('manifest-annos'),
         true
       )
@@ -319,7 +319,7 @@ describe('prezi2to3', () => {
     before(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
-		  results = upgrader.process_resource(
+		  results = upgrader.processResource(
         manifestFixture('manifest-services'),
         true
       );
@@ -373,7 +373,7 @@ describe('prezi2to3', () => {
     before(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
-		  results = upgrader.process_resource(
+		  results = upgrader.processResource(
         manifestFixture('collection-basic'),
         true
       );
