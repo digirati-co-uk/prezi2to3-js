@@ -65,7 +65,6 @@ let resultObject = upgrader.process_uri(uri, true);
 
 ## TODO/Roadmap
 
-* Convert function names to camel case.
 * Increase code coverage
 * Rewrite tests using JEST
 * Drop nwb.

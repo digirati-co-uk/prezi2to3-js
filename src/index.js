@@ -7,53 +7,101 @@ import { v4 as uuid4 } from 'uuid';
 
 const FLAGS = {
   "crawl": {
-        "prop": "crawl",
-        "default": false,
-        "description": "NOT YET IMPLEMENTED. Crawl to linked resources, such as AnnotationLists from a Manifest"
-    },
+    "prop": "crawl",
+    "default": false,
+    "description": "NOT YET IMPLEMENTED. Crawl to linked resources, such as AnnotationLists from a Manifest"
+  },
   "desc_2_md": {
-        "prop": "description_is_metadata",
-        "default": true,
+    "prop": "description_is_metadata",
+    "default": true,
     "description": "If true, then the source's `description` properties will be put into a `metadata` pair.\
          If false, they will be put into `summary`."
-    },
+  },
   "related_2_md": {
-        "prop": "related_is_metadata",
-        "default": false,
+    "prop": "related_is_metadata",
+    "default": false,
     "description": "If true, then the `related` resource will go into a `metadata` pair.\
         If false, it will become the `homepage` of the resource."
-    },
+  },
   "ext_ok": {
-        "prop": "ext_ok",
-        "default": false,
+    "prop": "ext_ok",
+    "default": false,
     "description": "If true, then extensions are allowed and will be copied across. \
         If false, then they will raise an error."
-    },
-    "default_lang": {
-        "prop": "default_lang",
-        "default": "@none",
-        "description": "The default language to use when adding values to language maps."
-    },
-    "deref_links": {
-        "prop": "deref_links",
-        "default": true,
-        "description": "If true, the conversion will dereference external content resources to look for format and type."
-    },
-    "debug": {
-        "prop": "debug",
-        "default": false,
-        "description": "If true, then go into a more verbose debugging mode."
-    },
-    "attribution_label": {
-        "prop": "attribution_label",
-        "default": "Attribution",
-        "description": "The label to use for requiredStatement mapping from attribution"
-    },
-    "license_label": {
-        "prop": "license_label",
-        "default": "Rights/License",
-        "description": "The label to use for non-conforming license URIs mapped into metadata"
-    }
+  },
+  "default_lang": {
+    "prop": "default_lang",
+    "default": "@none",
+    "description": "The default language to use when adding values to language maps."
+  },
+  "deref_links": {
+    "prop": "deref_links",
+    "default": true,
+    "description": "If true, the conversion will dereference external content resources to look for format and type."
+  },
+  "debug": {
+    "prop": "debug",
+    "default": false,
+    "description": "If true, then go into a more verbose debugging mode."
+  },
+  "attribution_label": {
+    "prop": "attribution_label",
+    "default": "Attribution",
+    "description": "The label to use for requiredStatement mapping from attribution"
+  },
+  "license_label": {
+    "prop": "license_label",
+    "default": "Rights/License",
+    "description": "The label to use for non-conforming license URIs mapped into metadata"
+  }
+};
+
+const CONTENT_TYPE_MAP = {
+  "image": "Image",
+  "audio": "Sound",
+  "video": "Video",
+  "application/pdf": "Text",
+  "text/html": "Text",
+  "text/plain": "Text",
+  "application/xml": "Dataset",
+  "text/xml": "Dataset"
+};
+
+const OBJECT_PROPERTY_TYPES = {
+  "thumbnail": "Image",
+  "logo":"Image",
+  "homepage": null,
+  "rendering": null,
+  "seeAlso": "Dataset",
+  "partOf": null
+};
+
+const SET_PROPERTIES = [
+  "thumbnail", "logo", "behavior",
+  "rendering", "service", "seeAlso", "partOf"
+];
+
+const ANNOTATION_PROPERTIES = [
+  "body", "target", "motivation", "source", "selector", "state",
+  "stylesheet", "styleClass"
+];
+
+const ALL_PROPERTIES = [
+  "label", "metadata", "summary", "thumbnail", "navDate",
+  "requiredStatement", "rights", "logo", "value",
+  "id", "type", "format", "language", "profile", "timeMode",
+  "height", "width", "duration", "viewingDirection", "behavior",
+  "homepage", "rendering", "service", "seeAlso", "partOf",
+  "start", "includes", "items", "structures", "annotations"]
+
+  
+const LANGUAGE_PROPERTIES = ['label', 'summary'];
+const DO_NOT_TRAVERSE = ['metadata', 'structures', '_structures', 'requiredStatement'];
+
+const SIMPLE_TYPE_MAP = { 
+  "Layer": "AnnotationCollection",
+  "AnnotationList": "AnnotationPage",
+  "cnt:ContentAsText": "TextualBody"
 };
 
 // const KEY_ORDER = [
@@ -89,50 +137,7 @@ class Upgrader {
           flags[flag] : 
           info['default'];
     }
-    
-
-    this.idTypeHash = {}
-    this.languageProperties = ['label', 'summary']
-    this.doNotTraverse = ['metadata', 'structures', '_structures', 'requiredStatement']
-
-    this.allProperties = [
-      "label", "metadata", "summary", "thumbnail", "navDate",
-      "requiredStatement", "rights", "logo", "value",
-      "id", "type", "format", "language", "profile", "timeMode",
-      "height", "width", "duration", "viewingDirection", "behavior",
-      "homepage", "rendering", "service", "seeAlso", "partOf",
-      "start", "includes", "items", "structures", "annotations"]
-
-    this.annotationProperties = [
-      "body", "target", "motivation", "source", "selector", "state",
-      "stylesheet", "styleClass"
-    ]
-
-    this.setProperties = [
-      "thumbnail", "logo", "behavior",
-      "rendering", "service", "seeAlso", "partOf"
-    ]
-
-    this.objectPropertyTypes = {
-      "thumbnail": "Image",
-      "logo":"Image",
-      "homepage": null,
-      "rendering": null,
-      "seeAlso": "Dataset",
-      "partOf": null
-    }
-
-    this.contentTypeMap = {
-      "image": "Image",
-      "audio": "Sound",
-      "video": "Video",
-      "application/pdf": "Text",
-      "text/html": "Text",
-      "text/plain": "Text",
-      "application/xml": "Dataset",
-      "text/xml": "Dataset"
-    }
-
+    this.idTypeHash = {};
   }
 
   warn(msg) {
@@ -157,8 +162,8 @@ class Upgrader {
   }
 
   mintURI() {
-    const new_uuid = uuid4();
-    return `https://example.org/uuid/${new_uuid}`;
+    const newUUID = uuid4();
+    return `https://example.org/uuid/${newUUID}`;
   }
 
   traverse(what) {
@@ -167,8 +172,8 @@ class Upgrader {
     let fn = null;
     for (let k in what) {
       v = what[k];
-      if (this.languageProperties.includes(k)||
-          this.doNotTraverse.includes(k)) {
+      if (LANGUAGE_PROPERTIES.includes(k)||
+          DO_NOT_TRAVERSE.includes(k)) {
         //also handled by language_map, etc
         p3version[k] = v
         continue;
@@ -204,10 +209,8 @@ class Upgrader {
       } else {
         p3version[k] = v
       }
-      if (
-        !this.languageProperties.includes(k) &&
-        !this.doNotTraverse.includes(k)
-      ) {
+      if (!LANGUAGE_PROPERTIES.includes(k) &&
+        !DO_NOT_TRAVERSE.includes(k)) {
         this.warn(`Unknown property: ${k}`);
       }
     }
@@ -297,28 +300,14 @@ class Upgrader {
           t = "TextualBody";
         }
       }
-      if (t.startsWith('sc:')) {
-        t = t.replace('sc:', '')
-      } else if (t.startsWith('oa:')) {
-        t = t.replace('oa:', '')
-      } else if (t.startsWith('dctypes:')) {
-        t = t.replace('dctypes:', '')
-      } else if (t.startsWith('iiif:')) {
-        // e.g iiif:ImageApiSelector
-        t = t.replace('iiif:', '')
-      }
-      if (t === "Layer") {
-        t = "AnnotationCollection"
-      }
-      else if (t === "AnnotationList") {
-        t = "AnnotationPage"
-      } else if (t === "cnt:ContentAsText") {
-        t = "TextualBody"
+      t = t.replace(/^(sc|oa|dctypes|iiif)\:/,'');
+      if (SIMPLE_TYPE_MAP.hasOwnProperty(t)) {
+        t = SIMPLE_TYPE_MAP[t];
       }
       what['type'] = t
       delete what['@type'];
     }
-    return what
+    return what;
   }
 
   doLanguageMap(value) {
@@ -367,7 +356,7 @@ class Upgrader {
   }
 
   fixLanguages(what) {
-    this.languageProperties.forEach(
+    LANGUAGE_PROPERTIES.forEach(
       p => {
         if (what.hasOwnProperty(p)) {
           try {
@@ -390,7 +379,7 @@ class Upgrader {
   }
 
   fixSets(what) {
-    this.setProperties.forEach(
+    SET_PROPERTIES.forEach(
       p => {
         if (what.hasOwnProperty(p)) {
           if (!isArray(what[p])) {
@@ -438,10 +427,10 @@ class Upgrader {
       ct = ct.toLowerCase();
       let first = ct.split('/')[0];
 
-      if (this.contentTypeMap.hasOwnProperty(first)) {
-        what['type'] = this.contentTypeMap[first]
-      } else if (this.contentTypeMap.hasOwnProperty(ct)) {
-        what['type'] = this.contentTypeMap[ct]
+      if (CONTENT_TYPE_MAP.hasOwnProperty(first)) {
+        what['type'] = CONTENT_TYPE_MAP[first]
+      } else if (CONTENT_TYPE_MAP.hasOwnProperty(ct)) {
+        what['type'] = CONTENT_TYPE_MAP[ct]
       } else if (ct.startsWith("application/json") ||
         ct.startsWith("application/ld+json")) {
         // Try and fetch and look for a type!
@@ -461,13 +450,7 @@ class Upgrader {
     if (!isDictionary(what)) {
       what = {'id': what}
     }
-    let  myid = '';
-
-    if (what.hasOwnProperty('id')) {
-      myid = what['id']
-    } else if (what.hasOwnProperty('@id')) {
-      myid = what['@id']
-    }
+    let  myid = what['id'] || what['@id'] || '';
 
     if (!what.hasOwnProperty('type') && typ) {
       what['type'] = typ
@@ -490,7 +473,7 @@ class Upgrader {
           } else if (what['format'].startsWith('application/pdf')) {
             what['type'] = "Text"
           }
-        }
+        }1
 
         // Try to guess from URI
         if (!what.hasOwnProperty('type') && myid.indexOf('.htm') > -1) {
@@ -506,10 +489,10 @@ class Upgrader {
   }
 
   fixObjects(what) {
-    for (var p in this.objectPropertyTypes) {
-      let typ = this.objectPropertyTypes[p];
+    for (var p in OBJECT_PROPERTY_TYPES) {
+      let typ = OBJECT_PROPERTY_TYPES[p];
       if (what.hasOwnProperty(p)) {
-        if (this.setProperties.includes(p)) {
+        if (SET_PROPERTIES.includes(p)) {
           // Assumes list :(
           what[p] = what[p].map(v => this.fixObject(v, typ));
         } else {
@@ -942,7 +925,10 @@ class Upgrader {
         }
       } else {
         // Just a link
-        what['stylesheet'] = {'@id': ss, '@type': 'oa:CssStylesheet'}
+        what['stylesheet'] = {
+          '@id': ss,
+          '@type': 'oa:CssStylesheet'
+        };
       }
     }
     return what;
@@ -1108,28 +1094,28 @@ class Upgrader {
   }
 
   processResource(what, top=false) {
-    let orig_context = ""
+    let origContext = ""
     if (top) {
       // process @context
-      orig_context = what["@context"];
+      origContext = what["@context"];
       // could be a list with extensions etc
       delete what['@context'];
     }
     // First update types, so we can switch on it
     what = this.fixType(what);
-    let typ = what['type'] || '';
-    let typ_cap = typ.split('')
+    let typeCapitalised = (what['type'] || '')
+      .split('')
       .map((chr,idx)=> 
         idx===0 ? chr.toUpperCase() : chr.toLowerCase()
       ).join('');
-    let fn = this[`process${typ_cap}`] || this.processGeneric;
+    let fn = this[`process${typeCapitalised}`] || this.processGeneric;
     what = fn(what);
     what = this.traverse(what)
-    let fn2 = this[`postProcess${typ_cap}`] || this.postProcessGeneric;
+    let fn2 = this[`postProcess${typeCapitalised}`] || this.postProcessGeneric;
     what = fn2(what);
     if (top) {
       // Add back in the v3 context
-      if (isArray(orig_context)) {
+      if (isArray(origContext)) {
         // XXX process extensions
         // pass
       } else {
