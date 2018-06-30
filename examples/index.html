@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IIIF Presentation v2 to v3</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik" rel="stylesheet">
+    <style>
+        html, body { font-family: 'Roboto Mono', monospace; width: 100%; height: 100%; overflow: hidden; padding: 0; margin: 0; background: #f9f9fa;}
+        .main { width: 100%; height: 100%; display: flex; flex-direction: row; }
+        .main__title { font-family: 'Rubik', sans-serif; position: absolute; margin: 0; padding: 12px 8px; font-size: 24px; color: #202b39;}
+        
+        .column { flex:1; padding-top: 40px; display: flex; flex-direction: column; }
+        .column__title { font-family: 'Rubik', sans-serif; height: 28px; margin: 0; font-size: 18px; padding: 8px; box-sizing: border-box; color: #202b39;}
+        .column__content { flex: 1; }
+
+        input,textarea { margin: 8px; padding: 8px; font-family: 'Roboto Mono', monospace; font-size: 12px; border: 2px solid #c3c3c3;}
+        input:focus, textarea:focus { border-color: rgb(89, 191, 236); outline: 0; }
+        
+        .input-form { display: flex; flex-direction: column; }
+        .input-form__url-filed { margin-right:0; }
+        .input-form__content-field { flex: 1; resize: none;  margin: 0 0 0 8px; }
+        .input-form__content-submit-button {  align-self: flex-end; margin-right:0; padding: 8px 16px; border-color: rgb(89, 191, 236); background: rgb(89, 191, 236); color: white; cursor: pointer;}
+        .output-field { flex:1; resize: none; }
+    </style>
+</head>
+<body>
+    <article class="main">
+        <h1 class="main__title">IIIF Presentation v2 to v3</h1>
+        <section class="column">
+            <h2 class="column__title">Input</h2>
+            <form id="input_form" class="column__content input-form">
+                <input name="manifestURL" type="url" class="input-form__url-filed" placeholder="Please specify a manifest url or populate the manifest content below"/>
+                <textarea name="namifestContent" class="input-form__content-field"></textarea>
+                <input class="input-form__content-submit-button" type="submit" value="Convert"/>
+            </form>
+        </section>
+        <section class="column">
+            <h2 class="column__title">Output</h2>
+            <textarea id="output" disabled class="column__content output-field"></textarea>
+        </section>
+    </article>
+    <script src="../umd/iiif-prezi2to3.js" type="text/javascript"></script>
+    <script>
+        
+        document.getElementById("input_form").addEventListener('submit', function(ev) {
+            ev.preventDefault();
+            var upgrader = new Upgrader({"deref_links " : false});
+            var content = '';
+            try {
+                if (document.forms.input_form.manifestURL.value!=="") {
+                    content = upgrader.process_uri(document.forms.input_form.manifestURL.value, true);
+                } else {
+                    content = upgrader.processResource(
+                        JSON.parse(document.forms.input_form.manifestContent.value), 
+                        true
+                    );
+                }
+                document.getElementById("output").value = JSON.stringify(content,null,2);
+            }catch (ex) {
+                alert(ex);
+            }
+        })
+    </script>
+</body>
+</html>
