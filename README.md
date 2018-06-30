@@ -6,6 +6,8 @@
 
 The library is a direct javascript port of the [IIIF/prezi-2-to-3](https://github.com/IIIF/prezi-2-to-3/), therefore it converts [json-ld](https://json-ld.org/) documents form IIIF Presentation [v2](http://iiif.io/api/presentation/2.1/) to [v3](http://iiif.io/api/presentation/3.0/).
 
+[demo](https://rawgit.com/digirati-co-uk/prezi2to3-js/master/examples/index.html)
+
 ## Istallation
 
 Installing via npm:
