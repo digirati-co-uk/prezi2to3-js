@@ -8,17 +8,15 @@ The library is a direct javascript port of the [IIIF/prezi-2-to-3](https://githu
 
 ## Istallation
 
-TODO: publish to npm
-
 Installing via npm:
 
 ```
-npm install [TODO:package-name]
+npm install iiif-prezi2to3
 ```
 
 Installing using yarn:
 ```
-yarn add [TODO:package-name]
+yarn add iiif-prezi2to3
 ```
 
 ## Usage
@@ -27,12 +25,12 @@ yarn add [TODO:package-name]
 
 Using with require:
 ```
-var Upgrader = require('prezi2to3');
+var Upgrader = require('iiif-prezi2to3');
 ```
 
 Using with es6 imports:
 ```
-import Upgrader from 'prezi2to3';
+import Upgrader from 'iiif-prezi2to3';
 ```
 
 ### Instantiating
@@ -71,14 +69,14 @@ let resultObject = upgrader.process_uri(uri, true);
 * Add typings.
 * Reduce cyclomatic complexity for several functions including:
     * traverse
-    * fix_service_type
-    * fix_type
-    * fix_object
-    * process_generic
-    * set_remote_type
-    * process_range
-    * process_annotation
-    * process_resource
+    * fixServiceType
+    * fixType
+    * fixObject
+    * processGeneric
+    * setRemoteType
+    * processRange
+    * processAnnotation
+    * processResource
 
 
 

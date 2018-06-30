@@ -1,5 +1,5 @@
 {
-  "name": "iiif-prezi2to3-js",
+  "name": "iiif-prezi2to3",
   "version": "1.0.0",
   "description": "Describe prezi2to3 here",
   "main": "lib/index.js",
