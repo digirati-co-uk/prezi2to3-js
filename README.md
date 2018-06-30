@@ -88,5 +88,5 @@ let resultObject = upgrader.process_uri(uri, true);
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[coveralls-badge]: https://coveralls.io/repos/github/digirati-co-uk/prezi2to3-js/badge.svg?branch=master
+[coveralls]: https://coveralls.io/github/digirati-co-uk/prezi2to3-js?branch=master
