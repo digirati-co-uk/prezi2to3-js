@@ -1,0 +1,11 @@
+.npmrc
+.git
+.DS_Store
+npm-debug.log
+src/**/*
+tests/**/*
+coverage/**/*
+node_modules/**/*
+.travis.yml
+nwb.config.js
+.gitignore

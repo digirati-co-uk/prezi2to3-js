@@ -1,5 +1,5 @@
 {
-  "name": "prezi2to3",
+  "name": "iiif-prezi2to3-js",
   "version": "1.0.0",
   "description": "Describe prezi2to3 here",
   "main": "lib/index.js",
@@ -25,8 +25,7 @@
     "jsondiffpatch": "^0.3.11",
     "nwb": "0.21.x"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Adam Meszaros<adam.meszaros@digirati.com>",
   "license": "MIT",
-  "repository": ""
+  "repository": "https://github.com/digirati-co-uk/prezi2to3-js.git"
 }
