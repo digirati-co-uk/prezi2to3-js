@@ -35,6 +35,11 @@ Using with es6 imports:
 import Upgrader from 'iiif-prezi2to3';
 ```
 
+From browser:
+```
+<script src="https://unpkg.com/iiif-prezi2to3/umd/iiif-prezi2to3.js" type="text/javascript"></script>
+```
+
 ### Instantiating
 Convert javascript JSON:
 ```
@@ -46,12 +51,12 @@ let upgrader = new Upgrader({"deref_links " : false});
 Processing in memory objects:
 
 ```
-let resultObject = upgrader.process_resource(input_manifest, true);
+let resultObject = upgrader.processResource(input_manifest, true);
 ```
 
 Processing urls:
 ```
-let resultObject = upgrader.process_uri(uri, true);
+let resultObject = upgrader.processUri(uri, true);
 ```
 
 ### Constuctor flags
@@ -85,8 +90,8 @@ let resultObject = upgrader.process_uri(uri, true);
 [build-badge]: https://travis-ci.org/digirati-co-uk/prezi2to3-js.svg?branch=master
 [build]: https://travis-ci.org/digirati-co-uk/prezi2to3-js
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[npm-badge]: https://badge.fury.io/js/iiif-prezi2to3.svg
+[npm]: https://badge.fury.io/js/iiif-prezi2to3
 
 [coveralls-badge]: https://coveralls.io/repos/github/digirati-co-uk/prezi2to3-js/badge.svg?branch=master
 [coveralls]: https://coveralls.io/github/digirati-co-uk/prezi2to3-js?branch=master

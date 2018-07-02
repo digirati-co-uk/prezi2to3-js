@@ -40,7 +40,7 @@ const processUUIDs = (jsonObject) => {
   return JSON.stringify(jsonObject, (k, v) => {
     if (k === 'id' && typeof v == 'string' && v.startsWith(UUID_START)) {
       return 'uuid' + (uidIdx++);
-    } 
+    }
     return v;
   })
 };
@@ -84,6 +84,29 @@ describe('prezi2to3', () => {
     });
     done();
   }, 10000);
+
+  it('loads a manifest from a specific url and processing it', function () {
+    let upgrader = new Upgrader({
+      "ext_ok": false, 
+      "deref_links": false
+    });
+    const uri = TEST_URLS[1];
+    const results = upgrader.processUri(uri, true);
+    const output_manifest = manifestFromUri(uri, 'out');
+    const compare = JSON.stringify(
+      jsonDiff(
+        JSON.parse(processUUIDs(output_manifest)), 
+        JSON.parse(processUUIDs(results))
+      ), null, 2);
+    
+    expect(compare).toBe(undefined,
+      [compare,
+      "reference",
+      processUUIDs(output_manifest),
+      "result",
+      processUUIDs(results)].join('\n\n')
+    );
+  });
 
   describe('Manifests', () => {
     let results = null;

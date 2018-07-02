@@ -332,15 +332,7 @@ class Upgrader {
           p3IString[lang].push(i['@value']);
         } else if (isArray(i)) {
           //pass
-        } /*else if (isDictionary(i)) {
-          // NEVER GETTING EXECUTED becase the isDictionary(i) is the previous expression
-          let lang = i['@language'] || '@none';
-          // UCD has just {"@value": ""}
-          if (!p3IString.hasOwnProperty(lang)) {
-            p3IString[lang] = [];
-          }
-          p3IString[lang].push(i['@value']);
-        }*/ else {
+        } else {
           // string value
           if (!p3IString.hasOwnProperty(defl)) {
             p3IString[defl] = []
@@ -1128,7 +1120,7 @@ class Upgrader {
     return what
   }
 
-  process_uri(uri, top=false) {
+  processUri(uri, top=false) {
     let what = this.retrieveResource(uri);
     return this.processResource(what, top);
   }
@@ -1158,11 +1150,6 @@ class Upgrader {
     return OrderedDict(sorted(new.items(), key=lambda x: KEY_ORDER_HASH.get(x[0], 1000)))
   }*/
 }
-
-
-//if __name__ == "__main__":
-
-
 
 
 ///// TO DO:
