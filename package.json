@@ -17,11 +17,11 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
-    "karma-fixture": "^0.2.6",
-    "karma-json-fixtures-preprocessor": "^0.0.6",
     "uuid": "^3.3.0"
   },
   "devDependencies": {
+    "karma-fixture": "^0.2.6",
+    "karma-json-fixtures-preprocessor": "^0.0.6",
     "jsondiffpatch": "^0.3.11",
     "nwb": "0.21.x"
   },
