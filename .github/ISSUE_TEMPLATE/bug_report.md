@@ -4,22 +4,33 @@ about: Create a report to help us improve.
 
 ---
 
-**Expected Behavior**
+## Expected Behavior
+
 Tell us what should happen.
 
-**Current Behavior**
+
+## Current Behavior
+
 Tell us what happens instead of the expected behavior.
 
-**Possible Solution**
+
+## Possible Solution
+
 Not obligatory, but suggest a fix/reason for the bug,
 
-**Screenshots**
+
+## Screenshots
+
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
+
+## Desktop (please complete the following information):
+
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari, node.js]
  - Version [e.g. 22]
+ - iiif-prezi2to3-js version [e.g. 1.0.7]
 
-**Additional context**
+## Additional context
+
 Add any other context about the problem here.
