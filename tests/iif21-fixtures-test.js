@@ -1204,12 +1204,34 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(1);
+    // body
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
+    expect(p3Manifest.items[0].items[0].items[0].body).toContainKeys(['type','id', 'source']);
+    expect(p3Manifest.items[0].items[0].items[0].body.type).toEqual('SpecificResource');
+    expect(p3Manifest.items[0].items[0].items[0].body.id).toEqual(
+      'http://iiif.io/api/image/2.1/example/reference/page1-full/full/full/180/default.jpg'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body.id).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].resource['@id']
+    );
   });
   
   it('Test 43 Manifest: Embedded Transcription on Canvas', () => {
@@ -1218,12 +1240,28 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    // console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+  
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/43/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    );
   });
   
   it('Test 44 Manifest: Embedded Transcription on Fragment Segment', () => {
@@ -1232,12 +1270,29 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest, null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/44/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    );
+    // NOTE: I don't see difference between the 44 and 43.
   });
   
   it('Test 45 Manifest: External text/plain Transcription on Canvas', () => {
@@ -1246,12 +1301,29 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    
+     // Canvases
+     expect(p3Manifest).toContainKey('items');
+     expect(p3Manifest.items.constructor).toEqual(Array);
+     expect(p3Manifest.items.length).toBe(1);
+     
+     expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+     expect(p3Manifest.items[0].annotations.length).toBe(1);
+     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+     expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+     expect(p3Manifest.items[0].annotations[0].id).toEqual(
+       "http://iiif.io/api/presentation/2.1/example/fixtures/list/45/list1.json"
+     );
+     expect(p3Manifest.items[0].annotations[0].id).toEqual(
+       p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+     );
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
   });
   
   it('Test 46 Manifest: External text/plain Transcription on Segment', () => {
@@ -1260,12 +1332,30 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+
+    console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/46/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    );
+    // NOTE: I don't see difference between the 45 and 46.
   });
   
   it('Test 47 Manifest: Embedded HTML Transcription on Canvas', () => {
@@ -1274,12 +1364,30 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    console.log(JSON.stringify(p3Manifest,null, 2));
+
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/47/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    );
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // NOTE: I don't see difference between the 47 and 46.
   });
   
   it('Test 48 Manifest: Embedded HTML Transcription on Segment', () => {
@@ -1288,12 +1396,30 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/48/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    ); 
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // NOTE: I don't see difference between the 48 and 47.
   });
   
   it('Test 51 Manifest: Embedded Comment on a Canvas', () => {
@@ -1302,12 +1428,28 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
-    expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT)); 
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/51/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    ); 
   });
   
   it('Test 52 Manifest: Embedded Comment on a Segment', () => {
@@ -1316,12 +1458,28 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/52/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    );
   });
   
   it('Test 54 Manifest: Comment in HTML', () => {
@@ -1330,12 +1488,28 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/54/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    );
   });
   
   it('Test 61 Manifest: Embedded Transcription on Selector Segment', () => {
@@ -1347,8 +1521,26 @@ describe('prezi2to3', () => {
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    
+    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].annotations.length).toBe(1);
+    expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/list/61/list1.json"
+    );
+    expect(p3Manifest.items[0].annotations[0].id).toEqual(
+      p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
+    );
 
     //console.log(JSON.stringify(p3Manifest,null, 2))
   });
+
 });
