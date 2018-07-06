@@ -728,7 +728,7 @@ class Upgrader {
 
           let rng = {"id": s['@id'] || this.mintURI(), "type": "Range"}
           rng['behavior'] = ['sequence'];
-          rng['items'] = s['canvases'].map(c => {
+          rng['items'] = (s['canvases']||[]).map(c => {
             if (isDictionary(c)) {
               return {
                 id: c['@id'],

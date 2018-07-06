@@ -318,7 +318,7 @@ describe('prezi2to3', () => {
     expect(p3Manifest.service.length).toBe(1);
     expect(p3Manifest.service[0].constructor).toEqual(Object);
     // NOTE: is it service id or @id in v3?
-    expect(JSON.stringify(p3Manifest.service[0])).toEqual(JSON.stringify(p3Manifest.service));
+    expect(JSON.stringify(p3Manifest.service[0])).toEqual(JSON.stringify(p2Manifest.service));
   });
   
   it('Test 11 Manifest: ViewingDirection: l-t-r', () => {
@@ -327,12 +327,13 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('viewingDirection')).toBe(true);
+    expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
+    expect(p3Manifest.viewingDirection).toEqual('left-to-right');
   });
   
   it('Test 12 Manifest: ViewingDirection: r-t-l', () => {
@@ -341,12 +342,13 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('viewingDirection')).toBe(true);
+    expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
+    expect(p3Manifest.viewingDirection).toEqual('right-to-left');
   });
   
   it('Test 13 Manifest: ViewingDirection: t-t-b', () => {
@@ -355,12 +357,13 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('viewingDirection')).toBe(true);
+    expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
+    expect(p3Manifest.viewingDirection).toEqual('top-to-bottom');
   });
   
   it('Test 14 Manifest: ViewingDirection: b-t-t', () => {
@@ -369,12 +372,13 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('viewingDirection')).toBe(true);
+    expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
+    expect(p3Manifest.viewingDirection).toEqual('bottom-to-top');
   });
   
   it('Test 15 Manifest: ViewingHint: paged', () => {
@@ -383,12 +387,14 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    // console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('behavior')).toBe(true);
+    expect(p3Manifest.behavior.constructor).toEqual(Array);
+    expect(p3Manifest.behavior.includes('paged')).toBe(true);
+    expect(p3Manifest.behavior.length).toBe(1);
   });
   
   it('Test 16 Manifest: ViewingHint: continuous', () => {
@@ -397,12 +403,14 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('behavior')).toBe(true);
+    expect(p3Manifest.behavior.constructor).toEqual(Array);
+    expect(p3Manifest.behavior.includes('continuous')).toBe(true);
+    expect(p3Manifest.behavior.length).toBe(1);
   });
   
   it('Test 17 Manifest: ViewingHint: individuals', () => {
@@ -411,12 +419,14 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('behavior')).toBe(true);
+    expect(p3Manifest.behavior.constructor).toEqual(Array);
+    expect(p3Manifest.behavior.includes('individuals')).toBe(true);
+    expect(p3Manifest.behavior.length).toBe(1);
   });
   
   it('Test 18 Manifest: Non Standard Keys', () => {
@@ -425,12 +435,12 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('someProperty')).toBe(true);
+    expect(p3Manifest.someProperty).toEqual(p2Manifest.someProperty);
   });
   
   it('Test 19 Manifest: Multiple Canvases', () => {
@@ -439,12 +449,17 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.hasOwnProperty('items')).toBe(true);
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(2);
+    expect(p3Manifest.items[0].hasOwnProperty('type')).toBe(true);
+    expect(p3Manifest.items[0].type).toEqual("Canvas");
+    expect(p3Manifest.items[1].hasOwnProperty('type')).toBe(true);
+    expect(p3Manifest.items[1].type).toEqual("Canvas");
   });
   
   it('Test 20 Manifest: Multiple Sequences', () => {
@@ -453,12 +468,48 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    expect(p3Manifest.hasOwnProperty('items')).toBe(true);
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    expect(p3Manifest.items[0].constructor).toEqual(Object);
+    expect(p3Manifest.items[0].hasOwnProperty('type')).toBe(true);
+    expect(p3Manifest.items[0].type).toEqual("Canvas");
+    expect(p3Manifest.hasOwnProperty('structures')).toBe(true);
+    expect(p3Manifest.structures.constructor).toEqual(Array);
+    expect(p3Manifest.structures.length).toBe(2);
+    expect(p3Manifest.structures[0].constructor).toEqual(Object);
+    expect(p3Manifest.structures[0].hasOwnProperty('type')).toBe(true);
+    expect(p3Manifest.structures[0].type).toEqual("Range");
+    expect(p3Manifest.structures[0].hasOwnProperty('behavior')).toBe(true);
+    expect(p3Manifest.structures[0].behavior.constructor).toEqual(Array);
+    expect(p3Manifest.structures[0].behavior.includes('sequence')).toBe(true);
+    
+    expect(p3Manifest.structures[0].hasOwnProperty('label')).toBe(true);
+    expect(p3Manifest.structures[0].label.constructor).toEqual(Object);
+    expect(p3Manifest.structures[0].label.hasOwnProperty('@none')).toBe(true);
+    expect(p3Manifest.structures[0].label['@none'].constructor).toEqual(Array);
+    expect(p3Manifest.structures[0].label['@none'].length).toBe(1);
+    expect(p3Manifest.structures[0].label['@none'][0]).toEqual(p2Manifest.sequences[0].label);
+    expect(p3Manifest.structures[0].label['@none'][0]).toEqual("Test 20 Sequence 1");
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest.structures[1].constructor).toEqual(Object);
+    expect(p3Manifest.structures[1].hasOwnProperty('type')).toBe(true);
+    expect(p3Manifest.structures[1].type).toEqual("Range");
+    expect(p3Manifest.structures[1].hasOwnProperty('behavior')).toBe(true);
+    expect(p3Manifest.structures[1].behavior.constructor).toEqual(Array);
+    expect(p3Manifest.structures[1].behavior.includes('sequence')).toBe(true);
+
+    expect(p3Manifest.structures[1].hasOwnProperty('label')).toBe(true);
+    expect(p3Manifest.structures[1].label.constructor).toEqual(Object);
+    expect(p3Manifest.structures[1].label.hasOwnProperty('@none')).toBe(true);
+    expect(p3Manifest.structures[1].label['@none'].constructor).toEqual(Array);
+    expect(p3Manifest.structures[1].label['@none'].length).toBe(1);
+    expect(p3Manifest.structures[1].label['@none'][0]).toEqual(p2Manifest.sequences[1].label);
+    expect(p3Manifest.structures[1].label['@none'][0]).toEqual("Test 20 Sequence 2");
   });
   
   it('Test 21 Manifest: Sequence with Metadata', () => {
@@ -467,12 +518,12 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    // console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
-    expect(p3Manifest.hasOwnProperty('@context')).toBe(true);
+    expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    
+    // NOTE: sequence metadata is being lost if there's only one sequence...
   });
   
   it('Test 22 Manifest: /Sequence/ with non l-t-r viewingDirection', () => {
