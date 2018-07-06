@@ -776,12 +776,75 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    // console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(2);
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/31/c1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].on
+    );
+    
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toBe(Array);
+    expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0].constructor).toBe(Object);
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@id']).toEqual(
+      'http://iiif.io/api/image/2.1/example/reference/page1-full'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0].profile).toEqual(
+      'http://iiif.io/api/image/2/level1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@type']).toEqual("ImageService2");
+
+    expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/31/c1.json#xywh=400,400,173,173'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[1].on
+    );
+
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[1].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[1].body.service.constructor).toBe(Array);
+    expect(p3Manifest.items[0].items[0].items[1].body.service.length).toBe(1);
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0].constructor).toBe(Object);
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('@id');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]['@id']).toEqual(
+      'http://iiif.io/api/image/2.1/example/reference/detail'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0].profile).toEqual(
+      'http://iiif.io/api/image/2/level1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('@type');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]['@type']).toEqual("ImageService2");
   });
   
   it('Test 32 Manifest: Multiple Detail Images', () => {
@@ -790,12 +853,53 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
+
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(3);
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/32/c1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].on
+    );
+    
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/32/c1.json#xywh=400,400,173,173'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[1].on
+    );
+    
+    expect(p3Manifest.items[0].items[0].items[2]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[2].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[2]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[2].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/32/c1.json#xywh=600,600,173,173'
+    );
+    expect(p3Manifest.items[0].items[0].items[2].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[2].on
+    );
   });
   
   it('Test 33 Manifest: Detail Image with Choice', () => {
@@ -804,12 +908,12 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    
+    // NOTE: possibly wrong behaviour choices are not definied yet
   });
   
   it('Test 34 Manifest: Detail Image with Choice, and \'no image\' as option', () => {
@@ -818,12 +922,12 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    
+    // NOTE: possibly wrong behaviour choices are not definied yet
   });
   
   it('Test 35 Manifest: Partial Image as Main Image', () => {
@@ -832,12 +936,33 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(1);
+    // body
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
+    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body['id']).toEqual(
+      "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png#xywh=100,100,1000,1600"
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body['id']).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].resource['@id']
+    );
   });
   
   it('Test 36 Manifest: Partial Image as Main Image with IIIF Service', () => {
@@ -846,12 +971,39 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(1);
+    // body
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
+    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body['id']).toEqual(
+      'http://iiif.io/api/image/2.1/example/reference/page1-full/100,100,1000,1600/full/0/default.jpg'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body['id']).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].resource['@id']
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('selector');
+    expect(p3Manifest.items[0].items[0].items[0].body.selector.constructor).toEqual(Object);
+    expect(p3Manifest.items[0].items[0].items[0].body.selector).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.selector.type).toEqual('ImageApiSelector');
+    expect(p3Manifest.items[0].items[0].items[0].body.selector).toContainKey('region');
+    expect(p3Manifest.items[0].items[0].items[0].body.selector.region).toEqual('100,100,1000,1600');
   });
   
   it('Test 37 Manifest: Partial Image as Detail Image', () => {
@@ -860,12 +1012,43 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
+
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(2);
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/37/c1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].on
+    );
+    expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/37/c1.json#xywh=400,400,153,153'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[1].on
+    );
   });
   
   it('Test 38 Manifest: Partial Image as Detail Image with IIIF Service', () => {
@@ -874,12 +1057,77 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
+
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(2);
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/38/c1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].on
+    );
+    
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toBe(Array);
+    expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0].constructor).toBe(Object);
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@id']).toEqual(
+      'http://iiif.io/api/image/2.1/example/reference/page1-full'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0].profile).toEqual(
+      'http://iiif.io/api/image/2/level1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@type']).toEqual("ImageService2");
+
+    expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/38/c1.json#xywh=400,400,173,173'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[1].on
+    );
+
+    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[1].body).toContainKey('source');
+    expect(p3Manifest.items[0].items[0].items[1].body.source).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service.constructor).toBe(Array);
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service.length).toBe(1);
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0].constructor).toBe(Object);
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('@id');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['@id']).toEqual(
+      'http://iiif.io/api/image/2.1/example/reference/detail'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0].profile).toEqual(
+      'http://iiif.io/api/image/2/level1.json'
+    );
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('@type');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['@type']).toEqual("ImageService2");
   });
   
   it('Test 39 Manifest: Image with CSS Rotation', () => {
@@ -888,12 +1136,40 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    // console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    // Canvases
+    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest.items.constructor).toEqual(Array);
+    expect(p3Manifest.items.length).toBe(1);
+    // Annotation Page
+    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items.length).toBe(1);
+
+    // Annotation
+    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.items[0].items[0].items.length).toBe(1);
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
+    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('stylesheet');
+    expect(p3Manifest.items[0].items[0].items[0].stylesheet.constructor).toEqual(Object);
+    expect(p3Manifest.items[0].items[0].items[0].stylesheet).toContainKeys([
+      'format',
+      'value', 
+      'type',
+      'id'
+    ])
+    expect(p3Manifest.items[0].items[0].items[0].stylesheet.type).toEqual('CssStylesheet');
+    expect(p3Manifest.items[0].items[0].items[0].stylesheet.format).toEqual('text/css');
+    expect(p3Manifest.items[0].items[0].items[0].stylesheet.value).toEqual('.rotated {transform: rotate(180deg)}');
+    expect(p3Manifest.items[0].items[0].items[0].stylesheet.value).toEqual(
+      p2Manifest.sequences[0].canvases[0].images[0].stylesheet.chars
+    );
   });
   
   it('Test 40 Manifest: Multiple Languages for Metadata Labels', () => {
@@ -902,12 +1178,24 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    // console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    // 
-
-    //console.log(JSON.stringify(p3Manifest,null, 2))
+    expect(p3Manifest).toContainKey('metadata');
+    expect(p3Manifest.metadata.constructor).toEqual(Array);
+    expect(p3Manifest.metadata.length).toBe(1);
+    expect(p3Manifest.metadata[0].constructor).toEqual(Object);
+    expect(p3Manifest.metadata[0]).toContainKeys(['label', 'value']);
+    expect(p3Manifest.metadata[0].label.constructor).toEqual(Object);
+    expect(p3Manifest.metadata[0].value.constructor).toEqual(Object);
+    expect(p3Manifest.metadata[0].label).toContainKeys(['fr', 'en']);
+    expect(p3Manifest.metadata[0].label.fr.constructor).toEqual(Array);
+    expect(p3Manifest.metadata[0].label.en.constructor).toEqual(Array);
+    expect(p3Manifest.metadata[0].label.fr.length).toBe(1);
+    expect(p3Manifest.metadata[0].label.en.length).toBe(1);
+    expect(p3Manifest.metadata[0].label.fr[0]).toEqual('date');
+    expect(p3Manifest.metadata[0].label.en[0]).toEqual('date');
   });
   
   it('Test 41 Manifest: Main Image with Server side Rotation', () => {
