@@ -28,7 +28,6 @@ describe('prezi2to3', () => {
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     expect(p3Manifest).toContainKey('label');
     expect(p3Manifest.label.constructor).toEqual(Object);
     expect(p3Manifest.label).toContainKey('@none');
@@ -89,7 +88,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -116,8 +114,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    //console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -151,7 +148,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -181,7 +177,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -210,7 +205,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -242,8 +236,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    //console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -270,7 +263,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -290,7 +282,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -308,7 +299,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -327,7 +317,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -342,7 +331,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -357,7 +345,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -372,7 +359,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -403,7 +389,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -419,7 +404,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -435,7 +419,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -449,7 +432,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -468,7 +450,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -561,7 +542,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -607,7 +587,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -645,7 +624,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -703,7 +681,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -717,7 +694,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -730,8 +706,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    //console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -852,8 +827,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -908,7 +882,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -922,7 +895,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -935,8 +907,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    //console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -970,8 +941,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    //console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1012,7 +982,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
 
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
@@ -1057,7 +1026,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1203,8 +1171,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    //console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1301,7 +1268,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1332,8 +1298,7 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-
-    console.log(JSON.stringify(p3Manifest,null, 2));
+;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1363,8 +1328,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
 
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
@@ -1396,7 +1360,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1428,7 +1391,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT)); 
@@ -1457,8 +1419,7 @@ describe('prezi2to3', () => {
     const p3Manifest = upgrader.processResource(
       clone(p2Manifest), 
       true
-    );
-    //console.log(JSON.stringify(p3Manifest,null, 2));
+    );;
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1489,7 +1450,6 @@ describe('prezi2to3', () => {
       true
     );
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1540,7 +1500,6 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].otherContent[0]['@id']
     );
 
-    //console.log(JSON.stringify(p3Manifest,null, 2))
   });
 
 });
