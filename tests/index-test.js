@@ -80,6 +80,7 @@ describe('prezi2to3', () => {
         processUUIDs(output_manifest),
         "result",
         processUUIDs(results)].join('\n\n')
+        //JSON.stringify(results, null, 2)
       );
     });
     done();

@@ -38,9 +38,10 @@ describe('prezi2to3', () => {
     expect(p3Manifest.id.constructor).toEqual(String);
     expect(p3Manifest.id).toBe(p2Manifest['@id']);
     expect(p3Manifest).toContainKey('partOf');
+    expect(p3Manifest).toNotContainKey('within');
     expect(p3Manifest.partOf.constructor).toEqual(Array);
-    //expect(p3Manifest.partOf[0].id).toBe(p2Manifest.within); -> currently failing
-    //expect(p3Manifest.partOf[0].type).toBe("Collection"); -> currently failing
+    expect(p3Manifest.partOf[0].id).toBe(p2Manifest.within); // -> currently failing
+    expect(p3Manifest.partOf[0].type).toBe("Collection"); // -> currently failing
     // in presentation v3 items will be always an array
     expect(p3Manifest).toContainKey('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
@@ -299,6 +300,7 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
+    console.log('Where', JSON.stringify(p3Manifest.service[0]));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -308,7 +310,14 @@ describe('prezi2to3', () => {
     expect(p3Manifest.service.length).toBe(1);
     expect(p3Manifest.service[0].constructor).toEqual(Object);
     // NOTE: is it service id or @id in v3?
-    expect(JSON.stringify(p3Manifest.service[0])).toEqual(JSON.stringify(p2Manifest.service));
+    expect(p3Manifest.service[0]).toNotContainKey('@id');
+    expect(p3Manifest.service[0]).toContainKey('id');
+    expect(p3Manifest.service[0]).toNotContainKey('@type');
+    expect(p3Manifest.service[0]).toContainKey('type');
+    expect(p3Manifest.service[0].type).toEqual('Service');
+    expect(
+      JSON.stringify(p3Manifest.service[0])
+    ).toEqual(JSON.stringify(p2Manifest.service));
   });
   
   it('Test 11 Manifest: ViewingDirection: l-t-r', () => {
@@ -499,12 +508,33 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2))
+    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // NOTE: sequence metadata is being lost if there's only one sequence...
+    expect(p3Manifest).toContainKey('structures');
+    expect(p3Manifest.structures.constructor).toEqual(Array);
+    expect(p3Manifest.structures.length).toBe(1);
+    expect(p3Manifest.structures[0].constructor).toEqual(Object);
+    expect(p3Manifest.structures[0]).toContainKeys(['type', 'items', 'behavior', 'metadata']);
+    expect(p3Manifest.structures[0].type).toEqual('Range');
+    expect(p3Manifest.structures[0].behavior.constructor).toEqual(Array);
+    expect(p3Manifest.structures[0].behavior).toContain('sequence');
+    expect(p3Manifest.structures[0].items.constructor).toEqual(Array);
+    expect(p3Manifest.structures[0].metadata.constructor).toEqual(Array);
+    expect(p3Manifest.structures[0].metadata.length).toBe(1);
+    expect(p3Manifest.structures[0].metadata[0]).toContainKeys(['label', 'value']);
+    expect(p3Manifest.structures[0].metadata[0].label.constructor).toEqual(Object);
+    expect(p3Manifest.structures[0].metadata[0].label).toContainKey('@none');
+    expect(p3Manifest.structures[0].metadata[0].label['@none'].constructor).toBe(Array);
+    expect(p3Manifest.structures[0].metadata[0].label['@none'].length).toBe(1);
+    expect(p3Manifest.structures[0].metadata[0].value.constructor).toEqual(Object);
+    expect(p3Manifest.structures[0].metadata[0].value).toContainKey('@none');
+    expect(p3Manifest.structures[0].metadata[0].value['@none'].constructor).toBe(Array);
+    expect(p3Manifest.structures[0].metadata[0].value['@none'].length).toBe(1);
+
   });
   
   it('Test 22 Manifest: /Sequence/ with non l-t-r viewingDirection', () => {

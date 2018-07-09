@@ -265,9 +265,31 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1fb418af-1465-43ad-8db5-e61a2a229c0d"
+          "id": "https://example.org/uuid/741b9f95-87c4-4741-a7bb-10afbbc6b3ea"
         }
       ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://example.org/uuid/375d694d-38b0-4d01-8e40-54db63b98167",
+      "type": "Range",
+      "behavior": [
+        "sequence",
+        "individuals"
+      ],
+      "items": [
+        {
+          "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
+          "type": "Canvas"
+        }
+      ],
+      "@context": "http://iiif.io/api/presentation/2/context.json",
+      "label": {
+        "@none": [
+          "Current Page Order"
+        ]
+      }
     }
   ],
   "@context": [

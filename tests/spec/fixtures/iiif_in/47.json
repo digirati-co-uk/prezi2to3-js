@@ -14,7 +14,7 @@
           "@type": "sc:Canvas", 
           "label": "Test 47 Canvas: 1", 
           "height": 1800, 
-          "width": 1200, 
+          "width": 1200,
           "images": [
             {
               "@type": "oa:Annotation", 

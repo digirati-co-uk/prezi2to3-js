@@ -103,7 +103,7 @@
       },
       "value": {
         "@none": [
-          "Vincent van Gogh, Arles, (1888,) gift;  to Paul Gauguin, (1888-1897) sold. [Ambroise Vollard, Paris.] [Paul Cassirer Gallery, Berlin.] Dr. Hugo von Tschudi, Berlin, (1906-1911), by descent; to his widow, Angela von Tschudi, Munich (1911-1919),  to Neue Staatsgalerie, Munich (1919-1938); removed from the collection by the National Socialist (Nazi) authorities in 1938, consigned; to [Theodor Fischer Gallery, Lucerne, Switzerland, for sale June 30, 1939, lot 45]; to Maurice Wertheim (1939-1951) bequest; to Fogg Art Museum, 1951.\r\n\r\n \r\n\r\nNotes:\r\nGauguin sold the painting for Fr 300\r\nHugo von Tschudi bought the painting for the Nationalgalerie, Berlin, with funds from sponsors, but did not submit it to the Kaiser for pre-approval. He took the painting to Munich when he assumed a post there.\r\nAccording to Stephanie Barron, the van Gogh was removed from the Neue Staatsgalerie on March 27, 1938 and stored at Schloss Niedersch\u00f6nhausen in August of that year. (Barron, 1990,pp. 135-146)\r\n"
+          "Vincent van Gogh, Arles, (1888,) gift;  to Paul Gauguin, (1888-1897) sold. [Ambroise Vollard, Paris.] [Paul Cassirer Gallery, Berlin.] Dr. Hugo von Tschudi, Berlin, (1906-1911), by descent; to his widow, Angela von Tschudi, Munich (1911-1919),  to Neue Staatsgalerie, Munich (1919-1938); removed from the collection by the National Socialist (Nazi) authorities in 1938, consigned; to [Theodor Fischer Gallery, Lucerne, Switzerland, for sale June 30, 1939, lot 45]; to Maurice Wertheim (1939-1951) bequest; to Fogg Art Museum, 1951.\r\n\r\n \r\n\r\nNotes:\r\nGauguin sold the painting for Fr 300\r\nHugo von Tschudi bought the painting for the Nationalgalerie, Berlin, with funds from sponsors, but did not submit it to the Kaiser for pre-approval. He took the painting to Munich when he assumed a post there.\r\nAccording to Stephanie Barron, the van Gogh was removed from the Neue Staatsgalerie on March 27, 1938 and stored at Schloss Niederschönhausen in August of that year. (Barron, 1990,pp. 135-146)\r\n"
         ]
       }
     },
@@ -148,7 +148,7 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/d331bf6f-4c15-439a-bd7f-1078e03bd205"
+      "id": "https://example.org/uuid/32db6865-d8db-4e16-91d7-3662813a1be2"
     }
   ],
   "items": [
@@ -193,7 +193,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d6de871b-0466-42b8-87d9-705c27751954"
+          "id": "https://example.org/uuid/77e1beb4-7b60-4685-960a-75e3466a69be"
         }
       ]
     },
@@ -238,7 +238,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/90bdcafc-8a58-43f7-aefa-4f611e4d7d02"
+          "id": "https://example.org/uuid/8033cdce-12c2-4fe6-823a-e18a3191697b"
         }
       ]
     },
@@ -283,7 +283,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9379aea6-24c3-4bc5-ac13-2154cdf7ef65"
+          "id": "https://example.org/uuid/0403a33d-cd78-4bdc-a183-213a4b34bce4"
         }
       ]
     },
@@ -328,7 +328,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0b7204e3-5c21-4b9a-85a3-74b456ad39b5"
+          "id": "https://example.org/uuid/4d85b8b9-90e0-4a35-bf2e-85c703c80ca6"
         }
       ]
     },
@@ -373,7 +373,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7943dedf-7454-4e1a-8968-481c52d7dff5"
+          "id": "https://example.org/uuid/5a51b37c-0590-44fd-a15b-d857378d53b1"
         }
       ]
     },
@@ -418,7 +418,43 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e211f30b-0ef4-4e6a-ae67-0207a71e9d6e"
+          "id": "https://example.org/uuid/ed0c9250-2bb4-48cf-8385-af5ccf2c3bbd"
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://example.org/uuid/fc3955f6-e1af-4a45-9c0b-6f7c37a12feb",
+      "type": "Range",
+      "behavior": [
+        "sequence",
+        "individuals"
+      ],
+      "items": [
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174896",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-18737483",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174892",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43182083",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183405",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183422",
+          "type": "Canvas"
         }
       ]
     }

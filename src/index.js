@@ -697,6 +697,28 @@ class Upgrader {
     return what;
   }
 
+  areSequencesNeeded(what) {
+    let sequences = what.sequences;
+    let sequencesLength = sequences.length;
+    
+    // TODO: add flag to not control this feature...
+    if (sequencesLength === 0) {
+      return false; // never be the case, just to be complete :D
+    } else if (sequencesLength > 1) {
+      return true;
+    } //else if (sequencesLength === 1) { //if we assume that sequencesLength is a positive integer.  {
+    
+    let isNotDefaultViewingHint = 
+      sequences[0].hasOwnProperty('viewingHint') && 
+      sequences[0].viewingHint !== 'paged';
+    let isNotDefaultViewingDirection = 
+      sequences[0].hasOwnProperty('viewingDirection') &&
+      sequences[0].viewingDirection !== 'left-to-right';
+    let hasMetadata = sequences[0].hasOwnProperty('metadata');
+    
+    return isNotDefaultViewingHint || isNotDefaultViewingDirection || hasMetadata;
+  }
+
   processManifest(what) {
     what = this.processGeneric(what)
 
@@ -717,15 +739,15 @@ class Upgrader {
     // Need to test as might not be top object
     if (what.hasOwnProperty('sequences')) {
       // No more sequences!
-      let seqs = what['sequences'];
-      what['items'] = seqs[0]['canvases'];
+      let seqs = what.sequences;
+      let keepingSequences = this.areSequencesNeeded(what);
+      what.items = seqs[0].canvases;
       delete what['sequences'];
-      if (seqs.length > 1) {
+      if (keepingSequences) {
         // Process to ranges
         what['_structures'] = [];
         seqs.forEach(s => {
           // XXX Test here to see if we need to crawl
-
           let rng = {"id": s['@id'] || this.mintURI(), "type": "Range"}
           rng['behavior'] = ['sequence'];
           rng['items'] = (s['canvases']||[]).map(c => {

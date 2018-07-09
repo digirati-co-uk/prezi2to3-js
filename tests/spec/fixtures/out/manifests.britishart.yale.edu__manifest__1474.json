@@ -1,7 +1,7 @@
 {
   "label": {
     "@none": [
-      "Peter Gaspar Scheemakers, 1691\u20131781, Flemish, active in Britain (from ca. 1720), Alexander Pope, ca. 1740, Marble, Yale Center for British Art, B1977.14.29, Paintings and Sculpture"
+      "Peter Gaspar Scheemakers, 1691–1781, Flemish, active in Britain (from ca. 1720), Alexander Pope, ca. 1740, Marble, Yale Center for British Art, B1977.14.29, Paintings and Sculpture"
     ]
   },
   "metadata": [
@@ -13,7 +13,7 @@
       },
       "value": {
         "@none": [
-          "Peter Gaspar Scheemakers, 1691\u20131781, Flemish, active in Britain (from ca. 1720)"
+          "Peter Gaspar Scheemakers, 1691–1781, Flemish, active in Britain (from ca. 1720)"
         ]
       }
     },
@@ -235,7 +235,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f35d8852-8165-49a3-a77b-13d7c0cd64e5"
+          "id": "https://example.org/uuid/a112d6a0-41ea-481f-961d-5b60b5c2f535"
         }
       ]
     },
@@ -279,7 +279,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4bb53dda-8a6f-4d98-aaf8-b92ad659ac10"
+          "id": "https://example.org/uuid/e65443c5-9230-4591-b356-d2285c11af26"
         }
       ]
     },
@@ -323,7 +323,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7c26da56-6e71-4e9d-a9d5-ec20c238cb27"
+          "id": "https://example.org/uuid/66588e2f-11e5-4215-bbf5-ac1c0f970fed"
         }
       ]
     },
@@ -367,7 +367,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/475f2283-ab6b-445c-9563-f5b23b034767"
+          "id": "https://example.org/uuid/08240e6a-e76e-4fbe-93e2-a3ebeaf7c51a"
         }
       ]
     },
@@ -411,9 +411,46 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/df1fae9b-9af5-48f5-9095-a60783f81810"
+          "id": "https://example.org/uuid/bec7e9e2-8b1c-4d3d-b7fd-94217da2e873"
         }
       ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://example.org/uuid/be40d521-71f3-4449-9733-6cc06c2c8542",
+      "type": "Range",
+      "behavior": [
+        "sequence",
+        "individuals"
+      ],
+      "items": [
+        {
+          "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0001-pub",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0001-bar",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0002-pub",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0003-pub",
+          "type": "Canvas"
+        },
+        {
+          "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0004-pub",
+          "type": "Canvas"
+        }
+      ],
+      "label": {
+        "@none": [
+          "default sequence"
+        ]
+      }
     }
   ],
   "@context": [
