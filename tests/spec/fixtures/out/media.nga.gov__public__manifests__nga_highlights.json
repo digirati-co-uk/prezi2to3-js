@@ -61,7 +61,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/da18b61b-2ad0-4b7f-9c86-9761bbb3c1d7",
+              "id": "https://example.org/uuid/7bff4492-c4ab-4577-81c9-cfbf64ba3998",
               "target": "https://media.nga.gov/public/manifests/canvas/106382.json",
               "body": {
                 "format": "image/jpeg",
@@ -69,9 +69,9 @@
                 "width": 307,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -79,7 +79,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ddba7f61-8249-43d6-a673-927788b898d9"
+          "id": "https://example.org/uuid/237475ab-f40d-40cb-b583-17d44cb8bb9a"
         }
       ]
     },
@@ -126,7 +126,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/748a1ce0-5b98-4666-b5ca-24a57a17ec2a",
+              "id": "https://example.org/uuid/e1263a0f-e993-4062-930f-6a88ca53dbf5",
               "target": "https://media.nga.gov/public/manifests/canvas/61371.json",
               "body": {
                 "format": "image/jpeg",
@@ -134,9 +134,9 @@
                 "width": 443,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -144,7 +144,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/cf8cc410-022f-4aa3-8cd3-137d062e9c48"
+          "id": "https://example.org/uuid/3c3e57d1-8af8-4034-88fb-9e82fd75c34e"
         }
       ]
     },
@@ -191,7 +191,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/d1a2c052-91ab-476b-b1f3-1b00709009af",
+              "id": "https://example.org/uuid/1db7bf9d-2eab-487b-ad95-6f356ec91603",
               "target": "https://media.nga.gov/public/manifests/canvas/52178.json",
               "body": {
                 "format": "image/jpeg",
@@ -199,9 +199,9 @@
                 "width": 441,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -209,7 +209,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/83dae6ea-6ed1-4308-9f60-ab518c9e7d7e"
+          "id": "https://example.org/uuid/fadbedee-18d2-4f06-897b-62466f9eeb05"
         }
       ]
     },
@@ -256,7 +256,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/a92ea9a7-f4d7-48e5-9a14-a355a546ef47",
+              "id": "https://example.org/uuid/af363d81-5e46-4550-838d-9dfe11a5b3d6",
               "target": "https://media.nga.gov/public/manifests/canvas/46626.json",
               "body": {
                 "format": "image/jpeg",
@@ -264,9 +264,9 @@
                 "width": 3348,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -274,7 +274,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ee615a13-9941-41b5-9235-5fad69f91ff1"
+          "id": "https://example.org/uuid/37775726-3988-4c88-8df7-894446223732"
         }
       ]
     },
@@ -321,7 +321,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/988dc372-33fa-4d03-a569-1212aba7533c",
+              "id": "https://example.org/uuid/8eaa2294-4613-4069-80d1-4004892b4a25",
               "target": "https://media.nga.gov/public/manifests/canvas/1138.json",
               "body": {
                 "format": "image/jpeg",
@@ -329,9 +329,9 @@
                 "width": 401,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -339,7 +339,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/88fadace-549c-4e0f-8867-1ce2d33f9957"
+          "id": "https://example.org/uuid/372ce6a4-82e0-4971-82df-acb1499a386a"
         }
       ]
     },
@@ -386,7 +386,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/df2607ef-0556-4f7e-ba33-438f853abd14",
+              "id": "https://example.org/uuid/b179296a-eff1-49e2-b479-e84c0d12af27",
               "target": "https://media.nga.gov/public/manifests/canvas/46159.json",
               "body": {
                 "format": "image/jpeg",
@@ -394,9 +394,9 @@
                 "width": 260,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -404,7 +404,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/02c3b298-172f-433e-aa90-33287529821c"
+          "id": "https://example.org/uuid/c57ad18c-0413-4ef5-b393-31f3f33fff70"
         }
       ]
     },
@@ -451,7 +451,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/e866bdc5-b4a2-41a6-a2c2-cad35371f2b5",
+              "id": "https://example.org/uuid/084054ff-534d-43df-b69f-e5ec0c28ccbd",
               "target": "https://media.nga.gov/public/manifests/canvas/33253.json",
               "body": {
                 "format": "image/jpeg",
@@ -459,9 +459,9 @@
                 "width": 443,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -469,7 +469,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/eadfc123-cded-4b5e-9138-32293cd8f722"
+          "id": "https://example.org/uuid/8252a150-a4da-4201-957f-c3b021f72a80"
         }
       ]
     },
@@ -516,7 +516,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/6026a0a7-e8fb-47b2-ade1-afe7a07c89b2",
+              "id": "https://example.org/uuid/0e51388d-dd46-4596-a479-b3be122b8ed1",
               "target": "https://media.nga.gov/public/manifests/canvas/1231.json",
               "body": {
                 "format": "image/jpeg",
@@ -524,9 +524,9 @@
                 "width": 224,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -534,7 +534,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/369bfaaa-bc5f-4659-acf7-2352df595780"
+          "id": "https://example.org/uuid/9b319b4d-b624-47a6-b69a-11ab8f85291e"
         }
       ]
     },
@@ -581,7 +581,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/5369eeaa-b997-4a42-9fca-3cc641c55ccb",
+              "id": "https://example.org/uuid/1520a3c4-4fea-4165-97c4-caf63e920007",
               "target": "https://media.nga.gov/public/manifests/canvas/37003.json",
               "body": {
                 "format": "image/jpeg",
@@ -589,9 +589,9 @@
                 "width": 352,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -599,7 +599,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/faa6b64f-4fbb-418a-9eab-42ed6ef1322a"
+          "id": "https://example.org/uuid/0e3851fe-8547-416d-91d2-8092fc09f8f8"
         }
       ]
     },
@@ -646,7 +646,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/f907bd4c-36de-4c8a-9f13-bc4452312aa7",
+              "id": "https://example.org/uuid/87b629dd-f067-4dca-b78b-ebb7992363a3",
               "target": "https://media.nga.gov/public/manifests/canvas/576.json",
               "body": {
                 "format": "image/jpeg",
@@ -654,9 +654,9 @@
                 "width": 442,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -664,7 +664,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/dc6de6db-a17d-4163-b7e3-2c7c097a342d"
+          "id": "https://example.org/uuid/da41314e-16fc-4e20-9c5a-edd523bb88a7"
         }
       ]
     },
@@ -711,7 +711,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/408c76e0-59c2-4a0d-b439-92d65fcb5864",
+              "id": "https://example.org/uuid/9af82b2f-cc96-4900-beff-8e130280908b",
               "target": "https://media.nga.gov/public/manifests/canvas/79.json",
               "body": {
                 "format": "image/jpeg",
@@ -719,9 +719,9 @@
                 "width": 312,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -729,7 +729,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b716ac65-80c0-4716-bf3c-3d39a2db67dd"
+          "id": "https://example.org/uuid/c37422d0-6a11-4b79-afcf-dae2d746c952"
         }
       ]
     },
@@ -776,7 +776,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/979f841f-5e90-4944-bc39-846074d69879",
+              "id": "https://example.org/uuid/3979b2b4-3968-414f-8f6b-dd48dd484227",
               "target": "https://media.nga.gov/public/manifests/canvas/1236.json",
               "body": {
                 "format": "image/jpeg",
@@ -784,9 +784,9 @@
                 "width": 355,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -794,7 +794,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b4841021-8e55-4e2b-a1d8-608a013beb8c"
+          "id": "https://example.org/uuid/f068d161-9cfc-440d-b06a-e9df6f7364be"
         }
       ]
     },
@@ -841,7 +841,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/afbbc26a-1022-4587-ac7a-97c51946ae1f",
+              "id": "https://example.org/uuid/9c5f629e-a974-431e-9975-def1c26e4b4d",
               "target": "https://media.nga.gov/public/manifests/canvas/46303.json",
               "body": {
                 "format": "image/jpeg",
@@ -849,9 +849,9 @@
                 "width": 355,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -859,7 +859,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b85345d2-124a-4762-9108-a41559b5c570"
+          "id": "https://example.org/uuid/a409832a-6daf-4658-b5f9-ee2d9fb6e5e0"
         }
       ]
     },
@@ -906,7 +906,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/cdd625c5-b11a-4b54-9031-fbefeda65c1a",
+              "id": "https://example.org/uuid/eb5c7e1d-6532-4ed5-8ebe-56a311d2202a",
               "target": "https://media.nga.gov/public/manifests/canvas/46471.json",
               "body": {
                 "format": "image/jpeg",
@@ -914,9 +914,9 @@
                 "width": 441,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -924,7 +924,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/15f82df7-ddbe-457c-b685-5dbe6764f670"
+          "id": "https://example.org/uuid/787fb77b-8a95-4dc3-ab12-34142748e3ea"
         }
       ]
     },
@@ -971,7 +971,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/5d57f546-0af2-411d-945b-e46d7f9b2f78",
+              "id": "https://example.org/uuid/4e1a2afd-8e95-4478-b97e-63af6a371648",
               "target": "https://media.nga.gov/public/manifests/canvas/46114.json",
               "body": {
                 "format": "image/jpeg",
@@ -979,9 +979,9 @@
                 "width": 245,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -989,7 +989,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b127b614-6164-4f70-9304-7dace7f7fc26"
+          "id": "https://example.org/uuid/3b643e0c-5a31-4d02-9225-8a16c2052745"
         }
       ]
     },
@@ -1036,7 +1036,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/f7b60294-ce8e-4990-92dc-2521eb6bf56d",
+              "id": "https://example.org/uuid/aa3a0629-d091-46f4-9adb-25f2d439ba2f",
               "target": "https://media.nga.gov/public/manifests/canvas/1147.json",
               "body": {
                 "format": "image/jpeg",
@@ -1044,9 +1044,9 @@
                 "width": 443,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1054,7 +1054,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/693acc2c-e1fc-46ae-b7ca-9ed8b30fe4c9"
+          "id": "https://example.org/uuid/84b45f70-93e3-4013-993a-131ee45b4970"
         }
       ]
     },
@@ -1101,7 +1101,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/5c60e608-7547-4afa-a416-e99770ba9a79",
+              "id": "https://example.org/uuid/ff1ade8b-7e0e-44cb-af25-193de8a9b777",
               "target": "https://media.nga.gov/public/manifests/canvas/1225.json",
               "body": {
                 "format": "image/jpeg",
@@ -1109,9 +1109,9 @@
                 "width": 441,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1119,7 +1119,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9a9a0738-39e3-498b-9eff-971e2193c907"
+          "id": "https://example.org/uuid/60d313e6-c152-4f43-bc3c-dbf136edfb1d"
         }
       ]
     },
@@ -1166,7 +1166,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/a248c6b6-ba42-44b7-8cf2-e8ed0d77c0dd",
+              "id": "https://example.org/uuid/00e26b90-6df9-46da-bd3c-e46d3ce6a089",
               "target": "https://media.nga.gov/public/manifests/canvas/52450.json",
               "body": {
                 "format": "image/jpeg",
@@ -1174,9 +1174,9 @@
                 "width": 441,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1184,7 +1184,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/bea2c9b1-15ce-4ada-9e1c-6004f9720467"
+          "id": "https://example.org/uuid/263d4b5a-5654-4749-ac10-2d8713354c3f"
         }
       ]
     },
@@ -1231,7 +1231,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/e02c22f9-5ecf-4f94-98a1-21c55990a0cb",
+              "id": "https://example.org/uuid/9e9fbdd7-036f-4a8a-9f47-c1d1e03a7455",
               "target": "https://media.nga.gov/public/manifests/canvas/12198.json",
               "body": {
                 "format": "image/jpeg",
@@ -1239,9 +1239,9 @@
                 "width": 201,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1249,7 +1249,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/549f1640-79d5-4436-b4d2-4543cfd60cdc"
+          "id": "https://example.org/uuid/d1692acc-1ea7-4fde-a104-872f30de3cb8"
         }
       ]
     },
@@ -1296,7 +1296,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/7d6a13de-4c09-4744-8a27-cd056e6f5a6c",
+              "id": "https://example.org/uuid/aafa8b8b-2dda-4612-86d6-0deff5200e92",
               "target": "https://media.nga.gov/public/manifests/canvas/43624.json",
               "body": {
                 "format": "image/jpeg",
@@ -1304,9 +1304,9 @@
                 "width": 442,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1314,7 +1314,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7b610a82-6988-4d79-9ea5-ae9b3e5bdebb"
+          "id": "https://example.org/uuid/f06a30fc-4428-49c4-ac80-7622f77f39ee"
         }
       ]
     },
@@ -1361,7 +1361,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/ef35e2c7-2636-41f8-8eab-16628c642808",
+              "id": "https://example.org/uuid/09825c32-892a-462c-89b1-3b44f588ea58",
               "target": "https://media.nga.gov/public/manifests/canvas/74796.json",
               "body": {
                 "format": "image/jpeg",
@@ -1369,9 +1369,9 @@
                 "width": 441,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1379,7 +1379,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d4a9f874-d2d8-44a5-a77a-05c6416319ee"
+          "id": "https://example.org/uuid/317834a8-a1c0-4cf4-a778-870e35df5403"
         }
       ]
     },
@@ -1426,7 +1426,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/9bf0825d-cbc7-4aab-ba04-fccbd7086ebf",
+              "id": "https://example.org/uuid/9df859d2-98aa-4f4d-8de8-c2b15f2c867a",
               "target": "https://media.nga.gov/public/manifests/canvas/46627.json",
               "body": {
                 "format": "image/jpeg",
@@ -1434,9 +1434,9 @@
                 "width": 442,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1444,7 +1444,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e389b78f-9569-442b-bcd7-2f178331706f"
+          "id": "https://example.org/uuid/1d7fb320-5b5d-4c86-94b3-18d0108d8f98"
         }
       ]
     },
@@ -1491,7 +1491,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/44eca798-0652-4134-8375-ff2f235a435e",
+              "id": "https://example.org/uuid/2918896c-6767-4b8f-bc7e-f14e12a5e2ce",
               "target": "https://media.nga.gov/public/manifests/canvas/134485.json",
               "body": {
                 "format": "image/jpeg",
@@ -1499,9 +1499,9 @@
                 "width": 441,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1509,7 +1509,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/567b159f-f816-467a-b867-802531fa0033"
+          "id": "https://example.org/uuid/bd6aacbe-cd4d-4e85-8895-ac1afe7b23d2"
         }
       ]
     },
@@ -1556,7 +1556,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/a6d4563c-fb59-43a5-b4a6-de2ef9f74c99",
+              "id": "https://example.org/uuid/2333defa-9b22-4503-b77b-c03425b12f2e",
               "target": "https://media.nga.gov/public/manifests/canvas/66409.json",
               "body": {
                 "format": "image/jpeg",
@@ -1564,9 +1564,9 @@
                 "width": 372,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1574,7 +1574,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0682fb9b-f3c8-48e0-8d35-96d2ac34951b"
+          "id": "https://example.org/uuid/15799b3f-8958-4767-bd27-76caee0f5ee0"
         }
       ]
     },
@@ -1621,7 +1621,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/0fe2868d-7ba8-4bcc-9b90-5e2a68843ed4",
+              "id": "https://example.org/uuid/236944ac-69f8-4cc6-9f9c-45ac9317f0de",
               "target": "https://media.nga.gov/public/manifests/canvas/398.json",
               "body": {
                 "format": "image/jpeg",
@@ -1629,9 +1629,9 @@
                 "width": 300,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1639,7 +1639,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/859d3a20-ec19-4817-b629-fcc293fc4a2e"
+          "id": "https://example.org/uuid/918e6eb7-d8d9-48a1-82a4-e99707ba9f0a"
         }
       ]
     },
@@ -1686,7 +1686,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/74d6925f-87f0-42b3-b1cc-f74aa8ba9c83",
+              "id": "https://example.org/uuid/dcfb77ca-c94d-4f7c-bd92-ab3d146c5553",
               "target": "https://media.nga.gov/public/manifests/canvas/164923.json",
               "body": {
                 "format": "image/jpeg",
@@ -1694,9 +1694,9 @@
                 "width": 441,
                 "service": [
                   {
-                    "@id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1704,7 +1704,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f5f2b986-f0da-4950-928e-f8180f2b3933"
+          "id": "https://example.org/uuid/436fcbf1-1fa0-4985-bd43-9c6ba51f190c"
         }
       ]
     }

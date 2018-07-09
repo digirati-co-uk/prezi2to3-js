@@ -218,8 +218,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://images.britishart.yale.edu/iiif/1778fd7f-0dd6-4229-b667-fb682255a8f1",
-                    "@type": "ImageService1"
+                    "id": "https://images.britishart.yale.edu/iiif/1778fd7f-0dd6-4229-b667-fb682255a8f1",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -235,7 +235,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a112d6a0-41ea-481f-961d-5b60b5c2f535"
+          "id": "https://example.org/uuid/72547e82-0e08-4175-8493-238a53ec82c6"
         }
       ]
     },
@@ -262,8 +262,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://images.britishart.yale.edu/iiif/915ba5d3-e38a-4d3c-a81a-ca858dc5cdb6",
-                    "@type": "ImageService1"
+                    "id": "https://images.britishart.yale.edu/iiif/915ba5d3-e38a-4d3c-a81a-ca858dc5cdb6",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -279,7 +279,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e65443c5-9230-4591-b356-d2285c11af26"
+          "id": "https://example.org/uuid/1fb3e16b-0a05-4df2-b677-6eb2861422b0"
         }
       ]
     },
@@ -306,8 +306,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://images.britishart.yale.edu/iiif/2057e87a-de16-4e59-ba15-3bcdaae7d8b0",
-                    "@type": "ImageService1"
+                    "id": "https://images.britishart.yale.edu/iiif/2057e87a-de16-4e59-ba15-3bcdaae7d8b0",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -323,7 +323,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/66588e2f-11e5-4215-bbf5-ac1c0f970fed"
+          "id": "https://example.org/uuid/a7716403-3144-4c1c-bf0d-ff3c1e6e82bd"
         }
       ]
     },
@@ -350,8 +350,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://images.britishart.yale.edu/iiif/4c630d19-d059-40ca-ba8c-0646bec2ab13",
-                    "@type": "ImageService1"
+                    "id": "https://images.britishart.yale.edu/iiif/4c630d19-d059-40ca-ba8c-0646bec2ab13",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -367,7 +367,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/08240e6a-e76e-4fbe-93e2-a3ebeaf7c51a"
+          "id": "https://example.org/uuid/d3c595e0-1ded-4f26-8211-d9dabb9b6480"
         }
       ]
     },
@@ -394,8 +394,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://images.britishart.yale.edu/iiif/0d02621e-57b7-46c8-9674-2c1e419b8b91",
-                    "@type": "ImageService1"
+                    "id": "https://images.britishart.yale.edu/iiif/0d02621e-57b7-46c8-9674-2c1e419b8b91",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -411,14 +411,14 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/bec7e9e2-8b1c-4d3d-b7fd-94217da2e873"
+          "id": "https://example.org/uuid/14bfbf97-a527-4337-afc5-dbe33ed9b296"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "https://example.org/uuid/be40d521-71f3-4449-9733-6cc06c2c8542",
+      "id": "https://example.org/uuid/69bef301-c6a3-4e2e-a9c3-aa245e5d345d",
       "type": "Range",
       "behavior": [
         "sequence",

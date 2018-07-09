@@ -706,8 +706,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309544",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309544",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -718,7 +718,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/544bb810-cef7-4fed-881f-1e60b45dcf3a"
+          "id": "https://example.org/uuid/63d7a009-3671-4518-9b6d-70dd1d4334f7"
         }
       ]
     },
@@ -751,8 +751,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309545",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309545",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -763,7 +763,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c485a097-354c-44aa-bfd4-75cfe96b1470"
+          "id": "https://example.org/uuid/c5187b3e-4c20-4e3c-8f26-6ba34fe859dc"
         }
       ]
     },
@@ -796,8 +796,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309546",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309546",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -808,7 +808,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ea390ef0-5322-4391-ba55-4869b3f538d2"
+          "id": "https://example.org/uuid/0a233b56-8d4e-4062-a812-61ea18a58f5a"
         }
       ]
     },
@@ -841,8 +841,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309547",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309547",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -853,7 +853,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7ca25cf5-1d17-440a-b00e-8ea57f41ba5f"
+          "id": "https://example.org/uuid/7bdaf80a-e9e0-48e1-a8bd-3e223ab9c156"
         }
       ]
     },
@@ -886,8 +886,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309548",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309548",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -898,7 +898,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8bc44e75-9ff5-497f-86ba-cb65eb6be12b"
+          "id": "https://example.org/uuid/51e6a500-8ec0-4cb4-863b-bb8416325a9e"
         }
       ]
     },
@@ -931,8 +931,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309549",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309549",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -943,7 +943,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/bb24c674-a3ab-45fa-8922-c6c9d5c02b86"
+          "id": "https://example.org/uuid/2fd19b72-4602-4b7a-84ab-bbb00e97bebf"
         }
       ]
     },
@@ -976,8 +976,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309550",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309550",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -988,7 +988,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5f985f62-27ff-4640-91c7-fbcff8dd76ee"
+          "id": "https://example.org/uuid/af7cd84d-d061-4155-80e8-4516fe6e484f"
         }
       ]
     },
@@ -1021,8 +1021,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309551",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309551",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1033,7 +1033,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/04ace87c-b758-4514-8a70-9fe8d5049812"
+          "id": "https://example.org/uuid/b209e63d-90ee-4d8e-a3e2-881b47046ed4"
         }
       ]
     },
@@ -1066,8 +1066,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309552",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309552",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1078,7 +1078,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b2ac39d3-8238-4db0-8de1-efe45f097fd3"
+          "id": "https://example.org/uuid/44b6c480-15e2-41a0-bd71-200e34794d56"
         }
       ]
     },
@@ -1111,8 +1111,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309553",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309553",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1123,7 +1123,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3085b714-620c-473e-8a38-0b15bc2adeea"
+          "id": "https://example.org/uuid/368b9d6f-27e8-4f42-9ccf-33df96898dc8"
         }
       ]
     },
@@ -1156,8 +1156,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309554",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309554",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1168,7 +1168,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/78ad96a5-422b-49b5-a1e5-f8c92995b983"
+          "id": "https://example.org/uuid/80553e76-a514-4808-93f4-cda265813506"
         }
       ]
     },
@@ -1201,8 +1201,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309555",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309555",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1213,7 +1213,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/cde2c3f2-9bf9-477f-9157-1e4fedc1b274"
+          "id": "https://example.org/uuid/92c92677-e5e7-41bc-833c-8b36d469c663"
         }
       ]
     },
@@ -1246,8 +1246,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309556",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309556",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1258,7 +1258,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/eb899974-5ab6-4bcb-9bad-797eddd6814b"
+          "id": "https://example.org/uuid/ac90c2b8-b93e-4046-8517-1180c4210274"
         }
       ]
     },
@@ -1291,8 +1291,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309557",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309557",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1303,7 +1303,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7e880b57-30bb-4bea-be00-75fc949125f8"
+          "id": "https://example.org/uuid/2d3b3d56-0bac-4f48-b714-406c4a10495d"
         }
       ]
     },
@@ -1336,8 +1336,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309558",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309558",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1348,7 +1348,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0f6a0222-cf31-4081-8aaf-20afbaef7c82"
+          "id": "https://example.org/uuid/f43402fb-4231-4b3a-9008-790b11b6b8a4"
         }
       ]
     },
@@ -1381,8 +1381,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309559",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309559",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1393,7 +1393,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/453d5279-2355-42cc-a99b-9be348c448a4"
+          "id": "https://example.org/uuid/b9e08aff-3f01-4eef-9718-0135be0c22f3"
         }
       ]
     },
@@ -1426,8 +1426,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309560",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309560",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1438,7 +1438,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/712d8427-d826-47f5-9300-c1c8da7f4f1a"
+          "id": "https://example.org/uuid/8332a055-35dd-40fe-a019-89c6fb1eff27"
         }
       ]
     },
@@ -1471,8 +1471,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309561",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309561",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1483,7 +1483,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d346dd38-58f1-45f1-98fc-7d3f70526e77"
+          "id": "https://example.org/uuid/a8c2b69c-51f0-4e80-b3ab-c732163b31fd"
         }
       ]
     },
@@ -1516,8 +1516,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309562",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309562",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1528,7 +1528,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/23d31600-f586-4cb5-a3ca-3331772f8dd4"
+          "id": "https://example.org/uuid/384e8b43-37b7-4cee-8664-b1881202aacf"
         }
       ]
     },
@@ -1561,8 +1561,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309563",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309563",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1573,7 +1573,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c4da67e0-95dd-47b1-b7e4-18c14e6e2ec9"
+          "id": "https://example.org/uuid/c8b4cc90-93ea-46df-9bd8-061937b52556"
         }
       ]
     },
@@ -1606,8 +1606,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309564",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309564",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1618,7 +1618,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b362273e-3ac6-47b8-8e42-a3e0b2dc13cd"
+          "id": "https://example.org/uuid/9aab6e3d-45ac-4c08-96f0-a154980960db"
         }
       ]
     },
@@ -1651,8 +1651,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309565",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309565",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1663,7 +1663,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9613994b-dcf1-447f-871d-a685efe92ccb"
+          "id": "https://example.org/uuid/80c4fd77-de67-4894-ae2e-c4814292db72"
         }
       ]
     },
@@ -1696,8 +1696,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309566",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309566",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1708,7 +1708,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b5440d1b-6baa-4b54-b95e-400ece865d40"
+          "id": "https://example.org/uuid/3cb55258-8b6c-4f1b-bdb9-255b72468c44"
         }
       ]
     },
@@ -1741,8 +1741,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309567",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309567",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1753,7 +1753,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4798f162-7091-4046-8616-470455853f8a"
+          "id": "https://example.org/uuid/b058f82b-43be-4a5b-bdb0-1a1d50cf5833"
         }
       ]
     },
@@ -1786,8 +1786,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309568",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309568",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1798,7 +1798,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/efd1b0d2-3e47-4fb9-934d-1d87a24ca057"
+          "id": "https://example.org/uuid/ab9de61e-1b7a-4923-b953-69a6c8977944"
         }
       ]
     },
@@ -1831,8 +1831,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309569",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309569",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1843,7 +1843,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d51eb80b-bc0c-473d-a719-581021d1513f"
+          "id": "https://example.org/uuid/99a193f5-ad24-4a3f-b124-bc7f65f3fc3b"
         }
       ]
     },
@@ -1876,8 +1876,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309570",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309570",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1888,7 +1888,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1c6f30a9-8657-4595-b13b-2749efb7fa2a"
+          "id": "https://example.org/uuid/091ad20a-14d0-40eb-b733-876bb226fdb2"
         }
       ]
     },
@@ -1921,8 +1921,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309571",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309571",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1933,7 +1933,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/712dbbe5-b76d-4379-a02f-cbaa6918a0f1"
+          "id": "https://example.org/uuid/7379a562-ac2c-4363-af23-4907ee3da6cf"
         }
       ]
     },
@@ -1966,8 +1966,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309572",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309572",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -1978,7 +1978,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2a48b8e3-3472-4c93-97a2-4c2daf51c0c3"
+          "id": "https://example.org/uuid/86077528-a172-449e-81be-67769721269f"
         }
       ]
     },
@@ -2011,8 +2011,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309573",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309573",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2023,7 +2023,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f9399913-4c0a-4a2d-bef4-eb171d7251f1"
+          "id": "https://example.org/uuid/79daa74b-fcc5-4529-9d5b-050ebe490c96"
         }
       ]
     },
@@ -2056,8 +2056,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309574",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309574",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2068,7 +2068,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a473837f-ba60-420a-a972-290891b0f76c"
+          "id": "https://example.org/uuid/ac9102d2-7ecf-414c-a7a6-ffe4f26c8bcf"
         }
       ]
     },
@@ -2101,8 +2101,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309575",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309575",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2113,7 +2113,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7c722dbf-4d18-4795-8b41-7878814713a5"
+          "id": "https://example.org/uuid/2c2a43b5-74b5-4e00-9726-e8135fb0465e"
         }
       ]
     },
@@ -2146,8 +2146,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309576",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309576",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2158,7 +2158,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9df1cf28-3716-49e8-94de-14bc920bbcba"
+          "id": "https://example.org/uuid/0e654d0f-2b4c-4cde-8610-e53c2322c175"
         }
       ]
     },
@@ -2191,8 +2191,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309577",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309577",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2203,7 +2203,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4a0bef6b-3a05-4372-97a8-9217de50f4a7"
+          "id": "https://example.org/uuid/28ddb974-fbae-4703-acec-80c85fa51796"
         }
       ]
     },
@@ -2236,8 +2236,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309578",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309578",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2248,7 +2248,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/02f1b389-a83a-4f80-b59b-6262f06b1683"
+          "id": "https://example.org/uuid/d34b18d3-079b-4523-808e-0084319e8ae8"
         }
       ]
     },
@@ -2281,8 +2281,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309579",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309579",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2293,7 +2293,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/49c94197-b4d2-4df2-9d33-1f5e206de64f"
+          "id": "https://example.org/uuid/d569bac7-0312-48d2-9e67-6e119d47a215"
         }
       ]
     },
@@ -2326,8 +2326,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309580",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309580",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2338,7 +2338,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/dc984f12-45c9-4d76-bd9e-4d7147321def"
+          "id": "https://example.org/uuid/5c5cdf41-71d3-4f0a-9c09-5a2d298bcbae"
         }
       ]
     },
@@ -2371,8 +2371,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309581",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309581",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2383,7 +2383,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/84ae341e-d8f8-4ab4-80af-a7af2a2d76ea"
+          "id": "https://example.org/uuid/6bb6ae62-b25f-4e3e-8f10-97f23572ad08"
         }
       ]
     },
@@ -2416,8 +2416,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309582",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309582",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2428,7 +2428,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f0671915-1f6f-4d51-8bdd-655ff50eb80a"
+          "id": "https://example.org/uuid/78277260-2fc9-4473-a124-66463498b351"
         }
       ]
     },
@@ -2461,8 +2461,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48309583",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309583",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2473,7 +2473,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a208dea0-db0b-4145-a35f-a97b524ff383"
+          "id": "https://example.org/uuid/0d349ac2-cf30-450b-be3d-79c0e5761faa"
         }
       ]
     },
@@ -2506,8 +2506,8 @@
                 "service": [
                   {
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/48530377",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48530377",
+                    "type": "ImageService1"
                   }
                 ],
                 "format": "image/jpeg",
@@ -2518,7 +2518,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e092a55b-94c8-4140-b569-197f1bf54508"
+          "id": "https://example.org/uuid/e56a1d91-e995-4b45-9ea2-81a669fc3bce"
         }
       ]
     }

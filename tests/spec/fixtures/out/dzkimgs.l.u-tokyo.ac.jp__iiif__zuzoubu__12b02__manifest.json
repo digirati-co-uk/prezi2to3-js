@@ -1,7 +1,7 @@
 {
   "label": {
     "@none": [
-      "\u5927\u6b63\u65b0\u8129\u5927\u85cf\u7d93\u56f3\u50cf\u90e8\u7b2c12b02\u5dfb"
+      "大正新脩大藏經図像部第12b02巻"
     ]
   },
   "metadata": [
@@ -13,7 +13,7 @@
       },
       "value": {
         "@none": [
-          "\u9ad8\u6960\u9806\u6b21\u90ce"
+          "高楠順次郎"
         ]
       }
     },
@@ -25,7 +25,7 @@
       },
       "value": {
         "ja": [
-          "\u5927\u8535\u51fa\u7248"
+          "大蔵出版"
         ]
       }
     },
@@ -37,7 +37,7 @@
       },
       "value": {
         "@none": [
-          "\u5927\u6b63\u65b0\u8129\u5927\u85cf\u7d93\u3000\u56f3\u50cf\u90e8"
+          "大正新脩大藏經　図像部"
         ]
       }
     },
@@ -61,7 +61,7 @@
       },
       "value": {
         "@none": [
-          "\u5927\u6b63\u65b0\u8129\u5927\u85cf\u7d93\u56f3\u50cf\u90e8"
+          "大正新脩大藏經図像部"
         ]
       }
     }
@@ -84,7 +84,7 @@
     },
     "value": {
       "@none": [
-        "\u5927\u8535\u51fa\u7248(Daizo shuppan) and SAT\u5927\u8535\u7d4c\u30c6\u30ad\u30b9\u30c8\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u7814\u7a76\u4f1a(SAT Daiz\u014dky\u014d Text Database Committee) "
+        "大蔵出版(Daizo shuppan) and SAT大蔵経テキストデータベース研究会(SAT Daizōkyō Text Database Committee) "
       ]
     }
   },
@@ -123,9 +123,9 @@
                 "height": 30000,
                 "service": [
                   {
-                    "@id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -133,7 +133,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/dda2a24b-25af-471a-8f25-1b583b38ce0b"
+          "id": "https://example.org/uuid/3c1e463e-7ce0-46e2-b91d-e21786168d7c"
         }
       ]
     }

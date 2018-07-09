@@ -253,7 +253,7 @@
   },
   "partOf": [
     {
-      "id": "uuid0"
+      "id": "https://example.org/uuid/59548c42-dfa5-4ea4-a56f-268495d27bf9"
     }
   ],
   "items": [
@@ -282,9 +282,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e001.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e001.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -292,7 +292,7 @@
               }
             }
           ],
-          "id": "uuid1"
+          "id": "https://example.org/uuid/8593cf12-15cf-4383-ab50-69d1db9ac1ac"
         }
       ]
     },
@@ -321,9 +321,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e005.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e005.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -331,7 +331,7 @@
               }
             }
           ],
-          "id": "uuid2"
+          "id": "https://example.org/uuid/163f4ca0-8cc8-495e-9205-f5b4b935a002"
         }
       ]
     },
@@ -360,9 +360,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000a.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000a.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -370,7 +370,7 @@
               }
             }
           ],
-          "id": "uuid3"
+          "id": "https://example.org/uuid/cc4665a1-c687-4176-a1e5-e35f77fcd125"
         }
       ]
     },
@@ -399,9 +399,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000b.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000b.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -409,7 +409,7 @@
               }
             }
           ],
-          "id": "uuid4"
+          "id": "https://example.org/uuid/0d43342d-defd-4356-aca0-2db49c2b8283"
         }
       ]
     },
@@ -438,9 +438,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000c.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000c.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -448,7 +448,7 @@
               }
             }
           ],
-          "id": "uuid5"
+          "id": "https://example.org/uuid/5028f2a5-d006-47b8-a99c-0509e3dd85dc"
         }
       ]
     },
@@ -477,9 +477,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000d.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_000d.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -487,7 +487,7 @@
               }
             }
           ],
-          "id": "uuid6"
+          "id": "https://example.org/uuid/0130f7f2-cbf3-4051-9914-30b289a01cc9"
         }
       ]
     },
@@ -516,9 +516,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_001.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_001.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -526,7 +526,7 @@
               }
             }
           ],
-          "id": "uuid7"
+          "id": "https://example.org/uuid/b271b4db-c385-4078-ad20-9efeb26824e4"
         }
       ]
     },
@@ -555,9 +555,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_002.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_002.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -565,7 +565,7 @@
               }
             }
           ],
-          "id": "uuid8"
+          "id": "https://example.org/uuid/2b685c3b-07be-4ed5-9e22-acb8883577ed"
         }
       ]
     },
@@ -594,9 +594,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_003.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_003.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -604,7 +604,7 @@
               }
             }
           ],
-          "id": "uuid9"
+          "id": "https://example.org/uuid/e8b6c02e-d96a-400e-b3a5-c84a5c41a5f8"
         }
       ]
     },
@@ -633,9 +633,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_004.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_004.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -643,7 +643,7 @@
               }
             }
           ],
-          "id": "uuid10"
+          "id": "https://example.org/uuid/20eed8d6-e701-420f-b69b-9aa99af4bbfe"
         }
       ]
     },
@@ -672,9 +672,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_005.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_005.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -682,7 +682,7 @@
               }
             }
           ],
-          "id": "uuid11"
+          "id": "https://example.org/uuid/c0d11305-59c9-4963-b519-90434dfafe64"
         }
       ]
     },
@@ -711,9 +711,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_006.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_006.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -721,7 +721,7 @@
               }
             }
           ],
-          "id": "uuid12"
+          "id": "https://example.org/uuid/badbd973-cb62-4ea6-8f9a-629cb577f18b"
         }
       ]
     },
@@ -750,9 +750,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_007.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_007.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -760,7 +760,7 @@
               }
             }
           ],
-          "id": "uuid13"
+          "id": "https://example.org/uuid/7672a77b-3bc7-4bcc-85e2-b57b2a2105cf"
         }
       ]
     },
@@ -789,9 +789,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_008.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_008.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -799,7 +799,7 @@
               }
             }
           ],
-          "id": "uuid14"
+          "id": "https://example.org/uuid/e1046e9a-e636-4150-b848-406bcdbb2983"
         }
       ]
     },
@@ -828,9 +828,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_009.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_009.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -838,7 +838,7 @@
               }
             }
           ],
-          "id": "uuid15"
+          "id": "https://example.org/uuid/71f3a5fe-3f0c-47e0-b7dc-5d6a1aaf6059"
         }
       ]
     },
@@ -867,9 +867,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_010.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_010.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -877,7 +877,7 @@
               }
             }
           ],
-          "id": "uuid16"
+          "id": "https://example.org/uuid/0c551a8f-4f3d-4a5b-97c7-3e4aa9aa140e"
         }
       ]
     },
@@ -906,9 +906,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_011.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_011.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -916,7 +916,7 @@
               }
             }
           ],
-          "id": "uuid17"
+          "id": "https://example.org/uuid/5f37badb-3b4a-4176-a16d-d0fb1622642e"
         }
       ]
     },
@@ -945,9 +945,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_012.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_012.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -955,7 +955,7 @@
               }
             }
           ],
-          "id": "uuid18"
+          "id": "https://example.org/uuid/30bc8329-d5cf-448a-97b7-fb917bcca8cd"
         }
       ]
     },
@@ -984,9 +984,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_013.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_013.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -994,7 +994,7 @@
               }
             }
           ],
-          "id": "uuid19"
+          "id": "https://example.org/uuid/ad92ab81-ad41-4195-8713-e297678e9f62"
         }
       ]
     },
@@ -1023,9 +1023,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_014.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_014.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1033,7 +1033,7 @@
               }
             }
           ],
-          "id": "uuid20"
+          "id": "https://example.org/uuid/8ea05619-ccf1-4628-a0ee-160f125fd0e6"
         }
       ]
     },
@@ -1062,9 +1062,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_015.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_015.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1072,7 +1072,7 @@
               }
             }
           ],
-          "id": "uuid21"
+          "id": "https://example.org/uuid/248d103e-9bcd-4c14-b204-7a0b17586daf"
         }
       ]
     },
@@ -1101,9 +1101,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_016.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_016.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1111,7 +1111,7 @@
               }
             }
           ],
-          "id": "uuid22"
+          "id": "https://example.org/uuid/2861aa4b-86a0-4e79-95c6-66b411f69b3c"
         }
       ]
     },
@@ -1140,9 +1140,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_017.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_017.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1150,7 +1150,7 @@
               }
             }
           ],
-          "id": "uuid23"
+          "id": "https://example.org/uuid/3bfbd569-719c-429f-9dcc-83b7492c3ab0"
         }
       ]
     },
@@ -1179,9 +1179,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_018.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_018.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1189,7 +1189,7 @@
               }
             }
           ],
-          "id": "uuid24"
+          "id": "https://example.org/uuid/091a2cb8-fd6f-440d-8da1-ef853e796c26"
         }
       ]
     },
@@ -1218,9 +1218,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_019.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_019.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1228,7 +1228,7 @@
               }
             }
           ],
-          "id": "uuid25"
+          "id": "https://example.org/uuid/6eb3718c-214e-4beb-94f3-80149adb6f37"
         }
       ]
     },
@@ -1257,9 +1257,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_020.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_020.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1267,7 +1267,7 @@
               }
             }
           ],
-          "id": "uuid26"
+          "id": "https://example.org/uuid/bba3306b-99b8-47c0-ab2a-a76af96c0339"
         }
       ]
     },
@@ -1296,9 +1296,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_021.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_021.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1306,7 +1306,7 @@
               }
             }
           ],
-          "id": "uuid27"
+          "id": "https://example.org/uuid/3b8f1454-643f-42f4-93a6-db3fdbb08ecd"
         }
       ]
     },
@@ -1335,9 +1335,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_022.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_022.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1345,7 +1345,7 @@
               }
             }
           ],
-          "id": "uuid28"
+          "id": "https://example.org/uuid/f8d9bdd3-5722-4273-8f5b-d4619f58c15b"
         }
       ]
     },
@@ -1374,9 +1374,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_023.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_023.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1384,7 +1384,7 @@
               }
             }
           ],
-          "id": "uuid29"
+          "id": "https://example.org/uuid/f9775ad9-9db6-4208-a3a1-68373c34d23f"
         }
       ]
     },
@@ -1413,9 +1413,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_024.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_024.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1423,7 +1423,7 @@
               }
             }
           ],
-          "id": "uuid30"
+          "id": "https://example.org/uuid/b233bb5b-24f3-40e4-b80e-bca1ffb8ef96"
         }
       ]
     },
@@ -1452,9 +1452,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_025.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_025.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1462,7 +1462,7 @@
               }
             }
           ],
-          "id": "uuid31"
+          "id": "https://example.org/uuid/9b241852-a587-4d68-9a8f-975ad01d4fdc"
         }
       ]
     },
@@ -1491,9 +1491,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_026.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_026.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1501,7 +1501,7 @@
               }
             }
           ],
-          "id": "uuid32"
+          "id": "https://example.org/uuid/c0dc0764-75aa-4cf9-b9a4-a0fd0e3aad78"
         }
       ]
     },
@@ -1530,9 +1530,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_026a.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_026a.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1540,7 +1540,7 @@
               }
             }
           ],
-          "id": "uuid33"
+          "id": "https://example.org/uuid/8ef270d7-28c0-4134-a9bb-1aa2e4322cfa"
         }
       ]
     },
@@ -1569,9 +1569,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_026b.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_026b.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1579,7 +1579,7 @@
               }
             }
           ],
-          "id": "uuid34"
+          "id": "https://example.org/uuid/53415440-b9b2-470f-93db-740d95456236"
         }
       ]
     },
@@ -1608,9 +1608,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_027.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_027.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1618,7 +1618,7 @@
               }
             }
           ],
-          "id": "uuid35"
+          "id": "https://example.org/uuid/3eb3879c-77af-4a80-ade3-763546ca6263"
         }
       ]
     },
@@ -1647,9 +1647,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1657,7 +1657,7 @@
               }
             }
           ],
-          "id": "uuid36"
+          "id": "https://example.org/uuid/1cc7990e-59e1-478e-b8fa-3ff41cb362a1"
         }
       ]
     },
@@ -1686,9 +1686,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028a.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028a.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1696,7 +1696,7 @@
               }
             }
           ],
-          "id": "uuid37"
+          "id": "https://example.org/uuid/d1834f29-928f-40c1-9baf-b90667e3a9a7"
         }
       ]
     },
@@ -1725,9 +1725,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028b.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028b.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1735,7 +1735,7 @@
               }
             }
           ],
-          "id": "uuid38"
+          "id": "https://example.org/uuid/dd5abe6c-f06e-4e3c-86d1-1fb153d3c862"
         }
       ]
     },
@@ -1764,9 +1764,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028c.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028c.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1774,7 +1774,7 @@
               }
             }
           ],
-          "id": "uuid39"
+          "id": "https://example.org/uuid/9034ec25-4cac-4e60-8d53-bf887854caca"
         }
       ]
     },
@@ -1803,9 +1803,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028d.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_028d.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1813,7 +1813,7 @@
               }
             }
           ],
-          "id": "uuid40"
+          "id": "https://example.org/uuid/b504e09f-b316-4f87-bb73-a50d21636746"
         }
       ]
     },
@@ -1842,9 +1842,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_029.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_029.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1852,7 +1852,7 @@
               }
             }
           ],
-          "id": "uuid41"
+          "id": "https://example.org/uuid/36c8bed3-713f-456d-8a65-2f3e5843b8b0"
         }
       ]
     },
@@ -1881,9 +1881,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1891,7 +1891,7 @@
               }
             }
           ],
-          "id": "uuid42"
+          "id": "https://example.org/uuid/7929b049-9e90-4a42-aa95-21af4e63ed36"
         }
       ]
     },
@@ -1920,9 +1920,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030a.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030a.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1930,7 +1930,7 @@
               }
             }
           ],
-          "id": "uuid43"
+          "id": "https://example.org/uuid/0bef9395-bf25-4e86-bf1d-790872e947a5"
         }
       ]
     },
@@ -1959,9 +1959,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030b.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030b.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1969,7 +1969,7 @@
               }
             }
           ],
-          "id": "uuid44"
+          "id": "https://example.org/uuid/ae872d56-7806-4727-88da-c6f5c356db65"
         }
       ]
     },
@@ -1998,9 +1998,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030c.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030c.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2008,7 +2008,7 @@
               }
             }
           ],
-          "id": "uuid45"
+          "id": "https://example.org/uuid/9a6c2d64-2e4e-46a7-b193-afca74e7335a"
         }
       ]
     },
@@ -2037,9 +2037,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030d.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030d.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2047,7 +2047,7 @@
               }
             }
           ],
-          "id": "uuid46"
+          "id": "https://example.org/uuid/8b4d6c89-dfee-44f6-bbba-4efbe6b7a335"
         }
       ]
     },
@@ -2076,9 +2076,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030e.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030e.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2086,7 +2086,7 @@
               }
             }
           ],
-          "id": "uuid47"
+          "id": "https://example.org/uuid/63d2bd23-fdc9-49c4-b49c-8419b81bd740"
         }
       ]
     },
@@ -2115,9 +2115,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030f.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_030f.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2125,7 +2125,7 @@
               }
             }
           ],
-          "id": "uuid48"
+          "id": "https://example.org/uuid/e1fb4fe5-e756-471d-9dd5-16b5ad8538bc"
         }
       ]
     },
@@ -2154,9 +2154,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_031.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_031.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2164,7 +2164,7 @@
               }
             }
           ],
-          "id": "uuid49"
+          "id": "https://example.org/uuid/0d87417f-f678-4c10-8acc-8dcbeb35230e"
         }
       ]
     },
@@ -2193,9 +2193,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2203,7 +2203,7 @@
               }
             }
           ],
-          "id": "uuid50"
+          "id": "https://example.org/uuid/f490f42c-a7f9-4741-95e3-e2b74f3e5e35"
         }
       ]
     },
@@ -2232,9 +2232,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032a.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032a.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2242,7 +2242,7 @@
               }
             }
           ],
-          "id": "uuid51"
+          "id": "https://example.org/uuid/62fe5398-fb44-4f4b-9e82-951e9b45c7fc"
         }
       ]
     },
@@ -2271,9 +2271,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032b.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032b.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2281,7 +2281,7 @@
               }
             }
           ],
-          "id": "uuid52"
+          "id": "https://example.org/uuid/ffd38c02-d150-47ef-993f-8ee20edad1bc"
         }
       ]
     },
@@ -2310,9 +2310,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032c.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032c.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2320,7 +2320,7 @@
               }
             }
           ],
-          "id": "uuid53"
+          "id": "https://example.org/uuid/2f9f2fdd-c490-4291-9f65-a3c47ad6ba1f"
         }
       ]
     },
@@ -2349,9 +2349,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032d.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_032d.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2359,7 +2359,7 @@
               }
             }
           ],
-          "id": "uuid54"
+          "id": "https://example.org/uuid/44217e44-a3d3-4af1-ac30-27d061b6f260"
         }
       ]
     },
@@ -2388,9 +2388,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_033.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_033.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2398,7 +2398,7 @@
               }
             }
           ],
-          "id": "uuid55"
+          "id": "https://example.org/uuid/56e1c745-6553-4bc8-b28c-52c5b2bb56bb"
         }
       ]
     },
@@ -2427,9 +2427,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2437,7 +2437,7 @@
               }
             }
           ],
-          "id": "uuid56"
+          "id": "https://example.org/uuid/fec7d500-8e6e-4c3d-aff4-ecc13310ee1a"
         }
       ]
     },
@@ -2466,9 +2466,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034a.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034a.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2476,7 +2476,7 @@
               }
             }
           ],
-          "id": "uuid57"
+          "id": "https://example.org/uuid/4580d1af-b789-4e33-bbe3-babf7d2729f6"
         }
       ]
     },
@@ -2505,9 +2505,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034b.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034b.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2515,7 +2515,7 @@
               }
             }
           ],
-          "id": "uuid58"
+          "id": "https://example.org/uuid/444a0b4d-c7f3-49c6-8f8e-a4ba50024b1d"
         }
       ]
     },
@@ -2544,9 +2544,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034c.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034c.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2554,7 +2554,7 @@
               }
             }
           ],
-          "id": "uuid59"
+          "id": "https://example.org/uuid/61c4e6a1-b727-43c1-9bfd-c9ebcabe1cbb"
         }
       ]
     },
@@ -2583,9 +2583,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034d.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034d.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2593,7 +2593,7 @@
               }
             }
           ],
-          "id": "uuid60"
+          "id": "https://example.org/uuid/a074dcbd-fa96-4121-b742-a3a1e8191fc9"
         }
       ]
     },
@@ -2622,9 +2622,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034e.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034e.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2632,7 +2632,7 @@
               }
             }
           ],
-          "id": "uuid61"
+          "id": "https://example.org/uuid/9ed481ba-5b8a-40ef-b48a-d4cc46e4c2dc"
         }
       ]
     },
@@ -2661,9 +2661,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034f.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034f.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2671,7 +2671,7 @@
               }
             }
           ],
-          "id": "uuid62"
+          "id": "https://example.org/uuid/d99c1add-1e7e-44e8-afff-05dcfb742760"
         }
       ]
     },
@@ -2700,9 +2700,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034g.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034g.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2710,7 +2710,7 @@
               }
             }
           ],
-          "id": "uuid63"
+          "id": "https://example.org/uuid/e42847e6-3bd8-470a-84f1-dd6372bcc48c"
         }
       ]
     },
@@ -2739,9 +2739,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034h.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_034h.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2749,7 +2749,7 @@
               }
             }
           ],
-          "id": "uuid64"
+          "id": "https://example.org/uuid/568675e1-d80e-4703-93c9-b7d9907c3131"
         }
       ]
     },
@@ -2778,9 +2778,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_035.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_035.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2788,7 +2788,7 @@
               }
             }
           ],
-          "id": "uuid65"
+          "id": "https://example.org/uuid/4e6763ea-2073-4bfe-848d-0467257af6fd"
         }
       ]
     },
@@ -2817,9 +2817,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_036.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_036.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2827,7 +2827,7 @@
               }
             }
           ],
-          "id": "uuid66"
+          "id": "https://example.org/uuid/0a8f60a6-4eab-4d20-88eb-a4331108dbbc"
         }
       ]
     },
@@ -2856,9 +2856,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_037.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_037.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2866,7 +2866,7 @@
               }
             }
           ],
-          "id": "uuid67"
+          "id": "https://example.org/uuid/1a694b64-03b9-4e34-96ed-0602fd724d47"
         }
       ]
     },
@@ -2895,9 +2895,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_038.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_038.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2905,7 +2905,7 @@
               }
             }
           ],
-          "id": "uuid68"
+          "id": "https://example.org/uuid/4c885bae-46ef-4fe4-aa4b-8adf643dd2f9"
         }
       ]
     },
@@ -2934,9 +2934,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_039.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_039.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2944,7 +2944,7 @@
               }
             }
           ],
-          "id": "uuid69"
+          "id": "https://example.org/uuid/d059cb2a-fe33-4a24-bbb5-071c031ca888"
         }
       ]
     },
@@ -2973,9 +2973,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_040.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_040.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -2983,7 +2983,7 @@
               }
             }
           ],
-          "id": "uuid70"
+          "id": "https://example.org/uuid/4f443dc7-4458-4d2f-ac13-4c567f9421fc"
         }
       ]
     },
@@ -3012,9 +3012,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_041.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_041.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3022,7 +3022,7 @@
               }
             }
           ],
-          "id": "uuid71"
+          "id": "https://example.org/uuid/2f249dd5-7a3c-4ce0-9d8c-328c47ac1b25"
         }
       ]
     },
@@ -3051,9 +3051,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_042.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_042.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3061,7 +3061,7 @@
               }
             }
           ],
-          "id": "uuid72"
+          "id": "https://example.org/uuid/42a3ac1a-9782-4aed-9d64-ffa7d8e97f47"
         }
       ]
     },
@@ -3090,9 +3090,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_043.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_043.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3100,7 +3100,7 @@
               }
             }
           ],
-          "id": "uuid73"
+          "id": "https://example.org/uuid/81af509a-ad2b-4728-bffa-9851ecf9d59f"
         }
       ]
     },
@@ -3129,9 +3129,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_044.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_044.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3139,7 +3139,7 @@
               }
             }
           ],
-          "id": "uuid74"
+          "id": "https://example.org/uuid/18de3e8c-00eb-4b1f-83a0-f02ac5b9bf53"
         }
       ]
     },
@@ -3168,9 +3168,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_045.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_045.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3178,7 +3178,7 @@
               }
             }
           ],
-          "id": "uuid75"
+          "id": "https://example.org/uuid/90b02981-3871-4a10-8a77-7dfa655e3e0e"
         }
       ]
     },
@@ -3207,9 +3207,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_046.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_046.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3217,7 +3217,7 @@
               }
             }
           ],
-          "id": "uuid76"
+          "id": "https://example.org/uuid/eb055696-3ce4-4a1e-812f-82ec2dd61af3"
         }
       ]
     },
@@ -3246,9 +3246,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_047.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_047.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3256,7 +3256,7 @@
               }
             }
           ],
-          "id": "uuid77"
+          "id": "https://example.org/uuid/072fca4a-2341-4a30-8b9c-701b930cd7ee"
         }
       ]
     },
@@ -3285,9 +3285,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_048.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_048.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3295,7 +3295,7 @@
               }
             }
           ],
-          "id": "uuid78"
+          "id": "https://example.org/uuid/cdd3aecb-db15-489a-a857-cda4bf13fb18"
         }
       ]
     },
@@ -3324,9 +3324,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_049.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_049.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3334,7 +3334,7 @@
               }
             }
           ],
-          "id": "uuid79"
+          "id": "https://example.org/uuid/106c485e-1f05-4ab9-86e1-061a3b3adb82"
         }
       ]
     },
@@ -3363,9 +3363,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_050.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_050.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3373,7 +3373,7 @@
               }
             }
           ],
-          "id": "uuid80"
+          "id": "https://example.org/uuid/1c73b337-ecc6-4926-ad34-ee459f044731"
         }
       ]
     },
@@ -3402,9 +3402,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_051.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_051.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3412,7 +3412,7 @@
               }
             }
           ],
-          "id": "uuid81"
+          "id": "https://example.org/uuid/efe08047-b2ba-4de1-9552-dd4c17a9f354"
         }
       ]
     },
@@ -3441,9 +3441,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_052.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_052.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3451,7 +3451,7 @@
               }
             }
           ],
-          "id": "uuid82"
+          "id": "https://example.org/uuid/ff458fad-ef49-46be-8d66-3b8713ba6bd2"
         }
       ]
     },
@@ -3480,9 +3480,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_053.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_053.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3490,7 +3490,7 @@
               }
             }
           ],
-          "id": "uuid83"
+          "id": "https://example.org/uuid/43605b4e-7c53-4cae-834d-0ca1ddd3ab68"
         }
       ]
     },
@@ -3519,9 +3519,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_054.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_054.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3529,7 +3529,7 @@
               }
             }
           ],
-          "id": "uuid84"
+          "id": "https://example.org/uuid/ff509a6c-e08a-48ea-b2dd-f7097adaf8af"
         }
       ]
     },
@@ -3558,9 +3558,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_055.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_055.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3568,7 +3568,7 @@
               }
             }
           ],
-          "id": "uuid85"
+          "id": "https://example.org/uuid/eb915fed-2acb-4bb0-a6ae-c7d459514b0c"
         }
       ]
     },
@@ -3597,9 +3597,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_056.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_056.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3607,7 +3607,7 @@
               }
             }
           ],
-          "id": "uuid86"
+          "id": "https://example.org/uuid/3607d68f-3064-4cd8-9b1d-aaab0b90feda"
         }
       ]
     },
@@ -3636,9 +3636,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_057.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_057.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3646,7 +3646,7 @@
               }
             }
           ],
-          "id": "uuid87"
+          "id": "https://example.org/uuid/b43d4a80-ab07-4379-898a-5e30b5cbd731"
         }
       ]
     },
@@ -3675,9 +3675,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_058.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_058.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3685,7 +3685,7 @@
               }
             }
           ],
-          "id": "uuid88"
+          "id": "https://example.org/uuid/de07aec6-aa86-4989-9ac1-60c5df976770"
         }
       ]
     },
@@ -3714,9 +3714,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_059.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_059.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3724,7 +3724,7 @@
               }
             }
           ],
-          "id": "uuid89"
+          "id": "https://example.org/uuid/bc982a64-9a88-4fa6-812d-33716cc9e3ce"
         }
       ]
     },
@@ -3753,9 +3753,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_060.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_060.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3763,7 +3763,7 @@
               }
             }
           ],
-          "id": "uuid90"
+          "id": "https://example.org/uuid/94ba830d-89e8-4426-bbb8-04e2c98f05a2"
         }
       ]
     },
@@ -3792,9 +3792,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_061.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_061.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3802,7 +3802,7 @@
               }
             }
           ],
-          "id": "uuid91"
+          "id": "https://example.org/uuid/c64f0e84-94d5-4022-a1e7-9a5c135c9649"
         }
       ]
     },
@@ -3831,9 +3831,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3841,7 +3841,7 @@
               }
             }
           ],
-          "id": "uuid92"
+          "id": "https://example.org/uuid/7e8b788e-da32-43be-9195-12253b139e30"
         }
       ]
     },
@@ -3870,9 +3870,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062a.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062a.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3880,7 +3880,7 @@
               }
             }
           ],
-          "id": "uuid93"
+          "id": "https://example.org/uuid/a4ea6369-4888-4b10-b8a9-de71ee6237c4"
         }
       ]
     },
@@ -3909,9 +3909,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062b.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062b.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3919,7 +3919,7 @@
               }
             }
           ],
-          "id": "uuid94"
+          "id": "https://example.org/uuid/56f8e30b-c9e4-4f02-afb9-83d2b47e7b92"
         }
       ]
     },
@@ -3948,9 +3948,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062c.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062c.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3958,7 +3958,7 @@
               }
             }
           ],
-          "id": "uuid95"
+          "id": "https://example.org/uuid/2b5ce6d1-3d4a-4a06-812d-5c9d7b88773f"
         }
       ]
     },
@@ -3987,9 +3987,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062d.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062d.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -3997,7 +3997,7 @@
               }
             }
           ],
-          "id": "uuid96"
+          "id": "https://example.org/uuid/0b5e22d9-5ba8-4342-85bd-9864ad1fe96d"
         }
       ]
     },
@@ -4026,9 +4026,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062e.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062e.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4036,7 +4036,7 @@
               }
             }
           ],
-          "id": "uuid97"
+          "id": "https://example.org/uuid/70053b65-0298-46c8-8ca5-8dfeb73bc34b"
         }
       ]
     },
@@ -4065,9 +4065,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062f.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062f.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4075,7 +4075,7 @@
               }
             }
           ],
-          "id": "uuid98"
+          "id": "https://example.org/uuid/15a1a293-ca42-4af5-af77-acaffacd5040"
         }
       ]
     },
@@ -4104,9 +4104,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062g.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062g.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4114,7 +4114,7 @@
               }
             }
           ],
-          "id": "uuid99"
+          "id": "https://example.org/uuid/ffeb6b3b-45b8-4265-9b1f-ee0ac2c09764"
         }
       ]
     },
@@ -4143,9 +4143,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062h.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062h.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4153,7 +4153,7 @@
               }
             }
           ],
-          "id": "uuid100"
+          "id": "https://example.org/uuid/63f322fd-8e8a-45ab-a10d-16a0904a6f62"
         }
       ]
     },
@@ -4182,9 +4182,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062i.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062i.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4192,7 +4192,7 @@
               }
             }
           ],
-          "id": "uuid101"
+          "id": "https://example.org/uuid/ea392fb4-95a9-45b5-acc3-60b7ccd6aa20"
         }
       ]
     },
@@ -4221,9 +4221,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062j.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_062j.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4231,7 +4231,7 @@
               }
             }
           ],
-          "id": "uuid102"
+          "id": "https://example.org/uuid/8aee9005-76e2-473b-bfdc-76e8bf142392"
         }
       ]
     },
@@ -4260,9 +4260,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_063.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_063.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4270,7 +4270,7 @@
               }
             }
           ],
-          "id": "uuid103"
+          "id": "https://example.org/uuid/ff4878f2-c44f-4a9d-8e06-cd098b883642"
         }
       ]
     },
@@ -4299,9 +4299,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_064.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_064.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4309,7 +4309,7 @@
               }
             }
           ],
-          "id": "uuid104"
+          "id": "https://example.org/uuid/e8cfcd6d-fc09-4f8a-af21-ec7794adadba"
         }
       ]
     },
@@ -4338,9 +4338,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_065.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_065.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4348,7 +4348,7 @@
               }
             }
           ],
-          "id": "uuid105"
+          "id": "https://example.org/uuid/8e2212c4-a188-4cc0-84af-3519bdbef111"
         }
       ]
     },
@@ -4377,9 +4377,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_066.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_066.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4387,7 +4387,7 @@
               }
             }
           ],
-          "id": "uuid106"
+          "id": "https://example.org/uuid/b727cd68-5164-4630-aca4-9847162cfca6"
         }
       ]
     },
@@ -4416,9 +4416,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_067.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_067.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4426,7 +4426,7 @@
               }
             }
           ],
-          "id": "uuid107"
+          "id": "https://example.org/uuid/460683be-3784-478e-a25f-62c957f710ca"
         }
       ]
     },
@@ -4455,9 +4455,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_068.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_068.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4465,7 +4465,7 @@
               }
             }
           ],
-          "id": "uuid108"
+          "id": "https://example.org/uuid/89d3ef92-e109-4205-b551-f768b9a4f86b"
         }
       ]
     },
@@ -4494,9 +4494,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_069.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_069.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4504,7 +4504,7 @@
               }
             }
           ],
-          "id": "uuid109"
+          "id": "https://example.org/uuid/797d6ccd-3e4e-4c24-94c7-e5b35305cca6"
         }
       ]
     },
@@ -4533,9 +4533,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_070.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_070.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4543,7 +4543,7 @@
               }
             }
           ],
-          "id": "uuid110"
+          "id": "https://example.org/uuid/0dafd868-d543-47b8-bb43-8c8a03a98a37"
         }
       ]
     },
@@ -4572,9 +4572,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_071.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_071.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4582,7 +4582,7 @@
               }
             }
           ],
-          "id": "uuid111"
+          "id": "https://example.org/uuid/7e247870-ced0-48b7-ac10-f825f7f6d118"
         }
       ]
     },
@@ -4611,9 +4611,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_072.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_072.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4621,7 +4621,7 @@
               }
             }
           ],
-          "id": "uuid112"
+          "id": "https://example.org/uuid/3b233e95-cb47-4b09-90a4-a2f9c8706ca3"
         }
       ]
     },
@@ -4650,9 +4650,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_073.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_073.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4660,7 +4660,7 @@
               }
             }
           ],
-          "id": "uuid113"
+          "id": "https://example.org/uuid/d8e48fb7-073e-4a64-9db8-bca23fc6ddd9"
         }
       ]
     },
@@ -4689,9 +4689,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_074.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_074.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4699,7 +4699,7 @@
               }
             }
           ],
-          "id": "uuid114"
+          "id": "https://example.org/uuid/2cb043ae-c313-4055-82e5-ec6d1f8e6b3d"
         }
       ]
     },
@@ -4728,9 +4728,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e006.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e006.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4738,7 +4738,7 @@
               }
             }
           ],
-          "id": "uuid115"
+          "id": "https://example.org/uuid/9734e424-d544-4ffd-be87-e156ddd06c16"
         }
       ]
     },
@@ -4767,9 +4767,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e003.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e003.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4777,7 +4777,7 @@
               }
             }
           ],
-          "id": "uuid116"
+          "id": "https://example.org/uuid/6be5e936-f65a-48ea-8f71-2dd2254cf453"
         }
       ]
     },
@@ -4806,9 +4806,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e002.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e002.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4816,7 +4816,7 @@
               }
             }
           ],
-          "id": "uuid117"
+          "id": "https://example.org/uuid/675c5597-b8ab-431a-8544-19ecc64670d6"
         }
       ]
     },
@@ -4845,9 +4845,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e004.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e004.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4855,7 +4855,7 @@
               }
             }
           ],
-          "id": "uuid118"
+          "id": "https://example.org/uuid/3a811778-f5b8-44e0-8b9d-32d253b73025"
         }
       ]
     },
@@ -4884,9 +4884,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e007.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e007.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4894,7 +4894,7 @@
               }
             }
           ],
-          "id": "uuid119"
+          "id": "https://example.org/uuid/99776c47-9046-407f-b447-56db07c859ba"
         }
       ]
     },
@@ -4923,9 +4923,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e008.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_e008.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4933,7 +4933,7 @@
               }
             }
           ],
-          "id": "uuid120"
+          "id": "https://example.org/uuid/7407be1a-73f4-4b73-93b6-7eab4ea2b270"
         }
       ]
     },
@@ -4962,9 +4962,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_MassE.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_MassE.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -4972,7 +4972,7 @@
               }
             }
           ],
-          "id": "uuid121"
+          "id": "https://example.org/uuid/608e34dd-fa14-44e0-bdf2-f4b56712589f"
         }
       ]
     },
@@ -5001,9 +5001,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_MassS.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_MassS.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -5011,7 +5011,7 @@
               }
             }
           ],
-          "id": "uuid122"
+          "id": "https://example.org/uuid/c2ceb6a5-3aab-471e-88f9-2b30dec43ffa"
         }
       ]
     },
@@ -5040,9 +5040,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_ProfilE.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_ProfilE.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -5050,7 +5050,7 @@
               }
             }
           ],
-          "id": "uuid123"
+          "id": "https://example.org/uuid/fb42fb4a-e353-4552-ad12-11ca6faa7406"
         }
       ]
     },
@@ -5079,9 +5079,9 @@
                 "width": 4872,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_ProfilS.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_ProfilS.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -5089,7 +5089,7 @@
               }
             }
           ],
-          "id": "uuid124"
+          "id": "https://example.org/uuid/9f338509-7527-4aa7-acb2-78b6898e3df2"
         }
       ]
     },
@@ -5118,9 +5118,9 @@
                 "width": 6496,
                 "service": [
                   {
-                    "@id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_ProfilSG.jp2",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://www.e-codices.unifr.ch/loris/csg/csg-0730/csg-0730_ProfilSG.jp2",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -5128,14 +5128,14 @@
               }
             }
           ],
-          "id": "uuid125"
+          "id": "https://example.org/uuid/e502ad5b-e4b5-48cc-b427-52702bee3023"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "uuid126",
+      "id": "https://example.org/uuid/c1ab463e-0465-4910-b87c-633487823a78",
       "type": "Range",
       "behavior": [
         "sequence"
@@ -5658,7 +5658,7 @@
       }
     },
     {
-      "id": "uuid127",
+      "id": "https://example.org/uuid/3b22891e-3326-42fa-9ffc-8ace2f6625d6",
       "type": "Range",
       "behavior": [
         "sequence"

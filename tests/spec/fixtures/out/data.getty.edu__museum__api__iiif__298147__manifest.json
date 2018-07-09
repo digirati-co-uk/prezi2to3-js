@@ -1,7 +1,7 @@
 {
   "label": {
     "@none": [
-      "La Surprise (1718\u20131719), Jean-Antoine Watteau (French, 1684 - 1721)"
+      "La Surprise (1718–1719), Jean-Antoine Watteau (French, 1684 - 1721)"
     ]
   },
   "metadata": [
@@ -25,7 +25,7 @@
       },
       "value": {
         "@none": [
-          "French, 1718\u20131719"
+          "French, 1718–1719"
         ]
       }
     },
@@ -49,7 +49,7 @@
       },
       "value": {
         "@none": [
-          "36.4 \u00d7 28.2 cm (14 5/16 \u00d7 11 1/8 in.)"
+          "36.4 × 28.2 cm (14 5/16 × 11 1/8 in.)"
         ]
       }
     },
@@ -109,7 +109,7 @@
       },
       "value": {
         "@none": [
-          "<div>Images provided here are believed to be in the public domain and are made available under the terms of the Getty's <nobr><a href='http://www.getty.edu/about/opencontent.html'>Open Content Program</a></nobr>. Texts provided here are \u00a9 J. Paul Getty Trust, licensed under <a href='https://creativecommons.org/licenses/by/4.0/legalcode/' taget='_target'>CC BY 4.0</a>. Terms of use for the Getty logo can be found <a href='http://www.getty.edu/legal/copyright.html#logo' target='_blank'>here</a>.</div>"
+          "<div>Images provided here are believed to be in the public domain and are made available under the terms of the Getty's <nobr><a href='http://www.getty.edu/about/opencontent.html'>Open Content Program</a></nobr>. Texts provided here are © J. Paul Getty Trust, licensed under <a href='https://creativecommons.org/licenses/by/4.0/legalcode/' taget='_target'>CC BY 4.0</a>. Terms of use for the Getty logo can be found <a href='http://www.getty.edu/legal/copyright.html#logo' target='_blank'>here</a>.</div>"
         ]
       }
     },
@@ -133,7 +133,7 @@
       },
       "value": {
         "@none": [
-          "In a verdant park at sunset, a young woman abandons herself to her tousle-haired companion\u2019s ardent embrace. Coiled up in a pose of centrifugal energy, the impulsive lovers are oblivious to the third figure: Mezzetin, sitting on the same rocky outcrop. Drawn from the theatrical tradition of the commedia dell\u2019arte, this character represents a poignant foil to the couple\u2019s unbridled passion. Introverted and with a melancholy air, he tunes his guitar, knowing that his serenading will mean nothing to the lovers and serve only to heighten his own sense of lonely longing as he gazes upon them. His costume, a rose-coloured jacket and knee-britches slashed with yellow and adorned with blue ribbons as well as a lace ruff and cuffs, is reminiscent of the paintings of Anthony van Dyck. The small dog at lower right, a quotation from Rubens, watches the couple with considerably more appreciation than Mezzetin can muster."
+          "In a verdant park at sunset, a young woman abandons herself to her tousle-haired companion’s ardent embrace. Coiled up in a pose of centrifugal energy, the impulsive lovers are oblivious to the third figure: Mezzetin, sitting on the same rocky outcrop. Drawn from the theatrical tradition of the commedia dell’arte, this character represents a poignant foil to the couple’s unbridled passion. Introverted and with a melancholy air, he tunes his guitar, knowing that his serenading will mean nothing to the lovers and serve only to heighten his own sense of lonely longing as he gazes upon them. His costume, a rose-coloured jacket and knee-britches slashed with yellow and adorned with blue ribbons as well as a lace ruff and cuffs, is reminiscent of the paintings of Anthony van Dyck. The small dog at lower right, a quotation from Rubens, watches the couple with considerably more appreciation than Mezzetin can muster."
         ]
       }
     }
@@ -171,7 +171,7 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/497437f1-414f-424c-adb5-952f51624c91"
+      "id": "https://example.org/uuid/81de60e8-0609-4057-a3ee-c38b5a5f3eef"
     }
   ],
   "items": [
@@ -204,9 +204,9 @@
                 "format": "image/jpeg",
                 "service": [
                   {
-                    "@id": "https://data.getty.edu/museum/api/iiif/633385",
                     "profile": "http://iiif.io/api/image/2/level0.json",
-                    "@type": "ImageService2"
+                    "id": "https://data.getty.edu/museum/api/iiif/633385",
+                    "type": "ImageService2"
                   }
                 ],
                 "width": 789,
@@ -216,7 +216,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e83c5fd5-22f3-4042-8f2d-d6bc0e21a35c"
+          "id": "https://example.org/uuid/7817ebfa-5c4b-4dc6-8af9-8dd6043ed31a"
         }
       ]
     }

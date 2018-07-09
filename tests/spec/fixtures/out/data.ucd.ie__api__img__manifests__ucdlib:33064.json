@@ -252,9 +252,9 @@
               "body": {
                 "service": [
                   {
-                    "@id": "https://iiif.ucd.ie/loris/ucdlib:33543",
                     "profile": "http://iiif.io/api/image/2/level2.json",
-                    "@type": "ImageService2"
+                    "id": "https://iiif.ucd.ie/loris/ucdlib:33543",
+                    "type": "ImageService2"
                   }
                 ],
                 "format": "image/jpeg",
@@ -265,14 +265,14 @@
               }
             }
           ],
-          "id": "uuid0"
+          "id": "https://example.org/uuid/124d9c26-9300-42a4-b703-300d73aa08b7"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "uuid1",
+      "id": "https://example.org/uuid/39ea324d-1e7c-4aa5-8632-408d78a58cc1",
       "type": "Range",
       "behavior": [
         "sequence",

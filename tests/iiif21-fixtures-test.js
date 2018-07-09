@@ -594,9 +594,9 @@ describe('prezi2to3', () => {
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
 
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('id');
     expect(
-      p3Manifest.items[0].items[0].items[0].body.service[0]['@id']
+      p3Manifest.items[0].items[0].items[0].body.service[0]['id']
     ).toEqual(
       p2Manifest.sequences[0].canvases[0].images[0].resource.service['@id']
     );
@@ -606,8 +606,8 @@ describe('prezi2to3', () => {
     ).toEqual(
       p2Manifest.sequences[0].canvases[0].images[0].resource.service['profile']
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@type');
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@type']).toEqual('ImageService2');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual('ImageService2');
   });
   
   it('Test 25 Manifest: Image with IIIF Service, embedded info', () => {
@@ -638,12 +638,14 @@ describe('prezi2to3', () => {
     expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('service');
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@type');
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@type']).toEqual('ImageService2');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual('ImageService2');
     let p2Service = clone(p2Manifest.sequences[0].canvases[0].images[0].resource.service);
     delete p2Service['@context'];
+    delete p2Service['@id'];
     let p3Service = clone(p3Manifest.items[0].items[0].items[0].body.service[0]);
-    delete p3Service['@type'];
+    delete p3Service['type'];
+    delete p3Service['id'];
     expect(JSON.stringify(p3Service)).toEqual(JSON.stringify(p2Service));
   });
   
@@ -812,16 +814,16 @@ describe('prezi2to3', () => {
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@id');
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@id']).toEqual(
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/page1-full'
     );
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('profile');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@type');
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@type']).toEqual("ImageService2");
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual("ImageService2");
 
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
     expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
@@ -839,16 +841,16 @@ describe('prezi2to3', () => {
     expect(p3Manifest.items[0].items[0].items[1].body.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[1].body.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[1].body.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('@id');
-    expect(p3Manifest.items[0].items[0].items[1].body.service[0]['@id']).toEqual(
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/detail'
     );
     expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('profile');
     expect(p3Manifest.items[0].items[0].items[1].body.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('@type');
-    expect(p3Manifest.items[0].items[0].items[1].body.service[0]['@type']).toEqual("ImageService2");
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]['type']).toEqual("ImageService2");
   });
   
   it('Test 32 Manifest: Multiple Detail Images', () => {
@@ -1087,16 +1089,16 @@ describe('prezi2to3', () => {
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@id');
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@id']).toEqual(
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/page1-full'
     );
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('profile');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('@type');
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['@type']).toEqual("ImageService2");
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual("ImageService2");
 
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
     expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
@@ -1115,16 +1117,16 @@ describe('prezi2to3', () => {
     expect(p3Manifest.items[0].items[0].items[1].body.source.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[1].body.source.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[1].body.source.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('@id');
-    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['@id']).toEqual(
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/detail'
     );
     expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('profile');
     expect(p3Manifest.items[0].items[0].items[1].body.source.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('@type');
-    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['@type']).toEqual("ImageService2");
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['type']).toEqual("ImageService2");
   });
   
   it('Test 39 Manifest: Image with CSS Rotation', () => {

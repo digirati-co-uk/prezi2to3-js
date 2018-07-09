@@ -290,14 +290,6 @@ class Upgrader {
       }
     }
 
-    if (what.hasOwnProperty('@id')) {
-      what.id = what['@id'];
-      delete what['@id'];
-    }
-    if (what.hasOwnProperty('@type')) {
-      what.type = what['@type'];
-      delete what['@type'];
-    }
     return what
   }
 
@@ -648,7 +640,15 @@ class Upgrader {
   }
 
   processService(what) {
-    what = this.fixServiceType(what)
+    what = this.fixServiceType(what);
+    if (what.hasOwnProperty('@id')) {
+      what.id = what['@id'];
+      delete what['@id'];
+    }
+    if (what.hasOwnProperty('@type')) {
+      what.type = what['@type'];
+      delete what['@type'];
+    }
     // The only thing to traverse is further services
     // everything else we leave alone
     if (what.hasOwnProperty('service')){

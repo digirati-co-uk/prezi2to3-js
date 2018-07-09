@@ -148,7 +148,7 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/32db6865-d8db-4e16-91d7-3662813a1be2"
+      "id": "https://example.org/uuid/87bf5415-02c1-4003-8af7-389a34204b52"
     }
   ],
   "items": [
@@ -182,9 +182,9 @@
                 "height": 2550,
                 "service": [
                   {
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/47174896",
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/47174896",
+                    "type": "ImageService1"
                   }
                 ],
                 "width": 2087,
@@ -193,7 +193,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/77e1beb4-7b60-4685-960a-75e3466a69be"
+          "id": "https://example.org/uuid/60ef0c0f-d2be-4742-8331-c17ee3971cde"
         }
       ]
     },
@@ -227,9 +227,9 @@
                 "height": 2550,
                 "service": [
                   {
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/18737483",
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/18737483",
+                    "type": "ImageService1"
                   }
                 ],
                 "width": 2088,
@@ -238,7 +238,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8033cdce-12c2-4fe6-823a-e18a3191697b"
+          "id": "https://example.org/uuid/ab9a0049-3169-43b1-abe7-a0e407757dee"
         }
       ]
     },
@@ -272,9 +272,9 @@
                 "height": 2550,
                 "service": [
                   {
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/47174892",
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/47174892",
+                    "type": "ImageService1"
                   }
                 ],
                 "width": 2259,
@@ -283,7 +283,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0403a33d-cd78-4bdc-a183-213a4b34bce4"
+          "id": "https://example.org/uuid/da784354-aa7c-4ea4-b8c3-9b39f7128457"
         }
       ]
     },
@@ -317,9 +317,9 @@
                 "height": 2550,
                 "service": [
                   {
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/43182083",
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/43182083",
+                    "type": "ImageService1"
                   }
                 ],
                 "width": 2100,
@@ -328,7 +328,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4d85b8b9-90e0-4a35-bf2e-85c703c80ca6"
+          "id": "https://example.org/uuid/295e87a4-c656-4a8a-8622-ef1cf3a576c8"
         }
       ]
     },
@@ -362,9 +362,9 @@
                 "height": 2550,
                 "service": [
                   {
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/43183405",
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/43183405",
+                    "type": "ImageService1"
                   }
                 ],
                 "width": 2082,
@@ -373,7 +373,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5a51b37c-0590-44fd-a15b-d857378d53b1"
+          "id": "https://example.org/uuid/66e52c44-e99c-4a06-8021-e5a24989590b"
         }
       ]
     },
@@ -407,9 +407,9 @@
                 "height": 2550,
                 "service": [
                   {
-                    "@id": "https://ids.lib.harvard.edu/ids/iiif/43183422",
                     "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                    "@type": "ImageService1"
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/43183422",
+                    "type": "ImageService1"
                   }
                 ],
                 "width": 2093,
@@ -418,14 +418,14 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ed0c9250-2bb4-48cf-8385-af5ccf2c3bbd"
+          "id": "https://example.org/uuid/327aab1a-a998-4ead-a51c-bf41bcfe9ec8"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "https://example.org/uuid/fc3955f6-e1af-4a45-9c0b-6f7c37a12feb",
+      "id": "https://example.org/uuid/c2a10ba7-b50f-417f-85c3-ef76eedf9171",
       "type": "Range",
       "behavior": [
         "sequence",

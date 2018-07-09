@@ -1,10 +1,10 @@
 {
   "label": {
     "sv": [
-      "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
+      "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
     ],
     "en": [
-      "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
+      "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
     ]
   },
   "metadata": [
@@ -19,7 +19,7 @@
       },
       "value": {
         "@none": [
-          "Originaltraktater med fr\u00e4mmande makter (traktater)"
+          "Originaltraktater med främmande makter (traktater)"
         ]
       }
     },
@@ -86,7 +86,7 @@
     {
       "label": {
         "sv": [
-          "Anm\u00e4rkning"
+          "Anmärkning"
         ],
         "en-GB": [
           "Remark"
@@ -94,14 +94,14 @@
       },
       "value": {
         "@none": [
-          "Fredsf\u00f6rdrag. Dat. Roskilde"
+          "Fredsfördrag. Dat. Roskilde"
         ]
       }
     },
     {
       "label": {
         "sv": [
-          "K\u00e4llh\u00e4nvisning"
+          "Källhänvisning"
         ],
         "en-GB": [
           "Source reference"
@@ -109,7 +109,7 @@
       },
       "value": {
         "@none": [
-          "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
+          "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
         ]
       }
     }
@@ -145,7 +145,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -160,7 +160,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -168,10 +168,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00001"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00001"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00001"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00001"
             ]
           }
         }
@@ -195,9 +195,9 @@
                 "width": 7022,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -205,7 +205,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/793a2c9f-4ee0-45a1-85cb-70d8bfc66bba"
+          "id": "https://example.org/uuid/d6bf1c22-dd03-4f63-9a95-54da248c4b7c"
         }
       ]
     },
@@ -237,7 +237,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -252,7 +252,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -260,10 +260,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00002"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00002"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00002"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00002"
             ]
           }
         }
@@ -287,9 +287,9 @@
                 "width": 6453,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -297,7 +297,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ac50acca-d99e-4519-b304-c6225a974900"
+          "id": "https://example.org/uuid/f2a8bd6f-a322-42eb-b7b1-07a25199fad3"
         }
       ]
     },
@@ -329,7 +329,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -344,7 +344,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -352,10 +352,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00003"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00003"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00003"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00003"
             ]
           }
         }
@@ -379,9 +379,9 @@
                 "width": 6504,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -389,7 +389,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f9636a0f-75a4-43d9-a5ad-0735ff42d3d6"
+          "id": "https://example.org/uuid/7765cdb6-4746-4113-9fbb-7e4d21295618"
         }
       ]
     },
@@ -421,7 +421,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -436,7 +436,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -444,10 +444,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00004"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00004"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00004"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00004"
             ]
           }
         }
@@ -471,9 +471,9 @@
                 "width": 12873,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -481,7 +481,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/09058c79-05c3-4bf3-864f-1a1777536c86"
+          "id": "https://example.org/uuid/cea35819-4951-414d-924c-11d84b56ca09"
         }
       ]
     },
@@ -513,7 +513,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -528,7 +528,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -536,10 +536,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00005"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00005"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00005"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00005"
             ]
           }
         }
@@ -563,9 +563,9 @@
                 "width": 12538,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -573,7 +573,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ac5d0134-8f32-41c7-ba2b-6c5b5de717e2"
+          "id": "https://example.org/uuid/c7eb81ad-539a-4910-b6e8-8b34eac824dd"
         }
       ]
     },
@@ -605,7 +605,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -620,7 +620,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -628,10 +628,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00006"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00006"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00006"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00006"
             ]
           }
         }
@@ -655,9 +655,9 @@
                 "width": 12921,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -665,7 +665,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7e23f937-ed35-472b-b362-984cd536a035"
+          "id": "https://example.org/uuid/470432fd-61ff-46e5-bd38-cab8c6779b5d"
         }
       ]
     },
@@ -697,7 +697,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -712,7 +712,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -720,10 +720,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00007"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00007"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00007"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00007"
             ]
           }
         }
@@ -747,9 +747,9 @@
                 "width": 12909,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -757,7 +757,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e482880a-0178-456b-9449-ca8c405d7115"
+          "id": "https://example.org/uuid/17d9571c-3c4b-4b7d-8362-72259d758cb4"
         }
       ]
     },
@@ -789,7 +789,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -804,7 +804,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -812,10 +812,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00008"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00008"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00008"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00008"
             ]
           }
         }
@@ -839,9 +839,9 @@
                 "width": 12546,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -849,7 +849,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/984efbfa-095c-4b3e-aeb7-35b0ddc1969d"
+          "id": "https://example.org/uuid/4faab575-2aa0-402e-a43a-64a20a0934cc"
         }
       ]
     },
@@ -881,7 +881,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -896,7 +896,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -904,10 +904,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00009"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00009"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00009"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00009"
             ]
           }
         }
@@ -931,9 +931,9 @@
                 "width": 12541,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -941,7 +941,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c41d0b51-5106-4193-8399-3014cd239b93"
+          "id": "https://example.org/uuid/919bd1ff-ef06-412d-b4e3-ecf4fe2e97b9"
         }
       ]
     },
@@ -973,7 +973,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -988,7 +988,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -996,10 +996,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00010"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00010"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00010"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00010"
             ]
           }
         }
@@ -1023,9 +1023,9 @@
                 "width": 12908,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1033,7 +1033,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/bbe460dd-a409-48b2-9070-2f12964333ba"
+          "id": "https://example.org/uuid/b9c2312a-c869-47a5-bae5-9f90877e9c73"
         }
       ]
     },
@@ -1065,7 +1065,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -1080,7 +1080,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -1088,10 +1088,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00011"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00011"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00011"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00011"
             ]
           }
         }
@@ -1115,9 +1115,9 @@
                 "width": 6539,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1125,7 +1125,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/da696c76-00ab-4469-b8d9-f3cb78ed4dba"
+          "id": "https://example.org/uuid/94ed0dd3-44f8-40bf-82ae-503f2455c42e"
         }
       ]
     },
@@ -1157,7 +1157,7 @@
         {
           "label": {
             "sv": [
-              "L\u00e4nk"
+              "Länk"
             ],
             "en-GB": [
               "Link"
@@ -1172,7 +1172,7 @@
         {
           "label": {
             "sv": [
-              "K\u00e4llh\u00e4nvisning"
+              "Källhänvisning"
             ],
             "en-GB": [
               "Source reference"
@@ -1180,10 +1180,10 @@
           },
           "value": {
             "sv": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00012"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), bildid: R0000004_00012"
             ],
             "en-GB": [
-              "Originaltraktater med fr\u00e4mmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00012"
+              "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568), Image ID: R0000004_00012"
             ]
           }
         }
@@ -1207,9 +1207,9 @@
                 "width": 7105,
                 "service": [
                   {
-                    "@id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012",
                     "profile": "http://iiif.io/api/image/2/level1.json",
-                    "@type": "ImageService2"
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012",
+                    "type": "ImageService2"
                   }
                 ],
                 "type": "Image",
@@ -1217,7 +1217,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/6b56843e-acd9-4978-8f7a-f624b7559baf"
+          "id": "https://example.org/uuid/95851219-c1ca-468a-bf3f-dea1003fcdfb"
         }
       ]
     }
