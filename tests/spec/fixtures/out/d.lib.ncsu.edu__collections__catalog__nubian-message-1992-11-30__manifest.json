@@ -99,18 +99,18 @@
   ],
   "service": [
     {
-      "@id": "https://ocr.lib.ncsu.edu/search/nubian-message-1992-11-30",
       "profile": "http://iiif.io/api/search/0/search",
       "label": "Search within this thing",
       "service": [
         {
-          "@id": "https://ocr.lib.ncsu.edu/suggest/nubian-message-1992-11-30",
           "profile": "http://iiif.io/api/search/0/autocomplete",
           "label": "Get suggested words",
-          "@type": "AutoCompleteService1"
+          "id": "https://ocr.lib.ncsu.edu/suggest/nubian-message-1992-11-30",
+          "type": "AutoCompleteService1"
         }
       ],
-      "@type": "SearchService1"
+      "id": "https://ocr.lib.ncsu.edu/search/nubian-message-1992-11-30",
+      "type": "SearchService1"
     }
   ],
   "seeAlso": [
@@ -250,7 +250,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b8812f28-30c4-491e-8bd2-968e9de15969"
+          "id": "uuid0"
         }
       ]
     },
@@ -340,7 +340,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/784e99ad-867a-4ee7-ac03-48c10b695284"
+          "id": "uuid1"
         }
       ]
     },
@@ -430,7 +430,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/31a798af-1ee4-4150-94b4-d23c76f70851"
+          "id": "uuid2"
         }
       ]
     },
@@ -520,7 +520,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d52759dd-4af1-4fea-a04f-489cd8cac286"
+          "id": "uuid3"
         }
       ]
     },
@@ -610,7 +610,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/cf5345bb-9a13-4144-8422-2516a7201685"
+          "id": "uuid4"
         }
       ]
     },
@@ -700,7 +700,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/bdd02ce3-b1c8-4ce7-a1ff-ca42b9b59b79"
+          "id": "uuid5"
         }
       ]
     },
@@ -790,7 +790,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c00da15d-7cd8-4c79-b81d-12ec759c4c66"
+          "id": "uuid6"
         }
       ]
     },
@@ -880,7 +880,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c1fefef3-722d-4f17-9aee-fe1ecf8ecb86"
+          "id": "uuid7"
         }
       ]
     },
@@ -970,7 +970,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/dccd38ff-7ff1-43c6-adba-12d0bea4b66e"
+          "id": "uuid8"
         }
       ]
     },
@@ -1060,7 +1060,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d0d49fd3-214d-4dd7-ba5b-dd1d35ee7712"
+          "id": "uuid9"
         }
       ]
     },
@@ -1150,7 +1150,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/029a0c34-9d5f-4a89-83f1-75d930ec7322"
+          "id": "uuid10"
         }
       ]
     },
@@ -1240,7 +1240,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d4b40fca-f762-4d1b-acb8-472edf26705b"
+          "id": "uuid11"
         }
       ]
     },
@@ -1330,7 +1330,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/fa779c3a-84ce-4cf9-8959-7790c3b6c5ff"
+          "id": "uuid12"
         }
       ]
     },
@@ -1420,7 +1420,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1a2d7fd2-082e-450b-bc0a-8a9a5e34a19b"
+          "id": "uuid13"
         }
       ]
     },
@@ -1510,7 +1510,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/11c9d370-184b-4697-b8cd-16bf5e99f84e"
+          "id": "uuid14"
         }
       ]
     },
@@ -1600,7 +1600,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/6b7c538b-0215-4252-b189-7728e14c1e59"
+          "id": "uuid15"
         }
       ]
     }

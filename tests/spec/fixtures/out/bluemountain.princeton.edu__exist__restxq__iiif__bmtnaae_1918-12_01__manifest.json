@@ -66,10 +66,15 @@
       }
     }
   ],
+  "service": [
+    {
+      "type": "Service"
+    }
+  ],
   "seeAlso": [
     {
       "type": "Dataset",
-      "id": "https://example.org/uuid/7af22eeb-874f-4f94-8e64-75362e80b180"
+      "id": "uuid0"
     }
   ],
   "structures": [
@@ -886,7 +891,7 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/1b5ca64d-7779-4f80-b161-f9092375ee19"
+      "id": "uuid1"
     }
   ],
   "items": [
@@ -907,7 +912,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/56176f11-3349-4fd3-968e-3b42d95a642d",
+              "id": "uuid2",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page1",
               "body": {
                 "format": "image/jp2",
@@ -925,7 +930,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8c54db55-3dbb-409b-82f9-24c4ea35627c"
+          "id": "uuid3"
         }
       ]
     },
@@ -946,7 +951,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/77d58d52-1b0d-4f6f-a3c8-2d24bd1127d9",
+              "id": "uuid4",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page2",
               "body": {
                 "format": "image/jp2",
@@ -964,7 +969,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/68b60bdd-964d-4f59-850c-c74f0a760489"
+          "id": "uuid5"
         }
       ]
     },
@@ -985,7 +990,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/610a572f-03fe-4ffc-b6aa-6f97a5d76d19",
+              "id": "uuid6",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page3",
               "body": {
                 "format": "image/jp2",
@@ -1003,7 +1008,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4d9847de-05c9-4e0f-b26c-1a7737918c63"
+          "id": "uuid7"
         }
       ]
     },
@@ -1024,7 +1029,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/ff758172-6ed1-4160-af67-408a1df11536",
+              "id": "uuid8",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page4",
               "body": {
                 "format": "image/jp2",
@@ -1042,7 +1047,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/dd0018d3-9b52-409d-b32f-ee0dba426757"
+          "id": "uuid9"
         }
       ]
     },
@@ -1063,7 +1068,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/68aa9c06-da67-4408-b086-60b9a630ffd9",
+              "id": "uuid10",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page5",
               "body": {
                 "format": "image/jp2",
@@ -1081,7 +1086,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1fb7b2ce-cd7e-476d-ad0c-2bf25e3e9c9f"
+          "id": "uuid11"
         }
       ]
     },
@@ -1102,7 +1107,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/7f45b4cf-122a-493b-88e9-02dfd79ce613",
+              "id": "uuid12",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page6",
               "body": {
                 "format": "image/jp2",
@@ -1120,7 +1125,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c30af4fd-64ba-4c95-9012-94b289857bcb"
+          "id": "uuid13"
         }
       ]
     },
@@ -1141,7 +1146,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/5cb52f4c-877e-4344-b9d5-c5526c1a59f7",
+              "id": "uuid14",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page7",
               "body": {
                 "format": "image/jp2",
@@ -1159,7 +1164,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c1740134-55b3-4fe1-98bb-6e0715d38ade"
+          "id": "uuid15"
         }
       ]
     },
@@ -1180,7 +1185,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/b932606f-fd35-48ec-b43e-69a4a96f4ad9",
+              "id": "uuid16",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page8",
               "body": {
                 "format": "image/jp2",
@@ -1198,7 +1203,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1fc60e28-e92d-42f1-abe7-297179157f4a"
+          "id": "uuid17"
         }
       ]
     },
@@ -1219,7 +1224,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/86b32d23-7657-48b9-87e3-726f935c6e90",
+              "id": "uuid18",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page9",
               "body": {
                 "format": "image/jp2",
@@ -1237,7 +1242,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2812fd52-3278-4ab6-9054-553e39f07db0"
+          "id": "uuid19"
         }
       ]
     },
@@ -1258,7 +1263,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/5d2a65d5-5cdc-456d-8d58-3cf6db6a3681",
+              "id": "uuid20",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page10",
               "body": {
                 "format": "image/jp2",
@@ -1276,7 +1281,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f51cca96-1d7f-4dc0-866e-923ad2aebd4c"
+          "id": "uuid21"
         }
       ]
     },
@@ -1297,7 +1302,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/43d5b7fe-e674-42fc-bc18-67e51f3c0ee9",
+              "id": "uuid22",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page11",
               "body": {
                 "format": "image/jp2",
@@ -1315,7 +1320,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a0237104-2bf8-4b27-a895-4cf20d54d663"
+          "id": "uuid23"
         }
       ]
     },
@@ -1336,7 +1341,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/be3cb323-a1dd-4a34-baad-1cc1f1985591",
+              "id": "uuid24",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page12",
               "body": {
                 "format": "image/jp2",
@@ -1354,7 +1359,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d6ddd99b-bab8-4c13-8d9f-701c5de6374a"
+          "id": "uuid25"
         }
       ]
     },
@@ -1375,7 +1380,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/6c041f96-b220-42d1-a848-24ebb13733d8",
+              "id": "uuid26",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page13",
               "body": {
                 "format": "image/jp2",
@@ -1393,7 +1398,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c1b6e217-de3e-45f1-bec2-085b2c5124f7"
+          "id": "uuid27"
         }
       ]
     },
@@ -1414,7 +1419,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/9f7a7d20-9f91-4b2c-8901-0cf05b149b6f",
+              "id": "uuid28",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page14",
               "body": {
                 "format": "image/jp2",
@@ -1432,7 +1437,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0d3ed5c1-c1f3-4c66-a152-9bae1f5ebb98"
+          "id": "uuid29"
         }
       ]
     },
@@ -1453,7 +1458,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/1e8a3744-27ed-4a77-adf1-b5c70c04aa29",
+              "id": "uuid30",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page15",
               "body": {
                 "format": "image/jp2",
@@ -1471,7 +1476,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4ba9cffa-e1e9-49ac-b2e2-e3add4623394"
+          "id": "uuid31"
         }
       ]
     },
@@ -1492,7 +1497,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/60646f64-0f02-4515-a7a5-2cc19c6969f2",
+              "id": "uuid32",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page16",
               "body": {
                 "format": "image/jp2",
@@ -1510,7 +1515,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5374bf36-c64a-4e23-ac1b-26c065ae8c8f"
+          "id": "uuid33"
         }
       ]
     }

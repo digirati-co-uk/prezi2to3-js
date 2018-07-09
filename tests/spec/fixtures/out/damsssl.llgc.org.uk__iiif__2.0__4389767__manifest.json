@@ -128,9 +128,9 @@
       "service": [
         {
           "@context": " http://iiif.io/api/image/2/context.json",
-          "@id": " https://damsssl.llgc.org.uk/iiif/2.0/image/logo",
+          "id": " https://damsssl.llgc.org.uk/iiif/2.0/image/logo",
           "profile": " http://iiif.io/api/image/2/level1.json",
-          "@type": "Service"
+          "type": "Service"
         }
       ],
       "type": "Image",

@@ -245,6 +245,9 @@ class Upgrader {
         what['@type'] = "Service";
         this.warn(`Unknown context: ${ctxt}`);
       }
+    } else {
+      what['@type'] = "Service";
+      this.warn('No cotext at all');
     }
 
     if (what.hasOwnProperty('profile')) {
@@ -285,6 +288,15 @@ class Upgrader {
         ].includes(profile)) {
           what['@type'] = "AutoCompleteService1"
       }
+    }
+
+    if (what.hasOwnProperty('@id')) {
+      what.id = what['@id'];
+      delete what['@id'];
+    }
+    if (what.hasOwnProperty('@type')) {
+      what.type = what['@type'];
+      delete what['@type'];
     }
     return what
   }
@@ -1106,6 +1118,20 @@ class Upgrader {
     }
     return what;
   }
+
+  // postProcessService(what) {
+  //   console.log('pps', what);
+  //   what = this.postProcessGeneric(what);
+  //   if (what.hasOwnProperty('@id')) {
+  //     what.id = what['@id'];
+  //     delete what['@id'];
+  //   }
+  //   if (what.hasOwnProperty('@type')) {
+  //     what.type = what['@type'];
+  //     delete what['@type'];
+  //   }
+  //   return what;
+  // }
 
   processResource(what, top=false) {
     let origContext = ""

@@ -235,7 +235,7 @@
           "profile": "http://iiif.io/api/annex/services/physdim",
           "physicalScale": 0.00333333333333333,
           "physicalUnits": "in",
-          "@type": "Service"
+          "type": "Service"
         }
       ],
       "type": "Canvas",
@@ -265,14 +265,14 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/741b9f95-87c4-4741-a7bb-10afbbc6b3ea"
+          "id": "uuid0"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "https://example.org/uuid/375d694d-38b0-4d01-8e40-54db63b98167",
+      "id": "uuid1",
       "type": "Range",
       "behavior": [
         "sequence",
