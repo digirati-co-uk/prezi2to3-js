@@ -12,9 +12,9 @@
   "scripts": {
     "build": "nwb build-web-module",
     "clean": "nwb clean-module",
-    "test": "nwb test",
-    "test:coverage": "nwb test --coverage",
-    "test:watch": "nwb test --server"
+    "test": "nwb test --timeout 15000",
+    "test:coverage": "nwb test --coverage --timeout 15000",
+    "test:watch": "nwb test --server --timeout 15000"
   },
   "dependencies": {
     "uuid": "^3.3.0"
