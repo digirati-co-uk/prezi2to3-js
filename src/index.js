@@ -421,17 +421,19 @@ class Upgrader {
   getHeader(uri) {
     let request = new XMLHttpRequest();
     request.open('HEAD', uri, false);  // `false` makes the request synchronous
-    request.send(null);
-    if (request.status === 200) {
-      return {
-        headers: {
-          get: (headerName) => request.getResponseHeader(headerName)
-        },
-        status: request.status
-      };
-    } else {
-      return null;
+    try {
+      request.send(null);
+      if (request.status === 200) {
+        return {
+          headers: {
+            get: (headerName) => request.getResponseHeader(headerName)
+          },
+          status: request.status
+        };
+      }
+    } catch(ex) {
     }
+    return null;
   }
 
   setRemoteType(what) {

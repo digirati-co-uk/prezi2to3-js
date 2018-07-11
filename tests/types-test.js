@@ -3,7 +3,7 @@ import expect from 'expect'
 import Upgrader from 'src/index'
 
 describe('prezi2to3', () => {
-    
+    this.timeout(15000);
 
     describe('fixType', () => {
         let fixTypeUpgrader = null;
@@ -701,12 +701,39 @@ describe('prezi2to3', () => {
             upgrader.setRemoteType(what);
             expect(what.type).toEqual('Manifest');
         });
-        it('gets type form data because it was json, p3 linked resource ', () => {
+        it('gets type form data because the header was json, p3 linked resource ', () => {
             upgrader.getHeader['content-type'] = 'application/json';
             upgrader.retrieveResource.data = { 'type': 'Manifest'}
             let what =  { id: 'test' };
             upgrader.setRemoteType(what);
             expect(what.type).toEqual('Manifest');
+        });
+        it('gets type form data because the header was json-ld, p3 linked resource ', () => {
+            upgrader.getHeader['content-type'] = 'application/ld+json';
+            upgrader.retrieveResource.data = { 'type': 'Manifest'}
+            let what =  { id: 'test' };
+            upgrader.setRemoteType(what);
+            expect(what.type).toEqual('Manifest');
+        });
+    })
+    describe('getHeader', () => {
+        let upgrader = null;
+        beforeEach(() => {
+            upgrader = new Upgrader({
+                "ext_ok": false, 
+                "deref_links": false,
+            });
+        });
+        it('returns a simplified object if the response status was 200', () => {
+            let uri = "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json";
+            let getHEaderResult = upgrader.getHeader(uri);
+            expect(getHEaderResult.constructor).toEqual(Object);
+            expect(getHEaderResult).toContainKeys(['status', 'headers']);
+        });
+        it('returns a simplified object if the response status was other than 200', () => {
+            let uri = "http://example.com/smething/not/exist";
+            let getHEaderResult = upgrader.getHeader(uri);
+            expect(getHEaderResult).toBe(null)
         });
     })
 });
