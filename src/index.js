@@ -76,6 +76,16 @@ const OBJECT_PROPERTY_TYPES = {
   "partOf": null
 };
 
+const CONTENT_RESOURCE_PROPERTIES = [
+  'thumbnail', 
+  'homepage', 
+  'logo',
+  'rendering', 
+  'seeAlso',
+  'body',
+  'partOf'
+];
+
 const SET_PROPERTIES = [
   "thumbnail", "logo", "behavior",
   "rendering", "service", "seeAlso", "partOf"
@@ -103,6 +113,26 @@ const SIMPLE_TYPE_MAP = {
   "AnnotationList": "AnnotationPage",
   "cnt:ContentAsText": "TextualBody"
 };
+
+const TYPES_WITH_MANDATORY_ID = [
+  'Collection',
+  'Manifest',
+  'Canvas',
+  'Annotation',
+  'Range',
+  'AnnotationCollection',
+  'AnnotationPage',
+];
+
+const PARTOF_MAPPING = {
+  'Collection': 'Collection',
+  'Manifest': 'Collection',
+  'Canvas': 'Manifest',
+  'Annotation': 'AnnotationPage',
+  'AnnotationPage': 'AnnotationCollection',
+}
+
+
 
 // const KEY_ORDER = [
 //     "@context", "id", "@id", "type", "@type", "motivation", "label", "profile",
@@ -149,16 +179,14 @@ class Upgrader {
   retrieveResource(uri) {
     let request = new XMLHttpRequest();
     request.open('GET', uri, false);  // `false` makes the request synchronous
-    request.send(null);
-    if (request.status === 200) {
-      try {
+    try{
+      request.send(null);
+      if (request.status === 200) {
         return JSON.parse(request.responseText);
-      } catch (ex) {
-        return {};
-      }
-    } else {
-      return {};
-    }
+      } 
+    } catch (ex) {
+    } 
+    return {};
   }
 
   mintURI() {
@@ -245,6 +273,9 @@ class Upgrader {
         what['@type'] = "Service";
         this.warn(`Unknown context: ${ctxt}`);
       }
+    } else {
+      what['@type'] = "Service";
+      this.warn('No cotext at all');
     }
 
     if (what.hasOwnProperty('profile')) {
@@ -286,6 +317,7 @@ class Upgrader {
           what['@type'] = "AutoCompleteService1"
       }
     }
+
     return what
   }
 
@@ -340,9 +372,6 @@ class Upgrader {
           p3IString[defl].push(i);
         }
       });
-    } else {
-      // string value
-      p3IString[defl] = [value]
     }
     return p3IString
   }
@@ -392,17 +421,19 @@ class Upgrader {
   getHeader(uri) {
     let request = new XMLHttpRequest();
     request.open('HEAD', uri, false);  // `false` makes the request synchronous
-    request.send(null);
-    if (request.status === 200) {
-      return {
-        headers: {
-          get: (headerName) => request.getResponseHeader(headerName)
-        },
-        status: request.status
-      };
-    } else {
-      return null;
+    try {
+      request.send(null);
+      if (request.status === 200) {
+        return {
+          headers: {
+            get: (headerName) => request.getResponseHeader(headerName)
+          },
+          status: request.status
+        };
+      }
+    } catch(ex) {
     }
+    return null;
   }
 
   setRemoteType(what) {
@@ -441,6 +472,11 @@ class Upgrader {
   fixObject(what, typ) {
     if (!isDictionary(what)) {
       what = {'id': what}
+    } else if (
+      isDictionary(what) && 
+      Object.keys(what).length===0
+    ) {
+      return {};
     }
     let  myid = what['id'] || what['@id'] || '';
 
@@ -500,7 +536,13 @@ class Upgrader {
     if (what.hasOwnProperty('@id')) {
       what['id'] = what['@id'];
       delete what['@id'];
-    } else {
+    }
+
+    let typeRequiresAnId = what.hasOwnProperty('type') && 
+      TYPES_WITH_MANDATORY_ID.includes(what.type) &&
+      !what.hasOwnProperty('id');
+    
+      if (typeRequiresAnId ) {
       // Add in id with a vanilla UUID
       what['id'] = this.mintURI();
     }
@@ -636,7 +678,15 @@ class Upgrader {
   }
 
   processService(what) {
-    what = this.fixServiceType(what)
+    what = this.fixServiceType(what);
+    if (what.hasOwnProperty('@id')) {
+      what.id = what['@id'];
+      delete what['@id'];
+    }
+    if (what.hasOwnProperty('@type')) {
+      what.type = what['@type'];
+      delete what['@type'];
+    }
     // The only thing to traverse is further services
     // everything else we leave alone
     if (what.hasOwnProperty('service')){
@@ -647,6 +697,11 @@ class Upgrader {
       what['service'] = what['service'].map(
         s => this.processService(s)
       );
+    } else if (
+      Object.keys(what).length === 1 && 
+      what.hasOwnProperty('type')
+    ) {
+      return {}
     }
     return what;
   }
@@ -697,6 +752,28 @@ class Upgrader {
     return what;
   }
 
+  areSequencesNeeded(what) {
+    let sequences = what.sequences;
+    let sequencesLength = sequences.length;
+    
+    // TODO: add flag to not control this feature...
+    if (sequencesLength === 0) {
+      return false; // never be the case, just to be complete :D
+    } else if (sequencesLength > 1) {
+      return true;
+    } //else if (sequencesLength === 1) { //if we assume that sequencesLength is a positive integer.  {
+    
+    let isNotDefaultViewingHint = 
+      sequences[0].hasOwnProperty('viewingHint') && 
+      sequences[0].viewingHint !== 'paged';
+    let isNotDefaultViewingDirection = 
+      sequences[0].hasOwnProperty('viewingDirection') &&
+      sequences[0].viewingDirection !== 'left-to-right';
+    let hasMetadata = sequences[0].hasOwnProperty('metadata');
+    
+    return isNotDefaultViewingHint || isNotDefaultViewingDirection || hasMetadata;
+  }
+
   processManifest(what) {
     what = this.processGeneric(what)
 
@@ -717,18 +794,18 @@ class Upgrader {
     // Need to test as might not be top object
     if (what.hasOwnProperty('sequences')) {
       // No more sequences!
-      let seqs = what['sequences'];
-      what['items'] = seqs[0]['canvases'];
+      let seqs = what.sequences;
+      let keepingSequences = this.areSequencesNeeded(what);
+      what.items = seqs[0].canvases;
       delete what['sequences'];
-      if (seqs.length > 1) {
+      if (keepingSequences) {
         // Process to ranges
         what['_structures'] = [];
         seqs.forEach(s => {
           // XXX Test here to see if we need to crawl
-
           let rng = {"id": s['@id'] || this.mintURI(), "type": "Range"}
           rng['behavior'] = ['sequence'];
-          rng['items'] = s['canvases'].map(c => {
+          rng['items'] = (s['canvases']||[]).map(c => {
             if (isDictionary(c)) {
               return {
                 id: c['@id'],
@@ -835,7 +912,7 @@ class Upgrader {
     // Remove redundant 'top' Range
     if (
       what.hasOwnProperty('behavior') &&
-      what['behavior'].hasOwnProperty('top')
+      what['behavior'].includes('top')
     ) {
       what['behavior'].splice(what['behavior'].indexOf('top'), 1);
       // if we're empty, remove it
@@ -958,7 +1035,7 @@ class Upgrader {
     }
     if (what.hasOwnProperty('item')) {
       let v = what['item']
-      if (isArray(v)) {
+      if (!isArray(v)) {
         v = [v]
       }
       newl = newl.concat(v)
@@ -971,7 +1048,8 @@ class Upgrader {
   postProcessGeneric(what) {
 
     // test known properties of objects for type
-    if (what.hasOwnProperty('homepage') && !what['homepage'].hasOwnProperty('type')) {
+    if (what.hasOwnProperty('homepage') && 
+      !what['homepage'].hasOwnProperty('type')) {
       what['homepage']['type'] = "Text"
     }
 
@@ -996,6 +1074,16 @@ class Upgrader {
       if (v) {
         what2[k] = v
       }
+    }
+    if (what2.hasOwnProperty('type') && 
+      PARTOF_MAPPING.hasOwnProperty(what2.type) &&
+      what2.hasOwnProperty('partOf') &&
+      what2.partOf.constructor===Array) {
+        what2.partOf.forEach((item)=> {
+          if(!item.hasOwnProperty('type')) {
+            item.type = PARTOF_MAPPING[what2.type];
+          }
+        })
     }
     return what2;
   }

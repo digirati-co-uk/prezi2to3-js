@@ -17,6 +17,7 @@ module.exports = {
       browserDisconnectTimeout: 100000,
       browserNoActivityTimeout: 100000,
       captureTimeout: 60000,
+      timeout: 60000,
       files: [
         {
           pattern: 'tests/spec/fixtures/**/*',

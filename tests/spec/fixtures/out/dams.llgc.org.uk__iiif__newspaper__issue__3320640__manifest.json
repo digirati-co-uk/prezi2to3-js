@@ -95,9 +95,9 @@
     {
       "service": [
         {
-          "@id": "http://dams.llgc.org.uk/iiif/2.0/image/logo",
           "profile": "http://iiif.io/api/image/2/level1.json",
-          "@type": "ImageService2"
+          "id": "http://dams.llgc.org.uk/iiif/2.0/image/logo",
+          "type": "ImageService2"
         }
       ],
       "type": "Image",
@@ -568,7 +568,7 @@
           },
           "value": {
             "@none": [
-              "WHEN, at the Despot's dread command, Bridg'd Hellespont his myriads bore From servile Asia's peopled strand To Graecia's and to Freedom's share\u2014"
+              "WHEN, at the Despot's dread command, Bridg'd Hellespont his myriads bore From servile Asia's peopled strand To Graecia's and to Freedom's share—"
             ]
           }
         }
@@ -594,7 +594,7 @@
     {
       "label": {
         "@none": [
-          "THE CURATE.\u2014A FRAGMENT."
+          "THE CURATE.—A FRAGMENT."
         ]
       },
       "metadata": [
@@ -734,7 +734,8 @@
   "id": "http://dams.llgc.org.uk/iiif/newspaper/issue/3320640/manifest.json",
   "partOf": [
     {
-      "id": "https://example.org/uuid/b9266e5e-dce7-4573-bbe0-4d5fcfb3765d"
+      "id": "http://dams.llgc.org.uk/iiif/newspapers/3320639.json",
+      "type": "Collection"
     }
   ],
   "items": [
@@ -803,7 +804,6 @@
                 "format": "image/jpeg",
                 "service": [
                   {
-                    "@id": "http://dams.llgc.org.uk/iiif/2.0/image/3320641",
                     "profile": "http://iiif.io/api/image/2/level1.json",
                     "height": 7905,
                     "width": 5826,
@@ -820,7 +820,8 @@
                         ]
                       }
                     ],
-                    "@type": "ImageService2"
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320641",
+                    "type": "ImageService2"
                   }
                 ],
                 "height": 7905,
@@ -830,7 +831,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ec95f4c0-c401-491f-84e9-f2f303bb4c05"
+          "id": "https://example.org/uuid/d3be76ef-08c2-4785-af95-9fbdfe9f51c4"
         }
       ]
     },
@@ -899,7 +900,6 @@
                 "format": "image/jpeg",
                 "service": [
                   {
-                    "@id": "http://dams.llgc.org.uk/iiif/2.0/image/3320642",
                     "profile": "http://iiif.io/api/image/2/level1.json",
                     "height": 7905,
                     "width": 5826,
@@ -916,7 +916,8 @@
                         ]
                       }
                     ],
-                    "@type": "ImageService2"
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320642",
+                    "type": "ImageService2"
                   }
                 ],
                 "height": 7905,
@@ -926,7 +927,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/60b3d420-8060-4ac2-8d33-26e33a04bd9b"
+          "id": "https://example.org/uuid/9cf25dca-c464-4aad-b2d2-93bd48c5c592"
         }
       ]
     },
@@ -1075,7 +1076,6 @@
                 "format": "image/jpeg",
                 "service": [
                   {
-                    "@id": "http://dams.llgc.org.uk/iiif/2.0/image/3320643",
                     "profile": "http://iiif.io/api/image/2/level1.json",
                     "height": 7905,
                     "width": 5826,
@@ -1092,7 +1092,8 @@
                         ]
                       }
                     ],
-                    "@type": "ImageService2"
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320643",
+                    "type": "ImageService2"
                   }
                 ],
                 "height": 7905,
@@ -1102,7 +1103,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d1b20b85-87a3-4c19-9234-7f1ad3dcb866"
+          "id": "https://example.org/uuid/3ac0e970-0982-47a4-8c15-58e96fea5b61"
         }
       ]
     },
@@ -1140,7 +1141,7 @@
         {
           "label": {
             "@none": [
-              "THE CURATE.\u2014A FRAGMENT."
+              "THE CURATE.—A FRAGMENT."
             ]
           },
           "type": "AnnotationPage",
@@ -1211,7 +1212,6 @@
                 "format": "image/jpeg",
                 "service": [
                   {
-                    "@id": "http://dams.llgc.org.uk/iiif/2.0/image/3320644",
                     "profile": "http://iiif.io/api/image/2/level1.json",
                     "height": 7905,
                     "width": 5826,
@@ -1228,7 +1228,8 @@
                         ]
                       }
                     ],
-                    "@type": "ImageService2"
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320644",
+                    "type": "ImageService2"
                   }
                 ],
                 "height": 7905,
@@ -1238,7 +1239,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b8262feb-6406-47de-b96a-17f2702e906a"
+          "id": "https://example.org/uuid/86e66f91-8c5e-4754-82f7-94ddfc168c97"
         }
       ]
     }

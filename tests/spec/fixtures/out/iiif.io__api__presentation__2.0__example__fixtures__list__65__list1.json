@@ -10,15 +10,13 @@
     {
       "motivation": "painting",
       "type": "Annotation",
-      "id": "https://example.org/uuid/1d48800a-124d-4ab0-8024-d12f683d9bf0",
+      "id": "https://example.org/uuid/12badf4b-9e14-4076-a63b-cb5fb4cc2e22",
       "target": {
         "selector": {
           "value": "xywh=225,70,750,150",
           "type": "FragmentSelector",
-          "id": "https://example.org/uuid/4aa95f28-77ad-4a7e-9106-7ceff77d5cdf"
         },
         "type": "SpecificResource",
-        "id": "https://example.org/uuid/197932f1-d50b-4d9a-9691-ddc54ef70ab3",
         "source": {
           "label": {
             "@none": [
