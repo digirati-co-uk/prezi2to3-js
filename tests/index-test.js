@@ -57,7 +57,7 @@ const manifestFromUri = (uri, io) => window.__json__[keyFromURI(uri, io)];
 const manifestFixture = (name) => window.__json__[`tests/spec/fixtures/input_data/${name}`];
 
 describe('prezi2to3', () => {
-  this.timeout(15000);
+  
   it('outputs identical json to the python version', (done) => {
     TEST_URLS.forEach(uri=>{
       //console.log(uri);

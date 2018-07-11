@@ -3,7 +3,6 @@ import expect from 'expect'
 import Upgrader from 'src/index'
 
 describe('prezi2to3', () => {
-    this.timeout(15000);
 
     describe('fixType', () => {
         let fixTypeUpgrader = null;

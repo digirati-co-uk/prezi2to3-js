@@ -12,7 +12,7 @@ const P3_CONTEXT = [
 ];
 
 describe('prezi2to3', () => {
-  this.timeout(15000);
+  
   let upgrader = null;
   beforeEach(function () {
     let flags = {"ext_ok": false, "deref_links": false};
