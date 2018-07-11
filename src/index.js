@@ -76,6 +76,16 @@ const OBJECT_PROPERTY_TYPES = {
   "partOf": null
 };
 
+const CONTENT_RESOURCE_PROPERTIES = [
+  'thumbnail', 
+  'homepage', 
+  'logo',
+  'rendering', 
+  'seeAlso',
+  'body',
+  'partOf'
+];
+
 const SET_PROPERTIES = [
   "thumbnail", "logo", "behavior",
   "rendering", "service", "seeAlso", "partOf"
@@ -103,6 +113,26 @@ const SIMPLE_TYPE_MAP = {
   "AnnotationList": "AnnotationPage",
   "cnt:ContentAsText": "TextualBody"
 };
+
+const TYPES_WITH_MANDATORY_ID = [
+  'Collection',
+  'Manifest',
+  'Canvas',
+  'Annotation',
+  'Range',
+  'AnnotationCollection',
+  'AnnotationPage',
+];
+
+const PARTOF_MAPPING = {
+  'Collection': 'Collection',
+  'Manifest': 'Collection',
+  'Canvas': 'Manifest',
+  'Annotation': 'AnnotationPage',
+  'AnnotationPage': 'AnnotationCollection',
+}
+
+
 
 // const KEY_ORDER = [
 //     "@context", "id", "@id", "type", "@type", "motivation", "label", "profile",
@@ -149,16 +179,14 @@ class Upgrader {
   retrieveResource(uri) {
     let request = new XMLHttpRequest();
     request.open('GET', uri, false);  // `false` makes the request synchronous
-    request.send(null);
-    if (request.status === 200) {
-      try {
+    try{
+      request.send(null);
+      if (request.status === 200) {
         return JSON.parse(request.responseText);
-      } catch (ex) {
-        return {};
-      }
-    } else {
-      return {};
-    }
+      } 
+    } catch (ex) {
+    } 
+    return {};
   }
 
   mintURI() {
@@ -344,9 +372,6 @@ class Upgrader {
           p3IString[defl].push(i);
         }
       });
-    } else {
-      // string value
-      p3IString[defl] = [value]
     }
     return p3IString
   }
@@ -445,6 +470,11 @@ class Upgrader {
   fixObject(what, typ) {
     if (!isDictionary(what)) {
       what = {'id': what}
+    } else if (
+      isDictionary(what) && 
+      Object.keys(what).length===0
+    ) {
+      return {};
     }
     let  myid = what['id'] || what['@id'] || '';
 
@@ -504,7 +534,13 @@ class Upgrader {
     if (what.hasOwnProperty('@id')) {
       what['id'] = what['@id'];
       delete what['@id'];
-    } else {
+    }
+
+    let typeRequiresAnId = what.hasOwnProperty('type') && 
+      TYPES_WITH_MANDATORY_ID.includes(what.type) &&
+      !what.hasOwnProperty('id');
+    
+      if (typeRequiresAnId ) {
       // Add in id with a vanilla UUID
       what['id'] = this.mintURI();
     }
@@ -659,6 +695,11 @@ class Upgrader {
       what['service'] = what['service'].map(
         s => this.processService(s)
       );
+    } else if (
+      Object.keys(what).length === 1 && 
+      what.hasOwnProperty('type')
+    ) {
+      return {}
     }
     return what;
   }
@@ -869,7 +910,7 @@ class Upgrader {
     // Remove redundant 'top' Range
     if (
       what.hasOwnProperty('behavior') &&
-      what['behavior'].hasOwnProperty('top')
+      what['behavior'].includes('top')
     ) {
       what['behavior'].splice(what['behavior'].indexOf('top'), 1);
       // if we're empty, remove it
@@ -992,7 +1033,7 @@ class Upgrader {
     }
     if (what.hasOwnProperty('item')) {
       let v = what['item']
-      if (isArray(v)) {
+      if (!isArray(v)) {
         v = [v]
       }
       newl = newl.concat(v)
@@ -1005,7 +1046,8 @@ class Upgrader {
   postProcessGeneric(what) {
 
     // test known properties of objects for type
-    if (what.hasOwnProperty('homepage') && !what['homepage'].hasOwnProperty('type')) {
+    if (what.hasOwnProperty('homepage') && 
+      !what['homepage'].hasOwnProperty('type')) {
       what['homepage']['type'] = "Text"
     }
 
@@ -1030,6 +1072,16 @@ class Upgrader {
       if (v) {
         what2[k] = v
       }
+    }
+    if (what2.hasOwnProperty('type') && 
+      PARTOF_MAPPING.hasOwnProperty(what2.type) &&
+      what2.hasOwnProperty('partOf') &&
+      what2.partOf.constructor===Array) {
+        what2.partOf.forEach((item)=> {
+          if(!item.hasOwnProperty('type')) {
+            item.type = PARTOF_MAPPING[what2.type];
+          }
+        })
     }
     return what2;
   }
@@ -1118,20 +1170,6 @@ class Upgrader {
     }
     return what;
   }
-
-  // postProcessService(what) {
-  //   console.log('pps', what);
-  //   what = this.postProcessGeneric(what);
-  //   if (what.hasOwnProperty('@id')) {
-  //     what.id = what['@id'];
-  //     delete what['@id'];
-  //   }
-  //   if (what.hasOwnProperty('@type')) {
-  //     what.type = what['@type'];
-  //     delete what['@type'];
-  //   }
-  //   return what;
-  // }
 
   processResource(what, top=false) {
     let origContext = ""

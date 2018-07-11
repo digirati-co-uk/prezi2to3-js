@@ -253,7 +253,8 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/59548c42-dfa5-4ea4-a56f-268495d27bf9"
+      "id": "https://www.e-codices.ch/en/list/csg",
+      "type": "Collection"
     }
   ],
   "items": [
@@ -292,7 +293,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8593cf12-15cf-4383-ab50-69d1db9ac1ac"
+          "id": "https://example.org/uuid/f412715c-49df-4d0e-bc01-63d1a098565a"
         }
       ]
     },
@@ -331,7 +332,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/163f4ca0-8cc8-495e-9205-f5b4b935a002"
+          "id": "https://example.org/uuid/ac2f8962-1711-46af-88ef-ce4802794f83"
         }
       ]
     },
@@ -370,7 +371,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/cc4665a1-c687-4176-a1e5-e35f77fcd125"
+          "id": "https://example.org/uuid/4c71372c-f16c-41c4-a175-e634b95045ce"
         }
       ]
     },
@@ -409,7 +410,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0d43342d-defd-4356-aca0-2db49c2b8283"
+          "id": "https://example.org/uuid/0976be72-5be1-4c34-be66-3b7330494265"
         }
       ]
     },
@@ -448,7 +449,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5028f2a5-d006-47b8-a99c-0509e3dd85dc"
+          "id": "https://example.org/uuid/c238b50e-3c23-4329-a1b4-79bc711fe8cd"
         }
       ]
     },
@@ -487,7 +488,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0130f7f2-cbf3-4051-9914-30b289a01cc9"
+          "id": "https://example.org/uuid/4ff9bc31-6a1d-49e8-9483-8d804ca113e1"
         }
       ]
     },
@@ -526,7 +527,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b271b4db-c385-4078-ad20-9efeb26824e4"
+          "id": "https://example.org/uuid/900513b3-8cdd-4638-8666-afa3a5b021c2"
         }
       ]
     },
@@ -565,7 +566,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2b685c3b-07be-4ed5-9e22-acb8883577ed"
+          "id": "https://example.org/uuid/28b5a1e6-7127-43c9-a78d-9d292b18709b"
         }
       ]
     },
@@ -604,7 +605,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e8b6c02e-d96a-400e-b3a5-c84a5c41a5f8"
+          "id": "https://example.org/uuid/6b47a794-dad5-46a7-921e-c6b8fbf63a0e"
         }
       ]
     },
@@ -643,7 +644,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/20eed8d6-e701-420f-b69b-9aa99af4bbfe"
+          "id": "https://example.org/uuid/016b52a6-ba33-489b-9f92-73f1fb4b3716"
         }
       ]
     },
@@ -682,7 +683,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c0d11305-59c9-4963-b519-90434dfafe64"
+          "id": "https://example.org/uuid/5961b4a4-4698-4dbc-8df4-860b3ba5697a"
         }
       ]
     },
@@ -721,7 +722,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/badbd973-cb62-4ea6-8f9a-629cb577f18b"
+          "id": "https://example.org/uuid/950d1024-bf23-47d6-bf89-c9624f700d3b"
         }
       ]
     },
@@ -760,7 +761,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7672a77b-3bc7-4bcc-85e2-b57b2a2105cf"
+          "id": "https://example.org/uuid/75ba7619-9821-4207-bac4-2271419ffd23"
         }
       ]
     },
@@ -799,7 +800,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e1046e9a-e636-4150-b848-406bcdbb2983"
+          "id": "https://example.org/uuid/bc3290a5-b510-442a-944d-e2898b8900b9"
         }
       ]
     },
@@ -838,7 +839,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/71f3a5fe-3f0c-47e0-b7dc-5d6a1aaf6059"
+          "id": "https://example.org/uuid/1205ec82-fd8a-4ee5-a3fd-de79bd950e99"
         }
       ]
     },
@@ -877,7 +878,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0c551a8f-4f3d-4a5b-97c7-3e4aa9aa140e"
+          "id": "https://example.org/uuid/67747f87-7e40-45a1-a3fa-b03eb1f3365c"
         }
       ]
     },
@@ -916,7 +917,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/5f37badb-3b4a-4176-a16d-d0fb1622642e"
+          "id": "https://example.org/uuid/aa35b425-dcf5-46a5-8d39-f36ed6c67086"
         }
       ]
     },
@@ -955,7 +956,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/30bc8329-d5cf-448a-97b7-fb917bcca8cd"
+          "id": "https://example.org/uuid/ce6084e9-ebe9-450b-b08f-adde7c2e8ce4"
         }
       ]
     },
@@ -994,7 +995,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ad92ab81-ad41-4195-8713-e297678e9f62"
+          "id": "https://example.org/uuid/5200117e-f570-4d4a-8557-f5d9ba15e76a"
         }
       ]
     },
@@ -1033,7 +1034,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8ea05619-ccf1-4628-a0ee-160f125fd0e6"
+          "id": "https://example.org/uuid/a44727a9-77c6-4470-9e1e-3684bf704f15"
         }
       ]
     },
@@ -1072,7 +1073,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/248d103e-9bcd-4c14-b204-7a0b17586daf"
+          "id": "https://example.org/uuid/a3feac72-61b5-4638-98be-8936f32ed268"
         }
       ]
     },
@@ -1111,7 +1112,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2861aa4b-86a0-4e79-95c6-66b411f69b3c"
+          "id": "https://example.org/uuid/14dfe2a8-b585-499f-b421-82ec350be7d2"
         }
       ]
     },
@@ -1150,7 +1151,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3bfbd569-719c-429f-9dcc-83b7492c3ab0"
+          "id": "https://example.org/uuid/10ae256d-a321-4d9c-b66d-4c36f41a4dc0"
         }
       ]
     },
@@ -1189,7 +1190,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/091a2cb8-fd6f-440d-8da1-ef853e796c26"
+          "id": "https://example.org/uuid/8315b55a-bdbc-4e62-b372-19a5455a626c"
         }
       ]
     },
@@ -1228,7 +1229,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/6eb3718c-214e-4beb-94f3-80149adb6f37"
+          "id": "https://example.org/uuid/3cc62f44-486a-4a22-90cb-1021f33b3793"
         }
       ]
     },
@@ -1267,7 +1268,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/bba3306b-99b8-47c0-ab2a-a76af96c0339"
+          "id": "https://example.org/uuid/9d48b12d-5e8e-4d0b-8d53-c1c438541812"
         }
       ]
     },
@@ -1306,7 +1307,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3b8f1454-643f-42f4-93a6-db3fdbb08ecd"
+          "id": "https://example.org/uuid/85668f45-a758-4d1f-ac20-42fb68fcdf7e"
         }
       ]
     },
@@ -1345,7 +1346,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f8d9bdd3-5722-4273-8f5b-d4619f58c15b"
+          "id": "https://example.org/uuid/989cdcc1-fd94-4ed2-8c8c-a948b2087d6a"
         }
       ]
     },
@@ -1384,7 +1385,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f9775ad9-9db6-4208-a3a1-68373c34d23f"
+          "id": "https://example.org/uuid/eb7d06b1-f28e-46bf-986a-999ce63dbec5"
         }
       ]
     },
@@ -1423,7 +1424,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b233bb5b-24f3-40e4-b80e-bca1ffb8ef96"
+          "id": "https://example.org/uuid/1eed0eda-b6c5-4624-b9aa-c08dceda7b1a"
         }
       ]
     },
@@ -1462,7 +1463,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9b241852-a587-4d68-9a8f-975ad01d4fdc"
+          "id": "https://example.org/uuid/7e766a93-20b7-489c-9630-cac74a4ad8c3"
         }
       ]
     },
@@ -1501,7 +1502,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c0dc0764-75aa-4cf9-b9a4-a0fd0e3aad78"
+          "id": "https://example.org/uuid/ce38b08a-d34d-4c4a-ae86-033a4c5468a2"
         }
       ]
     },
@@ -1540,7 +1541,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8ef270d7-28c0-4134-a9bb-1aa2e4322cfa"
+          "id": "https://example.org/uuid/1c4ed544-ba08-41b5-9885-8f686e9df22f"
         }
       ]
     },
@@ -1579,7 +1580,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/53415440-b9b2-470f-93db-740d95456236"
+          "id": "https://example.org/uuid/8da5cb0f-e199-476f-99ae-70e2022d41b9"
         }
       ]
     },
@@ -1618,7 +1619,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3eb3879c-77af-4a80-ade3-763546ca6263"
+          "id": "https://example.org/uuid/4b4b1bc3-2f42-4fb1-9078-5fc1f2d9161c"
         }
       ]
     },
@@ -1657,7 +1658,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1cc7990e-59e1-478e-b8fa-3ff41cb362a1"
+          "id": "https://example.org/uuid/016f5e3a-b000-44a4-8dc7-52a82e5367e5"
         }
       ]
     },
@@ -1696,7 +1697,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d1834f29-928f-40c1-9baf-b90667e3a9a7"
+          "id": "https://example.org/uuid/d4b197ee-eb24-4633-8ac3-3034912aa50c"
         }
       ]
     },
@@ -1735,7 +1736,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/dd5abe6c-f06e-4e3c-86d1-1fb153d3c862"
+          "id": "https://example.org/uuid/dd0e5540-bfc7-4585-85d2-8d529503fd14"
         }
       ]
     },
@@ -1774,7 +1775,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9034ec25-4cac-4e60-8d53-bf887854caca"
+          "id": "https://example.org/uuid/d8c7c86a-1d2a-4b98-8a8b-9d9da476fe1f"
         }
       ]
     },
@@ -1813,7 +1814,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b504e09f-b316-4f87-bb73-a50d21636746"
+          "id": "https://example.org/uuid/3f68a5c2-a246-441a-9890-b16ec1315d2e"
         }
       ]
     },
@@ -1852,7 +1853,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/36c8bed3-713f-456d-8a65-2f3e5843b8b0"
+          "id": "https://example.org/uuid/f169e2d9-d8dd-4c1e-a516-15bc4c16b806"
         }
       ]
     },
@@ -1891,7 +1892,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7929b049-9e90-4a42-aa95-21af4e63ed36"
+          "id": "https://example.org/uuid/73b8f474-0045-426b-b709-c32f1a241e31"
         }
       ]
     },
@@ -1930,7 +1931,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0bef9395-bf25-4e86-bf1d-790872e947a5"
+          "id": "https://example.org/uuid/9a66f49e-e131-467f-9711-075c8d864758"
         }
       ]
     },
@@ -1969,7 +1970,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ae872d56-7806-4727-88da-c6f5c356db65"
+          "id": "https://example.org/uuid/60fc7a96-34f0-424a-b7c1-fbf0eb0070dc"
         }
       ]
     },
@@ -2008,7 +2009,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9a6c2d64-2e4e-46a7-b193-afca74e7335a"
+          "id": "https://example.org/uuid/3a463fc3-bd98-4328-841d-29d50cb86f9c"
         }
       ]
     },
@@ -2047,7 +2048,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8b4d6c89-dfee-44f6-bbba-4efbe6b7a335"
+          "id": "https://example.org/uuid/44e0b060-ed02-4e1f-9689-ea4585e46793"
         }
       ]
     },
@@ -2086,7 +2087,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/63d2bd23-fdc9-49c4-b49c-8419b81bd740"
+          "id": "https://example.org/uuid/d321112f-8022-4f40-8a46-f743bf4a6e00"
         }
       ]
     },
@@ -2125,7 +2126,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e1fb4fe5-e756-471d-9dd5-16b5ad8538bc"
+          "id": "https://example.org/uuid/73fbab59-f26e-436c-9859-5df2c5cf80a7"
         }
       ]
     },
@@ -2164,7 +2165,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0d87417f-f678-4c10-8acc-8dcbeb35230e"
+          "id": "https://example.org/uuid/5bb13436-f2f1-4145-9378-a15cfc9cfe5e"
         }
       ]
     },
@@ -2203,7 +2204,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/f490f42c-a7f9-4741-95e3-e2b74f3e5e35"
+          "id": "https://example.org/uuid/d374d88d-a117-4065-84de-d80ac230d759"
         }
       ]
     },
@@ -2242,7 +2243,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/62fe5398-fb44-4f4b-9e82-951e9b45c7fc"
+          "id": "https://example.org/uuid/515a4acd-a74b-4865-a9a5-259047e5c0c9"
         }
       ]
     },
@@ -2281,7 +2282,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ffd38c02-d150-47ef-993f-8ee20edad1bc"
+          "id": "https://example.org/uuid/ac918507-e312-4f7a-8383-f2c80ad9382d"
         }
       ]
     },
@@ -2320,7 +2321,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2f9f2fdd-c490-4291-9f65-a3c47ad6ba1f"
+          "id": "https://example.org/uuid/3b67707d-b599-4261-9e48-a98179497a7e"
         }
       ]
     },
@@ -2359,7 +2360,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/44217e44-a3d3-4af1-ac30-27d061b6f260"
+          "id": "https://example.org/uuid/c3961003-871f-439b-bdb5-175f3837c51b"
         }
       ]
     },
@@ -2398,7 +2399,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/56e1c745-6553-4bc8-b28c-52c5b2bb56bb"
+          "id": "https://example.org/uuid/7f6f8d53-2a37-4306-a632-6aa469966eb7"
         }
       ]
     },
@@ -2437,7 +2438,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/fec7d500-8e6e-4c3d-aff4-ecc13310ee1a"
+          "id": "https://example.org/uuid/43cda489-200a-48da-8117-3bb81e2f1a43"
         }
       ]
     },
@@ -2476,7 +2477,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4580d1af-b789-4e33-bbe3-babf7d2729f6"
+          "id": "https://example.org/uuid/6e7e0bea-7760-487f-9ee2-d0c734b97693"
         }
       ]
     },
@@ -2515,7 +2516,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/444a0b4d-c7f3-49c6-8f8e-a4ba50024b1d"
+          "id": "https://example.org/uuid/64abb778-dba9-402a-9a62-8e6ca1898844"
         }
       ]
     },
@@ -2554,7 +2555,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/61c4e6a1-b727-43c1-9bfd-c9ebcabe1cbb"
+          "id": "https://example.org/uuid/c7b90845-294f-4705-9e3a-a9eb2fd9d665"
         }
       ]
     },
@@ -2593,7 +2594,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a074dcbd-fa96-4121-b742-a3a1e8191fc9"
+          "id": "https://example.org/uuid/395b57ca-a926-493c-b2b5-eb73689a2548"
         }
       ]
     },
@@ -2632,7 +2633,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9ed481ba-5b8a-40ef-b48a-d4cc46e4c2dc"
+          "id": "https://example.org/uuid/b7a494c5-59eb-41d1-acb0-5384ab452e79"
         }
       ]
     },
@@ -2671,7 +2672,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d99c1add-1e7e-44e8-afff-05dcfb742760"
+          "id": "https://example.org/uuid/14d76836-5109-43c7-ab84-81c49924c757"
         }
       ]
     },
@@ -2710,7 +2711,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e42847e6-3bd8-470a-84f1-dd6372bcc48c"
+          "id": "https://example.org/uuid/c65d4ccc-1c38-4a01-9e72-1157e19dd754"
         }
       ]
     },
@@ -2749,7 +2750,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/568675e1-d80e-4703-93c9-b7d9907c3131"
+          "id": "https://example.org/uuid/e0ef3193-f3aa-4c90-acf0-ac05f527d8c9"
         }
       ]
     },
@@ -2788,7 +2789,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4e6763ea-2073-4bfe-848d-0467257af6fd"
+          "id": "https://example.org/uuid/4e7ab1e6-adad-474b-8909-9844581b6297"
         }
       ]
     },
@@ -2827,7 +2828,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0a8f60a6-4eab-4d20-88eb-a4331108dbbc"
+          "id": "https://example.org/uuid/517c56c4-7cdc-4f01-97a0-ce7699167197"
         }
       ]
     },
@@ -2866,7 +2867,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1a694b64-03b9-4e34-96ed-0602fd724d47"
+          "id": "https://example.org/uuid/ff1d1766-f770-41e1-8c37-3cf99de5e381"
         }
       ]
     },
@@ -2905,7 +2906,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4c885bae-46ef-4fe4-aa4b-8adf643dd2f9"
+          "id": "https://example.org/uuid/3911df77-8342-43b7-8a61-9cb3b17876ab"
         }
       ]
     },
@@ -2944,7 +2945,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d059cb2a-fe33-4a24-bbb5-071c031ca888"
+          "id": "https://example.org/uuid/fbaf6331-f13a-449d-9d46-f3d2baceffc1"
         }
       ]
     },
@@ -2983,7 +2984,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/4f443dc7-4458-4d2f-ac13-4c567f9421fc"
+          "id": "https://example.org/uuid/8165ea6f-9502-4453-8d01-952dd1815831"
         }
       ]
     },
@@ -3022,7 +3023,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2f249dd5-7a3c-4ce0-9d8c-328c47ac1b25"
+          "id": "https://example.org/uuid/2e8b2f53-99db-4306-9abf-8df83b459dc8"
         }
       ]
     },
@@ -3061,7 +3062,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/42a3ac1a-9782-4aed-9d64-ffa7d8e97f47"
+          "id": "https://example.org/uuid/f2f7ddc9-b982-48bc-935b-e92012283573"
         }
       ]
     },
@@ -3100,7 +3101,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/81af509a-ad2b-4728-bffa-9851ecf9d59f"
+          "id": "https://example.org/uuid/6a83fdcb-95c5-478d-b6b2-c4fe52e046d0"
         }
       ]
     },
@@ -3139,7 +3140,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/18de3e8c-00eb-4b1f-83a0-f02ac5b9bf53"
+          "id": "https://example.org/uuid/8e88d17a-9555-4024-a9c6-012864a2f037"
         }
       ]
     },
@@ -3178,7 +3179,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/90b02981-3871-4a10-8a77-7dfa655e3e0e"
+          "id": "https://example.org/uuid/2de1317d-2a12-4600-aa54-6e7586c2e6d9"
         }
       ]
     },
@@ -3217,7 +3218,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/eb055696-3ce4-4a1e-812f-82ec2dd61af3"
+          "id": "https://example.org/uuid/3cc02e96-7146-4b04-875e-013875db1954"
         }
       ]
     },
@@ -3256,7 +3257,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/072fca4a-2341-4a30-8b9c-701b930cd7ee"
+          "id": "https://example.org/uuid/ef2bdb85-13fc-4ce7-9bb6-32633728fc6e"
         }
       ]
     },
@@ -3295,7 +3296,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/cdd3aecb-db15-489a-a857-cda4bf13fb18"
+          "id": "https://example.org/uuid/653aa487-6708-44e2-ab3a-549f7c41224c"
         }
       ]
     },
@@ -3334,7 +3335,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/106c485e-1f05-4ab9-86e1-061a3b3adb82"
+          "id": "https://example.org/uuid/defd5238-657a-415f-a05f-a3d3b726acde"
         }
       ]
     },
@@ -3373,7 +3374,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1c73b337-ecc6-4926-ad34-ee459f044731"
+          "id": "https://example.org/uuid/aa9f3fef-806a-4b7f-8d4c-fcddd360510c"
         }
       ]
     },
@@ -3412,7 +3413,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/efe08047-b2ba-4de1-9552-dd4c17a9f354"
+          "id": "https://example.org/uuid/68eee971-319f-4b8d-9f02-e2663cda6ecb"
         }
       ]
     },
@@ -3451,7 +3452,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ff458fad-ef49-46be-8d66-3b8713ba6bd2"
+          "id": "https://example.org/uuid/9dbad81b-b0d2-4328-bf9b-a6520aa5c256"
         }
       ]
     },
@@ -3490,7 +3491,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/43605b4e-7c53-4cae-834d-0ca1ddd3ab68"
+          "id": "https://example.org/uuid/9c366394-e149-46eb-982f-95f3fabc7566"
         }
       ]
     },
@@ -3529,7 +3530,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ff509a6c-e08a-48ea-b2dd-f7097adaf8af"
+          "id": "https://example.org/uuid/907bdd7c-3a19-48ad-ad7a-39bf2f56a831"
         }
       ]
     },
@@ -3568,7 +3569,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/eb915fed-2acb-4bb0-a6ae-c7d459514b0c"
+          "id": "https://example.org/uuid/a462a660-0eb6-4ee2-833b-c5eb188e0a45"
         }
       ]
     },
@@ -3607,7 +3608,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3607d68f-3064-4cd8-9b1d-aaab0b90feda"
+          "id": "https://example.org/uuid/a89243fb-be62-46fc-a647-e47b22cfbbd2"
         }
       ]
     },
@@ -3646,7 +3647,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b43d4a80-ab07-4379-898a-5e30b5cbd731"
+          "id": "https://example.org/uuid/1d0433fe-f345-44d7-9c0c-b01d7d51d38e"
         }
       ]
     },
@@ -3685,7 +3686,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/de07aec6-aa86-4989-9ac1-60c5df976770"
+          "id": "https://example.org/uuid/b689a587-e846-4aeb-a149-ef83245f6c31"
         }
       ]
     },
@@ -3724,7 +3725,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/bc982a64-9a88-4fa6-812d-33716cc9e3ce"
+          "id": "https://example.org/uuid/a59f54bc-46d0-4ffa-a135-a7186891d801"
         }
       ]
     },
@@ -3763,7 +3764,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/94ba830d-89e8-4426-bbb8-04e2c98f05a2"
+          "id": "https://example.org/uuid/02d93351-69b9-44f2-b1e5-eaf4380ddcbe"
         }
       ]
     },
@@ -3802,7 +3803,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c64f0e84-94d5-4022-a1e7-9a5c135c9649"
+          "id": "https://example.org/uuid/df16b5c8-6d5f-44e3-86e1-484ae9955794"
         }
       ]
     },
@@ -3841,7 +3842,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7e8b788e-da32-43be-9195-12253b139e30"
+          "id": "https://example.org/uuid/ca1de533-6db0-42dd-9760-b7a11416b0b6"
         }
       ]
     },
@@ -3880,7 +3881,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a4ea6369-4888-4b10-b8a9-de71ee6237c4"
+          "id": "https://example.org/uuid/98e0390d-0fd8-4776-ae2d-5c4a89455a77"
         }
       ]
     },
@@ -3919,7 +3920,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/56f8e30b-c9e4-4f02-afb9-83d2b47e7b92"
+          "id": "https://example.org/uuid/079d95bf-2b62-4ec8-aced-a680f325b8f5"
         }
       ]
     },
@@ -3958,7 +3959,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2b5ce6d1-3d4a-4a06-812d-5c9d7b88773f"
+          "id": "https://example.org/uuid/5884b3dd-fd6b-4eab-b155-3ff5caa8d1ef"
         }
       ]
     },
@@ -3997,7 +3998,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0b5e22d9-5ba8-4342-85bd-9864ad1fe96d"
+          "id": "https://example.org/uuid/24d9b35c-04d3-405e-bf96-f80a6a9ca26c"
         }
       ]
     },
@@ -4036,7 +4037,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/70053b65-0298-46c8-8ca5-8dfeb73bc34b"
+          "id": "https://example.org/uuid/462f83cc-a818-4d32-a018-bbbe9541342c"
         }
       ]
     },
@@ -4075,7 +4076,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/15a1a293-ca42-4af5-af77-acaffacd5040"
+          "id": "https://example.org/uuid/ee285964-86cb-46b4-a090-449e37fe83e8"
         }
       ]
     },
@@ -4114,7 +4115,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ffeb6b3b-45b8-4265-9b1f-ee0ac2c09764"
+          "id": "https://example.org/uuid/b5b0045d-2b17-4264-bd51-2a3da6edf883"
         }
       ]
     },
@@ -4153,7 +4154,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/63f322fd-8e8a-45ab-a10d-16a0904a6f62"
+          "id": "https://example.org/uuid/953dce8e-0268-49fa-9ae9-b569a6889389"
         }
       ]
     },
@@ -4192,7 +4193,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ea392fb4-95a9-45b5-acc3-60b7ccd6aa20"
+          "id": "https://example.org/uuid/ef6a5f65-0da4-4a6e-99e9-0e01ca6bcc74"
         }
       ]
     },
@@ -4231,7 +4232,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8aee9005-76e2-473b-bfdc-76e8bf142392"
+          "id": "https://example.org/uuid/a5ba30b0-9798-43d8-94e4-c4d6cb3ea476"
         }
       ]
     },
@@ -4270,7 +4271,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ff4878f2-c44f-4a9d-8e06-cd098b883642"
+          "id": "https://example.org/uuid/ef550498-b692-4c17-a516-f5dc8e170c8a"
         }
       ]
     },
@@ -4309,7 +4310,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e8cfcd6d-fc09-4f8a-af21-ec7794adadba"
+          "id": "https://example.org/uuid/ce48e720-8f1d-4403-a044-4f5ed42b7f3c"
         }
       ]
     },
@@ -4348,7 +4349,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8e2212c4-a188-4cc0-84af-3519bdbef111"
+          "id": "https://example.org/uuid/f91b13e6-d9c4-4f66-ad98-bcfa886ab1c8"
         }
       ]
     },
@@ -4387,7 +4388,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b727cd68-5164-4630-aca4-9847162cfca6"
+          "id": "https://example.org/uuid/51084065-946c-45ec-a8ee-fcbaef340323"
         }
       ]
     },
@@ -4426,7 +4427,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/460683be-3784-478e-a25f-62c957f710ca"
+          "id": "https://example.org/uuid/d18ed372-2445-46e7-8f32-2f112f8fe438"
         }
       ]
     },
@@ -4465,7 +4466,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/89d3ef92-e109-4205-b551-f768b9a4f86b"
+          "id": "https://example.org/uuid/933bbb73-80b2-467a-8174-235f9575c99b"
         }
       ]
     },
@@ -4504,7 +4505,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/797d6ccd-3e4e-4c24-94c7-e5b35305cca6"
+          "id": "https://example.org/uuid/60664e2a-3487-40a4-a054-3d9710c6335a"
         }
       ]
     },
@@ -4543,7 +4544,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/0dafd868-d543-47b8-bb43-8c8a03a98a37"
+          "id": "https://example.org/uuid/6442e2fa-cbe8-4a8f-bebb-4994c9012c99"
         }
       ]
     },
@@ -4582,7 +4583,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7e247870-ced0-48b7-ac10-f825f7f6d118"
+          "id": "https://example.org/uuid/f6670ce7-667c-4886-9173-a393ea2c3415"
         }
       ]
     },
@@ -4621,7 +4622,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3b233e95-cb47-4b09-90a4-a2f9c8706ca3"
+          "id": "https://example.org/uuid/e040c09b-0378-4bed-9377-93ce4f51c99c"
         }
       ]
     },
@@ -4660,7 +4661,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d8e48fb7-073e-4a64-9db8-bca23fc6ddd9"
+          "id": "https://example.org/uuid/4e0816e0-682d-44a4-a35e-484890a04a42"
         }
       ]
     },
@@ -4699,7 +4700,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/2cb043ae-c313-4055-82e5-ec6d1f8e6b3d"
+          "id": "https://example.org/uuid/376bcfc8-33b8-483b-ad3a-054e6a1316a8"
         }
       ]
     },
@@ -4738,7 +4739,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9734e424-d544-4ffd-be87-e156ddd06c16"
+          "id": "https://example.org/uuid/b4f366bf-b269-48ea-9288-fd48408a54c7"
         }
       ]
     },
@@ -4777,7 +4778,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/6be5e936-f65a-48ea-8f71-2dd2254cf453"
+          "id": "https://example.org/uuid/b40b8d2b-5cbd-4522-a253-39351b84aaa2"
         }
       ]
     },
@@ -4816,7 +4817,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/675c5597-b8ab-431a-8544-19ecc64670d6"
+          "id": "https://example.org/uuid/41d60ce2-18fc-4ad3-8916-dee734f5abe1"
         }
       ]
     },
@@ -4855,7 +4856,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3a811778-f5b8-44e0-8b9d-32d253b73025"
+          "id": "https://example.org/uuid/ba672bd6-eba4-4ade-a0e0-efbca2739472"
         }
       ]
     },
@@ -4894,7 +4895,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/99776c47-9046-407f-b447-56db07c859ba"
+          "id": "https://example.org/uuid/a236573c-f324-4d7b-b49d-ea002eb2edbb"
         }
       ]
     },
@@ -4933,7 +4934,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7407be1a-73f4-4b73-93b6-7eab4ea2b270"
+          "id": "https://example.org/uuid/1fe92055-3ab0-4418-953a-11491fc788c9"
         }
       ]
     },
@@ -4972,7 +4973,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/608e34dd-fa14-44e0-bdf2-f4b56712589f"
+          "id": "https://example.org/uuid/203286ee-baab-4c78-9c83-d4a68479861f"
         }
       ]
     },
@@ -5011,7 +5012,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/c2ceb6a5-3aab-471e-88f9-2b30dec43ffa"
+          "id": "https://example.org/uuid/fa2ec854-fdb1-439c-8b68-b25e12067223"
         }
       ]
     },
@@ -5050,7 +5051,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/fb42fb4a-e353-4552-ad12-11ca6faa7406"
+          "id": "https://example.org/uuid/3169f0c5-ffc7-452e-8759-9534ec316291"
         }
       ]
     },
@@ -5089,7 +5090,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/9f338509-7527-4aa7-acb2-78b6898e3df2"
+          "id": "https://example.org/uuid/134173f2-62c7-460d-b820-6d3d6575c926"
         }
       ]
     },
@@ -5128,14 +5129,14 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/e502ad5b-e4b5-48cc-b427-52702bee3023"
+          "id": "https://example.org/uuid/1c34449e-1e5d-440d-9888-80f5f7389620"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "https://example.org/uuid/c1ab463e-0465-4910-b87c-633487823a78",
+      "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/sequence/Sequence-651.json",
       "type": "Range",
       "behavior": [
         "sequence"
@@ -5658,7 +5659,7 @@
       }
     },
     {
-      "id": "https://example.org/uuid/3b22891e-3326-42fa-9ffc-8ace2f6625d6",
+      "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/sequence/Sequence-1190.json",
       "type": "Range",
       "behavior": [
         "sequence"

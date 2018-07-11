@@ -235,7 +235,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/72547e82-0e08-4175-8493-238a53ec82c6"
+          "id": "https://example.org/uuid/ad8fecde-2b8a-4760-aaf9-e7a700c6ac41"
         }
       ]
     },
@@ -279,7 +279,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1fb3e16b-0a05-4df2-b677-6eb2861422b0"
+          "id": "https://example.org/uuid/4548bc75-6b36-41b7-b72c-df2bdaa6a397"
         }
       ]
     },
@@ -323,7 +323,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/a7716403-3144-4c1c-bf0d-ff3c1e6e82bd"
+          "id": "https://example.org/uuid/dad6c14f-17b7-4503-9a44-d384a6ce0937"
         }
       ]
     },
@@ -367,7 +367,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d3c595e0-1ded-4f26-8211-d9dabb9b6480"
+          "id": "https://example.org/uuid/452f5a8a-56c0-4992-b4a7-11ea06c53129"
         }
       ]
     },
@@ -411,14 +411,14 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/14bfbf97-a527-4337-afc5-dbe33ed9b296"
+          "id": "https://example.org/uuid/9949ee68-442c-44d6-9510-426b94bfedc4"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "https://example.org/uuid/69bef301-c6a3-4e2e-a9c3-aa245e5d345d",
+      "id": "https://manifests.britishart.yale.edu/sequence/1474",
       "type": "Range",
       "behavior": [
         "sequence",

@@ -8,7 +8,8 @@
   "id": "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json",
   "partOf": [
     {
-      "id": "https://example.org/uuid/e130d27f-b232-471a-a9e1-1251c20e17fe"
+      "id": "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json",
+      "type": "Collection"
     }
   ],
   "items": [
@@ -29,7 +30,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/e0ef41b8-f99a-4334-9531-f15333fee720",
+              "id": "https://example.org/uuid/3644c005-bf7a-48d0-9fa9-1e1757bf8df1",
               "target": "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json",
               "body": {
                 "height": 1800,
@@ -39,7 +40,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/99e5b403-08b4-4cc8-b795-0a74fc2efcdf"
+          "id": "https://example.org/uuid/1dad04b3-79c6-4a97-a831-634f2ee50a26"
         }
       ]
     }

@@ -381,7 +381,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -507,7 +506,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    //console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -542,7 +540,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -556,7 +553,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2))
     
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
@@ -694,7 +690,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -782,7 +777,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2))
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1135,7 +1129,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1160,8 +1153,7 @@ describe('prezi2to3', () => {
     expect(p3Manifest.items[0].items[0].items[0].stylesheet).toContainKeys([
       'format',
       'value', 
-      'type',
-      'id'
+      'type'
     ])
     expect(p3Manifest.items[0].items[0].items[0].stylesheet.type).toEqual('CssStylesheet');
     expect(p3Manifest.items[0].items[0].items[0].stylesheet.format).toEqual('text/css');
@@ -1177,7 +1169,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
@@ -1238,7 +1229,6 @@ describe('prezi2to3', () => {
       clone(p2Manifest), 
       true
     );
-    // console.log(JSON.stringify(p3Manifest,null, 2));
     // test the context is correct
     expect(p3Manifest).toContainKey('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));

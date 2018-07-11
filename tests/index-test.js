@@ -60,7 +60,7 @@ describe('prezi2to3', () => {
   
   it('outputs identical json to the python version', (done) => {
     TEST_URLS.forEach(uri=>{
-      console.log(uri);
+      //console.log(uri);
       let upgrader = new Upgrader({
         "ext_ok": false, 
         "deref_links": false
@@ -79,7 +79,9 @@ describe('prezi2to3', () => {
         "reference",
         processUUIDs(output_manifest),
         "result",
-        processUUIDs(results)].join('\n\n')
+        processUUIDs(results),
+        "original result",
+        JSON.stringify(results, null, 2)].join('\n\n')
         //JSON.stringify(results, null, 2)
       );
     });
@@ -130,7 +132,7 @@ describe('prezi2to3', () => {
     });
 
 	  it('has items', () => {
-      console.log(JSON.stringify(results,null, 2));
+      //console.log(JSON.stringify(results,null, 2));
       expect(results).toContainKey('items');
       expect(results['items'][0]).toContainKey('items');
       expect(results['items'][0]['items'][0]).toContainKey('items');
@@ -348,7 +350,6 @@ describe('prezi2to3', () => {
         manifestFixture('manifest-services'),
         true
       );
-      //console.log(JSON.stringify(results,null, 2));
     });
 
     it('has search service', () => {

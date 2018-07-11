@@ -171,7 +171,8 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/81de60e8-0609-4057-a3ee-c38b5a5f3eef"
+      "id": "http://www.getty.edu/art/collection/",
+      "type": "Collection"
     }
   ],
   "items": [

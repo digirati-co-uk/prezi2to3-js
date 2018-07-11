@@ -15,10 +15,8 @@
         "selector": {
           "value": "xywh=225,70,750,150",
           "type": "FragmentSelector",
-          "id": "https://example.org/uuid/8dbb0f12-9693-4ea4-992b-dec121f8b1e7"
         },
         "type": "SpecificResource",
-        "id": "https://example.org/uuid/ef2d0877-f914-481e-b06c-3242a3268610",
         "source": {
           "label": {
             "@none": [

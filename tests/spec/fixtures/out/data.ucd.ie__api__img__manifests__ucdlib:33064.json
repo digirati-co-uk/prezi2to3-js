@@ -265,14 +265,14 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/124d9c26-9300-42a4-b703-300d73aa08b7"
+          "id": "https://example.org/uuid/46df4103-9fa4-4f30-b85d-f01fc6bbaa9c"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "https://example.org/uuid/39ea324d-1e7c-4aa5-8632-408d78a58cc1",
+      "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064/sequence/normal",
       "type": "Range",
       "behavior": [
         "sequence",

@@ -148,7 +148,8 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/87bf5415-02c1-4003-8af7-389a34204b52"
+      "id": "https://www.harvardartmuseums.org/collections",
+      "type": "Collection"
     }
   ],
   "items": [
@@ -193,7 +194,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/60ef0c0f-d2be-4742-8331-c17ee3971cde"
+          "id": "https://example.org/uuid/b9064845-7e07-41f0-bb32-6b7348d79301"
         }
       ]
     },
@@ -238,7 +239,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/ab9a0049-3169-43b1-abe7-a0e407757dee"
+          "id": "https://example.org/uuid/f2d02b70-5c3b-4b96-91e9-0e091f49a971"
         }
       ]
     },
@@ -283,7 +284,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/da784354-aa7c-4ea4-b8c3-9b39f7128457"
+          "id": "https://example.org/uuid/1482eefd-13db-4120-a171-215132add606"
         }
       ]
     },
@@ -328,7 +329,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/295e87a4-c656-4a8a-8622-ef1cf3a576c8"
+          "id": "https://example.org/uuid/f74688bc-7900-45f9-aaac-a83a214fce00"
         }
       ]
     },
@@ -373,7 +374,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/66e52c44-e99c-4a06-8021-e5a24989590b"
+          "id": "https://example.org/uuid/0e70d236-f549-4115-950c-da04b0d2eb4e"
         }
       ]
     },
@@ -418,14 +419,14 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/327aab1a-a998-4ead-a51c-bf41bcfe9ec8"
+          "id": "https://example.org/uuid/90467f9d-9ebc-4dc1-8728-dabb8ea8c953"
         }
       ]
     }
   ],
   "structures": [
     {
-      "id": "https://example.org/uuid/c2a10ba7-b50f-417f-85c3-ef76eedf9171",
+      "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/sequence/normal",
       "type": "Range",
       "behavior": [
         "sequence",

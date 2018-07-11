@@ -66,17 +66,6 @@
       }
     }
   ],
-  "service": [
-    {
-      "type": "Service"
-    }
-  ],
-  "seeAlso": [
-    {
-      "type": "Dataset",
-      "id": "https://example.org/uuid/e713237e-52a7-4e5d-bd24-47e1068b1544"
-    }
-  ],
   "structures": [
     {
       "label": {
@@ -891,7 +880,8 @@
   },
   "partOf": [
     {
-      "id": "https://example.org/uuid/4cf088a8-bf12-4004-86f1-9c0111d5653a"
+      "id": "within URI",
+      "type": "Collection"
     }
   ],
   "items": [
@@ -912,7 +902,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/d1f3ee17-3cc5-44f9-aa58-d837197246de",
+              "id": "https://example.org/uuid/bbc2832b-6fa7-4d05-8de0-3bb522aa2d10",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page1",
               "body": {
                 "format": "image/jp2",
@@ -930,7 +920,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/53e29f13-8902-485a-b1a5-8a45d1026b43"
+          "id": "https://example.org/uuid/a2cdd64c-716f-4917-bb4c-413ce9b9573a"
         }
       ]
     },
@@ -951,7 +941,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/7f377d99-4b8f-43cb-9cf1-6ca081c7f2ea",
+              "id": "https://example.org/uuid/2e9eaab4-5d38-4dd3-add9-27d5955c0262",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page2",
               "body": {
                 "format": "image/jp2",
@@ -969,7 +959,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/440b311b-02da-467e-9ad8-e564d1336de4"
+          "id": "https://example.org/uuid/21ef56da-2ff6-44a1-925e-220453884f75"
         }
       ]
     },
@@ -990,7 +980,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/eeea9a92-545d-4a62-ad89-42ebe8ea7dc2",
+              "id": "https://example.org/uuid/51534a81-aa87-457d-aa2b-3ae4448b9d79",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page3",
               "body": {
                 "format": "image/jp2",
@@ -1008,7 +998,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/d6ead270-2411-4521-8c86-a22b1a24684c"
+          "id": "https://example.org/uuid/00f7a84f-6e34-4bca-90c6-d6836ffce758"
         }
       ]
     },
@@ -1029,7 +1019,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/2af0fd28-93ea-4f2b-82ff-b6fd7ccc877b",
+              "id": "https://example.org/uuid/eb2de485-2983-489d-aecc-25b7dc288b07",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page4",
               "body": {
                 "format": "image/jp2",
@@ -1047,7 +1037,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/3a175e3e-e9b9-4889-a4e7-455e9826f969"
+          "id": "https://example.org/uuid/65b020ac-3519-488f-9a47-16100c9f7f06"
         }
       ]
     },
@@ -1068,7 +1058,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/de3d3873-b678-4328-ad8c-f24bd91a3355",
+              "id": "https://example.org/uuid/2373072e-fc2f-497e-a888-3011fbd5fa12",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page5",
               "body": {
                 "format": "image/jp2",
@@ -1086,7 +1076,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/903f3ae9-9421-485b-862d-9ec89565739a"
+          "id": "https://example.org/uuid/e29f55d2-ec12-4f98-a822-3cf7489e2374"
         }
       ]
     },
@@ -1107,7 +1097,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/35cabb84-c251-4c18-9eac-af2c4d46747a",
+              "id": "https://example.org/uuid/c8bbf57e-b8b7-4e68-8413-2c87fa47843e",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page6",
               "body": {
                 "format": "image/jp2",
@@ -1125,7 +1115,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/6fc34c79-d454-4d5e-ad3e-86935e0c9eed"
+          "id": "https://example.org/uuid/2db69114-0280-4394-8d16-287373ae3994"
         }
       ]
     },
@@ -1146,7 +1136,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/ba8817b0-8bf9-4342-8cf0-943b9dc49572",
+              "id": "https://example.org/uuid/c36303d4-c583-4952-81ba-09804ef53d38",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page7",
               "body": {
                 "format": "image/jp2",
@@ -1164,7 +1154,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/b15c4afe-6e03-4156-b34c-b8b9936bc5a5"
+          "id": "https://example.org/uuid/5766a5dd-5d6c-4395-86fe-91df83f2c237"
         }
       ]
     },
@@ -1185,7 +1175,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/09fbd51b-219b-43ac-b367-de7b6c2992ef",
+              "id": "https://example.org/uuid/fd3bf853-b3ec-4bfb-abbc-095ba355aa95",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page8",
               "body": {
                 "format": "image/jp2",
@@ -1203,7 +1193,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/65ea76f3-f8cb-4d13-babc-c1cf681b1db4"
+          "id": "https://example.org/uuid/19bda006-f7ac-461a-ad80-06ebe8d681ad"
         }
       ]
     },
@@ -1224,7 +1214,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/c4a7dfb0-13d9-458b-b727-76e1fb638b41",
+              "id": "https://example.org/uuid/7fe7b6dd-4ad2-4db4-b21f-42922a34c08e",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page9",
               "body": {
                 "format": "image/jp2",
@@ -1242,7 +1232,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/8aa47577-066f-44b8-94b0-82cdda6a49ce"
+          "id": "https://example.org/uuid/321e630d-9591-4fc7-a36f-44a2547d08b7"
         }
       ]
     },
@@ -1263,7 +1253,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/206b8d29-8ad4-4e3f-8a08-e47dc4394a96",
+              "id": "https://example.org/uuid/7891d599-f85d-4f28-a0d5-a7b9a816cd88",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page10",
               "body": {
                 "format": "image/jp2",
@@ -1281,7 +1271,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7f6595ac-8a38-4509-af09-d7b7d6baac75"
+          "id": "https://example.org/uuid/fe990d3a-3076-4c49-be2b-b80e4f37a0f9"
         }
       ]
     },
@@ -1302,7 +1292,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/b392c021-fe45-411d-b2b2-a13642f63f70",
+              "id": "https://example.org/uuid/0494d3c0-ab23-4b05-bccb-77bab6020d2a",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page11",
               "body": {
                 "format": "image/jp2",
@@ -1320,7 +1310,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/cf95de21-ad8b-456c-9968-c8e91edf4d0b"
+          "id": "https://example.org/uuid/da26514b-a0ff-49da-bf4d-1091614dc63d"
         }
       ]
     },
@@ -1341,7 +1331,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/0f2562c7-61d1-4f04-ac55-58135091af26",
+              "id": "https://example.org/uuid/4d45b878-e8ce-4d76-9386-242c9e7d1528",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page12",
               "body": {
                 "format": "image/jp2",
@@ -1359,7 +1349,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/7ae948c9-c61d-4b25-892b-6624ccdb03a8"
+          "id": "https://example.org/uuid/cb7ddabb-b4ad-49f6-9b8f-a6ceb44d32c4"
         }
       ]
     },
@@ -1380,7 +1370,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/5f893aa5-1688-4b24-bfe2-eabb8367328b",
+              "id": "https://example.org/uuid/dea63650-7b77-43a0-8b36-f162372da89f",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page13",
               "body": {
                 "format": "image/jp2",
@@ -1398,7 +1388,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/36811cdd-d75e-46b2-bf10-d955d460fb4e"
+          "id": "https://example.org/uuid/55f824a8-3506-4afe-8181-150064405d5d"
         }
       ]
     },
@@ -1419,7 +1409,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/0b26e416-0b87-4d8b-931a-9fca20aa1dd1",
+              "id": "https://example.org/uuid/f240c864-7182-47a2-a714-94aac8721e18",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page14",
               "body": {
                 "format": "image/jp2",
@@ -1437,7 +1427,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/808da161-2cb3-4344-a8f4-e7ca167d1f12"
+          "id": "https://example.org/uuid/55b11ace-75a4-4a39-8021-a42c40d112ba"
         }
       ]
     },
@@ -1458,7 +1448,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/3c7d1d7e-6b07-4e22-8da7-6e26bf88dcff",
+              "id": "https://example.org/uuid/0faa6a66-ac04-45c6-8901-5277403e9528",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page15",
               "body": {
                 "format": "image/jp2",
@@ -1476,7 +1466,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/1bfb77aa-3159-483a-8b10-e911b42405fe"
+          "id": "https://example.org/uuid/ad9fbd47-721a-4764-b468-f03f427ba65e"
         }
       ]
     },
@@ -1497,7 +1487,7 @@
             {
               "motivation": "painting",
               "type": "Annotation",
-              "id": "https://example.org/uuid/91bee2e3-fbff-4f1e-b742-9a269478ea1a",
+              "id": "https://example.org/uuid/21499dc1-d889-4bc4-8266-cb8d5a12c3a2",
               "target": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/canvas/page16",
               "body": {
                 "format": "image/jp2",
@@ -1515,7 +1505,7 @@
               }
             }
           ],
-          "id": "https://example.org/uuid/106a9a96-a8be-45f1-b4b7-575b3f0ba8f3"
+          "id": "https://example.org/uuid/c5026391-212b-412b-a7d9-06aa78b203dd"
         }
       ]
     }
