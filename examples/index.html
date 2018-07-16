@@ -50,7 +50,7 @@
             var content = '';
             try {
                 if (document.forms.input_form.manifestURL.value!=="") {
-                    content = upgrader.process_uri(document.forms.input_form.manifestURL.value, true);
+                    content = upgrader.processUri(document.forms.input_form.manifestURL.value, true);
                 } else {
                     content = upgrader.processResource(
                         JSON.parse(document.forms.input_form.manifestContent.value), 
