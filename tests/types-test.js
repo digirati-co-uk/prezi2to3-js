@@ -1,6 +1,4 @@
-import expect from 'expect'
-
-import Upgrader from 'src/index'
+const Upgrader = require('../src/index');
 
 describe('prezi2to3', () => {
 
@@ -17,8 +15,8 @@ describe('prezi2to3', () => {
             let result = fixTypeUpgrader.fixType({
                 "@type": ['oa:CssStyle']
             });
-            expect(result).toNotContainKey('@type');
-            expect(result).toContainKey('type');
+            expect(result).not.toHaveProperty('@type');
+            expect(result).toHaveProperty('type');
             expect(result.type).toEqual('CssStylesheet');
         });
 
@@ -26,8 +24,8 @@ describe('prezi2to3', () => {
             let result = fixTypeUpgrader.fixType({
                 "@type": ['cnt:ContentAsText']
             });
-            expect(result).toNotContainKey('@type');
-            expect(result).toContainKey('type');
+            expect(result).not.toHaveProperty('@type');
+            expect(result).toHaveProperty('type');
             expect(result.type).toEqual('TextualBody');  
         });
 
@@ -35,8 +33,8 @@ describe('prezi2to3', () => {
             let canvasTypeResult = fixTypeUpgrader.fixType({
                 "@type": 'sc:Canvas'
             });
-            expect(canvasTypeResult).toNotContainKey('@type');
-            expect(canvasTypeResult).toContainKey('type');
+            expect(canvasTypeResult).not.toHaveProperty('@type');
+            expect(canvasTypeResult).toHaveProperty('type');
             expect(canvasTypeResult.type).toEqual('Canvas');  
         });
 
@@ -45,8 +43,8 @@ describe('prezi2to3', () => {
                 "@type": 'sc:Manifest'
             });
 
-            expect(manifestTypeResult).toNotContainKey('@type');
-            expect(manifestTypeResult).toContainKey('type');
+            expect(manifestTypeResult).not.toHaveProperty('@type');
+            expect(manifestTypeResult).toHaveProperty('type');
             expect(manifestTypeResult.type).toEqual('Manifest');
         });
 
@@ -55,8 +53,8 @@ describe('prezi2to3', () => {
                 "@type": 'sc:Sequence'
             });
 
-            expect(sequenceTypeResult).toNotContainKey('@type');
-            expect(sequenceTypeResult).toContainKey('type');
+            expect(sequenceTypeResult).not.toHaveProperty('@type');
+            expect(sequenceTypeResult).toHaveProperty('type');
             expect(sequenceTypeResult.type).toEqual('Sequence'); 
         });
 
@@ -65,8 +63,8 @@ describe('prezi2to3', () => {
                 "@type": 'sc:AnnotationList'
             });
 
-            expect(sequenceTypeResult).toNotContainKey('@type');
-            expect(sequenceTypeResult).toContainKey('type');
+            expect(sequenceTypeResult).not.toHaveProperty('@type');
+            expect(sequenceTypeResult).toHaveProperty('type');
             expect(sequenceTypeResult.type).toEqual('AnnotationPage'); 
         });
 
@@ -75,8 +73,8 @@ describe('prezi2to3', () => {
                 "@type": 'sc:Collection'
             });
 
-            expect(collectionTypeResult).toNotContainKey('@type');
-            expect(collectionTypeResult).toContainKey('type');
+            expect(collectionTypeResult).not.toHaveProperty('@type');
+            expect(collectionTypeResult).toHaveProperty('type');
             expect(collectionTypeResult.type).toEqual('Collection');
         });
 
@@ -85,8 +83,8 @@ describe('prezi2to3', () => {
                 "@type": 'oa:Annotation'
             });
 
-            expect(annotationTypeResult).toNotContainKey('@type');
-            expect(annotationTypeResult).toContainKey('type');
+            expect(annotationTypeResult).not.toHaveProperty('@type');
+            expect(annotationTypeResult).toHaveProperty('type');
             expect(annotationTypeResult.type).toEqual('Annotation');
         });
 
@@ -95,8 +93,8 @@ describe('prezi2to3', () => {
                 "@type": 'sc:Layer'
             });
 
-            expect(annotationPageTypeResult).toNotContainKey('@type');
-            expect(annotationPageTypeResult).toContainKey('type');
+            expect(annotationPageTypeResult).not.toHaveProperty('@type');
+            expect(annotationPageTypeResult).toHaveProperty('type');
             expect(annotationPageTypeResult.type).toEqual('AnnotationCollection');
         });
 
@@ -106,8 +104,8 @@ describe('prezi2to3', () => {
                 "@type": 'oa:SpecificResource'
             });
 
-            expect(specificResourceTypeResult).toNotContainKey('@type');
-            expect(specificResourceTypeResult).toContainKey('type');
+            expect(specificResourceTypeResult).not.toHaveProperty('@type');
+            expect(specificResourceTypeResult).toHaveProperty('type');
             expect(specificResourceTypeResult.type).toEqual('SpecificResource');
         });
 
@@ -116,8 +114,8 @@ describe('prezi2to3', () => {
                 "@type": 'oa:FrangmentSelector'
             });
 
-            expect(fragmentSelectorTypeResult).toNotContainKey('@type');
-            expect(fragmentSelectorTypeResult).toContainKey('type');
+            expect(fragmentSelectorTypeResult).not.toHaveProperty('@type');
+            expect(fragmentSelectorTypeResult).toHaveProperty('type');
             expect(fragmentSelectorTypeResult.type).toEqual('FrangmentSelector');
         });
 
@@ -126,8 +124,8 @@ describe('prezi2to3', () => {
                 "@type": 'oa:Choice'
             });
 
-            expect(choiceTypeResult).toNotContainKey('@type');
-            expect(choiceTypeResult).toContainKey('type');
+            expect(choiceTypeResult).not.toHaveProperty('@type');
+            expect(choiceTypeResult).toHaveProperty('type');
             expect(choiceTypeResult.type).toEqual('Choice');
         });
 
@@ -136,8 +134,8 @@ describe('prezi2to3', () => {
                 "@type": 'dctypes:Image'
             }); //TODO: still image
 
-            expect(imageTypeResult).toNotContainKey('@type');
-            expect(imageTypeResult).toContainKey('type');
+            expect(imageTypeResult).not.toHaveProperty('@type');
+            expect(imageTypeResult).toHaveProperty('type');
             expect(imageTypeResult.type).toEqual('Image');
         });
 
@@ -146,8 +144,8 @@ describe('prezi2to3', () => {
                 "@type": 'iiif:ImageApiSelector'
             });
 
-            expect(imageApiSelectorTypeResult).toNotContainKey('@type');
-            expect(imageApiSelectorTypeResult).toContainKey('type');
+            expect(imageApiSelectorTypeResult).not.toHaveProperty('@type');
+            expect(imageApiSelectorTypeResult).toHaveProperty('type');
             expect(imageApiSelectorTypeResult.type).toEqual('ImageApiSelector');
         });
         it('converts cnt:ContentAsText to TextualBody', () => {
@@ -155,8 +153,8 @@ describe('prezi2to3', () => {
                 "@type": 'cnt:ContentAsText'
             });
 
-            expect(texualBodyTypeResult).toNotContainKey('@type');
-            expect(texualBodyTypeResult).toContainKey('type');
+            expect(texualBodyTypeResult).not.toHaveProperty('@type');
+            expect(texualBodyTypeResult).toHaveProperty('type');
             expect(texualBodyTypeResult.type).toEqual('TextualBody');
         });
     });
@@ -175,8 +173,11 @@ describe('prezi2to3', () => {
                 '@id': 'serviceId',
                 '@type': 'Service'
             });
-            expect(serviceResult).toNotContainKeys(['@id', '@type'])
-            expect(serviceResult).toContainKeys(['id', 'type'])
+            expect(serviceResult).not.toHaveProperty('@id');
+            expect(serviceResult).not.toHaveProperty('@type');
+
+            expect(serviceResult).toHaveProperty('id');
+            expect(serviceResult).toHaveProperty('type');
         });
 
         // Ask Stephen or Tom.
@@ -184,7 +185,7 @@ describe('prezi2to3', () => {
         //     let serviceResult = serviceUpgrader.processService({
         //         '@type': 'Service'
         //     });
-        //     expect(serviceResult).toContainKeys(['id'])
+        //     expect(serviceResult).toHavePropertys(['id'])
         // });
 
         it('converts the service inside the servie to an array if it was an object', () => {
@@ -196,7 +197,7 @@ describe('prezi2to3', () => {
                     '@type': 'Service2'
                 }
             });
-            expect(serviceResult).toContainKey('service');
+            expect(serviceResult).toHaveProperty('service');
             expect(serviceResult.service.constructor).toEqual(Array);
             expect(serviceResult.service.length).toBe(1);
             expect(serviceResult.service[0].constructor).toEqual(Object);
@@ -217,8 +218,8 @@ describe('prezi2to3', () => {
             let v3Collection = collectionUpgrader.processCollection({
                 members: []
             });
-            expect(v3Collection).toNotContainKey('members');
-            expect(v3Collection).toContainKey('items');
+            expect(v3Collection).not.toHaveProperty('members');
+            expect(v3Collection).toHaveProperty('items');
         });
 
         it('converts sub-collections to items', () => {
@@ -227,8 +228,8 @@ describe('prezi2to3', () => {
                     '@type': 'sc:Collection'
                 }]
             });
-            expect(v3Collection).toNotContainKey('collections');
-            expect(v3Collection).toContainKey('items');
+            expect(v3Collection).not.toHaveProperty('collections');
+            expect(v3Collection).toHaveProperty('items');
         });
 
         it('converts collection ids to collection objects', () => {
@@ -236,12 +237,12 @@ describe('prezi2to3', () => {
             let v3Collection = collectionUpgrader.processCollection({
                 collections: [sampleCollectionId]
             });
-            expect(v3Collection).toNotContainKey('collections');
-            expect(v3Collection).toContainKey('items');
+            expect(v3Collection).not.toHaveProperty('collections');
+            expect(v3Collection).toHaveProperty('items');
             expect(v3Collection.items.constructor).toEqual(Array);
             expect(v3Collection.items.length).toBe(1);
             expect(v3Collection.items[0].constructor).toBe(Object);
-            expect(v3Collection.items[0]).toContainKey('id');
+            expect(v3Collection.items[0]).toHaveProperty('id');
             expect(v3Collection.items[0].id).toEqual(sampleCollectionId);
         });
     
@@ -251,42 +252,40 @@ describe('prezi2to3', () => {
                     '@type': 'sc:Manifest'
                 }]
             });
-            expect(v3Collection).toNotContainKey('manifests');
-            expect(v3Collection).toContainKey('items');
+            expect(v3Collection).not.toHaveProperty('manifests');
+            expect(v3Collection).toHaveProperty('items');
         });
         it('converts manifest ids to manifests objects', () => {
             let sampleManifestId = "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json"
             let v3Collection = collectionUpgrader.processCollection({
                 manifests: [sampleManifestId]
             });
-            expect(v3Collection).toNotContainKey('manifests');
-            expect(v3Collection).toContainKey('items');
+            expect(v3Collection).not.toHaveProperty('manifests');
+            expect(v3Collection).toHaveProperty('items');
             expect(v3Collection.items.constructor).toEqual(Array);
             expect(v3Collection.items.length).toBe(1);
             expect(v3Collection.items[0].constructor).toBe(Object);
-            expect(v3Collection.items[0]).toContainKey('id');
+            expect(v3Collection.items[0]).toHaveProperty('id');
             expect(v3Collection.items[0].id).toEqual(sampleManifestId);
         });
     });
 
     describe('Manifest', () => {
         
-        let manifestUpgrader = null;
-        beforeEach(() => {
-            manifestUpgrader = new Upgrader({
-                "ext_ok": false, 
-                "deref_links": false
-            });
+        let manifestUpgrader = new Upgrader({
+            "ext_ok": false,
+            "deref_links": false
         });
 
         it('creates an object for the start canvas if it is just an id', () => {
             let manifestResult = manifestUpgrader.processManifest({
                 startCanvas: "canvasId"
             })
-            expect(manifestResult).toContainKey('start');
-            expect(manifestResult).toNotContainKey('startCanvas');
+            expect(manifestResult).toHaveProperty('start');
+            expect(manifestResult).not.toHaveProperty('startCanvas');
             expect(manifestResult.start.constructor).toEqual(Object);
-            expect(manifestResult.start).toContainKeys(['id', 'type'])
+            expect(manifestResult.start).toHaveProperty('id')
+            expect(manifestResult.start).toHaveProperty('type')
             expect(manifestResult.start.id).toEqual("canvasId");
             expect(manifestResult.start.type).toEqual("Canvas");
         });
@@ -300,10 +299,10 @@ describe('prezi2to3', () => {
                     '@type': "sc:Canvas"
                 }
             })
-            expect(manifestResult).toContainKey('start');
-            expect(manifestResult).toNotContainKey('startCanvas');
+            expect(manifestResult).toHaveProperty('start');
+            expect(manifestResult).not.toHaveProperty('startCanvas');
             expect(manifestResult.start.constructor).toEqual(Object);
-            expect(manifestResult.start).toContainKeys(['type'])
+            expect(manifestResult.start).toHaveProperty('type')
             //expect(manifestResult.start.id).toEqual("canvasId");
             expect(manifestResult.start.type).toEqual("Canvas");
         });
@@ -318,21 +317,21 @@ describe('prezi2to3', () => {
                     viewingHint: 'individual'
                 }]
             });
-            expect(manifestResult).toContainKey('_structures');
+            expect(manifestResult).toHaveProperty('_structures');
             expect(manifestResult._structures.constructor).toEqual(Array);
             expect(manifestResult._structures.length).toBe(2);
             expect(manifestResult._structures[0].constructor).toEqual(Object);
-            expect(manifestResult._structures[0]).toContainKey('type');
+            expect(manifestResult._structures[0]).toHaveProperty('type');
             expect(manifestResult._structures[0].type).toEqual('Range');
             expect(manifestResult._structures[1].constructor).toEqual(Object);
-            expect(manifestResult._structures[1]).toContainKey('type');
+            expect(manifestResult._structures[1]).toHaveProperty('type');
             expect(manifestResult._structures[1].type).toEqual('Range');
-            expect(manifestResult._structures[0]).toContainKey('id');
+            expect(manifestResult._structures[0]).toHaveProperty('id');
             expect(manifestResult._structures[0].id).toEqual('sequenceId');
-            expect(manifestResult._structures[1]).toContainKey('id');
-            expect(manifestResult._structures[0]).toContainKey('behavior');
-            expect(manifestResult._structures[1]).toContainKey('behavior');
-            expect(manifestResult._structures[1]).toNotContainKey('canvases');
+            expect(manifestResult._structures[1]).toHaveProperty('id');
+            expect(manifestResult._structures[0]).toHaveProperty('behavior');
+            expect(manifestResult._structures[1]).toHaveProperty('behavior');
+            expect(manifestResult._structures[1]).not.toHaveProperty('canvases');
         });
     });
 
@@ -349,7 +348,7 @@ describe('prezi2to3', () => {
             let rangeResult = rangeUpgrader.processRange({
                 items:[]
             });
-            expect(rangeResult).toContainKey('items');
+            expect(rangeResult).toHaveProperty('items');
         });
 
         it('converts members to items', () => {
@@ -359,8 +358,8 @@ describe('prezi2to3', () => {
                     '@type': 'Canvas'
                 }]
             });
-            expect(rangeResult).toContainKey('items');
-            expect(rangeResult).toNotContainKey('members');
+            expect(rangeResult).toHaveProperty('items');
+            expect(rangeResult).not.toHaveProperty('members');
         });
 
         it('converts canvases to items', () => {
@@ -370,8 +369,8 @@ describe('prezi2to3', () => {
                     '@type': 'Canvas'
                 }]
             });
-            expect(rangeResult).toContainKey('items');
-            expect(rangeResult).toNotContainKey('canvases');
+            expect(rangeResult).toHaveProperty('items');
+            expect(rangeResult).not.toHaveProperty('canvases');
         });
 
         it('converts sub-ranges to items', () => {
@@ -381,20 +380,20 @@ describe('prezi2to3', () => {
                     items:[]
                 }]
             });
-            expect(rangeResult).toContainKey('items');
-            expect(rangeResult).toNotContainKey('ranges');
+            expect(rangeResult).toHaveProperty('items');
+            expect(rangeResult).not.toHaveProperty('ranges');
             
             expect(rangeResult.items.constructor).toEqual(Array);
-            expect(rangeResult.items[0]).toContainKey('items');
+            expect(rangeResult.items[0]).toHaveProperty('items');
         });
 
         it('converts contentLayer to AnnotationCollections', () => {
             let rangeResult = rangeUpgrader.processRange({
                 contentLayer: "http://example.org/iiif/book1/layer/introTexts"
             });
-            expect(rangeResult).toContainKey('supplementary');
+            expect(rangeResult).toHaveProperty('supplementary');
             expect(rangeResult.supplementary.constructor).toEqual(Object);
-            expect(rangeResult.supplementary).toContainKey('type');
+            expect(rangeResult.supplementary).toHaveProperty('type');
             expect(rangeResult.supplementary.type).toEqual('AnnotationCollection');
         });
 
@@ -402,7 +401,7 @@ describe('prezi2to3', () => {
             let rangeResult = rangeUpgrader.processRange({
                 behavior: ['top', 'paged']
             });
-            expect(rangeResult).toContainKey('behavior');
+            expect(rangeResult).toHaveProperty('behavior');
             expect(rangeResult.behavior.constructor).toEqual(Array);
             expect(rangeResult.behavior).toNotContain('top');
         });
@@ -423,16 +422,18 @@ describe('prezi2to3', () => {
                     '@type': 'sc:Image'
                 }]
             });
-            expect(canvasResult).toContainKey('items');
-            expect(canvasResult).toNotContainKey('images');
+            expect(canvasResult).toHaveProperty('items');
+            expect(canvasResult).not.toHaveProperty('images');
             expect(canvasResult.items.constructor).toEqual(Array);
             expect(canvasResult.items.length).toBe(1);
             expect(canvasResult.items[0].constructor).toEqual(Object);
-            expect(canvasResult.items[0]).toContainKeys(['type','items']);
+            expect(canvasResult.items[0]).toHaveProperty('type');
+            expect(canvasResult.items[0]).toHaveProperty('items');
             expect(canvasResult.items[0].type).toEqual('AnnotationPage');
             expect(canvasResult.items[0].items.constructor).toEqual(Array);
             expect(canvasResult.items[0].items.length).toBe(1);
-            expect(canvasResult.items[0].items[0]).toContainKeys(['@type','@id']);
+            expect(canvasResult.items[0].items[0]).toHaveProperty('@id');
+            expect(canvasResult.items[0].items[0]).toHaveProperty('@type');
             expect(canvasResult.items[0].items[0]['@type']).toEqual('sc:Image');
         });
     });
@@ -458,15 +459,15 @@ describe('prezi2to3', () => {
                     '@type': 'sc:Image'
                 }]
             });
-            expect(annotationPageResult).toContainKey('items');
+            expect(annotationPageResult).toHaveProperty('items');
             expect(annotationPageResult.items.constructor).toEqual(Array);
-            expect(annotationPageResult).toNotContainKey('resources');
+            expect(annotationPageResult).not.toHaveProperty('resources');
         });
 
         it('creates empty items if the source does not contain resources or items', ()=> {
             let annotationPageResult = annotationPageUpgrader.processAnnotationpage({
             });
-            expect(annotationPageResult).toContainKey('items');
+            expect(annotationPageResult).toHaveProperty('items');
             expect(annotationPageResult.items.constructor).toEqual(Array);
         });
     });
@@ -487,7 +488,7 @@ describe('prezi2to3', () => {
             let annotationPageResult = annotationUpgrader.processAnnotation({
                 on: "someCanvasId"
             });
-            expect(annotationPageResult).toContainKey('target');
+            expect(annotationPageResult).toHaveProperty('target');
         });
 
         it('converts resource property to body', ()=> {
@@ -496,19 +497,19 @@ describe('prezi2to3', () => {
                     id: 'resourcemock'
                 }
             });
-            expect(annotationPageResult).toContainKey('body');
+            expect(annotationPageResult).toHaveProperty('body');
         });
 
         it('replaces motivation namespaces', ()=> {
             let annotationPageResult = annotationUpgrader.processAnnotation({
                 motivation: 'sc:painting'
             });
-            expect(annotationPageResult).toContainKey('motivation');
+            expect(annotationPageResult).toHaveProperty('motivation');
             expect(annotationPageResult.motivation).toEqual('painting');
             let annotationPageResult2 = annotationUpgrader.processAnnotation({
                 motivation: 'oa:commenting'
             });
-            expect(annotationPageResult2).toContainKey('motivation');
+            expect(annotationPageResult2).toHaveProperty('motivation');
             expect(annotationPageResult2.motivation).toEqual('commenting');
         });
 
@@ -518,19 +519,20 @@ describe('prezi2to3', () => {
                     chars: 'test{color:red;}'
                 }
             });
-            expect(annotationPageResult).toContainKey('stylesheet');
-            expect(annotationPageResult.stylesheet).toContainKey('value');
-            expect(annotationPageResult.stylesheet).toNotContainKey('chars');
+            expect(annotationPageResult).toHaveProperty('stylesheet');
+            expect(annotationPageResult.stylesheet).toHaveProperty('value');
+            expect(annotationPageResult.stylesheet).not.toHaveProperty('chars');
         });
 
         it('converts stylesheet links', ()=> {
             let annotationPageResult = annotationUpgrader.processAnnotation({
                 stylesheet: 'this is a link'
             });
-            expect(annotationPageResult).toContainKey('stylesheet');
-            expect(annotationPageResult.stylesheet).toContainKeys(['@id','@type']);
-            expect(annotationPageResult.stylesheet).toNotContainKey('value');
-            expect(annotationPageResult.stylesheet).toNotContainKey('chars');
+            expect(annotationPageResult).toHaveProperty('stylesheet');
+            expect(annotationPageResult.stylesheet).toHaveProperty('@id');
+            expect(annotationPageResult.stylesheet).toHaveProperty('@type');
+            expect(annotationPageResult.stylesheet).not.toHaveProperty('value');
+            expect(annotationPageResult.stylesheet).not.toHaveProperty('chars');
         }); 
     });
     
@@ -547,7 +549,7 @@ describe('prezi2to3', () => {
             let specificResourcePageResult = specificResourceUpgrader.processSpecificresource({
                 full: "mockfull"
             });
-            expect(specificResourcePageResult).toContainKey('source');
+            expect(specificResourcePageResult).toHaveProperty('source');
             expect(specificResourcePageResult.source).toEqual('mockfull');
         });
 
@@ -555,7 +557,7 @@ describe('prezi2to3', () => {
             let specificResourcePageResult = specificResourceUpgrader.processSpecificresource({
                 style: "mockstyleclass"
             });
-            expect(specificResourcePageResult).toContainKey('styleClass');
+            expect(specificResourcePageResult).toHaveProperty('styleClass');
             expect(specificResourcePageResult.styleClass).toEqual('mockstyleclass');
         });
     });
@@ -573,8 +575,8 @@ describe('prezi2to3', () => {
             let textualBodyPageResult = textualBodyUpgrader.processTextualbody({
                 chars: "test text"
             });
-            expect(textualBodyPageResult).toContainKey('value');
-            expect(textualBodyPageResult).toNotContainKey('chars');
+            expect(textualBodyPageResult).toHaveProperty('value');
+            expect(textualBodyPageResult).not.toHaveProperty('chars');
             expect(textualBodyPageResult.value).toEqual('test text');
         });
     });
@@ -591,8 +593,8 @@ describe('prezi2to3', () => {
             let choiceResult = choiceUpgrader.processChoice({
                 default: { id: "defaultId" }
             });
-            expect(choiceResult).toContainKey('items');
-            expect(choiceResult).toNotContainKey('default');
+            expect(choiceResult).toHaveProperty('items');
+            expect(choiceResult).not.toHaveProperty('default');
             expect(choiceResult.items.constructor).toEqual(Array);
             expect(choiceResult.items.length).toBe(1);
             expect(choiceResult.items[0].id).toEqual('defaultId');
@@ -606,8 +608,8 @@ describe('prezi2to3', () => {
                     id: "itemId2" 
                 }]
             });
-            expect(choiceResult).toContainKey('items');
-            expect(choiceResult).toNotContainKey('item');
+            expect(choiceResult).toHaveProperty('items');
+            expect(choiceResult).not.toHaveProperty('item');
             expect(choiceResult.items.constructor).toEqual(Array);
             expect(choiceResult.items.length).toBe(2);
             expect(choiceResult.items[0].id).toEqual('itemId1');
@@ -618,8 +620,8 @@ describe('prezi2to3', () => {
             let choiceResult = choiceUpgrader.processChoice({
                 item: { id: "itemId" }
             });
-            expect(choiceResult).toContainKey('items');
-            expect(choiceResult).toNotContainKey('item');
+            expect(choiceResult).toHaveProperty('items');
+            expect(choiceResult).not.toHaveProperty('item');
             expect(choiceResult.items.constructor).toEqual(Array);
             expect(choiceResult.items.length).toBe(1);
             expect(choiceResult.items[0].id).toEqual('itemId');
@@ -727,7 +729,8 @@ describe('prezi2to3', () => {
             let uri = "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json";
             let getHEaderResult = upgrader.getHeader(uri);
             expect(getHEaderResult.constructor).toEqual(Object);
-            expect(getHEaderResult).toContainKeys(['status', 'headers']);
+            expect(getHEaderResult).toHaveProperty('status');
+            expect(getHEaderResult).toHaveProperty('headers');
         });
         it('returns a simplified object if the response status was other than 200', () => {
             let uri = "http://example.com/smething/not/exist";

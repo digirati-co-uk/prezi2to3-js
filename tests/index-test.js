@@ -1,7 +1,8 @@
-import expect from 'expect'
-import { diff as jsonDiff} from 'jsondiffpatch'
 
-import Upgrader from 'src/index'
+const { diff: jsonDiff } = require('jsondiffpatch');
+
+const Upgrader = require('../src/index');
+
 
 
 const TEST_URLS = [
@@ -50,11 +51,11 @@ const str = (obj) => JSON.stringify(obj);
 
 // helper functions to get a specific fixture
 const keyFromURI = (uri, io) => uri.replace(/\//g,'__')
-  .replace(/^https?\:____/,`tests/spec/fixtures/${io}/`)
+  .replace(/^https?\:____/,`./spec/fixtures/${io}/`)
   .replace(/\.json$/,'');
 
-const manifestFromUri = (uri, io) => window.__json__[keyFromURI(uri, io)];
-const manifestFixture = (name) => window.__json__[`tests/spec/fixtures/input_data/${name}`];
+const manifestFromUri = (uri, io) => require(keyFromURI(uri, io));
+const manifestFixture = (name) => require(`./spec/fixtures/input_data/${name}`);
 
 describe('prezi2to3', () => {
   
@@ -114,7 +115,7 @@ describe('prezi2to3', () => {
   describe('Manifests', () => {
     let results = null;
     let upgrader = null;
-    before(()=>{
+    beforeEach(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
 		  results = upgrader.processResource(
@@ -127,33 +128,33 @@ describe('prezi2to3', () => {
 	  it('has p3 context', () => {
       const newctxt = ["http://www.w3.org/ns/anno.jsonld",
         "http://iiif.io/api/presentation/3/context.json"];
-      expect(results).toContainKey('@context');
+      expect(results).toHaveProperty('@context');
       expect(str(results['@context'])).toEqual(str(newctxt));
     });
 
 	  it('has items', () => {
       //console.log(JSON.stringify(results,null, 2));
-      expect(results).toContainKey('items');
-      expect(results['items'][0]).toContainKey('items');
-      expect(results['items'][0]['items'][0]).toContainKey('items');
-      expect(results['structures'][1]).toContainKey('items');
-      expect(results['structures'][1]['items'][1]).toContainKey('items');
+      expect(results).toHaveProperty('items');
+      expect(results['items'][0]).toHaveProperty('items');
+      expect(results['items'][0]['items'][0]).toHaveProperty('items');
+      expect(results['structures'][1]).toHaveProperty('items');
+      expect(results['structures'][1]['items'][1]).toHaveProperty('items');
     });
   
     it('has id porperties', () => {
-      expect(results).toContainKey('id');
+      expect(results).toHaveProperty('id');
       expect(results['id']).toEqual(
         "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json"
       );
-      expect(results['structures'][0]).toContainKey('id');
-      expect(results['items'][0]).toContainKey('id');
+      expect(results['structures'][0]).toHaveProperty('id');
+      expect(results['items'][0]).toHaveProperty('id');
     })
 
 	  it ('has the appropriate type properties', () => {
       // Also tests values of type
-      expect(results).toContainKey('type');
+      expect(results).toHaveProperty('type');
       expect(results['type']).toEqual("Manifest");
-      expect(results['items'][0]).toContainKey('type');
+      expect(results['items'][0]).toHaveProperty('type');
       let cvs = results['items'][0];
       expect(cvs['type']).toEqual('Canvas');
       expect(cvs['items'][0]['type']).toEqual("AnnotationPage");
@@ -162,7 +163,7 @@ describe('prezi2to3', () => {
 
 	  it('has startCanvas', () => {
       let cvs = "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json";
-	    expect(results).toContainKey('start');
+	    expect(results).toHaveProperty('start');
 	    expect(results['start']['id']).toEqual(cvs);
 	    expect(results['start']['type']).toEqual('Canvas');
     });
@@ -171,9 +172,9 @@ describe('prezi2to3', () => {
     it('has license', () => {
       let lic = "http://iiif.io/event/conduct/";
       let lic2 = "https://creativecommons.org/licenses/by/4.0/";
-      expect(results).toContainKey('rights');
+      expect(results).toHaveProperty('rights');
       expect(results['rights']).toEqual(lic2);
-      expect(results).toContainKey('metadata');
+      expect(results).toHaveProperty('metadata');
       // Find lic as a value in @none
       let found = false;
       results['metadata'].forEach(pair=>{
@@ -188,7 +189,7 @@ describe('prezi2to3', () => {
 	
 
     it('has viewingHint', () => {
-      expect(results).toContainKey('behavior');
+      expect(results).toHaveProperty('behavior');
       expect(str(results['behavior'])).toEqual(str(["paged"]))
     });
     
@@ -206,9 +207,9 @@ describe('prezi2to3', () => {
     
     it('has languagemap', () => {
       expect(results['label'].constructor).toEqual(Object);
-      expect(results['label']).toContainKey('@none');
+      expect(results['label']).toHaveProperty('@none');
       expect(str(results['label']['@none'])).toEqual(str(["Manifest Label"]));
-      expect(results).toContainKey('metadata');
+      expect(results).toHaveProperty('metadata');
       let md = results['metadata'];
       expect(md[0]['label'].constructor).toEqual(Object);
       expect(md[0]['label']['@none'].constructor).toEqual(Array);
@@ -220,8 +221,8 @@ describe('prezi2to3', () => {
       // md[1] has two values 
       expect(md[1]['value']['@none'].length).toBe(2);
       // md[2] has en and fr values
-      expect(md[2]['value']).toContainKey('en');
-      expect(md[2]['value']).toContainKey('fr');
+      expect(md[2]['value']).toHaveProperty('en');
+      expect(md[2]['value']).toHaveProperty('fr');
     });
     
     it('has description', () => {
@@ -239,9 +240,9 @@ describe('prezi2to3', () => {
         expect(found).toBe(1);
       } else {
         // look in summary
-        expect(results).toContainKey('summary');
+        expect(results).toHaveProperty('summary');
         expect(results['summary'].constructor).toEqual(Object);
-        expect(results['summary']).toContainKey('@none');
+        expect(results['summary']).toHaveProperty('@none');
         expect(results['summary']['@none'][0])
           .toEqual("This is a description of the Manifest");
       }
@@ -251,14 +252,14 @@ describe('prezi2to3', () => {
       let ranges = results['structures'];
       expect(ranges.length).toBe(1);
       let rng = ranges[0];
-      expect(rng).toContainKey("behavior");
+      expect(rng).toHaveProperty("behavior");
       expect(rng['type']).toEqual("Range");
-      expect(rng).toContainKey("items");
+      expect(rng).toHaveProperty("items");
       expect(rng['items'].length).toBe(3);
       // [0] is a Canvas
-      expect(rng['items'][1]).toContainKey("items");
+      expect(rng['items'][1]).toHaveProperty("items");
       expect(rng['items'][1]['items'][0].hasOwnProperty("items")).toBe(true);
-      expect(rng['items'][2]).toContainKey("items");
+      expect(rng['items'][2]).toHaveProperty("items");
 
     });
   })
@@ -266,7 +267,7 @@ describe('prezi2to3', () => {
     let results = null;
     let upgrader = null;
     let annotations = null; 
-    before(()=>{
+    beforeEach(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
 		  results = upgrader.processResource(
@@ -278,14 +279,14 @@ describe('prezi2to3', () => {
 
     it('has body', () => {
       let anno = annotations[0];
-      expect(anno).toContainKey('body');
+      expect(anno).toHaveProperty('body');
       expect(anno['body']['id'])
         .toEqual("http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png");
     });
       
     it('has target', () => {
       let anno = annotations[0];
-      expect(anno).toContainKey('target');
+      expect(anno).toHaveProperty('target');
       expect(anno['target'])
         .toEqual("http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json");
     });
@@ -293,14 +294,14 @@ describe('prezi2to3', () => {
 
     it('has type', () => {
       let anno = annotations[0];
-      expect(anno).toContainKey('type');
+      expect(anno).toHaveProperty('type');
       expect(anno['type']).toEqual("Annotation");
     });
       
 
     it('has motivation', () => {
       let anno = annotations[0];
-      expect(anno).toContainKey('motivation');
+      expect(anno).toHaveProperty('motivation');
       expect(anno['motivation']).toEqual("painting");
     });
       
@@ -308,32 +309,32 @@ describe('prezi2to3', () => {
     it('has source', () => {
       let anno = annotations[1];
       expect(anno['body']['type']).toEqual('SpecificResource');
-      expect(anno['body']).toContainKey('source');
+      expect(anno['body']).toHaveProperty('source');
     });
       
 
     it('has ContentAsText', () => {
       let anno = annotations[2];
       expect(anno['body']['type']).toEqual('TextualBody')
-      expect(anno['body']).toContainKey('value');
+      expect(anno['body']).toHaveProperty('value');
     });
       
 
     it('has choice', () => {
       let anno = annotations[3];
       expect(anno['body']['type']).toEqual('Choice');
-      expect(anno['body']).toContainKey('items');
+      expect(anno['body']).toHaveProperty('items');
       expect(anno['body']['items'].length).toBe(2);
     });
       
 
     it('has style', () => {
       let anno = annotations[4];
-      expect(anno).toContainKey('stylesheet');
+      expect(anno).toHaveProperty('stylesheet');
       expect(anno['stylesheet']['type']).toEqual("CssStylesheet");
-      expect(anno['stylesheet']).toContainKey("value");
+      expect(anno['stylesheet']).toHaveProperty("value");
       expect(anno['stylesheet']['value']).toEqual(".red {color: red;}");
-      expect(anno['body']).toContainKey("styleClass");
+      expect(anno['body']).toHaveProperty("styleClass");
       expect(anno['body']['styleClass']).toEqual("red");
     });
 		
@@ -343,7 +344,7 @@ describe('prezi2to3', () => {
     let results = null;
     let upgrader = null;
     
-    before(()=>{
+    beforeEach(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
 		  results = upgrader.processResource(
@@ -355,38 +356,38 @@ describe('prezi2to3', () => {
     it('has search service', () => {
       // Search and Autocomplete are on the Manifest
       let manifest = results;
-      expect(manifest).toContainKey('service');
+      expect(manifest).toHaveProperty('service');
       expect(manifest['service'].constructor).toEqual(Array);
       let svc = manifest['service'][0]; 
-      // expect(svc).toContainKey('@context'); --> is this mandatory?
+      // expect(svc).toHaveProperty('@context'); --> is this mandatory?
       expect(svc['id']).toEqual("http://example.org/services/identifier/search");
       expect(svc['type']).toEqual("SearchService1");
-      expect(svc).toContainKey('service');
+      expect(svc).toHaveProperty('service');
       expect(svc['service'][0]['type']).toEqual("AutoCompleteService1");
     });
 
     it('has image service', () => {
       let svc = results['items'][0]['items'][0]['items'][0]['body']['service'][0]
-      expect(svc).toContainKey('id');
-      expect(svc).toContainKey('type');
+      expect(svc).toHaveProperty('id');
+      expect(svc).toHaveProperty('type');
       expect(svc['type']).toEqual("ImageService2");
-      expect(svc).toContainKey('profile');
+      expect(svc).toHaveProperty('profile');
     });
 
     it('has auth service', () => {
       let svc = results['items'][0]['items'][0]['items'][0]['body']['service'][0]['service'][0];
-      expect(svc).toContainKey('id');
-      expect(svc).toContainKey('type');
+      expect(svc).toHaveProperty('id');
+      expect(svc).toHaveProperty('type');
       expect(svc['type']).toEqual("AuthCookieService1");
-      expect(svc).toContainKey('profile');
-      expect(svc).toContainKey('service');
+      expect(svc).toHaveProperty('profile');
+      expect(svc).toHaveProperty('service');
       let token = svc['service'][0]
-      expect(token).toContainKey('id');
-      expect(token).toContainKey('type');
+      expect(token).toHaveProperty('id');
+      expect(token).toHaveProperty('type');
       expect(token['type']).toEqual("AuthTokenService1");
       let logout = svc['service'][1]
-      expect(logout).toContainKey('id');
-      expect(logout).toContainKey('type');
+      expect(logout).toHaveProperty('id');
+      expect(logout).toHaveProperty('type');
       expect(logout['type']).toEqual("AuthLogoutService1");
     });
 
@@ -396,7 +397,7 @@ describe('prezi2to3', () => {
     let results = null;
     let upgrader = null;
     
-    before(()=>{
+    beforeEach(()=>{
       let flags= {"ext_ok": false, "deref_links": false}
 		  upgrader = new Upgrader(flags);
 		  results = upgrader.processResource(
@@ -406,19 +407,19 @@ describe('prezi2to3', () => {
     });
 
     it('has items', () => {
-      expect(results).toContainKey('items');
+      expect(results).toHaveProperty('items');
       let items = results['items'];
       // Two Collections, then One Manifest
       expect(items.length).toBe(3);
       expect(items[0]['type']).toEqual("Collection");
       expect(items[2]['type']).toEqual("Manifest");
-      expect(items[0]).toContainKey('items');
+      expect(items[0]).toHaveProperty('items');
       // Three Members: Collection, Manifest, Collection
       let items2 = items[0]['items'];
       expect(items2.length).toBe(3);
       expect(items2[0]['type']).toEqual("Collection");
       expect(items2[1]['type']).toEqual("Manifest");
-      expect(items2[0]).toContainKey('behavior');
+      expect(items2[0]).toHaveProperty('behavior');
       expect(items2[0]['behavior'].indexOf('multi-part')).toBe(0);
     });
   });

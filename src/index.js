@@ -3,56 +3,56 @@
 // IIIF Presentation API version 2 to version 3 upgrader
 //
 
-import { v4 as uuid4 } from 'uuid';
+const {nanoid} = require('nanoid');
 
 const FLAGS = {
   "crawl": {
     "prop": "crawl",
     "default": false,
-    "description": "NOT YET IMPLEMENTED. Crawl to linked resources, such as AnnotationLists from a Manifest"
+    "description": process.env.NODE_ENV === 'production' ? '' : "NOT YET IMPLEMENTED. Crawl to linked resources, such as AnnotationLists from a Manifest"
   },
   "desc_2_md": {
     "prop": "description_is_metadata",
     "default": true,
-    "description": "If true, then the source's `description` properties will be put into a `metadata` pair.\
+    "description": process.env.NODE_ENV === 'production' ? '' : "If true, then the source's `description` properties will be put into a `metadata` pair.\
          If false, they will be put into `summary`."
   },
   "related_2_md": {
     "prop": "related_is_metadata",
     "default": false,
-    "description": "If true, then the `related` resource will go into a `metadata` pair.\
+    "description": process.env.NODE_ENV === 'production' ? '' : "If true, then the `related` resource will go into a `metadata` pair.\
         If false, it will become the `homepage` of the resource."
   },
   "ext_ok": {
     "prop": "ext_ok",
     "default": false,
-    "description": "If true, then extensions are allowed and will be copied across. \
+    "description": process.env.NODE_ENV === 'production' ? '' : "If true, then extensions are allowed and will be copied across. \
         If false, then they will raise an error."
   },
   "default_lang": {
     "prop": "default_lang",
     "default": "@none",
-    "description": "The default language to use when adding values to language maps."
+    "description": process.env.NODE_ENV === 'production' ? '' : "The default language to use when adding values to language maps."
   },
   "deref_links": {
     "prop": "deref_links",
     "default": true,
-    "description": "If true, the conversion will dereference external content resources to look for format and type."
+    "description": process.env.NODE_ENV === 'production' ? '' : "If true, the conversion will dereference external content resources to look for format and type."
   },
   "debug": {
     "prop": "debug",
     "default": false,
-    "description": "If true, then go into a more verbose debugging mode."
+    "description": process.env.NODE_ENV === 'production' ? '' : "If true, then go into a more verbose debugging mode."
   },
   "attribution_label": {
     "prop": "attribution_label",
     "default": "Attribution",
-    "description": "The label to use for requiredStatement mapping from attribution"
+    "description": process.env.NODE_ENV === 'production' ? '' : "The label to use for requiredStatement mapping from attribution"
   },
   "license_label": {
     "prop": "license_label",
     "default": "Rights/License",
-    "description": "The label to use for non-conforming license URIs mapped into metadata"
+    "description": process.env.NODE_ENV === 'production' ? '' : "The label to use for non-conforming license URIs mapped into metadata"
   }
 };
 
@@ -171,8 +171,10 @@ class Upgrader {
   }
 
   warn(msg) {
-    if (this.debug) {
-      console.log(msg);
+    if (process.env.NODE_ENV !== 'production') {
+      if (this.debug) {
+        console.log(msg);
+      }
     }
   }
 
@@ -190,7 +192,7 @@ class Upgrader {
   }
 
   mintURI() {
-    const newUUID = uuid4();
+    const newUUID = nanoid();
     return `https://example.org/uuid/${newUUID}`;
   }
 
@@ -1256,4 +1258,4 @@ class Upgrader {
 // width+height pair for Canvas, if either
 // items all the way down
 
-export default Upgrader;
+module.exports = Upgrader;

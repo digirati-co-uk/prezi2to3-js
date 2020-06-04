@@ -1,9 +1,6 @@
-import expect from 'expect'
-import { diff as jsonDiff} from 'jsondiffpatch'
+const Upgrader = require('../src/index');
 
-import Upgrader from 'src/index'
-
-const manifestFixture = (name) => window.__json__[`tests/spec/fixtures/iiif_in/${name}`];
+const manifestFixture = (name) => require(`./spec/fixtures/iiif_in/${name}`);
 const clone = (jsonObject) => JSON.parse(JSON.stringify(jsonObject));
 
 const P3_CONTEXT = [
