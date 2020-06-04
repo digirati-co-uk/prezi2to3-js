@@ -11,7 +11,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "build": "rollup -c && tsc -p ./ --emitDeclarationOnly",
+    "build": "rollup -c",
     "start": "rollup -c --watch",
     "test": "jest",
     "prepare": "NODE_ENV=production rollup -c"
