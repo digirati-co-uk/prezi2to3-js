@@ -50,6 +50,11 @@ export default [
             }),
             resolve(), // so Rollup can find `ms`
             commonjs({ extensions: ['.js'] }),
+            babel({
+                babelrc: false,
+                presets: [['@babel/preset-env', { modules: false }]],
+                plugins: [["@babel/plugin-proposal-class-properties", { "loose": true }]]
+            }),
         ],
         external: [
             'crypto'
