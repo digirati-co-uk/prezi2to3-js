@@ -170,7 +170,7 @@ class Upgrader {
     this.idTypeHash = {};
   }
 
-  warn(msg) {
+  warn = (msg) => {
     if (process.env.NODE_ENV !== 'production') {
       if (this.debug) {
         console.log(msg);
@@ -178,7 +178,7 @@ class Upgrader {
     }
   }
 
-  retrieveResource(uri) {
+  retrieveResource = (uri) => {
     let request = new XMLHttpRequest();
     request.open('GET', uri, false);  // `false` makes the request synchronous
     try{
@@ -191,12 +191,12 @@ class Upgrader {
     return {};
   }
 
-  mintURI() {
+  mintURI = () => {
     const newUUID = nanoid();
     return `https://example.org/uuid/${newUUID}`;
   }
 
-  traverse(what) {
+  traverse = (what) => {
     const p3version = {};
     let v = null;
     let fn = null;
@@ -247,11 +247,14 @@ class Upgrader {
     return p3version
   }
 
-  fixServiceType(what) {
+  fixServiceType = (what) => {
     // manage known service contexts
     if (what.hasOwnProperty('@context')) {
       let ctxt = what['@context']
-      if (ctxt === "http://iiif.io/api/image/2/context.json") {
+      if (
+          ctxt === "http://iiif.io/api/image/2/context.json" ||
+          ctxt === "http://iiif.io/api/image/2/level2.json"
+      ) {
         what['@type'] = "ImageService2";
         delete what['@context'];
         return what;
@@ -323,7 +326,7 @@ class Upgrader {
     return what
   }
 
-  fixType(what) {
+  fixType = (what) => {
     // Called from processResource so we can switch
     let t = what['@type'] || '';
     if (t) {
@@ -378,7 +381,7 @@ class Upgrader {
     return p3IString
   }
 
-  fixLanguages(what) {
+  fixLanguages = (what) => {
     LANGUAGE_PROPERTIES.forEach(
       p => {
         if (what.hasOwnProperty(p)) {
@@ -401,7 +404,7 @@ class Upgrader {
     return what;
   }
 
-  fixSets(what) {
+  fixSets = (what) => {
     SET_PROPERTIES.forEach(
       p => {
         if (what.hasOwnProperty(p)) {
@@ -420,7 +423,7 @@ class Upgrader {
   //   }));
   //   return head;
   // }
-  getHeader(uri) {
+  getHeader = (uri) => {
     let request = new XMLHttpRequest();
     request.open('HEAD', uri, false);  // `false` makes the request synchronous
     try {
@@ -438,7 +441,7 @@ class Upgrader {
     return null;
   }
 
-  setRemoteType(what) {
+  setRemoteType = (what) => {
     let h = null;
     // do a HEAD on the resource and look at Content-Type
     try {
@@ -471,11 +474,11 @@ class Upgrader {
     }
   }
 
-  fixObject(what, typ) {
+  fixObject = (what, typ) => {
     if (!isDictionary(what)) {
       what = {'id': what}
     } else if (
-      isDictionary(what) && 
+      isDictionary(what) &&
       Object.keys(what).length===0
     ) {
       return {};
@@ -518,7 +521,7 @@ class Upgrader {
     return what
   }
 
-  fixObjects(what) {
+  fixObjects = (what) => {
     for (var p in OBJECT_PROPERTY_TYPES) {
       let typ = OBJECT_PROPERTY_TYPES[p];
       if (what.hasOwnProperty(p)) {
@@ -533,7 +536,7 @@ class Upgrader {
     return what;
   }
 
-  processGeneric(what) {
+  processGeneric = (what) => {
     // process generic IIIF properties
     if (what.hasOwnProperty('@id')) {
       what['id'] = what['@id'];
@@ -679,7 +682,7 @@ class Upgrader {
     return what
   }
 
-  processService(what) {
+  processService = (what) => {
     what = this.fixServiceType(what);
     if (what.hasOwnProperty('@id')) {
       what.id = what['@id'];
@@ -708,7 +711,7 @@ class Upgrader {
     return what;
   }
 
-  processCollection(what) {
+  processCollection = (what) => {
     what = this.processGeneric(what)
 
     if (what.hasOwnProperty('members')) {
@@ -754,7 +757,7 @@ class Upgrader {
     return what;
   }
 
-  areSequencesNeeded(what) {
+  areSequencesNeeded = (what) => {
     let sequences = what.sequences;
     let sequencesLength = sequences.length;
     
@@ -776,7 +779,7 @@ class Upgrader {
     return isNotDefaultViewingHint || isNotDefaultViewingDirection || hasMetadata;
   }
 
-  processManifest(what) {
+  processManifest = (what) => {
     what = this.processGeneric(what)
 
     if (what.hasOwnProperty('startCanvas')) {
@@ -836,7 +839,7 @@ class Upgrader {
     return what;
   }
 
-  processRange(what) {
+  processRange = (what) => {
     what = this.processGeneric(what);
 
     if (what.hasOwnProperty('items')) {
@@ -931,7 +934,7 @@ class Upgrader {
   }
 
 
-  processCanvas(what) {
+  processCanvas = (what) => {
     // XXX process otherContent here before generic grabs it
     what = this.processGeneric(what);
     if (what.hasOwnProperty('images')) {
@@ -944,11 +947,11 @@ class Upgrader {
     return what;
   }
 
-  processLayer(what) {
+  processLayer = (what) => {
     return this.processGeneric(what);
   }
 
-  processAnnotationpage(what) {
+  processAnnotationpage = (what) => {
     what = this.processGeneric(what)
     if (what.hasOwnProperty('resources')) {
       what['items'] = what['resources']
@@ -959,11 +962,11 @@ class Upgrader {
     return what;
   }
 
-  processAnnotationcollection(what) {
+  processAnnotationcollection = (what) => {
     return this.processGeneric(what);
   }
 
-  processAnnotation(what) {
+  processAnnotation = (what) => {
     what = this.processGeneric(what)
 
     if (what.hasOwnProperty('on')) {
@@ -1005,7 +1008,7 @@ class Upgrader {
     return what;
   }
 
-  processSpecificresource(what) {
+  processSpecificresource = (what) => {
     what = this.processGeneric(what)
     if (what.hasOwnProperty('full')) {
       // And if not, it's broken...
@@ -1019,7 +1022,7 @@ class Upgrader {
     return what;
   }
 
-  processTextualbody(what) {
+  processTextualbody = (what) => {
     if (what.hasOwnProperty('chars')) {
       what['value'] = what['chars']
       delete what['chars'];
@@ -1027,7 +1030,7 @@ class Upgrader {
     return what;
   }
 
-  processChoice(what) {
+  processChoice = (what) => {
     what = this.processGeneric(what)
 
     let newl = [];
@@ -1047,7 +1050,7 @@ class Upgrader {
     return what;
   }
 
-  postProcessGeneric(what) {
+  postProcessGeneric = (what) => {
 
     // test known properties of objects for type
     if (what.hasOwnProperty('homepage') && 
@@ -1090,7 +1093,7 @@ class Upgrader {
     return what2;
   }
 
-  postProcessManifest(what) {
+  postProcessManifest = (what) => {
 
     what = this.postProcessGeneric(what);
 
@@ -1175,7 +1178,7 @@ class Upgrader {
     return what;
   }
 
-  processResource(what, top=false) {
+  processResource = (what, top=false) => {
     let origContext = ""
     if (top) {
       // process @context
@@ -1190,10 +1193,10 @@ class Upgrader {
       .map((chr,idx)=> 
         idx===0 ? chr.toUpperCase() : chr.toLowerCase()
       ).join('');
-    let fn = this[`process${typeCapitalised}`] || this.processGeneric;
+    let fn = (this[`process${typeCapitalised}`] || this.processGeneric);
     what = fn(what);
     what = this.traverse(what)
-    let fn2 = this[`postProcess${typeCapitalised}`] || this.postProcessGeneric;
+    let fn2 = (this[`postProcess${typeCapitalised}`] || this.postProcessGeneric);
     what = fn2(what);
     if (top) {
       // Add back in the v3 context
@@ -1210,7 +1213,7 @@ class Upgrader {
     return what
   }
 
-  processUri(uri, top=false) {
+  processUri = (uri, top =false) => {
     let what = this.retrieveResource(uri);
     return this.processResource(what, top);
   }
@@ -1222,7 +1225,7 @@ class Upgrader {
     return this.processResource(what, top)
   }
 
-  reorder(what) {
+  reorder = (what) => {
     new = {}
     for (k,v) in what.items():
       if type(v) == list:

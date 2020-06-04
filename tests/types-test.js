@@ -403,7 +403,7 @@ describe('prezi2to3', () => {
             });
             expect(rangeResult).toHaveProperty('behavior');
             expect(rangeResult.behavior.constructor).toEqual(Array);
-            expect(rangeResult.behavior).toNotContain('top');
+            expect(rangeResult.behavior).not.toContain('top');
         });
     });
 

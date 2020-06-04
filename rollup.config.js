@@ -1,3 +1,4 @@
+import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
@@ -22,6 +23,11 @@ export default [
             }),
             resolve({ browser: true }), // so Rollup can find `ms`
             commonjs({ extensions: ['.js'] }),
+            babel({
+                babelrc: false,
+                presets: [['@babel/preset-env', { modules: false }]],
+                plugins: [["@babel/plugin-proposal-class-properties", { "loose": true }]]
+            }),
             terser(),
             compiler(),
         ],

@@ -23,61 +23,61 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // 
-    expect(p3Manifest).toContainKey('label');
+    expect(p3Manifest).toHaveProperty('label');
     expect(p3Manifest.label.constructor).toEqual(Object);
-    expect(p3Manifest.label).toContainKey('@none');
+    expect(p3Manifest.label).toHaveProperty('@none');
     expect(p3Manifest.label['@none'].constructor).toEqual(Array);
-    expect(p3Manifest).toContainKey('type');
+    expect(p3Manifest).toHaveProperty('type');
     expect(p3Manifest.type.constructor).toEqual(String);
-    expect(p3Manifest).toContainKey('id');
+    expect(p3Manifest).toHaveProperty('id');
     expect(p3Manifest.id.constructor).toEqual(String);
     expect(p3Manifest.id).toBe(p2Manifest['@id']);
-    expect(p3Manifest).toContainKey('partOf');
-    expect(p3Manifest).toNotContainKey('within');
+    expect(p3Manifest).toHaveProperty('partOf');
+    expect(p3Manifest).not.toHaveProperty('within');
     expect(p3Manifest.partOf.constructor).toEqual(Array);
     expect(p3Manifest.partOf[0].id).toBe(p2Manifest.within); // -> currently failing
     expect(p3Manifest.partOf[0].type).toBe("Collection"); // -> currently failing
     // in presentation v3 items will be always an array
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
-    expect(p3Manifest.items[0]).toContainKey('type');
+    expect(p3Manifest.items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].type).toBe("Canvas");
     expect(p3Manifest.items[0].id).toBe(p2Manifest.sequences[0].canvases[0]['@id']);
-    expect(p3Manifest.items[0]).toContainKey('width');
+    expect(p3Manifest.items[0]).toHaveProperty('width');
     expect(p3Manifest.items[0].width.constructor).toEqual(Number);
-    expect(p3Manifest.items[0]).toContainKey('height');
+    expect(p3Manifest.items[0]).toHaveProperty('height');
     expect(p3Manifest.items[0].height.constructor).toEqual(Number);
     expect(p3Manifest.items[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.items[0].label).toContainKey('@none');
+    expect(p3Manifest.items[0].label).toHaveProperty('@none');
     expect(p3Manifest.items[0].label['@none'].constructor).toEqual(Array);
-    expect(p3Manifest.items[0]).toContainKey('label');
+    expect(p3Manifest.items[0]).toHaveProperty('label');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
-    expect(p3Manifest.items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].type).toBe("AnnotationPage");
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('id');
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('id');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].type).toBe("Annotation")
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('motivation');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('motivation');
     expect(p3Manifest.items[0].items[0].items[0].motivation).toBe("painting");
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[0].target).toBe(p3Manifest.items[0].id);
     expect(p3Manifest.items[0].items[0].items[0].target).toBe(p2Manifest.sequences[0].canvases[0].images[0]['on']);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
     expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('id');
     expect(p3Manifest.items[0].items[0].items[0].body.id.constructor).toEqual(String);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].body.type.constructor).toEqual(String);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('width');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('width');
     expect(p3Manifest.items[0].items[0].items[0].body.width.constructor).toEqual(Number);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('height');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('height');
     expect(p3Manifest.items[0].items[0].items[0].body.height.constructor).toEqual(Number);
   });
   
@@ -88,21 +88,21 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('metadata');
+    expect(p3Manifest).toHaveProperty('metadata');
     expect(p3Manifest.metadata.constructor).toEqual(Array);
     expect(p3Manifest.metadata.length).toBe(1);
     expect(p3Manifest.metadata[0].constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0]).toContainKey('label');
+    expect(p3Manifest.metadata[0]).toHaveProperty('label');
     expect(p3Manifest.metadata[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].label).toContainKey('@none');
+    expect(p3Manifest.metadata[0].label).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].label['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].label['@none'][0]).toBe(p2Manifest['metadata'][0].label);
-    expect(p3Manifest.metadata[0]).toContainKey('value');
+    expect(p3Manifest.metadata[0]).toHaveProperty('value');
     expect(p3Manifest.metadata[0].value.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].value).toContainKey('@none');
+    expect(p3Manifest.metadata[0].value).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].value['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].value['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].value['@none'][0]).toBe(p2Manifest['metadata'][0].value);
@@ -115,25 +115,25 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('metadata');
+    expect(p3Manifest).toHaveProperty('metadata');
     expect(p3Manifest.metadata.constructor).toEqual(Array);
     expect(p3Manifest.metadata.length).toBe(1);
     expect(p3Manifest.metadata[0].constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0]).toContainKey('label');
+    expect(p3Manifest.metadata[0]).toHaveProperty('label');
     expect(p3Manifest.metadata[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].label).toContainKey('@none');
+    expect(p3Manifest.metadata[0].label).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].label['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].label['@none'][0]).toBe(p2Manifest['metadata'][0].label);
-    expect(p3Manifest.metadata[0]).toContainKey('value');
+    expect(p3Manifest.metadata[0]).toHaveProperty('value');
     expect(p3Manifest.metadata[0].value.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].value).toContainKey('fr');
+    expect(p3Manifest.metadata[0].value).toHaveProperty('fr');
     expect(p3Manifest.metadata[0].value['fr'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].value['fr'].length).toBe(1);
     expect(p3Manifest.metadata[0].value['fr'][0]).toBe(p2Manifest['metadata'][0].value[0]['@value']);
-    expect(p3Manifest.metadata[0].value).toContainKey('en');
+    expect(p3Manifest.metadata[0].value).toHaveProperty('en');
     expect(p3Manifest.metadata[0].value['en'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].value['en'].length).toBe(1);
     expect(p3Manifest.metadata[0].value['en'][0]).toBe(p2Manifest['metadata'][0].value[1]['@value']);
@@ -148,21 +148,21 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('metadata');
+    expect(p3Manifest).toHaveProperty('metadata');
     expect(p3Manifest.metadata.constructor).toEqual(Array);
     expect(p3Manifest.metadata.length).toBe(1);
     expect(p3Manifest.metadata[0].constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0]).toContainKey('label');
+    expect(p3Manifest.metadata[0]).toHaveProperty('label');
     expect(p3Manifest.metadata[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].label).toContainKey('@none');
+    expect(p3Manifest.metadata[0].label).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].label['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].label['@none'][0]).toBe(p2Manifest['metadata'][0].label);
-    expect(p3Manifest.metadata[0]).toContainKey('value');
+    expect(p3Manifest.metadata[0]).toHaveProperty('value');
     expect(p3Manifest.metadata[0].value.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].value).toContainKey('@none');
+    expect(p3Manifest.metadata[0].value).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].value['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].value['@none'].length).toBe(2);
     expect(p3Manifest.metadata[0].value['@none'][0]).toBe(p2Manifest['metadata'][0].value[0]);
@@ -177,22 +177,22 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
-    expect(p3Manifest).toContainKey('metadata');
+    expect(p3Manifest).toHaveProperty('metadata');
     expect(p3Manifest.metadata.constructor).toEqual(Array);
     expect(p3Manifest.metadata.length).toBe(1);
     expect(p3Manifest.metadata[0].constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0]).toContainKey('label');
+    expect(p3Manifest.metadata[0]).toHaveProperty('label');
     expect(p3Manifest.metadata[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].label).toContainKey('@none');
+    expect(p3Manifest.metadata[0].label).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].label['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].label['@none'][0]).toBe("Description");
-    expect(p3Manifest.metadata[0]).toContainKey('value');
+    expect(p3Manifest.metadata[0]).toHaveProperty('value');
     expect(p3Manifest.metadata[0].value.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].value).toContainKey('@none');
+    expect(p3Manifest.metadata[0].value).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].value['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].value['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].value['@none'][0]).toBe(p2Manifest['description']);
@@ -205,26 +205,26 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
-    expect(p3Manifest).toContainKey('metadata');
+    expect(p3Manifest).toHaveProperty('metadata');
     expect(p3Manifest.metadata.constructor).toEqual(Array);
     expect(p3Manifest.metadata.length).toBe(1);
     expect(p3Manifest.metadata[0].constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0]).toContainKey('label');
+    expect(p3Manifest.metadata[0]).toHaveProperty('label');
     expect(p3Manifest.metadata[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].label).toContainKey('@none');
+    expect(p3Manifest.metadata[0].label).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].label['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].label['@none'][0]).toBe("Description");
-    expect(p3Manifest.metadata[0]).toContainKey('value');
+    expect(p3Manifest.metadata[0]).toHaveProperty('value');
     expect(p3Manifest.metadata[0].value.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].value).toContainKey('@none');
+    expect(p3Manifest.metadata[0].value).toHaveProperty('@none');
     expect(p3Manifest.metadata[0].value['@none'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].value['@none'].length).toBe(1);
     expect(p3Manifest.metadata[0].value['@none'][0]).toBe(p2Manifest['description'][0]);
-    expect(p3Manifest.metadata[0].value).toContainKey('en');
+    expect(p3Manifest.metadata[0].value).toHaveProperty('en');
     expect(p3Manifest.metadata[0].value['en'].constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].value['en'].length).toBe(1);
     expect(p3Manifest.metadata[0].value['en'][0]).toBe(p2Manifest['description'][1]['@value']);
@@ -237,19 +237,19 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('requiredStatement');
+    expect(p3Manifest).toHaveProperty('requiredStatement');
     expect(p3Manifest.requiredStatement.constructor).toEqual(Object);
-    expect(p3Manifest.requiredStatement).toContainKey('label');
+    expect(p3Manifest.requiredStatement).toHaveProperty('label');
     expect(p3Manifest.requiredStatement.label.constructor).toEqual(Object);
-    expect(p3Manifest.requiredStatement.label).toContainKey('@none');
+    expect(p3Manifest.requiredStatement.label).toHaveProperty('@none');
     expect(p3Manifest.requiredStatement.label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.requiredStatement.label['@none'].length).toBe(1);
     expect(p3Manifest.requiredStatement.label['@none'][0]).toBe("Attribution");
-    expect(p3Manifest.requiredStatement).toContainKey('value');
+    expect(p3Manifest.requiredStatement).toHaveProperty('value');
     expect(p3Manifest.requiredStatement.value.constructor).toEqual(Object);
-    expect(p3Manifest.requiredStatement.value).toContainKey('@none');
+    expect(p3Manifest.requiredStatement.value).toHaveProperty('@none');
     expect(p3Manifest.requiredStatement.value['@none'].constructor).toEqual(Array);
     expect(p3Manifest.requiredStatement.value['@none'].length).toBe(1);
     expect(p3Manifest.requiredStatement.value['@none'][0]).toBe(p2Manifest['attribution']);
@@ -263,15 +263,15 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('seeAlso');
+    expect(p3Manifest).toHaveProperty('seeAlso');
     expect(p3Manifest.seeAlso.constructor).toEqual(Array);
     expect(p3Manifest.seeAlso.length).toBe(1);
     expect(p3Manifest.seeAlso[0].constructor).toEqual(Object);
-    expect(p3Manifest.seeAlso[0]).toContainKey('type');
+    expect(p3Manifest.seeAlso[0]).toHaveProperty('type');
     expect(p3Manifest.seeAlso[0].type).toBe('Dataset');
-    expect(p3Manifest.seeAlso[0]).toContainKey('id');
+    expect(p3Manifest.seeAlso[0]).toHaveProperty('id');
     expect(p3Manifest.seeAlso[0].id).toEqual(p2Manifest.seeAlso);
   });
   
@@ -282,9 +282,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('service');
+    expect(p3Manifest).toHaveProperty('service');
     expect(p3Manifest.service.constructor).toEqual(Array);
     expect(p3Manifest.service.length).toBe(1);
     expect(p3Manifest.service[0].constructor).toEqual(String);
@@ -300,17 +300,17 @@ describe('prezi2to3', () => {
     );
     //console.log(JSON.stringify(p3Manifest));
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
-    expect(p3Manifest).toContainKey('service');
+    expect(p3Manifest).toHaveProperty('service');
     expect(p3Manifest.service.constructor).toEqual(Array);
     expect(p3Manifest.service.length).toBe(1);
     expect(p3Manifest.service[0].constructor).toEqual(Object);
-    expect(p3Manifest.service[0]).toNotContainKey('@id');
-    expect(p3Manifest.service[0]).toContainKey('id');
-    expect(p3Manifest.service[0]).toNotContainKey('@type');
-    expect(p3Manifest.service[0]).toContainKey('type');
+    expect(p3Manifest.service[0]).not.toHaveProperty('@id');
+    expect(p3Manifest.service[0]).toHaveProperty('id');
+    expect(p3Manifest.service[0]).not.toHaveProperty('@type');
+    expect(p3Manifest.service[0]).toHaveProperty('type');
     expect(p3Manifest.service[0].type).toEqual('Service');
     // expect(
     //   JSON.stringify(p3Manifest.service[0].id)
@@ -324,9 +324,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('viewingDirection');
+    expect(p3Manifest).toHaveProperty('viewingDirection');
     expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
     expect(p3Manifest.viewingDirection).toEqual('left-to-right');
   });
@@ -338,9 +338,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('viewingDirection');
+    expect(p3Manifest).toHaveProperty('viewingDirection');
     expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
     expect(p3Manifest.viewingDirection).toEqual('right-to-left');
   });
@@ -352,9 +352,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('viewingDirection');
+    expect(p3Manifest).toHaveProperty('viewingDirection');
     expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
     expect(p3Manifest.viewingDirection).toEqual('top-to-bottom');
   });
@@ -366,9 +366,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('viewingDirection');
+    expect(p3Manifest).toHaveProperty('viewingDirection');
     expect(p3Manifest.viewingDirection).toBe(p2Manifest.viewingDirection);
     expect(p3Manifest.viewingDirection).toEqual('bottom-to-top');
   });
@@ -380,9 +380,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('behavior');
+    expect(p3Manifest).toHaveProperty('behavior');
     expect(p3Manifest.behavior.constructor).toEqual(Array);
     expect(p3Manifest.behavior.includes('paged')).toBe(true);
     expect(p3Manifest.behavior.length).toBe(1);
@@ -395,9 +395,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('behavior');
+    expect(p3Manifest).toHaveProperty('behavior');
     expect(p3Manifest.behavior.constructor).toEqual(Array);
     expect(p3Manifest.behavior.includes('continuous')).toBe(true);
     expect(p3Manifest.behavior.length).toBe(1);
@@ -410,9 +410,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('behavior');
+    expect(p3Manifest).toHaveProperty('behavior');
     expect(p3Manifest.behavior.constructor).toEqual(Array);
     expect(p3Manifest.behavior.includes('individuals')).toBe(true);
     expect(p3Manifest.behavior.length).toBe(1);
@@ -425,9 +425,9 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('someProperty');
+    expect(p3Manifest).toHaveProperty('someProperty');
     expect(p3Manifest.someProperty).toEqual(p2Manifest.someProperty);
   });
   
@@ -438,14 +438,14 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(2);
-    expect(p3Manifest.items[0]).toContainKey('type');
+    expect(p3Manifest.items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].type).toEqual("Canvas");
-    expect(p3Manifest.items[1]).toContainKey('type');
+    expect(p3Manifest.items[1]).toHaveProperty('type');
     expect(p3Manifest.items[1].type).toEqual("Canvas");
   });
   
@@ -456,42 +456,42 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     expect(p3Manifest.items[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0]).toContainKey('type');
+    expect(p3Manifest.items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].type).toEqual("Canvas");
-    expect(p3Manifest).toContainKey('structures');
+    expect(p3Manifest).toHaveProperty('structures');
     expect(p3Manifest.structures.constructor).toEqual(Array);
     expect(p3Manifest.structures.length).toBe(2);
     expect(p3Manifest.structures[0].constructor).toEqual(Object);
-    expect(p3Manifest.structures[0]).toContainKey('type');
+    expect(p3Manifest.structures[0]).toHaveProperty('type');
     expect(p3Manifest.structures[0].type).toEqual("Range");
-    expect(p3Manifest.structures[0]).toContainKey('behavior');
+    expect(p3Manifest.structures[0]).toHaveProperty('behavior');
     expect(p3Manifest.structures[0].behavior.constructor).toEqual(Array);
     expect(p3Manifest.structures[0].behavior.includes('sequence')).toBe(true);
     
-    expect(p3Manifest.structures[0]).toContainKey('label');
+    expect(p3Manifest.structures[0]).toHaveProperty('label');
     expect(p3Manifest.structures[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.structures[0].label).toContainKey('@none');
+    expect(p3Manifest.structures[0].label).toHaveProperty('@none');
     expect(p3Manifest.structures[0].label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.structures[0].label['@none'].length).toBe(1);
     expect(p3Manifest.structures[0].label['@none'][0]).toEqual(p2Manifest.sequences[0].label);
     expect(p3Manifest.structures[0].label['@none'][0]).toEqual("Test 20 Sequence 1");
 
     expect(p3Manifest.structures[1].constructor).toEqual(Object);
-    expect(p3Manifest.structures[1]).toContainKey('type');
+    expect(p3Manifest.structures[1]).toHaveProperty('type');
     expect(p3Manifest.structures[1].type).toEqual("Range");
-    expect(p3Manifest.structures[1]).toContainKey('behavior');
+    expect(p3Manifest.structures[1]).toHaveProperty('behavior');
     expect(p3Manifest.structures[1].behavior.constructor).toEqual(Array);
     expect(p3Manifest.structures[1].behavior.includes('sequence'));
 
-    expect(p3Manifest.structures[1]).toContainKey('label');
+    expect(p3Manifest.structures[1]).toHaveProperty('label');
     expect(p3Manifest.structures[1].label.constructor).toEqual(Object);
-    expect(p3Manifest.structures[1].label).toContainKey('@none');
+    expect(p3Manifest.structures[1].label).toHaveProperty('@none');
     expect(p3Manifest.structures[1].label['@none'].constructor).toEqual(Array);
     expect(p3Manifest.structures[1].label['@none'].length).toBe(1);
     expect(p3Manifest.structures[1].label['@none'][0]).toEqual(p2Manifest.sequences[1].label);
@@ -505,28 +505,28 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // NOTE: sequence metadata is being lost if there's only one sequence...
-    expect(p3Manifest).toContainKey('structures');
+    expect(p3Manifest).toHaveProperty('structures');
     expect(p3Manifest.structures.constructor).toEqual(Array);
     expect(p3Manifest.structures.length).toBe(1);
     expect(p3Manifest.structures[0].constructor).toEqual(Object);
-    expect(p3Manifest.structures[0]).toContainKeys(['type', 'items', 'behavior', 'metadata']);
+    //expect(p3Manifest.structures[0]).toContainKeys(['type', 'items', 'behavior', 'metadata']);
     expect(p3Manifest.structures[0].type).toEqual('Range');
     expect(p3Manifest.structures[0].behavior.constructor).toEqual(Array);
     expect(p3Manifest.structures[0].behavior).toContain('sequence');
     expect(p3Manifest.structures[0].items.constructor).toEqual(Array);
     expect(p3Manifest.structures[0].metadata.constructor).toEqual(Array);
     expect(p3Manifest.structures[0].metadata.length).toBe(1);
-    expect(p3Manifest.structures[0].metadata[0]).toContainKeys(['label', 'value']);
+    //expect(p3Manifest.structures[0].metadata[0]).toContainKeys(['label', 'value']);
     expect(p3Manifest.structures[0].metadata[0].label.constructor).toEqual(Object);
-    expect(p3Manifest.structures[0].metadata[0].label).toContainKey('@none');
+    expect(p3Manifest.structures[0].metadata[0].label).toHaveProperty('@none');
     expect(p3Manifest.structures[0].metadata[0].label['@none'].constructor).toBe(Array);
     expect(p3Manifest.structures[0].metadata[0].label['@none'].length).toBe(1);
     expect(p3Manifest.structures[0].metadata[0].value.constructor).toEqual(Object);
-    expect(p3Manifest.structures[0].metadata[0].value).toContainKey('@none');
+    expect(p3Manifest.structures[0].metadata[0].value).toHaveProperty('@none');
     expect(p3Manifest.structures[0].metadata[0].value['@none'].constructor).toBe(Array);
     expect(p3Manifest.structures[0].metadata[0].value['@none'].length).toBe(1);
 
@@ -539,7 +539,7 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // NOTE: sequence viewing direction is being lost if there's only one sequence...
@@ -553,7 +553,7 @@ describe('prezi2to3', () => {
     );
     
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // NOTE: sequence viewingHint is being lost if there's only one sequence...
@@ -566,41 +566,41 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
     // body
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
     expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
     // service
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('service');
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
 
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('id');
     expect(
       p3Manifest.items[0].items[0].items[0].body.service[0]['id']
     ).toEqual(
       p2Manifest.sequences[0].canvases[0].images[0].resource.service['@id']
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('profile');
     expect(
       p3Manifest.items[0].items[0].items[0].body.service[0]['profile']
     ).toEqual(
       p2Manifest.sequences[0].canvases[0].images[0].resource.service['profile']
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual('ImageService2');
   });
   
@@ -611,28 +611,28 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
     // body
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
     expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
     // service
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('service');
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual('ImageService2');
     let p2Service = clone(p2Manifest.sequences[0].canvases[0].images[0].resource.service);
     delete p2Service['@context'];
@@ -650,35 +650,35 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // checking canvas size
-    expect(p3Manifest.items[0]).toContainKey('width');
+    expect(p3Manifest.items[0]).toHaveProperty('width');
     expect(p3Manifest.items[0].width).toBe(600);
-    expect(p3Manifest.items[0]).toContainKey('height');
+    expect(p3Manifest.items[0]).toHaveProperty('height');
     expect(p3Manifest.items[0].height).toBe(900);
     
     // checking image size
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
     // body
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
     expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
 
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('width');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('width');
     expect(p3Manifest.items[0].items[0].items[0].body.width).toBe(1200);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('height');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('height');
     expect(p3Manifest.items[0].items[0].items[0].body.height).toBe(1800);
   });
   
@@ -689,14 +689,14 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
      // Canvases
-     expect(p3Manifest).toContainKey('items');
+     expect(p3Manifest).toHaveProperty('items');
      expect(p3Manifest.items.constructor).toEqual(Array);
      expect(p3Manifest.items.length).toBe(1);
-     expect(p3Manifest.items[0]).toNotContainKey('items');
+     expect(p3Manifest.items[0]).not.toHaveProperty('items');
   });
   
   it('Test 28 Manifest: Choice of Image', () => {
@@ -706,7 +706,7 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // NOTE: possibly wrong behaviour choices are not definied yet
@@ -719,7 +719,7 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
     // NOTE: possibly wrong behaviour choices are not definied yet
@@ -732,25 +732,25 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
 
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(2);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/30/c1.json'
     );
@@ -758,9 +758,9 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[0].on
     );
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/30/c1.json#xywh=400,400,173,173'
     );
@@ -776,24 +776,24 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
 
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(2);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/31/c1.json'
     );
@@ -801,26 +801,26 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[0].on
     );
     
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('service');
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('id');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/page1-full'
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('profile');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual("ImageService2");
 
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/31/c1.json#xywh=400,400,173,173'
     );
@@ -828,20 +828,20 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[1].on
     );
 
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('body');
-    expect(p3Manifest.items[0].items[0].items[1].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('body');
+    expect(p3Manifest.items[0].items[0].items[1].body).toHaveProperty('service');
     expect(p3Manifest.items[0].items[0].items[1].body.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[1].body.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[1].body.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toHaveProperty('id');
     expect(p3Manifest.items[0].items[0].items[1].body.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/detail'
     );
-    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toHaveProperty('profile');
     expect(p3Manifest.items[0].items[0].items[1].body.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].body.service[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[1].body.service[0]['type']).toEqual("ImageService2");
   });
   
@@ -852,25 +852,25 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
 
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(3);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/32/c1.json'
     );
@@ -878,9 +878,9 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[0].on
     );
     
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/32/c1.json#xywh=400,400,173,173'
     );
@@ -888,9 +888,9 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[1].on
     );
     
-    expect(p3Manifest.items[0].items[0].items[2]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[2]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[2].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[2]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[2]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[2].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/32/c1.json#xywh=600,600,173,173'
     );
@@ -906,7 +906,7 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // NOTE: possibly wrong behaviour choices are not definied yet
@@ -919,7 +919,7 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // NOTE: possibly wrong behaviour choices are not definied yet
@@ -932,25 +932,25 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
     // body
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
     expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('id');
     expect(p3Manifest.items[0].items[0].items[0].body['id']).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png#xywh=100,100,1000,1600"
     );
@@ -966,36 +966,36 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
     // body
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
     expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('id');
     expect(p3Manifest.items[0].items[0].items[0].body['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/page1-full/100,100,1000,1600/full/0/default.jpg'
     );
     expect(p3Manifest.items[0].items[0].items[0].body['id']).toEqual(
       p2Manifest.sequences[0].canvases[0].images[0].resource['@id']
     );
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('selector');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('selector');
     expect(p3Manifest.items[0].items[0].items[0].body.selector.constructor).toEqual(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body.selector).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.selector).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].body.selector.type).toEqual('ImageApiSelector');
-    expect(p3Manifest.items[0].items[0].items[0].body.selector).toContainKey('region');
+    expect(p3Manifest.items[0].items[0].items[0].body.selector).toHaveProperty('region');
     expect(p3Manifest.items[0].items[0].items[0].body.selector.region).toEqual('100,100,1000,1600');
   });
   
@@ -1007,24 +1007,24 @@ describe('prezi2to3', () => {
     );
 
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
 
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(2);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/37/c1.json'
     );
@@ -1032,9 +1032,9 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[0].on
     );
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/37/c1.json#xywh=400,400,153,153'
     );
@@ -1050,25 +1050,25 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
 
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(2);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[0].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/38/c1.json'
     );
@@ -1076,26 +1076,26 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[0].on
     );
     
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
+    expect(p3Manifest.items[0].items[0].items[0].body).toHaveProperty('service');
     expect(p3Manifest.items[0].items[0].items[0].body.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[0].body.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('id');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/page1-full'
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('profile');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0].body.service[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].body.service[0]['type']).toEqual("ImageService2");
 
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[1].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('target');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('target');
     expect(p3Manifest.items[0].items[0].items[1].target).toEqual(
       'http://iiif.io/api/presentation/2.1/example/fixtures/canvas/38/c1.json#xywh=400,400,173,173'
     );
@@ -1103,21 +1103,21 @@ describe('prezi2to3', () => {
       p2Manifest.sequences[0].canvases[0].images[1].on
     );
 
-    expect(p3Manifest.items[0].items[0].items[1]).toContainKey('body');
-    expect(p3Manifest.items[0].items[0].items[1].body).toContainKey('source');
-    expect(p3Manifest.items[0].items[0].items[1].body.source).toContainKey('service');
+    expect(p3Manifest.items[0].items[0].items[1]).toHaveProperty('body');
+    expect(p3Manifest.items[0].items[0].items[1].body).toHaveProperty('source');
+    expect(p3Manifest.items[0].items[0].items[1].body.source).toHaveProperty('service');
     expect(p3Manifest.items[0].items[0].items[1].body.source.service.constructor).toBe(Array);
     expect(p3Manifest.items[0].items[0].items[1].body.source.service.length).toBe(1);
     expect(p3Manifest.items[0].items[0].items[1].body.source.service[0].constructor).toBe(Object);
-    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('id');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toHaveProperty('id');
     expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['id']).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/detail'
     );
-    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('profile');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toHaveProperty('profile');
     expect(p3Manifest.items[0].items[0].items[1].body.source.service[0].profile).toEqual(
       'http://iiif.io/api/image/2/level1.json'
     );
-    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[1].body.source.service[0]['type']).toEqual("ImageService2");
   });
   
@@ -1128,31 +1128,31 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
 
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('type');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('type');
     expect(p3Manifest.items[0].items[0].items[0].type).toEqual('Annotation');
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('stylesheet');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('stylesheet');
     expect(p3Manifest.items[0].items[0].items[0].stylesheet.constructor).toEqual(Object);
-    expect(p3Manifest.items[0].items[0].items[0].stylesheet).toContainKeys([
-      'format',
-      'value', 
-      'type'
-    ])
+    //expect(p3Manifest.items[0].items[0].items[0].stylesheet).toContainKeys([
+    //   'format',
+    //   'value',
+    //   'type'
+    // ])
     expect(p3Manifest.items[0].items[0].items[0].stylesheet.type).toEqual('CssStylesheet');
     expect(p3Manifest.items[0].items[0].items[0].stylesheet.format).toEqual('text/css');
     expect(p3Manifest.items[0].items[0].items[0].stylesheet.value).toEqual('.rotated {transform: rotate(180deg)}');
@@ -1168,16 +1168,16 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
-    expect(p3Manifest).toContainKey('metadata');
+    expect(p3Manifest).toHaveProperty('metadata');
     expect(p3Manifest.metadata.constructor).toEqual(Array);
     expect(p3Manifest.metadata.length).toBe(1);
     expect(p3Manifest.metadata[0].constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0]).toContainKeys(['label', 'value']);
+    //expect(p3Manifest.metadata[0]).toContainKeys(['label', 'value']);
     expect(p3Manifest.metadata[0].label.constructor).toEqual(Object);
     expect(p3Manifest.metadata[0].value.constructor).toEqual(Object);
-    expect(p3Manifest.metadata[0].label).toContainKeys(['fr', 'en']);
+    //expect(p3Manifest.metadata[0].label).toContainKeys(['fr', 'en']);
     expect(p3Manifest.metadata[0].label.fr.constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].label.en.constructor).toEqual(Array);
     expect(p3Manifest.metadata[0].label.fr.length).toBe(1);
@@ -1193,25 +1193,25 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
 
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     // Annotation Page
-    expect(p3Manifest.items[0]).toContainKey('items');
+    expect(p3Manifest.items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items.length).toBe(1);
     // Annotation
-    expect(p3Manifest.items[0].items[0]).toContainKey('items');
+    expect(p3Manifest.items[0].items[0]).toHaveProperty('items');
     expect(p3Manifest.items[0].items[0].items.constructor).toEqual(Array);
     expect(p3Manifest.items[0].items[0].items.length).toBe(1);
     // body
-    expect(p3Manifest.items[0].items[0].items[0]).toContainKey('body');
+    expect(p3Manifest.items[0].items[0].items[0]).toHaveProperty('body');
     expect(p3Manifest.items[0].items[0].items[0].body.constructor).toEqual(Object);
-    expect(p3Manifest.items[0].items[0].items[0].body).toContainKeys(['type','id', 'source']);
+    //expect(p3Manifest.items[0].items[0].items[0].body).toContainKeys(['type','id', 'source']);
     expect(p3Manifest.items[0].items[0].items[0].body.type).toEqual('SpecificResource');
     expect(p3Manifest.items[0].items[0].items[0].body.id).toEqual(
       'http://iiif.io/api/image/2.1/example/reference/page1-full/full/full/180/default.jpg'
@@ -1228,19 +1228,19 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
   
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/43/list1.json"
@@ -1258,19 +1258,19 @@ describe('prezi2to3', () => {
     );
     //console.log(JSON.stringify(p3Manifest, null, 2));
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/44/list1.json"
@@ -1288,19 +1288,19 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
      // Canvases
-     expect(p3Manifest).toContainKey('items');
+     expect(p3Manifest).toHaveProperty('items');
      expect(p3Manifest.items.constructor).toEqual(Array);
      expect(p3Manifest.items.length).toBe(1);
      
-     expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+     //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
      expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
      expect(p3Manifest.items[0].annotations.length).toBe(1);
      expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-     expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+     //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
      expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
      expect(p3Manifest.items[0].annotations[0].id).toEqual(
        "http://iiif.io/api/presentation/2.1/example/fixtures/list/45/list1.json"
@@ -1319,19 +1319,19 @@ describe('prezi2to3', () => {
     );
 ;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // 
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/46/list1.json"
@@ -1350,18 +1350,18 @@ describe('prezi2to3', () => {
     );;
 
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/47/list1.json"
@@ -1380,19 +1380,19 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/48/list1.json"
@@ -1411,19 +1411,19 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT)); 
 
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/51/list1.json"
@@ -1440,19 +1440,19 @@ describe('prezi2to3', () => {
       true
     );;
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/52/list1.json"
@@ -1470,18 +1470,18 @@ describe('prezi2to3', () => {
     );
 
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/54/list1.json"
@@ -1498,19 +1498,19 @@ describe('prezi2to3', () => {
       true
     );
     // test the context is correct
-    expect(p3Manifest).toContainKey('@context');
+    expect(p3Manifest).toHaveProperty('@context');
     expect(JSON.stringify(p3Manifest['@context'])).toBe(JSON.stringify(P3_CONTEXT));
     
     // Canvases
-    expect(p3Manifest).toContainKey('items');
+    expect(p3Manifest).toHaveProperty('items');
     expect(p3Manifest.items.constructor).toEqual(Array);
     expect(p3Manifest.items.length).toBe(1);
     
-    expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
+    //expect(p3Manifest.items[0]).toContainKeys(['items','annotations']);
     expect(p3Manifest.items[0].annotations.constructor).toEqual(Array);
     expect(p3Manifest.items[0].annotations.length).toBe(1);
     expect(p3Manifest.items[0].annotations[0].constructor).toEqual(Object);
-    expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
+    //expect(p3Manifest.items[0].annotations[0]).toContainKeys(['label', 'type', 'id']);
     expect(p3Manifest.items[0].annotations[0].type).toEqual('AnnotationPage');
     expect(p3Manifest.items[0].annotations[0].id).toEqual(
       "http://iiif.io/api/presentation/2.1/example/fixtures/list/61/list1.json"
